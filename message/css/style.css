@@ -1,0 +1,96 @@
+@import url(font-awesome.min.css);
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #ddd;
+}
+
+h2, h3, h4, h5, h6, p {
+	color: #777;
+}
+
+a {
+	color: #777;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #00A0C6;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	color: #999;
+	background-color: #999;
+	width: 90%;
+}
+
+/* Navbar */
+.nav-custom {
+	background-color: #fff;
+	/* outline: 0; */
+}
+
+.nav-custom a {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
+	letter-spacing: 5px;
+	margin-top: 15px;
+}
+
+.nav-custom .nav li a {
+	margin-right: 5px;
+	/*
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	*/
+}
+	.nav-custom .nav li a:hover {
+		color: #333;
+		background-color: transparent;
+		/* outline: 0; */
+	}
+	.nav-custom .nav li a:focus {
+		background-color: transparent;
+		/* outline: 0; */
+	}
+
+.navbar-brand {
+	padding: 0 0 0 15px;
+}
+
+.logo {
+	height: 50px;
+	width: auto;
+}
+
+/* collapse btn icon in small screen */
+.icon-bar {
+	background: #777;
+}
+
+/* Contents */
+.intro,
+.selected-photo {
+	margin-top: 140px;
+}
+
+.intro {
+	background-color: #fff;
+}
+
+.intro h1 {
+	color: #56EAD8;
+}
+
+/* footer */
+.footer {
+	position: relative;
+	width: 100%;
+}
