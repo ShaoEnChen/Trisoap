@@ -7,12 +7,13 @@ body {
 	background-color: #ddd;
 }
 
-h2, h3, h4, h5, h6, p {
+h2, h3, h4, h5, h6, p, a {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
 	color: #777;
 }
 
 a {
-	color: #777;
 	text-decoration: none;
 }
 
@@ -37,8 +38,6 @@ hr {
 }
 
 .nav-custom a {
-	font-family: "Open Sans", sans-serif;
-	font-weight: 100;
 	letter-spacing: 5px;
 	margin-top: 15px;
 }
@@ -76,17 +75,38 @@ hr {
 }
 
 /* Contents */
-.intro,
-.selected-photo {
-	margin-top: 140px;
+.content {
+	margin-top: 120px;
+	text-align: center;
 }
 
-.intro {
+.choice {
 	background-color: #fff;
+	/* on grid system xs-screen */
+	max-width: 90%;
+	/* 高度上限 */
+	max-height: 340px;
+	margin: 20px auto;
+	padding: 50px 50px;
+	/* 自動生成滾軸 */
+	overflow: auto;
+	text-align: initial;
 }
 
-.intro h1 {
-	color: #56EAD8;
+.intro,
+.choice {
+	box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 20%, 0.5);
+}
+
+.choice p {
+	margin: 0;
+}
+
+/* 精選相片/影片 */
+.selected {
+	margin-top: 10px;
+	width: 100%;
+	height: auto;
 }
 
 /* footer */
