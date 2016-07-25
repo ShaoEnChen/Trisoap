@@ -46,7 +46,7 @@
               ?>
               <li><a href="#">管理平台<i class="fa fa-angle-down"></i><span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">權限管理</a></li>
+                  <li><a href="../manager/Update_Manager.php">權限管理</a></li>
                   <li><a href="../methods/Update_ITEMMAS1.php">商品管理</a></li>
                   <li><a href="../methods/Update_ORDMAS.php">訂單管理</a></li>
                   <li><a href="#">留心語管理</a></li>
@@ -80,8 +80,8 @@
               ?>
               <li><a href="#">註冊/登入<i class="fa fa-angle-down"></i><span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="../method/Create_CUSMAS1.php">註冊</a></li>
-                  <li><a href="../method/User_login1.php">登入</a></li>
+                  <li><a href="../methods/Create_CUSMAS1.php">註冊</a></li>
+                  <li><a href="../methods/User_login1.php">登入</a></li>
                 </ul>
               </li>
               <?

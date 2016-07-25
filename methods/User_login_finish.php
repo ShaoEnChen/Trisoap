@@ -18,7 +18,6 @@ if($CUSPW == null){
 
 //搜尋資料庫資料
 $queryPW = search('CUSPW', 'CUSMAS', 'EMAIL', $EMAIL);
-
 if(encrypt($CUSPW) != $queryPW){
         $message = $message . '密碼錯誤 \n';
 }
@@ -32,7 +31,7 @@ if($message == null){
             alert("成功登入");
         </script>
         <?
-        echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepage/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>';
 }
 else
 {
@@ -41,6 +40,6 @@ else
                 alert("<?echo $message;?>");
             </script>
         <?php
-        echo '<meta http-equiv=REFRESH CONTENT=1;url=User_login1.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=0.5;url=User_login1.php>';
 }
 ?>
