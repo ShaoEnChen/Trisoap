@@ -1,33 +1,32 @@
 <?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-include("mysql_connect.php");
+include("Helper/mysql_connect.php");
+include("Helper/sql_operation.php");
+include("Helper/handle_string.php");
 $EMAIL = $_SESSION['EMAIL'];
-//$ITEMNO = $_SESSION['ITEMNO'];
-//$ORDNO = $_SESSION['ORDNO'];
-$ORDTYPE = htmlentities($_POST['ORDTYPE']);  //sth wrong
-$ORDINST = htmlentities($_POST['ORDINST']);  //sth wrong
+$ORDTYPE = input('ORDTYPE');  //sth wrong
+$ORDINST = input('ORDINST');  //sth wrong
 if($EMAIL != null){
-	$sql = "SELECT * FROM OWNMAS where COMNM='Trisoap'";
-    $result = mysql_query($sql);
-    $row = mysql_fetch_row($result);
+    $row = select('OWNMAS', 'COMNM', 'Trisoap');
+    $ORDNOG = $row[5];
+    $ORDNOS = $row[6];
     date_default_timezone_set('Asia/Taipei');
     $CREATEDATE = date("Y-m-d H:i:s");
     $UPDATEDATE = date("Y-m-d H:i:s");
     if($ORDTYPE == 'G'){
         $SHIPFEE = 20;
-    	$sql = "insert into ORDMAS (ORDNO, ORDTYPE, EMAIL, ORDINST, SHIPFEE, CREATEDATE, UPDATEDATE) values ('$row[5]', '$ORDTYPE', '$EMAIL', '$ORDINST', '$SHIPFEE', '$CREATEDATE', '$UPDATEDATE')";
+    	$sql = "insert into ORDMAS (ORDNO, ORDTYPE, EMAIL, ORDINST, SHIPFEE, CREATEDATE, UPDATEDATE) values ('$ORDNOG', '$ORDTYPE', '$EMAIL', '$ORDINST', '$SHIPFEE', '$CREATEDATE', '$UPDATEDATE')";
     	if(mysql_query($sql)){
     		$sql = "UPDATE OWNMAS SET NORDNOG=NORDNOG+1 where COMNM='Trisoap'";
     		mysql_query($sql);
-    		$_SESSION['ORDNO'] = $row[5];
-    		//echo "建立訂單成功";
+    		$_SESSION['ORDNO'] = $ORDNOG;
 ?>
             <script>
-                alert("訂單建立成功，請重新選擇商品。");
+                alert("訂單建立成功。");
             </script>
 <?php
-    		echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Purchase_finish.php>';
+    		echo '<meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/product.html>';
     	}
     	else{
 ?>
@@ -40,18 +39,18 @@ if($EMAIL != null){
     }
     else{
         $SHIPFEE = 50;
-    	$sql = "insert into ORDMAS (ORDNO, ORDTYPE, EMAIL, ORDINST, SHIPFEE, CREATEDATE, UPDATEDATE) values ('$row[6]', '$ORDTYPE', '$EMAIL', '$ORDINST', '$SHIPFEE', '$CREATEDATE', '$UPDATEDATE')";
+    	$sql = "insert into ORDMAS (ORDNO, ORDTYPE, EMAIL, ORDINST, SHIPFEE, CREATEDATE, UPDATEDATE) values ('$ORDNOS', '$ORDTYPE', '$EMAIL', '$ORDINST', '$SHIPFEE', '$CREATEDATE', '$UPDATEDATE')";
     	if(mysql_query($sql)){
     		$sql = "UPDATE OWNMAS SET NORDNOS=NORDNOS+1 where COMNM='Trisoap'";
     		mysql_query($sql);
-    		$_SESSION['ORDNO'] = $row[6];
+    		$_SESSION['ORDNO'] = $ORDNOS;
     		//echo "建立訂單成功";
 ?>
             <script>
-                alert("訂單建立成功，請重新選擇商品。");
+                alert("訂單建立成功。");
             </script>
 <?php
-    		echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Purchase_finish.php>';
+    		echo '<meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/product.html>';
     	}
     	else{
 ?>

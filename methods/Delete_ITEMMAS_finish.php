@@ -3,7 +3,7 @@
 <title>三三吾鄉手工皂 下架商品</title>
 
 <?php
-include("mysql_connect.php");
+include("Helper/mysql_connect.php");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $message = null;

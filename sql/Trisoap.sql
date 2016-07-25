@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: localhost
--- 產生時間： 2016 年 06 月 22 日 18:24
+-- 產生時間： 2016 年 07 月 25 日 10:57
 -- 伺服器版本: 10.1.13-MariaDB
--- PHP 版本： 5.6.21
+-- PHP 版本： 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `cusmas`
+-- 資料表結構 `CUSMAS`
 --
 
 CREATE TABLE `CUSMAS` (
@@ -32,7 +32,7 @@ CREATE TABLE `CUSMAS` (
   `CUSNM` varchar(30) COLLATE utf8_bin NOT NULL,
   `CUSIDT` varchar(1) COLLATE utf8_bin NOT NULL DEFAULT 'B',
   `CUSADD` varchar(100) COLLATE utf8_bin DEFAULT NULL,
-  `CUSBIRTHY` tinyint(4) NOT NULL,
+  `CUSBIRTHY` smallint(4) NOT NULL,
   `CUSBIRTHM` tinyint(2) NOT NULL,
   `CUSBIRTHD` tinyint(2) NOT NULL,
   `COUNTRY` varchar(15) COLLATE utf8_bin DEFAULT 'Taiwan',
@@ -59,8 +59,8 @@ CREATE TABLE `CUSMAS` (
 --
 
 INSERT INTO `CUSMAS` (`EMAIL`, `CUSPW`, `CUSNM`, `CUSIDT`, `CUSADD`, `CUSBIRTHY`, `CUSBIRTHM`, `CUSBIRTHD`, `COUNTRY`, `ZCODE`, `TEL`, `CUSTYPE`, `KNOWTYPE`, `CREDITSTAT`, `TAXID`, `DISCOUNT`, `SALEAMTMTD`, `SALEAMTSTD`, `SALEAMTYTD`, `SALEAMT`, `CURAR`, `SPEINS`, `CREATEDATE`, `UPDATEDATE`, `ACTCODE`) VALUES
-('A02705028', '123', 'Tim', 'A', 'No', 0, 0, 0, '', '', '0922825881', 'A', 'A', 'A', '', 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
-('B02705028', '123', 'Tim', 'B', 'No', 0, 0, 0, '', '', '0922825881', 'A', 'A', 'A', '', 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1);
+('a0922825881@gmail.com', '7db4cd6e7093', '冷俊瑩', 'A', 'Home', 1995, 12, 6, 'Taiwan', NULL, '0922825881', 'A', 'A', 'A', 'No', 0, 0, 0, 0, 0, 0, '', '2016-07-25 10:17:55', '2016-07-25 10:17:55', 1),
+('tim841206@yahoo.com.tw', '7db4cd6e7093', '冷俊瑩', 'B', 'Home', 1995, 12, 6, 'Taiwan', NULL, '0922825881', 'A', 'A', 'A', 'No', 0, 0, 0, 0, 0, 0, '', '2016-07-25 09:42:09', '2016-07-25 09:42:09', 1);
 
 -- --------------------------------------------------------
 
@@ -70,12 +70,12 @@ INSERT INTO `CUSMAS` (`EMAIL`, `CUSPW`, `CUSNM`, `CUSIDT`, `CUSADD`, `CUSBIRTHY`
 
 CREATE TABLE `ITEMMAS` (
   `ITEMNO` int(15) NOT NULL,
-  `ITEMNM` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `ITEMNM` varchar(50) COLLATE utf8_bin DEFAULT NULL,
   `ITEMAMT` int(8) NOT NULL DEFAULT '0',
   `PRICE` int(8) DEFAULT NULL,
-  `DESCRIPTION` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `DESCRIPTION` varchar(50) COLLATE utf8_bin DEFAULT NULL,
   `PHOTO` mediumblob NOT NULL,
-  `PHOTOTYPE` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `PHOTOTYPE` varchar(50) COLLATE utf8_bin NOT NULL,
   `CREATEDATE` datetime NOT NULL,
   `UPDATEDATE` datetime NOT NULL,
   `ACTCODE` tinyint(1) NOT NULL DEFAULT '0'
@@ -99,12 +99,12 @@ INSERT INTO `ITEMMAS` (`ITEMNO`, `ITEMNM`, `ITEMAMT`, `PRICE`, `DESCRIPTION`, `P
 
 CREATE TABLE `MSGMAS` (
   `MSGNO` int(15) NOT NULL,
-  `EMAIL` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `MSGTXT` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `EMAIL` varchar(50) COLLATE utf8_bin NOT NULL,
+  `MSGTXT` text COLLATE utf8_bin NOT NULL,
   `MSGPHOTO` mediumblob NOT NULL,
-  `MSGPHOTOTYPE` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `MSGVIDEO` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `MSGSTAT` varchar(1) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'A',
+  `MSGPHOTOTYPE` varchar(50) COLLATE utf8_bin NOT NULL,
+  `MSGVIDEO` varchar(100) COLLATE utf8_bin NOT NULL,
+  `MSGSTAT` varchar(1) COLLATE utf8_bin NOT NULL DEFAULT 'A',
   `REWARDSTAT` tinyint(1) NOT NULL DEFAULT '0',
   `CREATEDATE` datetime NOT NULL,
   `PUBLICDATE` datetime NOT NULL,
@@ -118,10 +118,10 @@ CREATE TABLE `MSGMAS` (
 --
 
 CREATE TABLE `ORDITEMMAS` (
-  `ORDNO` varchar(15) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `ITEMNO` varchar(15) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `ORDNO` varchar(15) COLLATE utf8_bin NOT NULL,
+  `ITEMNO` varchar(15) COLLATE utf8_bin NOT NULL,
   `ORDAMT` int(8) DEFAULT NULL,
-  `EMAIL` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `EMAIL` varchar(50) COLLATE utf8_bin NOT NULL,
   `CREATEDATE` datetime NOT NULL,
   `UPDATEDATE` datetime NOT NULL,
   `ACTCODE` tinyint(1) NOT NULL DEFAULT '1'
@@ -135,14 +135,14 @@ CREATE TABLE `ORDITEMMAS` (
 
 CREATE TABLE `ORDMAS` (
   `ORDNO` int(15) NOT NULL,
-  `ORDTYPE` varchar(1) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `EMAIL` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `INVOICENO` varchar(15) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `ORDTYPE` varchar(1) COLLATE utf8_bin NOT NULL,
+  `EMAIL` varchar(50) COLLATE utf8_bin NOT NULL,
+  `INVOICENO` varchar(15) COLLATE utf8_bin DEFAULT NULL,
   `BACKSTAT` tinyint(1) DEFAULT '1',
-  `ORDSTAT` varchar(1) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT 'E',
+  `ORDSTAT` varchar(1) COLLATE utf8_bin DEFAULT 'E',
   `PAYSTAT` tinyint(1) DEFAULT '0',
-  `PAYTYPE` varchar(1) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `ORDINST` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `PAYTYPE` varchar(1) COLLATE utf8_bin DEFAULT NULL,
+  `ORDINST` varchar(50) COLLATE utf8_bin DEFAULT NULL,
   `TOTALPRICE` int(8) DEFAULT '0',
   `REALPRICE` int(8) NOT NULL,
   `SHIPFEE` int(8) DEFAULT '0',
@@ -160,11 +160,11 @@ CREATE TABLE `ORDMAS` (
 --
 
 CREATE TABLE `OWNMAS` (
-  `COMNM` varchar(15) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `COMADD` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `COMTEL` varchar(15) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `COMEMAIL` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `COMTAXID` varchar(15) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `COMNM` varchar(15) COLLATE utf8_bin NOT NULL,
+  `COMADD` varchar(100) COLLATE utf8_bin NOT NULL,
+  `COMTEL` varchar(15) COLLATE utf8_bin NOT NULL,
+  `COMEMAIL` varchar(50) COLLATE utf8_bin NOT NULL,
+  `COMTAXID` varchar(15) COLLATE utf8_bin NOT NULL,
   `NORDNOG` int(15) NOT NULL,
   `NORDNOS` int(15) NOT NULL,
   `NMSGNO` int(15) NOT NULL
@@ -175,7 +175,7 @@ CREATE TABLE `OWNMAS` (
 --
 
 INSERT INTO `OWNMAS` (`COMNM`, `COMADD`, `COMTEL`, `COMEMAIL`, `COMTAXID`, `NORDNOG`, `NORDNOS`, `NMSGNO`) VALUES
-('Trisoap', '', '', '', '', 100000001, 900000001, 100001);
+('Trisoap', '台灣台北市大安區和平東路二段265巷3號', '', 'trisoap2015@gmail.com', '43864595', 100000001, 900000001, 100001);
 
 --
 -- 已匯出資料表的索引

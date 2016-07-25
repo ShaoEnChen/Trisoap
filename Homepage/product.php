@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>三三社企
+    <title>三三社企-產品故事
     </title>
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,31 +25,68 @@
         <div class="navbar-header">
           <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#page-top" class="navbar-brand page-scroll">
             <!-- Img or text logo--><img src="http://placehold.it/125x30" alt="" class="logo"></a>
-
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="hidden"><a href="#page-top"></a></li>
-             <li><a href="index.html">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-              
-            </li>
-            <li><a href="about.html">關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-            </li>
-            
-           
-            <li><a href="product.html">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-            </li>
-
-            <li><a href="service.html">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+            <li><a href="index.php">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="about.php">關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a>
               <ul class="dropdown-menu">
-               <li><a href="faq.html">顧客問答</a></li>
+              	<li><a href="faq.php">顧客問答</a></li>
               </ul>
-
-            <li><a href="message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-
-             <li><a href="contact.html">聯絡我們<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-
             </li>
+            <li><a href="message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="contact.php">聯絡我們<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <?
+            session_start();
+            $CUSIDT = $_SESSION['CUSIDT'];
+            if($CUSIDT == 'A'){
+              ?>
+              <li><a href="#">管理平台<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">權限管理</a></li>
+                  <li><a href="../methods/Update_ITEMMAS1.php">商品管理</a></li>
+                  <li><a href="../methods/Update_ORDMAS.php">訂單管理</a></li>
+                  <li><a href="#">留心語管理</a></li>
+                </ul>
+              </li>
+              <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">查看訂單</a></li>
+                  <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
+                  <li><a href="../methods/User_ChangePW1.php">修改密碼</a></li>
+                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
+                  <li><a href="../methods/User_logout.php">登出</a></li>
+                </ul>
+              </li>
+              <?
+            }
+            elseif($CUSIDT == 'B'){
+              ?>
+              <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">查看訂單</a></li>
+                  <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
+                  <li><a href="../methods/User_ChangePW1.php">修改密碼</a></li>
+                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
+                  <li><a href="../methods/User_logout.php">登出</a></li>
+                </ul>
+              </li>
+              <?
+            }
+            else{
+              ?>
+              <li><a href="#">註冊/登入<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="../method/Create_CUSMAS1.php">註冊</a></li>
+                  <li><a href="../method/User_login1.php">登入</a></li>
+                </ul>
+              </li>
+              <?
+            }
+            ?>
           </ul>
         </div>
       </div>
@@ -82,8 +119,8 @@
             <p>葡萄籽油－洗淨後的清爽感受，葡萄籽油是軟油中的特色油品，洗淨後帶給肌膚非常清爽而不黏膩的感受，與橄欖油的成分交疊，會有大小泡沫交雜的豐富洗感。取自台東小農「釋迦小羊牧場」所提供的釋迦果實，藉由將微弱的果酸添加減低肥皂中過於刺激的鹼性達成天然的去除膚質表面髒汙的獨家體驗</p><a href="product3.html" class="btn btn-gray btn-xs">更多</a>
           </div>
           <div class="col-sm-6"><a href="news-single-sidebar.html"><img src="img/news/1.jpg" alt="" class="img-responsive center-block">
-              <h5>禮盒</h5></a>
-            <p></p><a href="http://placehold.it/800x400" class="btn btn-gray btn-xs">更多</a>
+              <h5>三三臺東意象禮盒組</h5></a>
+            <p>三三臺東意象禮盒，乃由TriSoap三三社會企業研發後，將技術免費移轉給李勝賢文教基金會，並由其協力生產。李勝賢文教基金會位於台東市，是以服務憨兒為主的小型作業所，開辦愛心二手商店及手工皂製作已有數年之久。裡頭的憨兒各個是作皂好手，只要提及作皂他們便展現優於一般人的專注力與專業程度。作皂不只為了成品，更在於每個憨兒在作好皂後的自信笑容</p><a href="product4.html" class="btn btn-gray btn-xs">更多</a>
           </div>
           
         </div>

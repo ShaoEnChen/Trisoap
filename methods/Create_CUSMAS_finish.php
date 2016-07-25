@@ -16,32 +16,31 @@
 </head>
 
 <?php session_start();
-include("mysql_connect.php");
+include("Helper/mysql_connect.php");
+include("Helper/sql_operarion.php");
+include("Helper/handle_string.php");
+include("Helper/mail/mail.php");
 $message = '';
 
-$CUSNM = htmlentities($_POST['CUSNM']);
-$CUSPW1 = htmlentities($_POST['CUSPW1']);
-$CUSPW2 = htmlentities($_POST['CUSPW2']);
-$CUSADD = htmlentities($_POST['CUSADD']);
+$CUSNM = input('CUSNM');
+$CUSPW1 = input('CUSPW1');
+$CUSPW2 = input('CUSPW2');
+$CUSADD = input('CUSADD');
 $CUSTYPE = $_POST['CUSTYPE'];
-$CUSBIRTHY = htmlentities($_POST['CUSBIRTHY']);
-$CUSBIRTHM = htmlentities($_POST['CUSBIRTHM']);
-$CUSBIRTHD = htmlentities($_POST['CUSBIRTHD']);
-$TEL = htmlentities($_POST['TEL']);
-$EMAIL = htmlentities($_POST['EMAIL']);
-$TAXID = htmlentities($_POST['TAXID']);
+$CUSBIRTHY = input('CUSBIRTHY');
+$CUSBIRTHM = input('CUSBIRTHM');
+$CUSBIRTHD = input('CUSBIRTHD');
+$TEL = input('TEL');
+$EMAIL = input('EMAIL');
+$TAXID = input('TAXID');
 $KNOWTYPE = $_POST['KNOWTYPE'];
-$SPEINS = htmlentities($_POST['SPEINS']);
-date_default_timezone_set('Asia/Taipei');
-$MAILDATE = date("Y-m-d");
+$SPEINS = input('SPEINS');
 
 if($EMAIL == null){
         $message = $message . '電子信箱欄位不可空白 \n';
 }
-$queryEMAIL = "SELECT EMAIL FROM CUSMAS where EMAIL = '$EMAIL'";
-$result = mysql_query($queryEMAIL);
-$row = mysql_fetch_row($result);
-if($row[0] != null){
+$queryEMAIL = search('EMAIL', 'CUSMAS', 'EMAIL', $EMAIL);
+if($queryEMAIL != null){
         $message = $message . '此電子信箱已存在 \n';
 }
 if($CUSNM == null){
@@ -88,46 +87,7 @@ if($message == ''){
             $code .= $str[mt_rand(0, strlen($str)-1)];
         }
         $_SESSION['COMMIT'] = $code;
-
-        include("PHPMailerAutoload.php"); //匯入PHPMailer類別       
-        $mail= new PHPMailer(); //建立新物件        
-        $mail->IsSMTP(); //設定使用SMTP方式寄信        
-        $mail->SMTPAuth = true; //設定SMTP需要驗證        
-        $mail->SMTPSecure = 'ssl'; // Gmail的SMTP主機需要使用SSL連線   
-        $mail->Host = "smtp.gmail.com"; //Gamil的SMTP主機        
-        $mail->Port = 465;  //Gamil的SMTP主機的SMTP埠位為465埠。
-        $mail->IsHTML(true); //設定郵件內容為HTML        
-        $mail->CharSet = "utf-8"; //設定郵件編碼        
-        $mail->Username = "trisoap2015@gmail.com"; //設定驗證帳號        
-        $mail->Password = "n0n02015"; //設定驗證密碼        
-        $mail->From = "trisoap2015@gmail.com"; //設定寄件者信箱        
-        $mail->FromName = "三三吾鄉社會企業"; //設定寄件者姓名        
-        $mail->Subject = "三三吾鄉會員註冊驗證碼"; //設定郵件標題        
-        $mail->Body = "親愛的三三客戶您好：<br>
-        <br>
-        我們在此誠摯的感謝您註冊三三吾鄉成為會員，期望未來能有榮幸為您服務。<br>
-        <br>
-        您的會員註冊驗證碼為 " . $_SESSION['COMMIT'] . " ，請至原註冊頁面輸入以完成會員註冊。<br>
-        <br>
-        感謝您對三三吾鄉的支持。<br>
-        <br>
-        三三吾鄉社會企業團隊敬上<br>" .
-        $MAILDATE . "<br>
-        ________________________________<br>
-        <br>
-        三三吾鄉社會企業<br>
-        地址：106台北市大安區和平東路二段265巷3號<br>
-        email : trisaop2015@gmail.com<br>
-        網址 : xxxxxxxxxxxxx<br>      
-        "; //設定郵件內容                
-        $mail->AddAddress("$EMAIL"); //設定收件者郵件及名稱
-        if(!$mail->Send()) {        
-            ?>
-            <script>
-            alert("信件未寄出");
-            </script>
-            <?php       
-        }
+        mail_verify($EMAIL, $code);     
         ?>
 <body>
         <div class="container">
@@ -138,7 +98,7 @@ if($message == ''){
                 </div>
                 <div class="login-box animated fadeInUp">
                         <div class="box-header">
-                                <h2>Sign Up</h2>
+                                <h2>註冊</h2>
                         </div>
                         您的會員註冊驗證碼已寄至您的信箱，煩請您前往確認。<br>
                         <form name="form" method="post" action="Create_CUSMAS_end.php">
@@ -157,7 +117,7 @@ if($message == ''){
                                 <input type="password" id="password">
                                 <br/>
                         -->
-                                <button type="submit">Commit</button>
+                                <button type="submit">確定</button>
                         <!--
                                 <br/>
                                 <a href="#"><p class="small">Forgot your password?</p></a>

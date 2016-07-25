@@ -18,7 +18,7 @@
 
 <body>
 	<?php
-	include("mysql_connect.php");
+	include("Helper/mysql_connect.php");
 	$EMAIL = $_SESSION['EMAIL'];
 	$CUSIDT = $_SESSION['CUSIDT'];
 	if($EMAIL != null){
@@ -45,15 +45,7 @@
 				<a href="#"><p class="small">Forgot your password?</p></a>
 			-->
 			</form>
-			<?php
-			if($CUSIDT == 'A'){
-			?>
-				<button type="button"></buttom><a href="../Homepages/index_manager.php">取消</a>
-			<?php
-			}
-			else{
-			?>
-				<button type="button"></buttom><a href="../Homepages/index_customer.php">取消</a>
+			<button type="button"></buttom><a href="../Homepage/index.php">取消</a>
 		</div>
 	</div>
 	<?php
@@ -61,7 +53,7 @@
 	}
 	else{
 		echo '您無權限觀看此頁面!';
-    	echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepages/index.php>';
+    	echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/index.php>';
 	}
 	?>
 </body>

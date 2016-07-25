@@ -2,7 +2,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>三三吾鄉手工皂 更新商品</title>
 <?php
-include("mysql_connect.php");
+include("Helper/mysql_connect.php");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 

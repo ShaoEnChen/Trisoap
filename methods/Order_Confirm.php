@@ -67,43 +67,39 @@
       </div>
     </nav>
 
-    <!-- 內容 想><置中 -->
+    <!-- 內容想置中>< -->
     <div id="wrapper" style="text-align:center">
       <header id="header"><br><br><br></header> 
         <section id="about-slider">
             <div style="margin: 0 auto"> <font size="5">
 
                 <?php
-                include("mysql_connect.php");
+                include("Helper/mysql_connect.php");
+                include("Helper/sql_operation.php");
 
                 $EMAIL = $_SESSION['EMAIL'];
                 $ORDNO = $_SESSION['ORDNO'];
+                if(is_null($ORDNO)){
+                    $ORDNO = '100000000';
+                }
                 echo "<h2>已選擇的商品</h2>";
-                //echo '<hr>';
 
                 $ItemNo = array("ItemNo");
                 $ItemName = array("ItemName");
                 $Price = array(0);
                 $ItemAmount = array(0);
 
-                $sql = "SELECT ITEMNO FROM ORDITEMMAS where ORDNO = '$ORDNO'";
+                $sql = "SELECT ITEMNO FROM ORDITEMMAS where ORDNO = '$ORDNO' AND EMAIL = '$EMAIL'";
                 $no_result = mysql_query($sql);
                 while($no_row = mysql_fetch_row($no_result, MYSQL_NUM)){         //get item node
                     $node = $no_row[0];
-                    $sql = "SELECT ITEMNM FROM ITEMMAS where ITEMNO = '$node'";  //get item name
-                    $nm_result = mysql_query($sql);
-                    $nm_row = mysql_fetch_row($nm_result);
-                    $name = $nm_row[0];
+                    $name = search('ITEMNM', 'ITEMMAS', 'ITEMNO', $node);
                     array_push($ItemName, $name);
-
-                    $sql = "SELECT PRICE FROM ITEMMAS where ITEMNO = '$node'";  //get item price
-                    $p_result = mysql_query($sql);
-                    $p_row = mysql_fetch_row($p_result);
-                    $price = $p_row[0];
+                    $price = search('PRICE', 'ITEMMAS', 'ITEMNO', $node);
                     array_push($Price, $price);        
                 }
 
-                $sql = "SELECT ORDAMT FROM ORDITEMMAS where ORDNO = '$ORDNO'";  //get item amount
+                $sql = "SELECT ORDAMT FROM ORDITEMMAS where ORDNO = '$ORDNO' AND EMAIL = '$EMAIL'";  //get item amount
                 $amt_result = mysql_query($sql);
                 $number = mysql_num_rows($amt_result);
                 while($amt_row = mysql_fetch_row($amt_result, MYSQL_NUM)){
@@ -112,10 +108,7 @@
                 }
 
                 if($number != 0){
-                    $sql = "SELECT SHIPFEE FROM ORDMAS where ORDNO = '$ORDNO'";  //get shipfee
-                    $fee_result = mysql_query($sql);
-                    $fee_row = mysql_fetch_row($fee_result);
-                    $shipfee = $fee_row[0];
+                    $shipfee = search('SHIPFEE', 'ORDMAS', 'ORDNO', $ORDNO);
                 }
                 else{
                     echo "目前沒有選擇任何商品";
@@ -148,11 +141,23 @@
                 echo " 元</font>";
                 echo '<br><br>';
                 //echo '<hr>';
-                ?>
-                <div><buttom></buttom><a href="cashing_test1.php">確定結帳</a>
+                if($ORDNO == '100000000'){
+                    ?>
+                    <div><buttom></buttom><a href="Create_ORDMAS2.php">確定結帳</a>
                     <br><font size="4">(結帳完成後會自動登出)</font>
-                </div>
-                <!--<a href="../Homepages/product_customer.php" style="float: right">返回</a>-->
+                    </div>
+                    <!--<a href="../Homepages/product_customer.php" style="float: right">返回</a>-->
+                    <?
+                }
+                else{
+                    ?>
+                    <div><buttom></buttom><a href="cashing_test1.php">確定結帳</a>
+                    <br><font size="4">(結帳完成後會自動登出)</font>
+                    </div>
+                    <!--<a href="../Homepages/product_customer.php" style="float: right">返回</a>-->
+                    <?
+                }
+                ?>
             </div>
         </section>
     </div>

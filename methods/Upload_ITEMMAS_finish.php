@@ -3,7 +3,8 @@
 <title>三三吾鄉手工皂 上市商品</title>
 
 <?php
-include("mysql_connect.php");
+include("Helper/mysql_connect.php");
+include("Helper/sql_operation.php");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $message = null;
@@ -14,11 +15,9 @@ if($EMAIL != null){
                 if($newITEMNO == null){
                         $message = $message . '商品編號欄位不可空白<br>';
                 }
-                $queryITEMNO = "SELECT * FROM ITEMMAS where ITEMNO = '$newITEMNO'";
-                $result = mysql_query($queryITEMNO);
-                $row = mysql_fetch_row($result);
-                if($row[6] == '1'){
-                        $message = $message . "$row[1]已經上市<br>";
+                $row = select('ITEMMAS', 'ITEMNO', $newITEMNO);
+                if($row['ACTCODE'] == '1'){
+                        $message = $message . "$row['ITEMNM']已經上市<br>";
                 }
 
                 if($message == null){
@@ -38,10 +37,10 @@ if($EMAIL != null){
         }
         else{
                 echo '您無權限觀看此頁面!';
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index_customer.php>';
+                echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.php>';
         }
 }
 else{
         echo '您無權限觀看此頁面!';
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.php>';
 }

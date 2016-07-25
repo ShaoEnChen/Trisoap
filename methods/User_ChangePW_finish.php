@@ -1,25 +1,25 @@
 <?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-include("mysql_connect.php");
+include("Helper/mysql_connect.php");
+include("Helper/sql_operation.php");
+include("Helper/handel_string.php");
 $message = '';
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 
 if($EMAIL != null){
-        $queryEMAIL = "SELECT CUSPW FROM CUSMAS where EMAIL = '$EMAIL'";
-        $result = mysql_query($queryEMAIL);
-        $row = mysql_fetch_row($result);
-        $CUSPW = htmlentities($_POST['CUSPW']);
-        $newCUSPW1 = htmlentities($_POST['newCUSPW1']);
-        $newCUSPW2 = htmlentities($_POST['newCUSPW2']);
+        $queryPW = search('CUSPW', 'CUSMAS', 'EMAIL', $EMAIL);
+        $CUSPW = input('CUSPW');
+        $newCUSPW1 = input('newCUSPW1');
+        $newCUSPW2 = input('newCUSPW2');
         date_default_timezone_set('Asia/Taipei');
         $UPDATEDATE = date("Y-m-d H:i:s");
 
         if($CUSPW == null){
                 $message = $message . '原始密碼欄位不可空白 \n';
         }
-        if($CUSPW != $row[0]){
+        if(encrypt($CUSPW) != $queryPW){
                 $message = $message . '原始密碼錯誤 \n';
         }
         if(($newCUSPW1 == null) || ($newCUSPW2 == null)){
@@ -36,14 +36,15 @@ if($EMAIL != null){
         }
 
         if($message == null){
-                $sql = "UPDATE CUSMAS SET CUSPW = '$newCUSPW1', UPDATEDATE ='$UPDATEDATE' WHERE EMAIL='$EMAIL'";
+                $CUSPW = encrypt($newCUSPW1);
+                $sql = "UPDATE CUSMAS SET CUSPW = '$CUSPW', UPDATEDATE ='$UPDATEDATE' WHERE EMAIL='$EMAIL'";
                 if(mysql_query($sql)){               
 ?>
                         <script>
                         alert("密碼修改成功");
                         </script>
 <?php
-                        echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepages/index.php>';
+                        echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepage/index.php>';
                         
                 }
                 else
@@ -67,6 +68,6 @@ if($EMAIL != null){
 }
 else{
         echo '您無權限觀看此頁面!';
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.php>';
 }
 ?>

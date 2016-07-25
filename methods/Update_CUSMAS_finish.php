@@ -1,18 +1,18 @@
 <?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-include("mysql_connect.php");
+include("Helper/mysql_connect.php");
+include("Helper/handle_string.php");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 
-if($EMAIL != null)
-{
-        $CUSNM = htmlentities($_POST['CUSNM']);
-        $CUSADD = htmlentities($_POST['CUSADD']);
+if($EMAIL != null){
+        $CUSNM = input('CUSNM');
+        $CUSADD = input('CUSADD');
         $CUSTYPE = $_POST['CUSTYPE'];
-        $TEL = htmlentities($_POST['TEL']);
-        $SPEINS = htmlentities($_POST['SPEINS']);
-        $TAXID = htmlentities($_POST['TAXID']);
+        $TEL = input('TEL');
+        $SPEINS = input('SPEINS');
+        $TAXID = input('TAXID');
         date_default_timezone_set('Asia/Taipei');
         $UPDATEDATE = date("Y-m-d H:i:s");
 
@@ -50,7 +50,7 @@ if($EMAIL != null)
                         alert("資料修改成功");
                 </script>
 <?php
-                echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepages/index.php>';
+                echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepage/index.php>';
         }
         else{
 ?>
@@ -64,6 +64,6 @@ if($EMAIL != null)
 else
 {
         echo '您無權限觀看此頁面!';
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.php>';
 }
 ?>

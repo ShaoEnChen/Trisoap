@@ -2,7 +2,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>三三吾鄉手工皂 更新訂單</title>
 <?php
-include("mysql_connect.php");
+include("Helper/mysql_connect.php");
 $EMAIL = $_SESSION['EMAIL'];
 if($EMAIL != null){
         $queryORDNO = "SELECT * FROM ORDMAS where EMAIL='$EMAIL' AND ORDSTAT='E' AND PAYSTAT='0' AND ACTCODE='1'";

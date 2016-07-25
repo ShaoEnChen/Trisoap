@@ -18,14 +18,13 @@
 
 <body>
 	<?php
-	include("mysql_connect.php");
+	include("Helper/mysql_connect.php");
+	include("Helper/sql_operation.php");
 	$EMAIL = $_SESSION['EMAIL'];
 	$CUSIDT = $_SESSION['CUSIDT'];
 
 	if($EMAIL != null){
-        $sql = "SELECT * FROM CUSMAS where EMAIL='$EMAIL'";
-        $result = mysql_query($sql);
-        $row = mysql_fetch_row($result);
+		$row = select('CUSMAS', 'EMAIL', $EMAIL);
     ?>
 	<div class="container">
 		<div class="top">
@@ -37,35 +36,38 @@
 			<div class="box-header">
 				<h2>修改資料</h2>
 			</div>
-			<?php
-			echo "<form name=\"form\" method=\"post\" action=\"Update_CUSMAS_finish.php\">";
-			?>
+			<form name="form" method="post" action="Update_CUSMAS_finish.php">
 			<label for="username">
 			<?php
 				echo "電子信箱：$EMAIL <p>";
 			?>
 			<label for="username">姓名
 	        <?php
-	        echo "<input type=\"text\" name=\"CUSNM\" value=\"$row[2]\" />";
+	        $CUSNM = $row['CUSNM'];
+	        echo "<input type=\"text\" name=\"CUSNM\" value=\"$CUSNM\" />";
 	        ?>
 	        地址
 	        <?php
-	        echo "<input type=\"text\" name=\"CUSADD\" value=\"$row[4]\" /> <br>";
+	        $CUSADD = $row['CUSADD'];
+	        echo "<input type=\"text\" name=\"CUSADD\" value=\"$CUSADD\" /> <br>";
 	        ?>
 	    	</label><br>
 	    	<label for="username">電話
 	        <?php
-	        echo "<input type=\"text\" name=\"TEL\" value=\"$row[10]\" />";
+	        $TEL = $row['TEL'];
+	        echo "<input type=\"text\" name=\"TEL\" value=\"$TEL\" />";
 	        ?>
 	        統編
 	        <?php
-	        echo "<input type=\"text\" name=\"TAXID\" value=\"$row[14]\" />";
+	        $TAXID = $row['TAXID'];
+	        echo "<input type=\"text\" name=\"TAXID\" value=\"$TAXID\" />";
 	        ?>
 	    	</label><br>
 	        <label for="username">
 					<div class="styled-select">您的膚質*<select name="CUSTYPE"
 						<?php
-							echo "$row[11]";
+							$CUSTYPE = $row['CUSTYPE'];
+							echo "$CUSTYPE";
 						?>
 						></option>
 					  	<option value="A">乾性</option>
@@ -76,24 +78,14 @@
 				</label>
 	        <label for="username">特殊要求
 	        	<?php
-	        	echo "<textarea name=\"SPEINS\" cols=\"45\" rows=\"5\">$row[21]</textarea>";
+	        		$SPEINS = $row['SPEINS'];
+	        		echo "<textarea name=\"SPEINS\" cols=\"45\" rows=\"5\">$SPEINS</textarea>";
 	        	?>
 	        </label><br>
 	        
 	        <button type="submit">確定</button>
-	        <?php
-	        echo "</form>";
-        	?>
-			
-			<?php
-			if($CUSIDT == 'A'){
-			?>
-				<button type="button"></buttom><a href="../Homepages/index_manager.php">取消</a>
-			<?php
-			}
-			else{
-			?>
-				<button type="button"></buttom><a href="../Homepages/index_customer.php">取消</a>
+	        </form>
+			<button type="button"></buttom><a href="../Homepage/index.php">取消</a>
 		</div>
 	</div>
 	<?php
@@ -101,7 +93,7 @@
 	}
 	else{
         echo '您無權限觀看此頁面!';
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.php>';
 	}
 	?>
 </body>

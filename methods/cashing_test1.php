@@ -2,14 +2,12 @@
 <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 -->
 <?php
-include('AllPay.Payment.Integration.php');    //include the AllPay file
-include("mysql_connect.php");
+include("AllPay.Payment.Integration.php");    //include the AllPay file
+include("Helper/mysql_connect.php");
+include("Helper/sql_operation.php");
 
 $ORDNO = $_SESSION['ORDNO'];                  //get the order node
-$sql = "SELECT TOTALAMT FROM ORDMAS where ORDNO = '$ORDNO'";  //get the total amount
-$result = mysql_query($sql);
-$row = mysql_fetch_row($result);
-$totalamount = $row[0];
+$totalamount = search('TOTALAMT', 'ORDMAS', 'ORDNO', $ORDNO);
 
 try {
     $obj = new AllInOne();
@@ -41,16 +39,9 @@ try {
     $no_result = mysql_query($sql);
     while($no_row = mysql_fetch_row($no_result, MYSQL_NUM)){         //get item node
         $node = $no_row[0];
-        $sql = "SELECT ITEMNM FROM ITEMMAS where ITEMNO = '$node'";  //get item name
-        $nm_result = mysql_query($sql);
-        $nm_row = mysql_fetch_row($nm_result);
-        $name = $nm_row[0];
+        $name = search('ITEMNM', 'ITEMMAS', 'ITEMNO', $node);
         array_push($ItemName, $name);
-
-        $sql = "SELECT PRICE FROM ITEMMAS where ITEMNO = '$node'";  //get item price
-        $p_result = mysql_query($sql);
-        $p_row = mysql_fetch_row($p_result);
-        $price = $p_row[0];
+        $price = search('PRICE', 'ITEMMAS', 'ITEMNO', $node);
         array_push($Price, $price);
     }
 
@@ -62,10 +53,7 @@ try {
         array_push($ItemAmount, $amt);
     }
 
-    $sql = "SELECT SHIPFEE FROM ORDMAS where ORDNO = '$ORDNO'";  //get shipfee
-    $fee_result = mysql_query($sql);
-    $fee_row = mysql_fetch_row($fee_result);
-    $shipfee = $fee_row[0];
+    $shipfee = search('SHIPFEE', 'ORDMAS', 'ORDNO', $ORDNO);
 
     for($i=1; $i<=$number; $i++){
     	array_push($obj->Send['Items'], array('Name' => $ItemName[$i], 'Price' => $Price[$i],

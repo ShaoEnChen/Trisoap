@@ -1,13 +1,13 @@
 <?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-include("mysql_connect.php");
+include("Helper/mysql_connect.php");
 $EMAIL = $_SESSION['EMAIL'];
 $ORDNO = htmlentities($_POST['ORDNO']);
 $message = null;
 
 function ViewORDITEM($number){
-        include("mysql_connect.php");
+        include("Helper/mysql_connect.php");
         $ORDNO = htmlentities($_POST['ORDNO']);
         $ITEMNOnumber = 'ITEMNO' . "$number";
         $ITEMAMTnumber = 'ITEMAMT' . "$number";

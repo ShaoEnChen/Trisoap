@@ -4,7 +4,7 @@
 -->
 <?php
 include('AllPay.Payment.Integration1.php');
-include("mysql_connect.php");
+include("Helper/mysql_connect.php");
 
 /*
 * get feedback from AllPay

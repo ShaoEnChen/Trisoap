@@ -1,11 +1,13 @@
 <?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-include("mysql_connect.php");
+include("Helper/mysql_connect.php");
+include("Helper/sql_operation.php");
+include("Helper/handle_string.php");
 $message = '';
 
-$EMAIL = htmlentities($_POST['EMAIL']);
-$CUSPW = htmlentities($_POST['CUSPW']);
+$EMAIL = input('EMAIL');
+$CUSPW = input('CUSPW');
 
 if($EMAIL == null){
         $message = $message . '電子信箱欄位不可空白 \n';
@@ -15,31 +17,22 @@ if($CUSPW == null){
 }
 
 //搜尋資料庫資料
-$sql = "SELECT CUSPW FROM CUSMAS where EMAIL = '$EMAIL'";
-$result = mysql_query($sql);
-$row = mysql_fetch_row($result);
+$queryPW = search('CUSPW', 'CUSMAS', 'EMAIL', $EMAIL);
 
-if($CUSPW != $row[0]){
+if(encrypt($CUSPW) != $queryPW){
         $message = $message . '密碼錯誤 \n';
 }
 
 if($message == null){
         $_SESSION['EMAIL'] = $EMAIL;
-        $sql = "SELECT CUSIDT FROM CUSMAS where EMAIL = '$EMAIL'";
-        $result = mysql_query($sql);
-        $row = mysql_fetch_row($result);
-        $_SESSION['CUSIDT'] = $row[0];
+        $queryCUSIDT = search('CUSIDT', 'CUSMAS', 'EMAIL', $EMAIL);
+        $_SESSION['CUSIDT'] = $queryCUSIDT;
         ?>
-            <script>
-                alert("成功登入");
-            </script>
-        <?php
-        if($row[0] == 'A'){ 
-                echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepages/index_manager.php>';
-        }
-        else{
-                echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepages/index_customer.php>';
-        }
+        <script>
+            alert("成功登入");
+        </script>
+        <?
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepage/index.php>';
 }
 else
 {

@@ -67,61 +67,57 @@
       </div>
     </nav>
 
-    <!-- 內容 想><置中 -->
+    <!-- 內容想置中>< -->
     <div id="wrapper" style="text-align:center">
         <header id="header"><br><br><br></header> 
         <section id="about-slider">
             <div style="margin: 0 auto; margin-top: 15%;">
             
             <?php
-      			include("mysql_connect.php");
+      			include("Helper/mysql_connect.php");
+            include("Helper/update_price.php");
       			$EMAIL = $_SESSION['EMAIL'];
-      			$ITEMNO = $_SESSION['ITEMNO'];
       			$ORDNO = $_SESSION['ORDNO'];
-      			$ITEMAMT = htmlentities($_POST['ITEMAMT']);
-            if(is_numeric($ITEMAMT) == FALSE){
-              $ITEMAMT = '0';
+            $ITEMNO = input('ITEMNO');
+      			$ORDAMT = input('ORDAMT');
+            if(is_numeric($ORDAMT) == FALSE || $ORDAMT < 0){
+              $ORDAMT = '0';
             }
-            elseif($ITEMAMT < 0){
-              $ITEMAMT = '0';
-            }
-
       			if($EMAIL != null){
       				if($ITEMNO != null){
       					if($ORDNO == null){
-      						echo "請先建立訂單<br>";
-      						echo '<meta http-equiv=REFRESH CONTENT=2;url=Create_ORDMAS.php>';
+                  $ORDNO = '100000000';
       					}
-      					else{
-                  date_default_timezone_set('Asia/Taipei');
-      						$CREATEDATE = date("Y-m-d H:i:s");
-      			      $UPDATEDATE = date("Y-m-d H:i:s");
-      						$sql = "insert into ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, CREATEDATE, UPDATEDATE) values ('$ORDNO', '$ITEMNO', '$ITEMAMT', '$CREATEDATE', '$UPDATEDATE')";
-      						unset($_SESSION['ITEMNO']);
-      						if(mysql_query($sql)){
-      							echo "<h1>成功加入購物車</h1>";
-      							include("Update_PRICE.php");
+                date_default_timezone_set('Asia/Taipei');
+    						$CREATEDATE = date("Y-m-d H:i:s");
+    			      $UPDATEDATE = date("Y-m-d H:i:s");
+    						$sql = "insert into ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNO', '$ITEMNO', '$ORDAMT', 'EMAIL', '$CREATEDATE', '$UPDATEDATE')";
+    						unset($_SESSION['ITEMNO']);
+    						if(mysql_query($sql)){
+    							echo "<h1>成功加入購物車</h1>";
+                  if($ORDNO != '100000000'){
+                    update_price($ORDNO);
+                  }
       			?>
         
-      			<a href="../Homepages/product_customer.php" class="btn" size="4"><h2>繼續購物</h2></a> 
+      			<a href="../Homepage/product.html" class="btn" size="4"><h2>繼續購物</h2></a> 
     				<a href="Order_Confirm.php" class="btn" size="4"><h2>結帳</h2></a> <br>
     
       			<?php
-      						}
-      						else{
-      							echo "<h1>加入購物車失敗</h1><br>";
-      							echo '<meta http-equiv=REFRESH CONTENT=2;url=../Product/Product.php>';
-      						}
-      					}
+                }
+    						else{
+    							echo "<h1>加入購物車失敗</h1><br>";
+    							echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/product.html>';
+    						}
       				}
       				else{
-      					//echo "將把您導向商品頁<br>";
-      					echo '<meta http-equiv=REFRESH CONTENT=0.5;url=../Homepages/product_customer.php>';
+      					echo '請先選擇商品<br>';
+      					echo '<meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/product.html>';
       				}
       			}
       			else{
-      				echo '您無權限觀看此頁面!';
-      			    echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+              echo '您無權限觀看此頁面!';
+              echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.html>';
       			}
       			?>
 

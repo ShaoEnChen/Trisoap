@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>三三社企
+    <title>三三社企-產品介紹
     </title>
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -29,26 +29,64 @@
         <div class="collapse navbar-collapse navbar-main-collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="hidden"><a href="#page-top"></a></li>
-             <li><a href="index.html">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-              
-            </li>
-            <li><a href="about.html">關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-            </li>
-            
-           
-            <li><a href="product.html">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-            </li>
-
-            <li><a href="service.html">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+            <li><a href="index.php">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="about.php">關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a>
               <ul class="dropdown-menu">
-               <li><a href="faq.html">顧客問答</a></li>
+              	<li><a href="faq.php">顧客問答</a></li>
               </ul>
-
-            <li><a href="message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-
-             <li><a href="contact.html">聯絡我們<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-
             </li>
+            <li><a href="message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="contact.php">聯絡我們<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <?
+            session_start();
+            $CUSIDT = $_SESSION['CUSIDT'];
+            if($CUSIDT == 'A'){
+              ?>
+              <li><a href="#">管理平台<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">權限管理</a></li>
+                  <li><a href="../methods/Update_ITEMMAS1.php">商品管理</a></li>
+                  <li><a href="../methods/Update_ORDMAS.php">訂單管理</a></li>
+                  <li><a href="#">留心語管理</a></li>
+                </ul>
+              </li>
+              <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">查看訂單</a></li>
+                  <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
+                  <li><a href="../methods/User_ChangePW1.php">修改密碼</a></li>
+                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
+                  <li><a href="../methods/User_logout.php">登出</a></li>
+                </ul>
+              </li>
+              <?
+            }
+            elseif($CUSIDT == 'B'){
+              ?>
+              <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">查看訂單</a></li>
+                  <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
+                  <li><a href="../methods/User_ChangePW1.php">修改密碼</a></li>
+                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
+                  <li><a href="../methods/User_logout.php">登出</a></li>
+                </ul>
+              </li>
+              <?
+            }
+            else{
+              ?>
+              <li><a href="#">註冊/登入<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="../method/Create_CUSMAS1.php">註冊</a></li>
+                  <li><a href="../method/User_login1.php">登入</a></li>
+                </ul>
+              </li>
+              <?
+            }
+            ?>
           </ul>
         </div>
       </div>
@@ -82,8 +120,8 @@
             <div class="col-lg-6 slide">
               <h4>田靜山巒禾風皂 (米皂) </h4>
               <p class="small">REF. 9583301-234</p>
-              <p>點點金黃的花絲在皂上綴躍，好比座落在太麻里原生的花田，點綴著清幽的臺東。
-              手作渲染的花紋，隨著不同的心情有所變化；每種皂款都為你獻上獨一。</p>
+              <p>徐徐微風拂過，隨風搖曳的稻禾色調，是種清心舒適的享受。
+              艾草底層與金盞花粉夾層的色澤設計，凸顯台東的小農意象。</p>
               <!-- Indicators-->
               <ol class="carousel-indicators mCustomScrollbar">
                 <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/shop/single1.jpg" alt=""></li>
@@ -93,15 +131,16 @@
                 <li data-target="#carousel-shop" data-slide-to="4"><img src="img/shop/single5.jpg" alt=""></li>
               </ol>
               <hr>
-              <p>主要成分 / 乳油木果脂 橄欖油 椰子油 棕梠油 台東乾燥金針花絲</p>
-              <p>適用膚質 / 中性與乾燥之膚質適用</p>
-              <form class="form-inline">
+              <p>主要成分 / 乳油木果脂、甜杏仁油、橄欖油、椰子油、棕梠油、池上米、研磨艾草粉、研磨金盞花粉</p>
+              <p>適用膚質 / 敏感性膚質、中性與冬天易乾燥之膚質適用</p>
+              <form class="form-inline" method="post" action="../methods/Purchase_finish.php">
                 <div class="form-group">
-                  <h2 class="no-pad">$134</h2>
+                  <h2 class="no-pad">$300</h2>
                 </div>
                 <div class="form-group">
                   <label for="number"></label>
-                  <input id="number" type="number" value="1" max="50" min="1" class="form-control">
+                  <input id="number" type="number" name="ORDAMT" value="1" max="50" min="1" class="form-control">
+                  <input type="hidden" name="ITEMNO" value="1">
                 </div>
                 <button type="submit" class="btn btn-dark">加入購物車</button>
               </form>

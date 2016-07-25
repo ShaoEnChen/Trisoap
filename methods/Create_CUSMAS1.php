@@ -128,7 +128,7 @@
 						</select>
 						</div>
 					</label>
-				<label for="username">所屬國家<input type="text" name="CUSBIRTHD" value="Taiwan"/>  您的電話<input type="text" name="TEL" value="<?php echo $TEL;?>"/></label><br>
+				<label for="username">所屬國家<input type="text" name="COUNTRY" value="Taiwan"/>  您的電話<input type="text" name="TEL" value="<?php echo $TEL;?>"/></label><br>
 				<label for="username">您的地址<input type="text" name="CUSADD" value="<?php echo $CUSADD;?>"/>  統一編號<input type="text" name="TAXID" value="<?php echo $TAXID;?>"/></label><br>
 				<label for="username">
 					<div class="styled-select">您的膚質*<select name="CUSTYPE">

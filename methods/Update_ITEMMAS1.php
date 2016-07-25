@@ -16,7 +16,7 @@
     </head>
     <body id="page-top">
         <?php
-            include("mysql_connect.php");
+            include("Helper/mysql_connect.php");
             $EMAIL = $_SESSION['EMAIL'];
             $CUSIDT = $_SESSION['CUSIDT'];
             if($EMAIL != null):

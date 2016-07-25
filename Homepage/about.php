@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>三三社企
+    <title>三三社企-關於三三
     </title>
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -29,27 +29,64 @@
         <div class="collapse navbar-collapse navbar-main-collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="hidden"><a href="#page-top"></a></li>
-             <li><a href="index.html">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-              
-            </li>
-            <li><a href="about.html">關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-            </li>
-            
-           
-            <li><a href="product.html">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-            </li>
-
-            <li><a href="service.html">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+            <li><a href="index.php">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="about.php">關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a>
               <ul class="dropdown-menu">
-               <li><a href="faq.html">顧客問答</a></li>
+                <li><a href="faq.php">顧客問答</a></li>
               </ul>
-
-            <li><a href="message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-
-             <li><a href="contact.html">聯絡我們<i class="fa fa-angle-down"></i><span class="caret"></span></a>
-
             </li>
-            
+            <li><a href="message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="contact.php">聯絡我們<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <?
+            session_start();
+            $CUSIDT = $_SESSION['CUSIDT'];
+            if($CUSIDT == 'A'){
+              ?>
+              <li><a href="#">管理平台<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">權限管理</a></li>
+                  <li><a href="../methods/Update_ITEMMAS1.php">商品管理</a></li>
+                  <li><a href="../methods/Update_ORDMAS.php">訂單管理</a></li>
+                  <li><a href="#">留心語管理</a></li>
+                </ul>
+              </li>
+              <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">查看訂單</a></li>
+                  <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
+                  <li><a href="../methods/User_ChangePW1.php">修改密碼</a></li>
+                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
+                  <li><a href="../methods/User_logout.php">登出</a></li>
+                </ul>
+              </li>
+              <?
+            }
+            elseif($CUSIDT == 'B'){
+              ?>
+              <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">查看訂單</a></li>
+                  <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
+                  <li><a href="../methods/User_ChangePW1.php">修改密碼</a></li>
+                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
+                  <li><a href="../methods/User_logout.php">登出</a></li>
+                </ul>
+              </li>
+              <?
+            }
+            else{
+              ?>
+              <li><a href="#">註冊/登入<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="../method/Create_CUSMAS1.php">註冊</a></li>
+                  <li><a href="../method/User_login1.php">登入</a></li>
+                </ul>
+              </li>
+              <?
+            }
+            ?>
           </ul>
         </div>
       </div>
