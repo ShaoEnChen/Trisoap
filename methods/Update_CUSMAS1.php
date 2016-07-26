@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +17,7 @@
 
 <body>
 	<?php
+	session_start();
 	include("Helper/mysql_connect.php");
 	include("Helper/sql_operation.php");
 	$EMAIL = $_SESSION['EMAIL'];

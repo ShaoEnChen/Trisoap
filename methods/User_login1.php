@@ -104,10 +104,11 @@
 <div class="login-block">
     <h1>Login</h1>
     <form name="form" method="post" action="User_login_finish.php">
-        <label for="username"><input type="text" value="" placeholder="電子信箱" id="username" /></label>
-        <label for="password"><input type="password" value="" placeholder="密碼" id="password" /></label>
+        <label for="username"><input type="text" value="" placeholder="電子信箱" name="EMAIL" id="username" /></label>
+        <label for="password"><input type="password" value="" placeholder="密碼" name="CUSPW" id="password" /></label>
         <button type="submit">登入</button>
-    </form>
+    </form><br>
+    <button type="button"></buttom><a href="../Homepage/index.php">取消</a>
 </div>
 </body>
 <script>

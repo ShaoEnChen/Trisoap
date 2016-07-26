@@ -1,6 +1,6 @@
-<?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
+session_start();
 include("Helper/mysql_connect.php");
 include("Helper/handle_string.php");
 $EMAIL = $_SESSION['EMAIL'];
@@ -50,7 +50,7 @@ if($EMAIL != null){
                         alert("資料修改成功");
                 </script>
 <?php
-                echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepage/index.php>';
+                echo '<meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>';
         }
         else{
 ?>
@@ -58,12 +58,12 @@ if($EMAIL != null){
                         alert("<?echo $message;?>");
                 </script>
 <?php
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=Update_CUSMAS1.php>';
+                echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Update_CUSMAS1.php>';
         }
 }
 else
 {
         echo '您無權限觀看此頁面!';
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/index.php>';
 }
 ?>

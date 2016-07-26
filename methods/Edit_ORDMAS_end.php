@@ -2,6 +2,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
 include("Helper/mysql_connect.php");
+include("Helper/sql_operation.php");
+include("Helper/handle_string.php");
+include("Helper/update_price.php");
 $EMAIL = $_SESSION['EMAIL'];
 $ORDNO = $_SESSION['ORDNO'];
 $number = $_SESSION['number'];
@@ -9,9 +12,7 @@ $message = null;
 $price = 0;
 
 if($EMAIL != null){
-        $queryORDNO = "SELECT * FROM ORDMAS WHERE ORDNO='$ORDNO'";
-        $result = mysql_query($queryORDNO);
-        $row = mysql_fetch_array($result);
+        $row = select('ORDMAS', 'ORDNO', $ORDNO);
         if($row['ORDSTAT'] != 'E'){
                 $message = $message . '此訂單已進入執行狀態，故無法更新<br>';
         }
@@ -26,11 +27,10 @@ if($EMAIL != null){
                         $UPDATEDATE = date("Y-m-d H:i:s");
                         $ITEMNOnumber = 'ITEMNO' . "$number";
                         $ITEMAMTnumber = 'ITEMAMT' . "$number";
-                        $ITEMNO = $_POST["$ITEMNOnumber"];
-                        $ITEMAMT = htmlentities($_POST["$ITEMAMTnumber"]);
-                        $sql = "SELECT * FROM ORDITEMMAS WHERE ORDNO='$ORDNO' AND ITEMNO='$number'";
-                        $result = mysql_query($sql);
-                        $row = mysql_fetch_row($result);
+                        $ITEMNO = input($ITEMNOnumber);
+                        $ITEMAMT = input($ITEMAMTnumber);
+                        $middle = select('ORDITEMMAS', 'ORDNO', $ORDNO);
+                        $row = select($middle, 'ITEMNO', $number);
                         if($row != false)
                                 $sql = "UPDATE ORDITEMMAS SET ORDAMT='$ITEMAMT', UPDATEDATE='$UPDATEDATE' WHERE ITEMNO='$ITEMNO'";
                         else{
@@ -46,7 +46,7 @@ if($EMAIL != null){
                 $number -= 1;
                 }
                 unset($_SESSION['number']);
-                include("Update_PRICE.php");
+                update_price($ORDNO);
                 unset($_SESSION['ORDNO']);
         }
         else{
@@ -55,7 +55,7 @@ if($EMAIL != null){
         }
         if($message == null){
                 echo "更新成功";
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=../Order/ORDMAS.php>';
+                echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/index.php>';
         }
         else{
                 echo $message;
@@ -64,6 +64,6 @@ if($EMAIL != null){
 }
 else{
         echo '您無權限觀看此頁面!';
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/index.php>';
 }
 ?>

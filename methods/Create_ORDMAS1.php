@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +17,7 @@
 
 <body>
 	<?php
+	session_start();
 	include("Helper/mysql_connect.php");
 	$EMAIL = $_SESSION['EMAIL'];
 	$CUSIDT = $_SESSION['CUSIDT'];
@@ -34,11 +34,10 @@
 			<div class="box-header">
 				<h2>建立訂單</h2>
 			</div>
-			<form name="form" method="post" action="Create_ORDMAS_finish.php">
+			<form name="form" method="post" action="Create_ORDMAS1_finish.php">
 	        <label for="username">
 				<div class="styled-select">訂單種類*<br>
 					<select name="ORDTYPE">
-						<!--<option value=""></option>-->
 						<option value="G">一般處理</option>
 						<!--<option value="S">特別處理</option>-->
 					</select>
@@ -52,24 +51,14 @@
 	        
 	        <button type="submit">確定</button>
 	        </form>
-			
-			<?php
-			if($CUSIDT == 'A'){
-			?>
-				<button type="button"></buttom><a href="../Homepages/product_manager.php">取消</a>
-			<?php
-			}
-			else{
-			?>
-				<button type="button"></buttom><a href="../Homepages/product_customer.php">取消</a>
+			<button type="button"></buttom><a href="../Homepage/product.php">取消</a>
 		</div>
 	</div>
 	<?php
-			}
 	}
 	else{
 		echo '請先登入或註冊!';
-    	echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepages/product.php>';
+    	echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/product.php>';
 	}
 	?>
 </body>

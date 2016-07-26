@@ -1,7 +1,7 @@
-<?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>三三吾鄉手工皂 取消訂單</title>
 <?php
+session_start();
 include("Helper/mysql_connect.php");
 $EMAIL = $_SESSION['EMAIL'];
 if($EMAIL != null){
@@ -10,7 +10,7 @@ if($EMAIL != null){
         $item = mysql_fetch_array($result);
         if($item == false){
                 echo '您沒有可取消的訂單!<br>';
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=../Order/ORDMAS.php>';
+                echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/index.php>';
         }
         else{
                 echo "<form name=\"form\" method=\"post\" action=\"Delete_ORDMAS_finish.php\">";
@@ -26,11 +26,11 @@ if($EMAIL != null){
         echo "<input type=\"submit\" name=\"button\" value=\"確定\" />";
         echo "</form> <br>";
 ?>
-<a href="../Order/ORDMAS.php">取消</a>
+<a href="../Homepage/index.php">取消</a>
 <?php
 }
 else{
         echo '請先註冊或登入!';
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/index.php>';
 }
 ?>

@@ -143,7 +143,8 @@
 <div class="login-block">
     <h1>Register</h1>
     <form name="form" method="post" action="Create_CUSMAS_finish.php">
-        <?php session_start();
+        <?
+        session_start();
         $CUSNM = $_SESSION['CUSNM'];
         $CUSADD = $_SESSION['CUSADD'];
         $CUSTYPE = $_SESSION['CUSTYPE'];
@@ -159,13 +160,12 @@
         <label for="username"><input type="text" name="EMAIL" value="<?echo $EMAIL;?>" placeholder="電子信箱*" id="username"/></label>
         <label for="name"><input type="text" name="CUSNM" value="<?echo $CUSNM;?>" placeholder="您的姓名*" id="name"/></label>
         <label for="password"><input type="password" name="CUSPW1" placeholder="設定密碼*" id="password"/></label>
-        <label for="password"><input type="password" name="CUSPW2" placeholder="再次輸入密碼*" id="password2"/></label>
-        <label for="username"><input type="date" name="bday"></label>
-
+        <label for="password2"><input type="password" name="CUSPW2" placeholder="再次輸入密碼*" id="password2"/></label>
         <!-- <label for="username"><input type="text" name="COUNTRY" value="Taiwan" placeholder="所屬國家"/></label> -->
-        <label for="username"><input type="text" name="TEL" value="<?php echo $TEL;?>" placeholder="聯絡電話"/></label>
-        <label for="username"><input type="text" name="CUSADD" value="<?php echo $CUSADD;?>" placeholder="通訊地址"/></label> 
-        <label for="username"><input type="text" name="TAXID" value="<?php echo $TAXID;?>" placeholder="統一編號"/></label>
+        <label for="bookdate"><input type="date" name="CUSBIRTH" placeholder="生日  ex.1999-12-31" id="bookdate"/></label>
+        <label for="phonenumber"><input type="text" name="TEL" value="<?php echo $TEL;?>" placeholder="聯絡電話" id="phonenumber"/></label>
+        <label for="address"><input type="text" name="CUSADD" value="<?php echo $CUSADD;?>" placeholder="通訊地址" id="address"/></label> 
+        <label for="uniformnum"><input type="text" name="TAXID" value="<?php echo $TAXID;?>" placeholder="統一編號" id="uniformnum"/></label>
         <label for="username">
             <div class="q-select">
                 <select name="CUSTYPE">
@@ -186,9 +186,9 @@
             </div>
         </label>
         <label for="username"><textarea name="SPEINS" value="<?php echo $SPEINS;?>" placeholder="特殊要求""></textarea></label>
-        
         <button type="submit">註冊</button>
-    </form>
+    </form><br>
+    <button type="button"></buttom><a href="../Homepage/index.php">取消</a>
 </div>
 </body>
 <script>

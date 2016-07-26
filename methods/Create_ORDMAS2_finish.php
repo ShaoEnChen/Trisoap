@@ -1,6 +1,6 @@
-<?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
+session_start();
 include("Helper/mysql_connect.php");
 include("Helper/sql_operation.php");
 include("Helper/handle_string.php");
@@ -36,7 +36,7 @@ if($EMAIL != null){
                 alert("訂單建立失敗");
             </script>
 <?php
-    		echo '<meta http-equiv=REFRESH CONTENT=2;url=Create_ORDMAS2.php>';
+    		echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Create_ORDMAS2.php>';
     	}
     }
     else{
@@ -48,7 +48,6 @@ if($EMAIL != null){
             $sql = "UPDATE ORDITEMMAS SET ORDNO = $ORDNOS WHERE ORDNO = 100000000 AND EMAIL = '$EMAIL'";
             mysql_query($sql);
     		$_SESSION['ORDNO'] = $ORDNOS;
-    		//echo "建立訂單成功";
 ?>
             <script>
                 alert("訂單建立成功，將為您導向歐付寶頁面。");
@@ -62,11 +61,11 @@ if($EMAIL != null){
                 alert("訂單建立失敗");
             </script>
 <?php
-    		echo '<meta http-equiv=REFRESH CONTENT=2;url=Create_ORDMAS2.php>';
+    		echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Create_ORDMAS2.php>';
     	}
     }
 }
 else{
 	echo '您無權限觀看此頁面!';
-    echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+    echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.php>';
 }

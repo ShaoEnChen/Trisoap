@@ -1,21 +1,20 @@
-<?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
+session_start();
 include("Helper/mysql_connect.php");
+include("Helper/sql_operation.php");
 $EMAIL = $_SESSION['EMAIL'];
 $ORDNO = $_POST['ORDNO'];
 $message = null;
 
 if($EMAIL != null){
-        $queryORDNO = "SELECT * FROM ORDMAS where ORDNO='$ORDNO'";
-        $result = mysql_query($queryORDNO);
-        $row = mysql_fetch_row($result);
+        $row = select('ORDMAS', 'ORDNO', $ORDNO);
         date_default_timezone_set('Asia/Taipei');
         $UPDATEDATE = date("Y-m-d H:i:s");
-        if($row[5] != 'E'){
+        if($row['ORDSTAT'] != 'E'){
                 $message = $message . '此訂單已進入執行狀態，故無法取消<br>';
         }
-        if($row[6] == '1'){
+        if($row['PAYSTAT'] == '1'){
                 $message = $message . '無法取消已付款之訂單<br>';
         }
         if($message == null){
@@ -30,7 +29,7 @@ if($EMAIL != null){
         }
         if($message == null){
                 echo "取消成功";
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=../Order/ORDMAS.php>';
+                echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/index.php>';
         }
         else{
                 echo $message;
@@ -39,6 +38,6 @@ if($EMAIL != null){
 }
 else{
         echo '您無權限觀看此頁面!';
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/index.php>';
 }
 ?>
