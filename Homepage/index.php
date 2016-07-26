@@ -32,18 +32,18 @@
             <li><a href="index.php">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="about.php">關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+            <!-- <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a>
               <ul class="dropdown-menu">
               	<li><a href="faq.php">顧客問答</a></li>
               </ul>
-            </li>
+            </li> -->
             <li><a href="message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <li><a href="contact.php">聯絡我們<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <!-- <li><a href="contact.php">聯絡我們<i class="fa fa-angle-down"></i><span class="caret"></span></a></li> -->
             <?
             session_start();
             $CUSIDT = $_SESSION['CUSIDT'];
             if($CUSIDT == 'A'){
-              ?>
+            ?>
               <li><a href="#">管理平台<i class="fa fa-angle-down"></i><span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="../manager/Update_Manager.php">權限管理</a></li>
@@ -52,39 +52,39 @@
                   <li><a href="#">留心語管理</a></li>
                 </ul>
               </li>
-              <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+              <!-- <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">查看訂單</a></li>
+                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
                   <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
                   <li><a href="../methods/User_ChangePW1.php">修改密碼</a></li>
-                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
+                  <li><a href="#">查看訂單</a></li>
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
-              </li>
-              <?
+              </li> -->
+            <?
             }
             elseif($CUSIDT == 'B'){
-              ?>
+            ?>
               <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">查看訂單</a></li>
+                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
                   <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
                   <li><a href="../methods/User_ChangePW1.php">修改密碼</a></li>
-                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
+                  <li><a href="#">查看訂單</a></li>
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>
-              <?
+            <?
             }
             else{
-              ?>
+            ?>
               <li><a href="#">註冊/登入<i class="fa fa-angle-down"></i><span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="../methods/Create_CUSMAS1.php">註冊</a></li>
                   <li><a href="../methods/User_login1.php">登入</a></li>
                 </ul>
               </li>
-              <?
+            <?
             }
             ?>
             
@@ -103,7 +103,7 @@
       <div class="intro-body">
         
         <h1>三三 吾鄉皂</h1>
-       
+        
         <div data-wow-delay="1.4s" class="scroll-btn hidden-xs wow fadeInDown"><a href="#about" class="page-scroll"><span class="mouse"><span class="weel"><span></span></span></span></a></div>
       </div>
     </header>

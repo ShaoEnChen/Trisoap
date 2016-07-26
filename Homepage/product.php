@@ -108,19 +108,19 @@
         <div class="row grid-pad">
           <div class="col-sm-6"><a href="news-single-sidebar.html"><img src="img/news/1.jpg" alt="" class="img-responsive center-block">
               <h5>田靜山巒禾風皂 (米皂）</h5></a>
-            <p>甜杏仁油－蘊含天然維他命的豐富油，甜杏仁油是手工皂界的優良油品，富含天然維他命對於改善過乾的肌膚有良好的作用，亦適用於敏感性肌膚調理。禾風皂由台東池上在地小農「高家米倉」提供的純淨米糠乾燥研磨後添加至皂中，可藉由純淨米糠的顆粒清除肌膚中的細微髒汙</p><a href="product1.html" class="btn btn-gray btn-xs">更多</a>
+            <p>甜杏仁油－蘊含天然維他命的豐富油，甜杏仁油是手工皂界的優良油品，富含天然維他命對於改善過乾的肌膚有良好的作用，亦適用於敏感性肌膚調理。禾風皂由台東池上在地小農「高家米倉」提供的純淨米糠乾燥研磨後添加至皂中，可藉由純淨米糠的顆粒清除肌膚中的細微髒汙</p><a href="product1.php" class="btn btn-gray btn-xs">更多</a>
           </div>
           <div class="col-sm-6"><a href="news-single-sidebar.html"><img src="img/news/1.jpg" alt="" class="img-responsive center-block">
               <h5>金絲森林渲染皂 (金針花皂）</h5></a>
-            <p>乳油木果脂－神奇奶油樹的聖品，由非洲乳油木樹中的果油提煉而出，在洗感上帶給肌膚滋潤卻又不黏膩的舒適體驗；搭配台東池上的乾燥金針，點點花絲由手作渲染而出的花紋更在視覺上帶來豐富感受。四種油品的經典配方是TriSoap三三的經典皂款，帶給你不論視覺或洗感上都獨一無二的經典旅程</p><a href="product2.html" class="btn btn-gray btn-xs">更多</a>
+            <p>乳油木果脂－神奇奶油樹的聖品，由非洲乳油木樹中的果油提煉而出，在洗感上帶給肌膚滋潤卻又不黏膩的舒適體驗；搭配台東池上的乾燥金針，點點花絲由手作渲染而出的花紋更在視覺上帶來豐富感受。四種油品的經典配方是TriSoap三三的經典皂款，帶給你不論視覺或洗感上都獨一無二的經典旅程</p><a href="product2.php" class="btn btn-gray btn-xs">更多</a>
           </div>
           <div class="col-sm-6"><a href="news-single-sidebar.html"><img src="img/news/1.jpg" alt="" class="img-responsive center-block">
               <h5>釋迦手感果力皂 (釋迦皂）</h5></a>
-            <p>葡萄籽油－洗淨後的清爽感受，葡萄籽油是軟油中的特色油品，洗淨後帶給肌膚非常清爽而不黏膩的感受，與橄欖油的成分交疊，會有大小泡沫交雜的豐富洗感。取自台東小農「釋迦小羊牧場」所提供的釋迦果實，藉由將微弱的果酸添加減低肥皂中過於刺激的鹼性達成天然的去除膚質表面髒汙的獨家體驗</p><a href="product3.html" class="btn btn-gray btn-xs">更多</a>
+            <p>葡萄籽油－洗淨後的清爽感受，葡萄籽油是軟油中的特色油品，洗淨後帶給肌膚非常清爽而不黏膩的感受，與橄欖油的成分交疊，會有大小泡沫交雜的豐富洗感。取自台東小農「釋迦小羊牧場」所提供的釋迦果實，藉由將微弱的果酸添加減低肥皂中過於刺激的鹼性達成天然的去除膚質表面髒汙的獨家體驗</p><a href="product3.php" class="btn btn-gray btn-xs">更多</a>
           </div>
           <div class="col-sm-6"><a href="news-single-sidebar.html"><img src="img/news/1.jpg" alt="" class="img-responsive center-block">
               <h5>三三臺東意象禮盒組</h5></a>
-            <p>三三臺東意象禮盒，乃由TriSoap三三社會企業研發後，將技術免費移轉給李勝賢文教基金會，並由其協力生產。李勝賢文教基金會位於台東市，是以服務憨兒為主的小型作業所，開辦愛心二手商店及手工皂製作已有數年之久。裡頭的憨兒各個是作皂好手，只要提及作皂他們便展現優於一般人的專注力與專業程度。作皂不只為了成品，更在於每個憨兒在作好皂後的自信笑容</p><a href="product4.html" class="btn btn-gray btn-xs">更多</a>
+            <p>三三臺東意象禮盒，乃由TriSoap三三社會企業研發後，將技術免費移轉給李勝賢文教基金會，並由其協力生產。李勝賢文教基金會位於台東市，是以服務憨兒為主的小型作業所，開辦愛心二手商店及手工皂製作已有數年之久。裡頭的憨兒各個是作皂好手，只要提及作皂他們便展現優於一般人的專注力與專業程度。作皂不只為了成品，更在於每個憨兒在作好皂後的自信笑容</p><a href="product4.php" class="btn btn-gray btn-xs">更多</a>
           </div>
           
         </div>
