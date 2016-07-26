@@ -1,15 +1,15 @@
-<?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
+session_start();
 include("Helper/mysql_connect.php");
+include("Helper/handle_string.php");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $ORIGIN = $_SESSION['ORIGIN'];
 $message = null;
 
-if($EMAIL != null){
-        if($CUSIDT == 'A'){
-                $INVOICENO = $_POST['INVOICENO'];
+if($EMAIL != null && $CUSIDT == 'A'){
+                $INVOICENO = input('INVOICENO');
                 date_default_timezone_set('Asia/Taipei');
                 $UPDATEDATE = date("Y-m-d H:i:s");
                 $sql = "UPDATE ORDMAS SET INVOICENO='$INVOICENO' WHERE ORDNO='$ORDNO'";
@@ -31,19 +31,14 @@ if($EMAIL != null){
                 }
                 unset($_SESSION['ORIGIN']);
                 if($ORIGIN == '1')
-                        echo '<meta http-equiv=REFRESH CONTENT=2;url=Update_ORDMAS_1.php>';
+                        echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Update_ORDMAS_1.php>';
                 elseif($ORIGIN == 'F')
-                        echo '<meta http-equiv=REFRESH CONTENT=2;url=Update_ORDMAS_F.php>';
+                        echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Update_ORDMAS_F.php>';
                 else
-                        echo '<meta http-equiv=REFRESH CONTENT=2;url=Update_ORDMAS_R.php>';
-        }
-        else{
-                echo '您無權限觀看此頁面!';
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index_customer.php>';
-        }
+                        echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Update_ORDMAS_R.php>';
 }
 else{
         echo '您無權限觀看此頁面!';
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/index.php>';
 }
 ?>

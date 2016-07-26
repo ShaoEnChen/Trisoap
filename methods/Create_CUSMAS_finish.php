@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
         <meta charset="utf-8">
         <title>三三社企-註冊</title>
@@ -14,10 +13,10 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
-
-<?php session_start();
+<?
+session_start();
 include("Helper/mysql_connect.php");
-include("Helper/sql_operarion.php");
+include("Helper/sql_operation.php");
 include("Helper/handle_string.php");
 include("Helper/mail/mail.php");
 $message = '';
@@ -27,9 +26,10 @@ $CUSPW1 = input('CUSPW1');
 $CUSPW2 = input('CUSPW2');
 $CUSADD = input('CUSADD');
 $CUSTYPE = $_POST['CUSTYPE'];
-$CUSBIRTHY = input('CUSBIRTHY');
-$CUSBIRTHM = input('CUSBIRTHM');
-$CUSBIRTHD = input('CUSBIRTHD');
+$CUSBIRTH = explode('-', input('CUSBIRTH'));
+$CUSBIRTHY = $CUSBIRTH[0];
+$CUSBIRTHM = $CUSBIRTH[1];
+$CUSBIRTHD = $CUSBIRTH[2];
 $TEL = input('TEL');
 $EMAIL = input('EMAIL');
 $TAXID = input('TAXID');
@@ -103,27 +103,9 @@ if($message == ''){
                         您的會員註冊驗證碼已寄至您的信箱，煩請您前往確認。<br>
                         <form name="form" method="post" action="Create_CUSMAS_end.php">
                                 <label for="username">驗證碼*<input type="text" name="VERIFY" /></label><br>
-                                <!--
-                                <input type="submit" name="button" value="註冊" />
-                                -->
-                                
-                        <!--
-                                <label for="username">Username</label>
-                                <br/>
-                                <input type="text" id="username">
-                                <br/>
-                                <label for="password">Password</label>
-                                <br/>
-                                <input type="password" id="password">
-                                <br/>
-                        -->
                                 <button type="submit">確定</button>
-                        <!--
-                                <br/>
-                                <a href="#"><p class="small">Forgot your password?</p></a>
-                        -->
                         </form>
-                        <button type="button"></buttom><a href="../Homepages/index.php">取消</a>
+                        <button type="button"></buttom><a href="../Homepage/index.php">取消</a>
                 </div>
         </div>
 </body>

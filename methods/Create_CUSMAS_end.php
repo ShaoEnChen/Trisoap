@@ -1,8 +1,9 @@
-<?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
+session_start();
 include("Helper/mysql_connect.php");
-$VERIFY = $_POST['VERIFY'];
+include("Helper/handle_string.php");
+$VERIFY = input('VERIFY');
 if($VERIFY == $_SESSION['COMMIT']){
         $CUSNM = $_SESSION['CUSNM'];
         $CUSPW = $_SESSION['CUSPW'];
@@ -39,7 +40,7 @@ if($VERIFY == $_SESSION['COMMIT']){
                 unset($_SESSION['KNOWTYPE']);
                 unset($_SESSION['SPEINS']);
                 unset($_SESSION['COMMIT']);
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index_customer.php>';
+                echo '<meta http-equiv=REFRESH CONTENT=0.5;url=../HomePage/index.php>';
         }
         else{
                 ?>
@@ -48,7 +49,7 @@ if($VERIFY == $_SESSION['COMMIT']){
                 </script>
                 <?php
                 unset($_SESSION['COMMIT']);
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=Create_CUSMAS1.php>';
+                echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Create_CUSMAS1.php>';
         }
 }
 else{
@@ -58,5 +59,5 @@ else{
         </script>
         <?php
         unset($_SESSION['COMMIT']);
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=Create_CUSMAS1.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Create_CUSMAS1.php>';
 }

@@ -1,6 +1,6 @@
-<?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
+session_start();
 include("Helper/mysql_connect.php");
 include("Helper/sql_operation.php");
 include("Helper/handle_string.php");
@@ -15,13 +15,11 @@ if($EMAIL == null){
 if($CUSPW == null){
         $message = $message . '密碼欄位不可空白 \n';
 }
-
 //搜尋資料庫資料
 $queryPW = search('CUSPW', 'CUSMAS', 'EMAIL', $EMAIL);
 if(encrypt($CUSPW) != $queryPW){
         $message = $message . '密碼錯誤 \n';
 }
-
 if($message == null){
         $_SESSION['EMAIL'] = $EMAIL;
         $queryCUSIDT = search('CUSIDT', 'CUSMAS', 'EMAIL', $EMAIL);

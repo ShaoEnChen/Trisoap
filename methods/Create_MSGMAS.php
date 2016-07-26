@@ -1,13 +1,12 @@
-<?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>三三吾鄉手工皂 新增留心語</title>
 <?php
+session_start();
 include("Helper/mysql_connect.php");
 $EMAIL = $_SESSION['EMAIL'];
 $message = null;
 
 if($EMAIL != null){
-    echo "*部分為必填<br>";
     echo "顧客帳號：$EMAIL <br>";
     echo "<form name=\"form\" method=\"post\" action=\"Create_MSGMAS_finish.php\" Enctype=\"multipart/form-data>";
     echo "<input type=\"hidden\" name=\"MSG\" /> <br>";
@@ -17,11 +16,11 @@ if($EMAIL != null){
     echo "<input type=\"submit\" name=\"button\" value=\"確定\" />";
     echo "</form>";
     ?>
-<a href="../Message/Message.php">取消</a>
+<a href="../message/Message.html">取消</a>
 <?php
 }
 else{
 	echo '請先登入或註冊!';
-    echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+    echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.php>';
 }
 ?>

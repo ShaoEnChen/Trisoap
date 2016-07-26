@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -74,6 +73,7 @@
             <div style="margin: 0 auto"> <font size="5">
 
                 <?php
+                session_start();
                 include("Helper/mysql_connect.php");
                 include("Helper/sql_operation.php");
 
@@ -146,7 +146,6 @@
                     <div><buttom></buttom><a href="Create_ORDMAS2.php">確定結帳</a>
                     <br><font size="4">(結帳完成後會自動登出)</font>
                     </div>
-                    <!--<a href="../Homepages/product_customer.php" style="float: right">返回</a>-->
                     <?
                 }
                 else{
@@ -154,10 +153,10 @@
                     <div><buttom></buttom><a href="cashing_test1.php">確定結帳</a>
                     <br><font size="4">(結帳完成後會自動登出)</font>
                     </div>
-                    <!--<a href="../Homepages/product_customer.php" style="float: right">返回</a>-->
                     <?
                 }
                 ?>
+                <a href="../Homepage/index.php">返回</a>
             </div>
         </section>
     </div>

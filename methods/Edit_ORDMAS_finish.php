@@ -1,25 +1,25 @@
-<?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
+session_start();
 include("Helper/mysql_connect.php");
+include("Helper/handle_string.php");
 $EMAIL = $_SESSION['EMAIL'];
-$ORDNO = htmlentities($_POST['ORDNO']);
+$ORDNO = input('ORDNO');
 $message = null;
 
 function ViewORDITEM($number){
         include("Helper/mysql_connect.php");
-        $ORDNO = htmlentities($_POST['ORDNO']);
+        include("Helper/handle_string.php");
+        include("Helper/sql_operation.php");
+        $ORDNO = input('ORDNO');
         $ITEMNOnumber = 'ITEMNO' . "$number";
         $ITEMAMTnumber = 'ITEMAMT' . "$number";
-        $sql = "SELECT * FROM ORDITEMMAS where ORDNO='$ORDNO' and ITEMNO='$number'";
-        $result = mysql_query($sql);
-        $row = mysql_fetch_array($result);
+        $middle = select('ORDITEMMAS', 'ORDNO', $ORDNO);
+        $row = select($middle, 'ITEMNO', $number);
         echo "商品編號：$number <br>";
         echo "<input type=\"hidden\" name=\"$ITEMNOnumber\" value=\"$number\" />";
-        $queryORDITEM = "SELECT ITEMNM FROM ITEMMAS where ITEMNO='$number'";
-        $queryName = mysql_query($queryORDITEM);
-        $name = mysql_fetch_row($queryName);
-        echo "商品名稱：$name[0] <br>";
+        $name = search('ITEMNM', 'ITEMMAS', 'ITEMNO', $number);
+        echo "商品名稱：$name <br>";
         if($row == false)                        
                 echo "商品數量：<input type=\"text\" name=\"$ITEMAMTnumber\" value=\"0\" /> <br><br>";
         else{
@@ -54,6 +54,6 @@ if($EMAIL != null){
 }
 else{
         echo '您無權限觀看此頁面!';
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.php>';
 }
 ?>

@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -74,6 +73,7 @@
             <div style="margin: 0 auto; margin-top: 15%;">
             
             <?php
+            session_start();
       			include("Helper/mysql_connect.php");
             include("Helper/update_price.php");
       			$EMAIL = $_SESSION['EMAIL'];
@@ -100,24 +100,24 @@
                   }
       			?>
         
-      			<a href="../Homepage/product.html" class="btn" size="4"><h2>繼續購物</h2></a> 
+      			<a href="../Homepage/product.php" class="btn" size="4"><h2>繼續購物</h2></a> 
     				<a href="Order_Confirm.php" class="btn" size="4"><h2>結帳</h2></a> <br>
     
       			<?php
                 }
     						else{
     							echo "<h1>加入購物車失敗</h1><br>";
-    							echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/product.html>';
+    							echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/product.php>';
     						}
       				}
       				else{
       					echo '請先選擇商品<br>';
-      					echo '<meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/product.html>';
+      					echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/product.php>';
       				}
       			}
       			else{
               echo '您無權限觀看此頁面!';
-              echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.html>';
+              echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/index.php>';
       			}
       			?>
 

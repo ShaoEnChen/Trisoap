@@ -1,7 +1,7 @@
-<?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>三三吾鄉手工皂 更新訂單</title>
 <?php
+session_start();
 include("Helper/mysql_connect.php");
 $EMAIL = $_SESSION['EMAIL'];
 if($EMAIL != null){
@@ -31,6 +31,6 @@ if($EMAIL != null){
 }
 else{
         echo '請先註冊或登入!';
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePages/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.php>';
 }
 ?>

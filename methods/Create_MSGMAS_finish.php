@@ -1,14 +1,16 @@
-<?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
+session_start();
 include("Helper/mysql_connect.php");
+include("Helper/sql_operation.php");
+include("Helper/handle_string.php");
 include("Helper/mail/mail.php")
 $EMAIL = $_SESSION['EMAIL'];
 $message = null;
 
 if($EMAIL != null){
-    $MSGTXT = htmlentities($_POST['MSGTXT']);
-    $MSGVIDEO = htmlentities($_POST['MSGVIDEO']);
+    $MSGTXT = input('MSGTXT');
+    $MSGVIDEO = input('MSGVIDEO');
     $MSGPHOTOTYPE = $_FILES["MSGPHOTO"]["type"];
     $file = fopen($_FILES["MSGPHOTO"]["tmp_name"], "rb");
     $fileContents = fread($file, filesize($_FILES["MSGPHOTO"]["tmp_name"])); 
@@ -22,9 +24,7 @@ if($EMAIL != null){
     }
     if($message == null){
         $savetype = 0;
-        $sql = "SELECT * FROM OWNMAS where COMNM='Trisoap'";
-        $result = mysql_query($sql);
-        $row = mysql_fetch_row($result);
+        $MSGNO = search('NMSGNO', 'OWNMAS', 'COMNM', 'Trisoap');
         if($MSGPHOTO == null && $MSGVIDEO == null)
             $savetype = 1;
         elseif($MSGPHOTO != null && $MSGVIDEO == null)
@@ -32,23 +32,23 @@ if($EMAIL != null){
         elseif($MSGPHOTO == null && $MSGVIDEO != null)
             $savetype = 3;
         if($savetype = 0){
-            $enter = "insert into MSGMAS (MSGNO, EMAIL, MSGTXT, MSGPHOTO, MSGPHOTOTYPE, MSGVIDEO, CREATEDATE) values ('$row[7]', '$EMAIL', '$MSGTXT', '$MSGPHOTO', '$MSGPHOTOTYPE', '$MSGVIDEO', '$CREATEDATE')";
+            $enter = "insert into MSGMAS (MSGNO, EMAIL, MSGTXT, MSGPHOTO, MSGPHOTOTYPE, MSGVIDEO, CREATEDATE) values ('$MSGNO', '$EMAIL', '$MSGTXT', '$MSGPHOTO', '$MSGPHOTOTYPE', '$MSGVIDEO', '$CREATEDATE')";
         }
         elseif($savetype = 1){
-            $enter = "insert into MSGMAS (MSGNO, EMAIL, MSGTXT, CREATEDATE) values ('$row[7]', '$EMAIL', '$MSGTXT', '$CREATEDATE')";
+            $enter = "insert into MSGMAS (MSGNO, EMAIL, MSGTXT, CREATEDATE) values ('$MSGNO', '$EMAIL', '$MSGTXT', '$CREATEDATE')";
         }
         elseif($savetype = 2){
-            $enter = "insert into MSGMAS (MSGNO, EMAIL, MSGTXT, MSGPHOTO, MSGPHOTOTYPE, CREATEDATE) values ('$row[7]', '$EMAIL', '$MSGTXT', '$MSGPHOTO', '$MSGPHOTOTYPE', '$CREATEDATE')";
+            $enter = "insert into MSGMAS (MSGNO, EMAIL, MSGTXT, MSGPHOTO, MSGPHOTOTYPE, CREATEDATE) values ('$MSGNO', '$EMAIL', '$MSGTXT', '$MSGPHOTO', '$MSGPHOTOTYPE', '$CREATEDATE')";
         }
         else{    
-            $enter = "insert into MSGMAS (MSGNO, EMAIL, MSGTXT, MSGVIDEO, CREATEDATE) values ('$row[7]', '$EMAIL', '$MSGTXT', '$MSGVIDEO', '$CREATEDATE')";
+            $enter = "insert into MSGMAS (MSGNO, EMAIL, MSGTXT, MSGVIDEO, CREATEDATE) values ('$MSGNO', '$EMAIL', '$MSGTXT', '$MSGVIDEO', '$CREATEDATE')";
         }
         if(mysql_query($enter)){
             $sql = "UPDATE OWNMAS SET NMSGNO=NMSGNO+1 where COMNM='Trisoap'";
             mysql_query($sql);
             echo "新增留心語成功";
             mail_receive_message($EMAIL);
-            echo '<meta http-equiv=REFRESH CONTENT=2;url=../Message/Message.php>';
+            echo '<meta http-equiv=REFRESH CONTENT=2;url=../message/Message.html>';
         }
         else{
             echo "新增留心語失敗";
