@@ -6,7 +6,7 @@ include("Helper/handle_string.php");
 $VERIFY = input('VERIFY');
 if($VERIFY == $_SESSION['COMMIT']){
         $CUSNM = $_SESSION['CUSNM'];
-        $CUSPW = $_SESSION['CUSPW'];
+        $CUSPW = encrypt($_SESSION['CUSPW']);
         $CUSADD = $_SESSION['CUSADD'];
         $CUSTYPE = $_SESSION['CUSTYPE'];
         $CUSBIRTHY = $_SESSION['CUSBIRTHY'];

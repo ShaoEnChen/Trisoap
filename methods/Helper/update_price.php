@@ -1,5 +1,4 @@
 <?php
-include("sql_operation.php");
 function update_price($ORDNO){
 	$row = select('ORDMAS', 'ORDNO', $ORDNO);
 	$TOTALPRICE = $row['TOTALPRICE'];
