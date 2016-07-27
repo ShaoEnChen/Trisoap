@@ -20,33 +20,33 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-custom navbar-fixed-top">
+    <!-- <nav class="navbar navbar-custom navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-            <!-- Img or text logo--><img src="image/logo5.png" alt="" class="logo"></a>
+            <img src="image/logo5.png" alt="" class="logo"></a>
 
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="hidden"><a href="#page-top"></a></li>
-            <li><a href="../Homepages/index.php">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="../Homepages/index.php">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li> -->
             <!--  
             <li><a href="about.html">關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             
             <li><a href="product.html">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             -->
-            <li><a href="../Homepages/story.html">三三故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <!-- <li><a href="../Homepages/story.html">三三故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             
             <li><a href="../Homepages/product.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
 
             <li><a href="../Homepages/faq.html">顧客問答<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
 
-            <li><a href="../Message/Message.php">留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="../Message/Message.php">留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li> -->
             <!--
             <li><a href="contact.html">聯絡我們<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             -->
-            <li class="dropdown"><a href="#" class="dropdown-toggle"><span class="lang">會員中心/登出</span><span class="caret"></span></a>
+            <!-- <li class="dropdown"><a href="#" class="dropdown-toggle"><span class="lang">會員中心/登出</span><span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">查看訂單</a></li>
                 <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
@@ -64,7 +64,7 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <!-- 內容想置中>< -->
     <div id="wrapper" style="text-align:center">

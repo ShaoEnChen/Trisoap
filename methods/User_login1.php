@@ -13,20 +13,25 @@
         font-family: Montserrat;
     }
 
-    .logo {
+    /*.logo {
         width: 213px;
         height: 36px;
         background: url('http://i.imgur.com/fd8Lcso.png') no-repeat;
         margin: 30px auto;
-    }
+    }*/
 
     .login-block {
-        width: 320px;
+        width: 350px;
         padding: 20px;
         background: #fff;
         border-radius: 5px;
         border-top: 5px solid #FFA042;
         margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
     }
 
     .login-block h1 {
@@ -89,33 +94,59 @@
         font-family: 微軟正黑體;
         outline: none;
         cursor: pointer;
+        margin-bottom: 5px;
     }
 
     .login-block button:hover {
         background: #FF9224;
     }
 
+    #cancel {
+        width: 100%;
+        height: 40px;
+        background: #AAAAAA;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid #AAAAAA;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: 微軟正黑體;
+        outline: none;
+        cursor: pointer;
+    }
+
+    #cancel:hover {
+        background: #888888;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
     </style>
 </head>
 
 <body>
-
-<div class="logo"></div>
+<br>
+<!-- <div class="logo"></div> -->
 <div class="login-block">
     <h1>Login</h1>
     <form name="form" method="post" action="User_login_finish.php">
         <label for="username"><input type="text" value="" placeholder="電子信箱" name="EMAIL" id="username" /></label>
         <label for="password"><input type="password" value="" placeholder="密碼" name="CUSPW" id="password" /></label>
         <button type="submit">登入</button>
-    </form><br>
-    <button type="button"></buttom><a href="../Homepage/index.php">取消</a>
+    </form>
+    <button type="button" id="cancel"></buttom><a href="../Homepage/index.php">取消</a>
 </div>
 </body>
 <script>
-    $(document).ready(function () {
-        $('#logo').addClass('animated fadeInDown');
-        $("input:text:visible:first").focus();
-    });
+    // $(document).ready(function () {
+    //     $('#logo').addClass('animated fadeInDown');
+    //     $("input:text:visible:first").focus();
+    // });
     $('#username').focus(function() {
         $('label[for="username"]').addClass('selected');
     });

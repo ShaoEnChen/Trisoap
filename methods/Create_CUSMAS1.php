@@ -13,15 +13,15 @@
         font-family: Montserrat;
     }
 
-    .logo {
+    /*.logo {
         width: 213px;
         height: 36px;
         background: url('http://i.imgur.com/fd8Lcso.png') no-repeat;
         margin: 30px auto;
-    }
+    }*/
 
-    .login-block {
-        width: 640px;
+    .register-block {
+        width: 550px;
         padding: 20px;
         background: #fff;
         border-radius: 5px;
@@ -29,7 +29,7 @@
         margin: 0 auto;
     }
 
-    .login-block h1 {
+    .register-block h1 {
         text-align: center;
         color: #000;
         font-size: 18px;
@@ -38,44 +38,24 @@
         margin-bottom: 20px;
     }
 
-    .login-block input {
+    .register-block input {
         width: 49.5%;
-        height: 42px;
+        height: 40px;
         box-sizing: border-box;
         border-radius: 5px;
         border: 1px solid #ccc;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         font-size: 14px;
-        font-family: Montserrat;
+        font-family: 微軟正黑體;
         padding: 0 20px 0 50px;
         outline: none;
     }
 
-    .login-block input#username {
-        background: #fff 20px top no-repeat;
-        background-size: 16px 80px;
-    }
-
-    .login-block input#username:focus {
-        background: #fff 20px bottom no-repeat;
-        background-size: 16px 80px;
-    }
-
-    .login-block input#password {
-        background: #fff 20px top no-repeat;
-        background-size: 16px 80px;
-    }
-
-    .login-block input#password:focus {
-        background: #fff 20px bottom no-repeat;
-        background-size: 16px 80px;
-    }
-
-    .login-block input:active, .login-block input:focus {
+    .register-block input:active, .register-block input:focus {
         border: 1px solid #ff656c;
     }
 
-    .login-block button {
+    .register-block button {
         width: 100%;
         height: 40px;
         background: #FFA042;
@@ -89,15 +69,16 @@
         font-family: 微軟正黑體;
         outline: none;
         cursor: pointer;
+        margin-bottom: 5px;
     }
 
-    .login-block button:hover {
+    .register-block button:hover {
         background: #FF9224;
     }
 
-    .login-block textarea {
+    .register-block textarea {
         width: 100%;
-        height: 55px;
+        height: 50px;
         box-sizing: border-box;
         border-radius: 5px;
         border: 1px solid #ccc;
@@ -109,14 +90,14 @@
     }
 
     .q-select select {
-        width: 49.5%;
+        width: 100%;
         height: 42px;
         box-sizing: border-box;
         border-radius: 5px;
         border: 1px solid #ccc;
         margin-bottom: 20px;
         font-size: 14px;
-        font-family: Montserrat;
+        font-family: 微軟正黑體;
         padding: 0 20px 0 50px;
         outline: none;
     }
@@ -134,13 +115,46 @@
         outline: none;
     }
 
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    textarea[placeholder] {
+        font-family: 微軟正黑體;
+    }
+
+    option {
+        font-family: 微軟正黑體;
+    }
+
+    #cancel {
+        width: 100%;
+        height: 40px;
+        background: #AAAAAA;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid #AAAAAA;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: 微軟正黑體;
+        outline: none;
+        cursor: pointer;
+    }
+
+    #cancel:hover {
+        background: #888888;
+    }
+
     </style>
 </head>
 
 <body>
-
-<div class="logo"></div>
-<div class="login-block">
+<!-- <div class="logo"></div> -->
+<br>
+<div class="register-block">
     <h1>Register</h1>
     <form name="form" method="post" action="Create_CUSMAS_finish.php">
         <?
@@ -161,21 +175,25 @@
         <label for="name"><input type="text" name="CUSNM" value="<?echo $CUSNM;?>" placeholder="您的姓名*" id="name"/></label>
         <label for="password"><input type="password" name="CUSPW1" placeholder="設定密碼*" id="password"/></label>
         <label for="password2"><input type="password" name="CUSPW2" placeholder="再次輸入密碼*" id="password2"/></label>
-        <!-- <label for="username"><input type="text" name="COUNTRY" value="Taiwan" placeholder="所屬國家"/></label> -->
+        <!-- <label for="country"><input type="text" name="COUNTRY" value="Taiwan" placeholder="所屬國家" id="country"/></label> -->
         <label for="bookdate"><input type="date" name="CUSBIRTH" placeholder="生日  ex.1999-12-31" id="bookdate"/></label>
         <label for="phonenumber"><input type="text" name="TEL" value="<?php echo $TEL;?>" placeholder="聯絡電話" id="phonenumber"/></label>
         <label for="address"><input type="text" name="CUSADD" value="<?php echo $CUSADD;?>" placeholder="通訊地址" id="address"/></label> 
         <label for="uniformnum"><input type="text" name="TAXID" value="<?php echo $TAXID;?>" placeholder="統一編號" id="uniformnum"/></label>
-        <label for="username">
+        <label for="skin">
             <div class="q-select">
-                <select name="CUSTYPE">
+                <select name="CUSTYPE" id="skin">
                     <option value="">您的膚質*</option>
                     <option value="A">乾性</option>
                     <option value="B">中性</option>
                     <option value="C">油性</option>
                     <option value="D">混和性</option>
-                </select>  
-                <select name="KNOWTYPE">
+                </select>
+            </div>
+        </label>
+        <label for="know">
+            <div class="q-select">
+                <select name="KNOWTYPE" id="know">
                     <option value="">如何認識三三*</option>
                     <option value="A">粉絲專頁</option>
                     <option value="B">親友介紹</option>
@@ -185,17 +203,17 @@
                 </select>
             </div>
         </label>
-        <label for="username"><textarea name="SPEINS" value="<?php echo $SPEINS;?>" placeholder="特殊要求""></textarea></label>
+        <label for="request"><textarea name="SPEINS" value="<?php echo $SPEINS;?>" placeholder="特殊要求" id="request"></textarea></label>
         <button type="submit">註冊</button>
-    </form><br>
-    <button type="button"></buttom><a href="../Homepage/index.php">取消</a>
+    </form>
+    <button type="button" id="cancel"></buttom><a href="../Homepage/index.php">取消</a>
 </div>
 </body>
 <script>
-    $(document).ready(function () {
-        $('#logo').addClass('animated fadeInDown');
-        $("input:text:visible:first").focus();
-    });
+    // $(document).ready(function () {
+    //     $('#logo').addClass('animated fadeInDown');
+    //     $("input:text:visible:first").focus();
+    // });
     $('#username').focus(function() {
         $('label[for="username"]').addClass('selected');
     });
