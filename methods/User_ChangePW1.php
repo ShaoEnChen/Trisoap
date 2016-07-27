@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<meta charset="utf-8">
-	<title>三三社企-修改密碼</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='css/sign.css' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
 
-	<!-- Google Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Custom Stylesheet -->
-	<link rel="stylesheet" href="css/style.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>三三社企-註冊</title>
 </head>
 
 <body>
+<br>
 	<?php
 	session_start();
 	include("Helper/mysql_connect.php");
@@ -23,30 +18,15 @@
 	$CUSIDT = $_SESSION['CUSIDT'];
 	if($EMAIL != null){
 	?>
-	<div class="container">
-		<div class="top">
-			<!--
-			<h1 id="title" class="hidden"><span id="logo">Daily <span>UI</span></span></h1>
-			-->
-		</div>
-		<div class="login-box animated fadeInUp">
-			<div class="box-header">
-				<h2>修改密碼</h2>
-			</div>
+	<div class="sign-block">
+    	<h1>修改密碼</h1>
 			<form name="form" method="post" action="User_ChangePW_finish.php">
-				<label for="password">原始密碼<br><input type="password" name="CUSPW" /></label><br>
-				<label for="username">密碼限定使用英數字，長度上限為15字元</label><br>
-				<label for="password">新密碼<br><input type="password" name="newCUSPW1" /></label><br>
-				<label for="password">再一次輸入新密碼<br><input type="password" name="newCUSPW2" /></label><br>
-				
-				<button type="submit">確定</button>
-			<!--
-				<br/>
-				<a href="#"><p class="small">Forgot your password?</p></a>
-			-->
+				<label for="ori_password">原始密碼<br><input type="password" name="CUSPW" id="ori_password"/></label><br>
+				<p>密碼限定使用英數字，長度上限為15字元</p>>
+				<label for="password">新密碼<br><input type="password" name="newCUSPW1" id="password"/></label><br>
+				<label for="password2">再一次輸入新密碼<br><input type="password" name="newCUSPW2" id="password2"/></label><br>
 			</form>
-			<button type="button"></buttom><a href="../Homepage/index.php">取消</a>
-		</div>
+		<button type="button" class="cancel"></buttom><a href="../Homepage/index.php">取消</a>
 	</div>
 	<?php
 			}

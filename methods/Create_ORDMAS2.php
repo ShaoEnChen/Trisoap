@@ -1,18 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<meta charset="utf-8">
-	<title>三三社企-建立訂單</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='css/sign.css' rel='stylesheet' type='text/css'>
+    <link href='css/table.css' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
 
-	<!-- Google Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Custom Stylesheet -->
-	<link rel="stylesheet" href="css/style.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>建立訂單</title>
+    <style>
+    .sign-block {
+        width: 400px;
+        padding: 20px;
+        border-top: 10px solid #AA0000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    .sign-block h1 {
+        font-family: 微軟正黑體;
+    }
+    .promise {
+        background: #AA0000;
+        border: 1px solid #880000;
+    }
+    .promise:hover {
+        background: #880000;
+    }
+    </style>
 </head>
 
 <body>
@@ -24,46 +41,22 @@
 
 	if($EMAIL != null){
     ?>
-	<div class="container">
-		<div class="top">
-			<!--
-			<h1 id="title" class="hidden"><span id="logo">Daily <span>UI</span></span></h1>
-			-->
-		</div>
-		<div class="login-box animated fadeInUp">
-			請先建立訂單<br>
-			<div class="box-header">
-				<h2>建立訂單</h2>
-			</div>
-			<form name="form" method="post" action="Create_ORDMAS2_finish.php">
-	        <label for="username">
-				<div class="styled-select">訂單種類*<br>
-					<select name="ORDTYPE">
-						<option value="G">一般處理</option>
-						<!--<option value="S">特別處理</option>-->
-					</select>
-				</div>
-			</label>
-			<!--<h5>特別處理需付額外費用</h5><br>-->
-
-	        <label for="username">額外指令<br>
-				<textarea name="ORDINST" cols="45" rows="5"></textarea>
-	        </label><br>
-	        
-	        <button type="submit">確定</button>
-	        </form>
-			
-			<button type="button"></buttom><a href="Order_Confirm.php">取消</a>
-		</div>
+	<br>
+    <div class="sign-block">
+    	<h1>請先建立訂單</h1>
+    	<form name="form" method="post" action="Create_ORDMAS1_finish.php">
+	        <label for="need"><textarea name="ORDINST" rows="5" placeholder="特殊要求" id="need"></textarea></label>
+	        <button type="submit" class="promise">確定</button>
+	    </form>
+    	<button type="button" class="cancel"></buttom><a href="Order_Confirm.php">取消</a>
+		<?php
+		}
+		else{
+			echo '請先登入或註冊!';
+	    	echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepage/product.php>';
+		}
+		?>
 	</div>
-	<?php
-			}
-	}
-	else{
-		echo '請先登入或註冊!';
-    	echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/product.php>';
-	}
-	?>
 </body>
 
 <script>

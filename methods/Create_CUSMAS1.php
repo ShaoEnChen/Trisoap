@@ -3,158 +3,15 @@
 
 <head>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='css/sign.css' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
 
     <title>三三社企-註冊</title>
-    <style>
-    body {
-        background: url('http://i.imgur.com/Eor57Ae.jpg') no-repeat fixed center center;
-        background-size: cover;
-        font-family: Montserrat;
-    }
-
-    /*.logo {
-        width: 213px;
-        height: 36px;
-        background: url('http://i.imgur.com/fd8Lcso.png') no-repeat;
-        margin: 30px auto;
-    }*/
-
-    .register-block {
-        width: 550px;
-        padding: 20px;
-        background: #fff;
-        border-radius: 5px;
-        border-top: 5px solid #FFA042;
-        margin: 0 auto;
-    }
-
-    .register-block h1 {
-        text-align: center;
-        color: #000;
-        font-size: 18px;
-        text-transform: uppercase;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-
-    .register-block input {
-        width: 49.5%;
-        height: 40px;
-        box-sizing: border-box;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        margin-bottom: 12px;
-        font-size: 14px;
-        font-family: 微軟正黑體;
-        padding: 0 20px 0 50px;
-        outline: none;
-    }
-
-    .register-block input:active, .register-block input:focus {
-        border: 1px solid #ff656c;
-    }
-
-    .register-block button {
-        width: 100%;
-        height: 40px;
-        background: #FFA042;
-        box-sizing: border-box;
-        border-radius: 5px;
-        border: 1px solid #FF9224;
-        color: #fff;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 14px;
-        font-family: 微軟正黑體;
-        outline: none;
-        cursor: pointer;
-        margin-bottom: 5px;
-    }
-
-    .register-block button:hover {
-        background: #FF9224;
-    }
-
-    .register-block textarea {
-        width: 100%;
-        height: 50px;
-        box-sizing: border-box;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        margin-bottom: 20px;
-        font-size: 14px;
-        font-family: Montserrat;
-        padding: 0 20px 0 50px;
-        outline: none;
-    }
-
-    .q-select select {
-        width: 100%;
-        height: 42px;
-        box-sizing: border-box;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        margin-bottom: 20px;
-        font-size: 14px;
-        font-family: 微軟正黑體;
-        padding: 0 20px 0 50px;
-        outline: none;
-    }
-
-    .b-select select {
-        width: 25%;
-        height: 42px;
-        box-sizing: border-box;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        margin-bottom: 20px;
-        font-size: 14px;
-        font-family: Montserrat;
-        padding: 0 20px 0 50px;
-        outline: none;
-    }
-
-    a {
-        color: white;
-        text-decoration: none;
-    }
-
-    textarea[placeholder] {
-        font-family: 微軟正黑體;
-    }
-
-    option {
-        font-family: 微軟正黑體;
-    }
-
-    #cancel {
-        width: 100%;
-        height: 40px;
-        background: #AAAAAA;
-        box-sizing: border-box;
-        border-radius: 5px;
-        border: 1px solid #AAAAAA;
-        color: #fff;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 14px;
-        font-family: 微軟正黑體;
-        outline: none;
-        cursor: pointer;
-    }
-
-    #cancel:hover {
-        background: #888888;
-    }
-
-    </style>
 </head>
 
 <body>
-<!-- <div class="logo"></div> -->
 <br>
-<div class="register-block">
+<div class="sign-block">
     <h1>Register</h1>
     <form name="form" method="post" action="Create_CUSMAS_finish.php">
         <?
@@ -204,27 +61,9 @@
             </div>
         </label>
         <label for="request"><textarea name="SPEINS" value="<?php echo $SPEINS;?>" placeholder="特殊要求" id="request"></textarea></label>
-        <button type="submit">註冊</button>
+        <button type="submit" class="promise">註冊</button>
     </form>
-    <button type="button" id="cancel"></buttom><a href="../Homepage/index.php">取消</a>
+    <button type="button" class="cancel"></buttom><a href="../Homepage/index.php">取消</a>
 </div>
 </body>
-<script>
-    // $(document).ready(function () {
-    //     $('#logo').addClass('animated fadeInDown');
-    //     $("input:text:visible:first").focus();
-    // });
-    $('#username').focus(function() {
-        $('label[for="username"]').addClass('selected');
-    });
-    $('#username').blur(function() {
-        $('label[for="username"]').removeClass('selected');
-    });
-    $('#password').focus(function() {
-        $('label[for="password"]').addClass('selected');
-    });
-    $('#password').blur(function() {
-        $('label[for="password"]').removeClass('selected');
-    });
-</script>
 </html>
