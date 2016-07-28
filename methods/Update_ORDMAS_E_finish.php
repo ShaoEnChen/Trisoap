@@ -18,7 +18,9 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 echo "儲存成功";
                 $queryEMAIL = search('EMAIL', 'ORDMAS', 'ORDNO', $ORDNO);
                 $queryName = search('CUSNM', 'CUSMAS', 'EMAIL', $queryEMAIL);
-                mail_receive_order($queryEMAIL, $ORDNO, $queryName);
+                $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+                $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+                mail_receive_order($queryEMAIL, $ORDNO, $queryName, $COMADD, $COMEMAIL);
         }
         else
                 echo "儲存失敗";

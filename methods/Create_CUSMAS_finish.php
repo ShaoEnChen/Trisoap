@@ -101,7 +101,9 @@ if($message == ''){
         $code .= $str[mt_rand(0, strlen($str)-1)];
     }
     $_SESSION['COMMIT'] = $code;
-    mail_verify($EMAIL, $code);     
+    $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+    $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+    mail_verify($EMAIL, $code, $COMADD, $COMEMAIL);
 ?>
 <!-- End PHP Area -->    
 

@@ -34,8 +34,10 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 }
                 if($message == null){
                         $_SESSION['ORIGIN'] = '1';
-                        $queryEMAIL = select('EMAIL', 'ORDMAS', 'ORDNO', $ORDNO);
-                        mail_pass_order($queryEMAIL, $ORDNO);
+                        $queryEMAIL = search('EMAIL', 'ORDMAS', 'ORDNO', $ORDNO);
+                        $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+                        $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+                        mail_pass_order($queryEMAIL, $ORDNO, $COMADD, $COMEMAIL);
                         echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Update_ORDMAS_finish.php>';
                 }
         }

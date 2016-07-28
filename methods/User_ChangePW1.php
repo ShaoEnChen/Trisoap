@@ -22,14 +22,14 @@
     	<h1>修改密碼</h1>
 			<form name="form" method="post" action="User_ChangePW_finish.php">
 				<label for="ori_password">原始密碼<br><input type="password" name="CUSPW" id="ori_password"/></label><br>
-				<p>密碼限定使用英數字，長度上限為15字元</p>>
+				<p>密碼限定使用英數字，長度上限為15字元</p>
 				<label for="password">新密碼<br><input type="password" name="newCUSPW1" id="password"/></label><br>
 				<label for="password2">再一次輸入新密碼<br><input type="password" name="newCUSPW2" id="password2"/></label><br>
+				<button type="submit" class="promise">確定</button>
 			</form>
 		<button type="button" class="cancel"></buttom><a href="../Homepage/index.php">取消</a>
 	</div>
 	<?php
-			}
 	}
 	else{
 		echo '您無權限觀看此頁面!';

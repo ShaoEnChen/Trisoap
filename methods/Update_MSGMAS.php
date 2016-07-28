@@ -8,7 +8,7 @@ $CUSIDT = $_SESSION['CUSIDT'];
 
 if($EMAIL != null && $CUSIDT == 'A'){
     echo "留心語列表：<br>";
-    $queryMSGMAS = "SELECT * FROM MSGMAS WHERE ACTCODE='1'";
+    $queryMSGMAS = "SELECT * FROM MSGMAS WHERE ACTCODE=1";
     $result = mysql_query($queryMSGMAS);
     while($row = mysql_fetch_array($result)){
         echo "留言編號:".$row['MSGNO']." 顧客編號:".$row['EMAIL']." 留言文字:".$row['MSGTXT']." 留言照片/影片:";

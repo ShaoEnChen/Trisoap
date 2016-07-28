@@ -16,14 +16,12 @@
     </head>
     <body id="page-top">
         <?php
-            include("../methods/mysql_connect.php");
+            include("../methods/Helper/mysql_connect.php");
+            include("../methods/Helper/sql_operation.php");
             $EMAIL = $_SESSION['EMAIL'];
             $CUSIDT = $_SESSION['CUSIDT'];
-            if($EMAIL != null):
-                if($CUSIDT == 'A'):
-                    $queryCUSNM = "SELECT CUSNM FROM CUSMAS where EMAIL = '$EMAIL'";
-                    $result = mysql_query($queryCUSNM);
-                    $row = mysql_fetch_row($result);
+            if($EMAIL != null && $CUSIDT == 'A'):
+                    $queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
         ?>
         <nav class="navbar navbar-fixed-top nav-custom">
             <div class="container-fluid">
@@ -40,7 +38,7 @@
                 <div class="collapse navbar-collapse navbar-main-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="../HomePages/index_manager.php">
+                            <a href="../Homepage/index.php">
                                 回三三首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
                             </a>
                         </li>
@@ -59,7 +57,7 @@
                             <!-- 更新使用者資料、密碼 -->
                             <a href="#">
                                 <?php
-                                    echo $row[0]."，您好<br>";
+                                    echo $queryCUSNM."，您好<br>";
                                 ?>
                             </a>
                         </li>
@@ -161,13 +159,9 @@
             </div>
         </section>
         <?php
-                else:
-                    print "您無權限觀看此頁面!";
-                    echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index_Customer.php>';
-                endif;
             else:
                 print "您無權限觀看此頁面!";
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=../HomePage/index.php>';
+                echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/index.php>';
             endif;
         ?>
     </body>

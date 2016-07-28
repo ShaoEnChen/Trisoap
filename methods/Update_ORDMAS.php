@@ -15,6 +15,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
         echo "訂單編號:";
         echo "<form name=\"form\" method=\"post\" action=\"View_ORDITEM.php\">";
         echo "<input type=\"hidden\" name=\"ORDNO\" value=\"$ORDNO\" />";
+        echo "<input type=\"hidden\" name=\"RETURN\" value=\"update\" />";
         echo "<input type=\"submit\" name=\"button\" value=\"$ORDNO\" />";
         echo "</form>";
         echo "訂單種類:".$row['ORDTYPE']." 顧客編號:".$row['EMAIL']." 發票編號:".$row['INVOICENO']." 缺貨狀態:".$row['BACKSTAT']." 訂單狀態:".$row['ORDSTAT']." 付款狀態:".$row['PAYSTAT']." 額外指令:".$row['ORD_INST']." 訂單總額:".$row['TOTALPRICE']." 訂單總值:".$row['TOTALAMT']." 建立日期:".$row['CREATEDATE']."</br>";

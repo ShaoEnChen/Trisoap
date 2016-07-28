@@ -7,8 +7,9 @@ include("Helper/sql_operation.php");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 
-if($EMAIL != null && $CUSIDT == 'A'){
+if($EMAIL != null){
         $ORDNO = $_POST['ORDNO'];
+        $RETURN = $_POST['RETURN'];
         $row = select('ORDMAS', 'ORDNO', $ORDNO);
         echo "訂單編號：".$row['ORDNO']."<br>";
         echo "訂單種類：".$row['ORDTYPE']."<br>";
@@ -27,9 +28,17 @@ if($EMAIL != null && $CUSIDT == 'A'){
         echo "運輸費用：".$row['SHIPFEE']."<br>";
         echo "訂單總值：".$row['TOTALAMOUNT']."<br>";
         echo "付款狀態：".$row['PAYSTAT']."<br>";
-?>
-<a href="Update_ORDMAS.php">返回</a> <br>
-<?php
+        if($RETURN == 'update'){
+                ?>
+                <a href="Update_ORDMAS.php">返回</a> <br>
+                <?php
+        }
+        elseif($RETURN == 'view'){
+                ?>
+                <a href="View_ORDMAS.php">返回</a> <br>
+                <?php
+        }
+
 }
 else{
         echo '您無權限觀看此頁面!';

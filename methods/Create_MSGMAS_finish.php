@@ -47,7 +47,9 @@ if($EMAIL != null){
             $sql = "UPDATE OWNMAS SET NMSGNO=NMSGNO+1 where COMNM='Trisoap'";
             mysql_query($sql);
             echo "新增留心語成功";
-            mail_receive_message($EMAIL);
+            $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+            $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+            mail_receive_message($EMAIL, $COMADD, $EMAIL);
             echo '<meta http-equiv=REFRESH CONTENT=2;url=../message/Message.html>';
         }
         else{

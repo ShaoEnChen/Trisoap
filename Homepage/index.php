@@ -38,7 +38,7 @@
             </li>
             <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <li><a href="message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="../message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <?
             session_start();
             $CUSIDT = $_SESSION['CUSIDT'];
@@ -49,15 +49,15 @@
                   <li><a href="../manager/Update_Manager.php">權限管理</a></li>
                   <li><a href="../methods/Update_ITEMMAS.php">商品管理</a></li>
                   <li><a href="../methods/Update_ORDMAS.php">訂單管理</a></li>
-                  <li><a href="#">留心語管理</a></li>
+                  <li><a href="../methods/Update_MSGMAS.php">留心語管理</a></li>
                 </ul>
               </li>
               <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
+                  <li><a href="../methods/View_ORDMAS.php">查看訂單</a></li>
                   <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
                   <li><a href="../methods/User_ChangePW1.php">修改密碼</a></li>
-                  <li><a href="#">查看訂單</a></li>
+                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>
@@ -67,10 +67,10 @@
             ?>
               <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
+                  <li><a href="../methods/View_ORDMAS.php">查看訂單</a></li>
                   <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
                   <li><a href="../methods/User_ChangePW1.php">修改密碼</a></li>
-                  <li><a href="#">查看訂單</a></li>
+                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>

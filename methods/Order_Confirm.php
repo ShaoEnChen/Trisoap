@@ -127,15 +127,17 @@
     </table>
     <br>
     <?php
-    if($ORDNO == '100000000'){
-    ?>
-        <button type="button" class="promise"></buttom><a href="Create_ORDMAS2.php">確定結帳</a>
-    <?php
-    }
-    else{
-    ?>
-        <button type="button" class="promise"></buttom><a href="cashing_test1.php">確定結帳</a>
-    <?php
+    if($number != 0){
+        if($ORDNO == '100000000'){
+        ?>
+            <button type="button" class="promise"></buttom><a href="Create_ORDMAS2.php">確定結帳</a>
+        <?php
+        }
+        else{
+        ?>
+            <button type="button" class="promise"></buttom><a href="cashing_test1.php">確定結帳</a>
+        <?php
+        }
     }
     ?>
     <button type="button" class="cancel"></buttom><a href="../Homepage/product.php">返回商品頁</a>

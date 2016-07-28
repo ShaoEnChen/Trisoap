@@ -29,7 +29,9 @@ if($EMAIL != null && $CUSIDT == 'A'){
                         $findREWARD = search('REWARDSTAT', 'MSGMAS', 'MSGNO', $MSGNO);
                         if($findREWARD == 0){
                                 $queryEMAIL = search('EMAIL', 'MSGMAS', 'MSGNO', $MSGNO);
-                                mail_pass_message($queryEMAIL);
+                                $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+                                $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+                                mail_pass_message($queryEMAIL, $COMADD, $COMEMAIL);
                                 $setREWARD = "UPDATE MSGMAS SET REWARDSTAT='1' WHERE MSGNO='$MSGNO'";
                                 mysql_query($setREWARD);
                                 $putREWARD = "UPDATE CUSMAS SET DISCOUNT=DISCOUNT+25 WHERE EMAIL='$queryEMAIL'";
