@@ -41,6 +41,11 @@
             <li><a href="../message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <?
             session_start();
+            include("../methods/Helper/mysql_connect.php");
+            include("../methods/Helper/sql_operation.php");
+            $COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
+            $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+            $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
             $CUSIDT = $_SESSION['CUSIDT'];
             if($CUSIDT == 'A'){
               ?>
@@ -164,7 +169,9 @@
           </div>
           <div class="col-md-3">
             <h3><a href="contact.html">聯絡我們</a></h3>
-            <p><i class="fa fa-phone fa-fw"></i> (03)1234567 <br> <i class="fa fa-envelope fa-fw"></i> loveyou@gamil.com<br> <i class="fa fa-map-marker fa-fw"></i>台灣台北市
+            <p><i class="fa fa-phone fa-fw fa-lg"></i> <?echo $COMTEL;?> <br>
+            <i class="fa fa-envelope fa-fw fa-lg"></i> <?echo $COMEMAIL;?> <br>
+            <i class="fa fa-map-marker fa-fw fa-lg"></i> <?echo $COMADD;?>
             </p>
           </div>
         </div>

@@ -4,7 +4,7 @@ session_start();
 include("Helper/mysql_connect.php");
 include("Helper/sql_operation.php");
 include("Helper/handle_string.php");
-include("Helper/mail/mail.php")
+include("Helper/mail/mail.php");
 $EMAIL = $_SESSION['EMAIL'];
 $message = null;
 
@@ -49,7 +49,7 @@ if($EMAIL != null){
             echo "新增留心語成功";
             $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
             $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-            mail_receive_message($EMAIL, $COMADD, $EMAIL);
+            mail_receive_message($EMAIL, $COMADD, $COMEMAIL);
             echo '<meta http-equiv=REFRESH CONTENT=2;url=../message/Message.html>';
         }
         else{

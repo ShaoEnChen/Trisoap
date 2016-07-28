@@ -41,6 +41,11 @@
             <li><a href="../message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <?
             session_start();
+            include("../methods/Helper/mysql_connect.php");
+            include("../methods/Helper/sql_operation.php");
+            $COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
+            $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+            $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
             $CUSIDT = $_SESSION['CUSIDT'];
             if($CUSIDT == 'A'){
               ?>
@@ -146,7 +151,9 @@
               <button type="submit" class="btn btn-dark btn-lg">確認送出</button>
             </form>
             <hr>
-            <p><i class="fa fa-phone fa-fw fa-lg"></i> (123) 456-7890 <br> <i class="fa fa-envelope fa-fw fa-lg"></i> info@trisoap.com <br> <i class="fa fa-map-marker fa-fw fa-lg"></i> 台灣 台北市
+            <p><i class="fa fa-phone fa-fw fa-lg"></i> <?echo $COMTEL;?> <br>
+            <i class="fa fa-envelope fa-fw fa-lg"></i> <?echo $COMEMAIL;?> <br>
+            <i class="fa fa-map-marker fa-fw fa-lg"></i> <?echo $COMADD;?>
             </p>
           </div>
         </div>

@@ -54,7 +54,7 @@
           date_default_timezone_set('Asia/Taipei');
           $CREATEDATE = date("Y-m-d H:i:s");
           $UPDATEDATE = date("Y-m-d H:i:s");
-          $sql = "insert into ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNO', '$ITEMNO', '$ORDAMT', 'EMAIL', '$CREATEDATE', '$UPDATEDATE')";
+          $sql = "insert into ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNO', '$ITEMNO', '$ORDAMT', '$EMAIL', '$CREATEDATE', '$UPDATEDATE')";
           unset($_SESSION['ITEMNO']);
           if(mysql_query($sql)){
             echo "<br>";
@@ -64,7 +64,7 @@
             }
       ?>
 
-      <button type="button" class="promise"></buttom><a href="../Homepage/index.php">前往結帳</a>
+      <button type="button" class="promise"></buttom><a href="Order_Confirm.php">前往結帳</a>
       <button type="button" class="cancel"></buttom><a href="../Homepage/product.php">繼續購物</a>
     
       <?php

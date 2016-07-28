@@ -140,6 +140,7 @@
         }
     }
     ?>
+    <button type="button" class="cancel"></buttom><a href="../Homepage/index.php">返回首頁</a><br>
     <button type="button" class="cancel"></buttom><a href="../Homepage/product.php">返回商品頁</a>
             
     </div>

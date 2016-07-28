@@ -2,7 +2,7 @@
 <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 -->
 <?php
-include("AllPay.Payment.Integration.php");    //include the AllPay file
+include("AllPay.Payment.Integration1.php");    //include the AllPay file
 include("Helper/mysql_connect.php");
 include("Helper/sql_operation.php");
 

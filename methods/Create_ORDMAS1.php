@@ -45,6 +45,7 @@
     <div class="sign-block">
     	<h1>建立訂單</h1>
     	<form name="form" method="post" action="Create_ORDMAS1_finish.php">
+            <input type="hidden" name="ORDTYPE" value="G" />
 	        <label for="need"><textarea name="ORDINST" rows="5" placeholder="特殊要求" id="need"></textarea></label>
 	        <button type="submit" class="promise">確定</button>
 	    </form>

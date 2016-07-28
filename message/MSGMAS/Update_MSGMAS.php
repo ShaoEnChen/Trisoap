@@ -16,14 +16,13 @@
 	</head>
 	<body id="page-top">
 		<?php
-			include("../../methods/mysql_connect.php");
+			include("../../methods/Helper/mysql_connect.php");
+			include("../../methods/Helper/sql_operarion.php");
 			$EMAIL = $_SESSION['EMAIL'];
 			$CUSIDT = $_SESSION['CUSIDT'];
 			if($EMAIL != null):
 				if($CUSIDT == 'A'):
-					$queryCUSNM = "SELECT CUSNM FROM CUSMAS where EMAIL = '$EMAIL'";
-					$result = mysql_query($queryCUSNM);
-					$row = mysql_fetch_row($result);
+					$queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
 		?>
 		<nav class="navbar navbar-fixed-top nav-custom">
 			<div class="container-fluid">
@@ -39,12 +38,12 @@
 				<div class="collapse navbar-collapse navbar-main-collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="../../HomePages/index_manager.php">
+							<a href="../../Homepage/index.php">
 								回三三首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
 							</a>
 						</li>
 						<li>
-							<a href="../Message.php">
+							<a href="../Message.html">
 								回留心語首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
 							</a>
 						</li>
@@ -53,7 +52,7 @@
 							<!-- 更新使用者資料、密碼 -->
 							<a href="#">
 								<?php
-									echo $row[0]."，您好<br>";
+									echo $queryCUSNM."，您好<br>";
 								?>
 							</a>
 						</li>
@@ -85,7 +84,7 @@
 								<li><a data-toggle="pill" href="#fail">未通過</a></li>
 								<li><a data-toggle="pill" href="#published">公開中</a></li>
 								<li><a data-toggle="pill" href="#epic">典藏</a></li>
-								<li><a data-toggle="pill" href="#letter">編輯信件</a></li>
+								<!--<li><a data-toggle="pill" href="#letter">編輯信件</a></li>-->
 							</ul>
 						</div>
 						<a href="#" class="btn btn-primary col-xs-1 col-xs-offset-7 col-sm-offset-2 col-md-offset-4">儲存</a>
@@ -218,7 +217,7 @@
 								</table>
 							</div>
 						<?php } ?>
-							<div class="tab-pane fade">
+							<!--<div class="tab-pane fade">
 								<table class="table table-hover">
 									<thead>
 										<tr>
@@ -251,7 +250,7 @@
 										</tr>
 									</tbody>
 								</table>
-							</div>
+							</div>-->
 						</div>
 					</div>
 				</div>

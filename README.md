@@ -17,3 +17,5 @@ UI待修改部分:
 Update_ORDMAS -> 更改訂單狀態，管理員功能，查看詳細資料會連到View_ORDITEM
 View_ORDMAS   -> 查看所有訂單，顧客功能，查看詳細資料會連到View_ORDITEM
 View_ORDITEM  -> 查看訂單詳細資料，有返回功能，從Update_ORDMAS來就回Update_ORDMAS，從View_ORDMAS來就回View_ORDMAS
+
+連到歐付寶會交易失敗
