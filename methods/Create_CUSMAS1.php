@@ -32,8 +32,7 @@
         <label for="name"><input type="text" name="CUSNM" value="<?echo $CUSNM;?>" placeholder="您的姓名*" id="name"/></label>
         <label for="password"><input type="password" name="CUSPW1" placeholder="設定密碼*" id="password"/></label>
         <label for="password2"><input type="password" name="CUSPW2" placeholder="再次輸入密碼*" id="password2"/></label>
-        <!-- <label for="country"><input type="text" name="COUNTRY" value="Taiwan" placeholder="所屬國家" id="country"/></label> -->
-        <label for="bookdate"><input type="date" name="CUSBIRTH" placeholder="生日  ex.1999-12-31" id="bookdate"/></label>
+        <label for="bookdate"><input type="date" name="CUSBIRTH" placeholder="生日  ex.1999-8-8" id="bookdate"/></label>
         <label for="phonenumber"><input type="text" name="TEL" value="<?php echo $TEL;?>" placeholder="聯絡電話" id="phonenumber"/></label>
         <label for="address"><input type="text" name="CUSADD" value="<?php echo $CUSADD;?>" placeholder="通訊地址" id="address"/></label> 
         <label for="uniformnum"><input type="text" name="TAXID" value="<?php echo $TAXID;?>" placeholder="統一編號" id="uniformnum"/></label>

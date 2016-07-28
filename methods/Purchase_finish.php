@@ -53,7 +53,7 @@
           date_default_timezone_set('Asia/Taipei');
           $CREATEDATE = date("Y-m-d H:i:s");
           $UPDATEDATE = date("Y-m-d H:i:s");
-          $sql = "insert into ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNO', '$ITEMNO', '$ORDAMT', 'EMAIL', '$CREATEDATE', '$UPDATEDATE')";
+          $sql = "insert into ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNO', '$ITEMNO', '$ORDAMT', '$EMAIL', '$CREATEDATE', '$UPDATEDATE')";
           unset($_SESSION['ITEMNO']);
           if(mysql_query($sql)){
             echo "<br>";
@@ -63,24 +63,24 @@
             }
       ?>
 
-      <button type="button" class="promise"></buttom><a href="../Homepage/index.php">前往結帳</a>
+      <button type="button" class="promise"></buttom><a href="Order_Confirm.php">前往結帳</a>
       <button type="button" class="cancel"></buttom><a href="../Homepage/product.php">繼續購物</a>
     
       <?php
           }
           else{
             echo "<br><h1>加入購物車失敗</h1>";
-            echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepage/product.php>';
+            echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/product.php>';
           }
         }
         else{
           echo '請先選擇商品';
-          echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepage/product.php>';
+          echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/product.php>';
           }
         }
       else{
         echo '您無權限觀看此頁面!';
-        echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepage/index.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/index.php>';
       }
       ?>
     </div>

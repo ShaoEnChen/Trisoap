@@ -44,7 +44,7 @@
 	<br>
     <div class="sign-block">
     	<h1>請先建立訂單</h1>
-    	<form name="form" method="post" action="Create_ORDMAS1_finish.php">
+    	<form name="form" method="post" action="Create_ORDMAS2_finish.php">
 	        <label for="need"><textarea name="ORDINST" rows="5" placeholder="特殊要求" id="need"></textarea></label>
 	        <button type="submit" class="promise">確定</button>
 	    </form>
@@ -53,7 +53,7 @@
 		}
 		else{
 			echo '請先登入或註冊!';
-	    	echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepage/product.php>';
+	    	echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/product.php>';
 		}
 		?>
 	</div>

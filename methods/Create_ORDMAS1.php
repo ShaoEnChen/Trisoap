@@ -53,7 +53,7 @@
 		}
 		else{
 			echo '請先登入或註冊!';
-	    	echo '<meta http-equiv=REFRESH CONTENT=1;url=../Homepage/product.php>';
+	    	echo '<meta http-equiv=REFRESH CONTENT=2;url=../Homepage/product.php>';
 		}
 		?>
 	</div>
