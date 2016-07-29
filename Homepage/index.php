@@ -30,15 +30,16 @@
           <ul class="nav navbar-nav navbar-left">
             <li class="hidden"><a href="#page-top"></a></li>
             <li><a href="index.php">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <li><a href="about.php">關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+            <li><a href=#>關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li><a href="about.php">三三團隊</a></li>
                 <li><a href="faq.php">顧客問答</a></li>
                 <li><a href="contact.php">聯絡我們</a></li>
               </ul>
             </li>
             <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <li><a href="../message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="../message/Message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <?
             session_start();
             include("../methods/Helper/mysql_connect.php");
@@ -103,7 +104,7 @@
       </div>
     </nav>
     <!-- Header-->
-    <header data-background="img/header/5.jpg" class="intro">
+    <header data-background="img/index.jpg" class="intro">
       <!-- Intro Header-->
       <div class="intro-body">
         
@@ -142,9 +143,9 @@
                 <li data-target="#carousel-light" data-slide-to="2"></li>
               </ol>
               <div role="listbox" class="carousel-inner">
-                <div class="item active"><img src="img/slider/2.png" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="img/slider/1.png" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="img/slider/3.png" alt="" class="img-responsive center-block"></div>
+                <div class="item active"><img src="img/production.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/production.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/production.jpg" alt="" class="img-responsive center-block"></div>
               </div>
             </div>
           </div>
@@ -170,9 +171,9 @@
                 <li data-target="#carousel-light" data-slide-to="2"></li>
               </ol>
               <div role="listbox" class="carousel-inner">
-                <div class="item active"><img src="img/slider/2.png" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="img/slider/1.png" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="img/slider/3.png" alt="" class="img-responsive center-block"></div>
+                <div class="item active"><img src="img/farmer.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/farmer.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/farmer.jpg" alt="" class="img-responsive center-block"></div>
               </div>
             </div>
           </div>
@@ -209,20 +210,20 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h3><a href="about.html">關於我們</a></h3>
+            <h3><a href="about.php">關於我們</a></h3>
             <p>一切都是從一個座落在寧靜城市裡的、專門開辦二手販售
 以及手工皂製作的小型作業所---「李勝賢文教基金會」開始的參訪李勝賢文教基金會的經驗讓我們留下了深刻的印象那天，我們第一次學做皂，也是第一次深深地被憨兒們打皂時嶄露出來的自信與笑容深深吸引
             </p>
           </div>
           <div class="col-md-4">
-            <h3><a href="faq.html">常見問題</a></h3>
+            <h3><a href="faq.php">常見問題</a></h3>
             <p>「冷製手工皂」是使用純天然的基底植物油，搭配上鹼水調配
   再經過攪拌、保溫、晾皂等各種精細的過程，而後皂化成一個
   具有不同皂性的產品。有別於一般大型賣場，或是各式衛妝開
   架式商店所販售的工廠壓製肥皂或沐浴精</p>
           </div>
           <div class="col-md-3">
-            <h3><a href="contact.html">聯絡我們</a></h3>
+            <h3><a href="contact.php">聯絡我們</a></h3>
             <p><i class="fa fa-phone fa-fw fa-lg"></i> <?echo $COMTEL;?> <br>
             <i class="fa fa-envelope fa-fw fa-lg"></i> <?echo $COMEMAIL;?> <br>
             <i class="fa fa-map-marker fa-fw fa-lg"></i> <?echo $COMADD;?>

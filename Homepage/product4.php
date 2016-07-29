@@ -30,15 +30,16 @@
           <ul class="nav navbar-nav navbar-left">
             <li class="hidden"><a href="#page-top"></a></li>
             <li><a href="index.php">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <li><a href="about.php">關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+            <li><a href=#>關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li><a href="about.php">三三團隊</a></li>
                 <li><a href="faq.php">顧客問答</a></li>
                 <li><a href="contact.php">聯絡我們</a></li>
               </ul>
             </li>
             <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <li><a href="../message/message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="../message/Message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <?
             session_start();
             $CUSIDT = $_SESSION['CUSIDT'];
@@ -92,12 +93,11 @@
       </div>
     </nav>
     <!-- Header-->
-    <header data-background="img/shop/header4.jpg" class="intro introhalf">
+    <header data-background="img/product/detail/series.jpg" class="intro introhalf">
       <!-- Intro Header-->
       <div class="intro-body">
         <h1>商品一覽</h1>
-        <h4><a href="index.html">禮盒</a>
-        </h4>
+        <h4>禮盒</h4>
       </div>
     </header>
     <!-- shop-->
@@ -109,11 +109,11 @@
             <div class="col-lg-6 carousel-outer">
               <!-- Wrapper for slides-->
               <div class="carousel-inner">
-                <div class="item active"><img src="img/shop/single1.jpg" alt=""></div>
-                <div class="item"><img src="img/shop/single2.jpg" alt=""></div>
-                <div class="item"><img src="img/shop/single3.jpg" alt=""></div>
+                <div class="item active"><img src="img/product/detail/taitung_small.jpg" alt=""></div>
+                <div class="item"><img src="img/product/detail/taitung_green.jpg" alt=""></div>
+                <!-- <div class="item"><img src="img/shop/single3.jpg" alt=""></div>
                 <div class="item"><img src="img/shop/single4.jpg" alt=""></div>
-                <div class="item"><img src="img/shop/single5.jpg" alt=""></div>
+                <div class="item"><img src="img/shop/single5.jpg" alt=""></div> -->
               </div>
               <!-- Controls--><a href="#carousel-shop" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a><a href="#carousel-shop" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
             </div>
@@ -124,11 +124,11 @@
               清風徐過的稻田、翠綠飽滿的釋迦、嬌豔暖橘的金針，融合當地的憨兒手作，三種特色，造就臺東意象禮盒組的經典</p>
               <!-- Indicators-->
               <ol class="carousel-indicators mCustomScrollbar">
-                <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/shop/single1.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/shop/single2.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="2"><img src="img/shop/single3.jpg" alt=""></li>
+                <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/detail/taitung_small.jpg" alt=""></li>
+                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/taitung_green.jpg" alt=""></li>
+                <!-- <li data-target="#carousel-shop" data-slide-to="2"><img src="img/shop/single3.jpg" alt=""></li>
                 <li data-target="#carousel-shop" data-slide-to="3"><img src="img/shop/single4.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="4"><img src="img/shop/single5.jpg" alt=""></li>
+                <li data-target="#carousel-shop" data-slide-to="4"><img src="img/shop/single5.jpg" alt=""></li> -->
               </ol>
               <hr>
               <p>禮盒內含 / 金絲森林渲染皂一顆 釋迦手感果力皂一顆 田靜山巒禾風皂一顆</p>
