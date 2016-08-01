@@ -53,7 +53,7 @@ if($EMAIL != null){
                 alert("訂單建立成功，將為您導向歐付寶頁面。");
             </script>
 <?php
-    		echo '<meta http-equiv=REFRESH CONTENT=0.5;url=cashing_test1.php>';
+    		echo '<meta http-equiv=REFRESH CONTENT=5;url=cashing_test1.php>';
     	}
     	else{
 ?>

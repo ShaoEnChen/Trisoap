@@ -119,7 +119,7 @@
               <!-- Controls--><a href="#carousel-shop" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a><a href="#carousel-shop" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
             </div>
             <div class="col-lg-6 slide">
-              <h4>田靜山巒禾風皂 (米皂) </h4>
+              <h4>金絲森林渲染皂 (金針花皂) </h4>
               <p class="small">REF. 9583301-234</p>
               <p>點點金黃的花絲在皂上綴躍，好比座落在太麻里原生的花田，點綴著清幽的臺東。
               手作渲染的花紋，隨著不同的心情有所變化；每種皂款都為你獻上獨一。</p>

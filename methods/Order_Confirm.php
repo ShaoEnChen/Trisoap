@@ -71,7 +71,8 @@
         }
 
         if($number != 0){
-            $shipfee = search('SHIPFEE', 'ORDMAS', 'ORDNO', $ORDNO);
+            // $shipfee = search('SHIPFEE', 'ORDMAS', 'ORDNO', $ORDNO);
+            $shipfee = 20;
             $total = $shipfee;
             ?>
             <table>

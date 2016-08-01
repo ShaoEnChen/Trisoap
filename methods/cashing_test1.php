@@ -18,14 +18,14 @@ try {
     $obj->HashIV     = 'v77hoKGq4kWxNNIS';                                           //HashIV
     $obj->MerchantID = '2000132';                                                    //MerchantID
     //Basic Order Parameter
-    $obj->Send['ReturnURL']         = "http://140.112.222.143/methods/cashing_feedback.php" ;    //付款完成通知回傳的網址
+    $obj->Send['ReturnURL']         = "http://localhost/methods/cashing_feedback.php" ;    //付款完成通知回傳的網址
     $TradeNo = "Test".time();
     $obj->Send['MerchantTradeNo']   = $TradeNo;                             //Order_id  "Test".time()
     $obj->Send['MerchantTradeDate'] = date("Y/m/d H:i:s");                        //Order_time
     $obj->Send['TotalAmount']       = $totalamount;                               //Order_amount
     $obj->Send['TradeDesc']         = "trisoap";                                  //Order_Description
     $obj->Send['ChoosePayment']     = PaymentMethod::ALL;                         //Payment Method
-    $obj->Send['ClientBackURL']     = "http://140.112.222.143/Homepages/index.php";    //get back to HomePage
+    $obj->Send['ClientBackURL']     = "http://localhost/Homepage/index.php";    //get back to HomePage
     $sql = "UPDATE ORDMAS SET MerchantTradeNo = '$TradeNo' WHERE ORDNO = '$ORDNO'";
     mysql_query($sql);
 

@@ -129,7 +129,7 @@ else{
         alert("<?echo $message;?>");
     </script>
 <?
-    echo '<meta http-equiv=REFRESH CONTENT=1;url=Create_CUSMAS1.php>';
+    echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Create_CUSMAS1.php>';
 }
 ?>
 

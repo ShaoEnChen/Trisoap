@@ -1,4 +1,5 @@
 <?
+include(dirname(__FILE__)."/mysql_connect.php");
 /*function insert(){
 	$sql = 
 	if(!mysql_query($sql)){
