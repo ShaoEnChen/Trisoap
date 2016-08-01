@@ -135,7 +135,7 @@
         <div class="row">
           <div class="col-md-3 col-sm-6">
             <h4>尹又令</h4>
-            <p><img src="img/team/avatar5.jpg" alt="" class="img-responsive center-block"></p>
+            <p><img src="img/photo1.png" alt="" class="img-responsive center-block"></p>
             <ul class="list-inline">
               <li><a href="/"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
               <li><a href="/"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
@@ -145,7 +145,7 @@
           </div>
           <div class="col-md-3 col-sm-6">
             <h4>Chieh Young</h4>
-            <p><img src="img/team/avatar2.jpg" alt="" class="img-responsive center-block"></p>
+            <p><img src="img/photo2.png" alt="" class="img-responsive center-block"></p>
             <ul class="list-inline">
               <li><a href="/"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
               <li><a href="/"><i class="fa fa-youtube fa-2x fa-fw"></i></a></li>

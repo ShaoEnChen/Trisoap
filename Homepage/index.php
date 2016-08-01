@@ -143,9 +143,9 @@
                 <li data-target="#carousel-light" data-slide-to="2"></li>
               </ol>
               <div role="listbox" class="carousel-inner">
-                <div class="item active"><img src="img/production.jpg" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="img/production.jpg" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="img/production.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item active"><img src="img/production1.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/production2.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/production3.jpg" alt="" class="img-responsive center-block"></div>
               </div>
             </div>
           </div>
@@ -171,9 +171,9 @@
                 <li data-target="#carousel-light" data-slide-to="2"></li>
               </ol>
               <div role="listbox" class="carousel-inner">
-                <div class="item active"><img src="img/farmer.jpg" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="img/farmer.jpg" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="img/farmer.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item active"><img src="img/farmer1.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/farmer2.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/farmer3.jpg" alt="" class="img-responsive center-block"></div>
               </div>
             </div>
           </div>
