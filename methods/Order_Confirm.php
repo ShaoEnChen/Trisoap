@@ -120,7 +120,7 @@
             }
             else{
             ?>
-                <button type="button" class="promise"></buttom><a href="cashing_test1.php">確定結帳</a>
+                <button type="button" class="promise"></buttom><a href="cashing_test.php">確定結帳</a>
             <?php
             }
         }

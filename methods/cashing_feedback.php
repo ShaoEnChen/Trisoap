@@ -3,7 +3,7 @@
 <title>結帳結果頁</title>
 -->
 <?php
-include('AllPay.Payment.Integration1.php');
+include('AllPay.Payment.Integration.php');
 include("Helper/mysql_connect.php");
 
 /*
@@ -13,9 +13,9 @@ try
 {
 	$obj = new AllInOne();
  	//AllPay Service Parameter
- 	$obj->HashKey     = '5294y06JbISpM5x9'; 
-    $obj->HashIV      = 'v77hoKGq4kWxNNIS';
-    $obj->MerchantID  = '2000132'; 
+ 	$obj->HashKey     = 'bwqFcafJNX4GzAWO'; 
+    $obj->HashIV      = 'mJf0B3ONPbCfwkmF';
+    $obj->MerchantID  = '1385617'; 
 	//FeedBack Parameter
  	$arFeedback = $obj->CheckOutFeedback();
  	/* 檢核與變更訂單狀態 */

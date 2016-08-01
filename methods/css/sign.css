@@ -1,6 +1,7 @@
 body {
-    background: url('http://i.imgur.com/Eor57Ae.jpg') no-repeat fixed center center;
+    background: url('../image/background.jpg') no-repeat fixed center center;
     background-size: cover;
+    opacity: 0.95;
     font-family: Montserrat;
 }
 
