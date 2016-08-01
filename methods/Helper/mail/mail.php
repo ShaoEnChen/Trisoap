@@ -214,3 +214,39 @@ function mail_verify($id, $code, $COMADD, $COMEMAIL){
             echo "Mail not sent!";        
       }
 }
+function mail_reset_password($id, $code, $COMADD, $COMEMAIL){
+      $mail= new PHPMailer(); //建立新物件
+      $mail->IsSMTP(); //設定使用SMTP方式寄信
+      $mail->SMTPAuth = true; //設定SMTP需要驗證
+      $mail->SMTPSecure = 'ssl'; // Gmail的SMTP主機需要使用SSL連線
+      $mail->Host = "smtp.gmail.com"; //Gmail的SMTP主機
+      $mail->Port = 465;  //Gmail的SMTP主機的SMTP埠位為465埠。
+      $mail->IsHTML(true); //設定郵件內容為HTML
+      $mail->CharSet = "utf-8"; //設定郵件編碼
+      $mail->Username = "trisoap2015@gmail.com"; //設定驗證帳號
+      $mail->Password = "2015n0n0"; //設定驗證密碼
+      $mail->From = "trisoap2015@gmail.com"; //設定寄件者信箱
+      $mail->FromName = "三三吾鄉社會企業"; //設定寄件者姓名
+      date_default_timezone_set('Asia/Taipei');
+      $MAILDATE = date("Y-m-d");
+      $mail->Subject = "三三吾鄉會員密碼重設通知"; //設定郵件標題        
+      $mail->Body = "親愛的三三客戶您好：<br>
+      <br>
+      我們在此誠摯的感謝您註冊三三吾鄉成為會員，期望未來能有榮幸為您服務。<br>
+      <br>
+      您的會員註冊驗證碼為 ".$code." ，請至原註冊頁面輸入以完成會員註冊。<br>
+      <br>
+      感謝您對三三吾鄉的支持。<br>
+      <br>
+      三三吾鄉社會企業團隊敬上<br>".$MAILDATE."<br>
+      ________________________________<br>
+      <br>
+      三三吾鄉社會企業<br>
+      地址 : ".$COMADD."<br>
+      email : ".$COMEMAIL."<br>
+      網址 : xxxxxxxxxxxxx<br>"; //設定郵件內容
+      $mail->AddAddress($id); //設定收件者郵件及名稱
+      if(!$mail->Send()) {        
+            echo "Mail not sent!";        
+      }
+}

@@ -17,7 +17,7 @@
 	<body id="page-top">
 		<?php
 			include("../../methods/Helper/mysql_connect.php");
-			include("../../methods/Helper/sql_operarion.php");
+			include("../../methods/Helper/sql_operation.php");
 			$EMAIL = $_SESSION['EMAIL'];
 			$CUSIDT = $_SESSION['CUSIDT'];
 			if($EMAIL != null):
@@ -210,47 +210,11 @@
 												</select>
 											</td>
 										</tr>
-									<?php
-										}
-									?>
+									<?php } ?>
 									</tbody>
 								</table>
 							</div>
 						<?php } ?>
-							<!--<div class="tab-pane fade">
-								<table class="table table-hover">
-									<thead>
-										<tr>
-											<td>信件編號</td>
-											<td>信件種類</td>
-											<td>信件內容</td>
-											<td>編輯</td>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><a href="#">L001</a></td>
-											<td>接受留言</td>
-											<td>
-												xxx您好，感謝您喜愛並支持三三吾香皂的產品，收到您的留言我們非常開心…
-											</td>
-											<td>
-												<a href="#" class="btn">編輯</a>
-											</td>
-										</tr>
-										<tr>
-											<td><a href="#">L002</a></td>
-											<td>婉拒留言</td>
-											<td>
-												xxx您好，感謝您喜愛並支持三三吾香皂的產品，收到您的留言我們非常開心，但是…
-											</td>
-											<td>
-												<a href="#" class="btn">編輯</a>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>-->
 						</div>
 					</div>
 				</div>

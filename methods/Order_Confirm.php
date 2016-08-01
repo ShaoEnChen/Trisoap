@@ -72,77 +72,65 @@
 
         if($number != 0){
             $shipfee = search('SHIPFEE', 'ORDMAS', 'ORDNO', $ORDNO);
+            $total = $shipfee;
+            ?>
+            <table>
+                <thead>
+                    <tr>
+                        <td>商品名稱</td>
+                        <td>單價(台幣)</td>
+                        <td>數量</td>
+                        <td>金額(台幣)</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                <?php
+                for($i = 1; $i <= $number; $i++){
+                    ?>
+                    <tr>
+                        <td><?echo $ItemName[$i];?></td>
+                        <td><?echo $Price[$i];?></td>
+                        <td><?echo $ItemAmount[$i];?></td>
+                        <?
+                        $price = $Price[$i] * $ItemAmount[$i];
+                        $total += $price;
+                        ?>
+                        <td><?echo $price;?></td>
+                    </tr>
+                    <?
+                }
+                ?>
+                <tr>
+                    <td>運費 : </td>
+                    <td colspan="3"><?echo $shipfee;?></td>
+                </tr>
+                <tr>
+                    <td>總計 : </td>
+                    <td colspan="3"><?echo $total;?></td>
+                </tr>
+                </tbody>
+            </table><br>
+            <?
+            if($ORDNO == '100000000'){
+            ?>
+                <button type="button" class="promise"></buttom><a href="Create_ORDMAS2.php">確定結帳</a>
+            <?php
+            }
+            else{
+            ?>
+                <button type="button" class="promise"></buttom><a href="cashing_test1.php">確定結帳</a>
+            <?php
+            }
         }
         else{
             echo "<h2>目前沒有選擇任何商品</h2>";
-            $shipfee = 0;
+            ?>
+            <button type="button" class="promise"></buttom><a href="../Homepage/index.php">返回首頁</a>
+            <button type="button" class="promise"></buttom><a href="../Homepage/product.php">返回商品頁</a>
+            <?
         }
-
-        $total = $shipfee;
-        ?>
-        <thead>
-            <tr>
-                <td>商品名稱</td>
-                <td>單價(台幣)</td>
-                <td>數量</td>
-                <td>金額(台幣)</td>
-            </tr>
-        </thead>
-        <tbody>
-        <?php
-        for($i = 1; $i <= $number; $i++){
-            echo '<tr>';
-            echo '<td>';
-            echo $ItemName[$i];
-            echo '</td>';
-            echo '<td>';
-            echo $Price[$i];
-            echo '</td>';
-            echo '<td>';
-            echo $ItemAmount[$i];
-            echo '</td>';
-            $price = $Price[$i] * $ItemAmount[$i];
-            echo '<td>';
-            echo $price;
-            echo '</td>';
-            echo '</tr>';
-            $total += $price;
-        }
-
-        echo '<tr>';
-        echo '<td>運費 : </td>';
-        echo '<td colspan="3">';
-        echo $shipfee;
-        echo '</td>';
-        echo '</tr>';
-
-        echo '<tr>';
-        echo '<td>總計 : </td>';
-        echo '<td colspan="3">';
-        echo $total;
-        echo '</td>';
-        echo '</tr>';
-        ?>
-        </tbody>
-    </table>
-    <br>
-    <?php
-    if($number != 0){
-        if($ORDNO == '100000000'){
-        ?>
-            <button type="button" class="promise"></buttom><a href="Create_ORDMAS2.php">確定結帳</a>
-        <?php
-        }
-        else{
-        ?>
-            <button type="button" class="promise"></buttom><a href="cashing_test1.php">確定結帳</a>
-        <?php
-        }
-    }
-    ?>
-    <button type="button" class="cancel"></buttom><a href="../Homepage/index.php">返回首頁</a><br>
-    <button type="button" class="cancel"></buttom><a href="../Homepage/product.php">返回商品頁</a>
-            
+    ?>   
     </div>
 </body>
 </html>
