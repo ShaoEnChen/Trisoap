@@ -100,9 +100,10 @@ hr {
 
 .choice p {
 	margin: 0;
+	white-space: pre-line;
 }
 
-/* 精選相片/影片 */
+/* 精選相片（img）/影片 */
 .selected {
 	margin-top: 10px;
 	width: 100%;

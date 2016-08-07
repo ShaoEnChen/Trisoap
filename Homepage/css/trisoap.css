@@ -606,11 +606,11 @@ a.btn-nav .btn {
     width: 200px; }
 
   .navbar-custom {
-    padding: 30px;
+    /* padding: 30px; */
     border-bottom: 0;
     letter-spacing: 1px;
-    background: 0 0;
-    background: transparent; }
+    /* background: 0 0; */
+    /* background: transparent; */ }
     .navbar-custom.top-nav-collapse {
       padding: 0 30px;
       background-color: #18191B; }
@@ -819,7 +819,7 @@ a.btn-nav .btn {
   position: absolute;
   top: 45%;
   width: 100vw;
-  z-index: 2;
+  z-index: 99;
 }
 
 .landing .intro-body {

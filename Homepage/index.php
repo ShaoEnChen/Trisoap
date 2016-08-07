@@ -282,6 +282,7 @@
     <script src="js/tweecool.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.smartmenus.js"></script>
+    <!-- FlexSlider JS -->
     <script src="../FlexSlider/jquery.flexslider-min.js"></script>
         <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/-->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3E86i8mx1BZDlAaLcknh_mWl4F70i4os"></script>
