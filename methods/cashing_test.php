@@ -6,8 +6,14 @@ include("AllPay.Payment.Integration.php");
 include("Helper/mysql_connect.php");
 include("Helper/sql_operation.php");
 
+$EMAIL = $_SESSION['EMAIL'];
 $ORDNO = $_SESSION['ORDNO'];  // get the order node
 $totalamount = search('TOTALAMT', 'ORDMAS', 'ORDNO', $ORDNO);
+// get paytype and store
+$PAYTYPE = $_POST['PAYTYPE'];
+$sql = "UPDATE ORDMAS SET PAYTYPE = '$PAYTYPE' WHERE ORDNO = '$ORDNO'";
+mysql_query($sql);
+$paytype = $PAYTYPE;
 
 try {
     $obj = new AllInOne();
@@ -25,7 +31,15 @@ try {
     $obj->Send['MerchantTradeDate'] = date("Y/m/d H:i:s");                      //Order_time
     $obj->Send['TotalAmount']       = $totalamount;                             //Order_amount
     $obj->Send['TradeDesc']         = "trisoap";                                //Order_Description
-    $obj->Send['ChoosePayment']     = PaymentMethod::ALL;                       //Payment Method
+    if($paytype == 'ATM'){
+        $obj->Send['ChoosePayment'] = PaymentMethod::ATM;                    //Payment Method
+    }
+    else if($paytype == 'WebATM'){
+        $obj->Send['ChoosePayment'] = PaymentMethod::WebATM;                    //Payment Method
+    }
+    else{
+        $obj->Send['ChoosePayment'] = PaymentMethod::Credit;                    //Payment Method
+    }
     $obj->Send['ClientBackURL']     = "http://localhost/Homepage/index.php";
 
     $sql = "UPDATE ORDMAS SET MerchantTradeNo = '$TradeNo' WHERE ORDNO = '$ORDNO'";
@@ -65,8 +79,15 @@ try {
     array_push($obj->Send['Items'], array('Name' => "運費", 'Price' => $shipfee,
         'Currency' => "元", 'Quantity' => (int) "1", 'URL' => "xxx"));
     
-    //discount from joining message
-    
+    //discount
+    $discount = search('DISCOUNT', 'CUSMAS', 'EMAIL', $EMAIL);
+    array_push($obj->Send['Items'], array('Name' => "留心語折扣", 'Price' => $discount,
+        'Currency' => "元", 'Quantity' => (int) "1", 'URL' => "xxx"));
+
+    //update discount
+    $DISCOUNT = 0;
+    $sql = "UPDATE CUSMAS SET DISCOUNT = '$DISCOUNT' WHERE EMAIL = '$EMAIL'";
+    mysql_query($sql);
 
     //Create Order(auto submit to AllPay)
     $obj->CheckOut();

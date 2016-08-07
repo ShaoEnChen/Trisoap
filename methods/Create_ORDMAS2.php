@@ -38,6 +38,7 @@
 	include("Helper/mysql_connect.php");
     include("Helper/sql_operation.php");
 	$EMAIL = $_SESSION['EMAIL'];
+    $ORDNO = $_SESSION['ORDNO'];
 
 	if($EMAIL != null){
     ?>
