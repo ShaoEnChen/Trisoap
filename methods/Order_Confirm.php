@@ -72,8 +72,11 @@
 
         if($number != 0){
             // $shipfee = search('SHIPFEE', 'ORDMAS', 'ORDNO', $ORDNO);
-            $shipfee = 20;
+            $shipfee = 20;  //need revise ???????
             $total = $shipfee;
+            // discount
+            $discount = search('DISCOUNT', 'CUSMAS', 'EMAIL', $EMAIL);
+            $total += $discount;
             ?>
             <table>
                 <thead>
@@ -104,6 +107,10 @@
                 ?>
                 <tr>
                     <td>運費 : </td>
+                    <td colspan="3"><?echo $discount;?></td>
+                </tr>
+                <tr>
+                    <td>留心語折扣 : </td>
                     <td colspan="3"><?echo $shipfee;?></td>
                 </tr>
                 <tr>
@@ -112,15 +119,38 @@
                 </tr>
                 </tbody>
             </table><br>
+            
+            <?
+            // update TOTALAMOUNT
+            $sql = "UPDATE ORDMAS SET TOTALAMT = '$total' WHERE ORDNO = '$ORDNO'";
+            mysql_query($sql);
+            ?>
+
+            <form method="post" action="cashing_test.php">
+                <label for="PAYTYPE">
+                    <div class="q-select">
+                        <select name="PAYTYPE" id="PAYTYPE" required>
+                            <option value="">選擇付款方式*</option>
+                            <option value="Credit">信用卡</option>
+                            <option value="ATM">ATM</option>
+                            <option value="WebATM">網路ATM</option>
+                        </select>
+                    </div>
+                </label>
+                <br>
             <?
             if($ORDNO == '100000000'){
             ?>
-                <button type="button" class="promise"></buttom><a href="Create_ORDMAS2.php">確定結帳</a>
+                <button type="submit" class="promise"></button><a href="Create_ORDMAS2.php">確定結帳</a>
+            </form>
+            <br>
             <?php
             }
             else{
             ?>
-                <button type="button" class="promise"></buttom><a href="cashing_test.php">確定結帳</a>
+                <button type="submit" class="promise"></buttom><a href="cashing_test.php">確定結帳</a>
+            </form>
+            <br>
             <?php
             }
         }
