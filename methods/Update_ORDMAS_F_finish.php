@@ -25,11 +25,11 @@ if($EMAIL != null && $CUSIDT == 'A'){
                         $ITEMAMT = $item['ORDAMT'];
                         $AMT = select('ITEMMAS', 'ITEMNO', $ITEMNO);
                         if($AMT['ACTCODE'] == 0){
-                                $message = $message . $AMT['ITEMNM'] . "目前下架中，儲存失敗<br>";
+                                $message = $message . $AMT['ITEMNM'] . "目前下架中，儲存失敗" . '\n';
                                 $sql = "UPDATE ORDMAS SET ORDSTAT='F', UPDATEDATE='$UPDATEDATE' WHERE ORDNO='$ORDNO'";
                         }
                         elseif($AMT['ITEMAMT'] - $ITEMAMT < 0){
-                                $message = $message . $AMT['ITEMNM'] . "數量不足，儲存失敗<br>";
+                                $message = $message . $AMT['ITEMNM'] . "數量不足，儲存失敗" . '\n';
                                 $sql = "UPDATE ORDMAS SET ORDSTAT='F', UPDATEDATE='$UPDATEDATE' WHERE ORDNO='$ORDNO'";
                         }
                 }

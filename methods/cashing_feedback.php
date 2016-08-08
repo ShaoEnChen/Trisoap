@@ -3,8 +3,15 @@
 <title>結帳結果頁</title>
 -->
 <?php
-include('AllPay.Payment.Integration.php');
+session_start();
+include("AllPay.Payment.Integration.php");
 include("Helper/mysql_connect.php");
+include("Helper/sql_operation.php");
+include("Helper/handle_string.php");
+$ORDNO = $_SESSION['ORDNO'];
+$paytype = $_SESSION['PAYTYPE'];
+$totalamount = $_SESSION['total'];
+$discount = search('DISCOUNT', 'CUSMAS', 'EMAIL', $EMAIL);
 
 /*
 * get feedback from AllPay
@@ -41,15 +48,8 @@ try
 			}
  		}
 
- 		$F_TradeNo = $szMerchantTradeNo;
- 		//determine feedback content
  		if($szRtnCode == 1){
- 			$sql = "UPDATE ORDMAS SET PAYSTAT='1' WHERE MerchantTradeNo = '$F_TradeNo'";
- 			mysql_query($sql);
- 		}
- 		else{
- 			$sql = "UPDATE ORDMAS SET PAYSTAT='0' WHERE MerchantTradeNo = '$F_TradeNo'";  //not necessary
- 			mysql_query($sql);
+ 			// do something
  		}
  		print '1|OK';	//tell AllPay that we get the feedback
  	} 

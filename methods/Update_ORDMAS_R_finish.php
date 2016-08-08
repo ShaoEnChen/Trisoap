@@ -25,12 +25,12 @@ if($EMAIL != null && $CUSIDT == 'A'){
                         $ITEMAMT = $item['ORDAMT'];
                         $AMT = select('ITEMMAS', 'ITEMNO', $ITEMNO);
                         if($AMT['ACTCODE'] == 0){
-                                $message = $message . $AMT['ITEMNM'] . "目前下架中，已調整訂單狀態為強制結束<br>";
+                                $message = $message . $AMT['ITEMNM'] . "目前下架中，已調整訂單狀態為強制結束" . '\n';
                                 $sql = "UPDATE ORDMAS SET ORDSTAT='F', UPDATEDATE='$UPDATEDATE' WHERE ORDNO='$ORDNO'";
                                 break;
                         }
                         elseif($AMT['ITEMAMT'] - $ITEMAMT < 0){
-                                $message = $message . $AMT['ITEMNM'] . "數量不足，已調整訂單狀態為缺貨中";
+                                $message = $message . $AMT['ITEMNM'] . "數量不足，已調整訂單狀態為缺貨中" . '\n';
                                 $sql = "UPDATE ORDMAS SET BACKCODE='1', UPDATEDATE='$UPDATEDATE' WHERE ORDNO='$ORDNO'";
                         }
                 }

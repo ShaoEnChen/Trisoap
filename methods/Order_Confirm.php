@@ -74,7 +74,6 @@
             // $shipfee = search('SHIPFEE', 'ORDMAS', 'ORDNO', $ORDNO);
             $shipfee = 20;  //need revise ???????
             $total = $shipfee;
-            // discount
             $discount = search('DISCOUNT', 'CUSMAS', 'EMAIL', $EMAIL);
             $total += $discount;
             ?>
@@ -104,14 +103,15 @@
                     </tr>
                     <?
                 }
+                $_SESSION['total'] = $total;
                 ?>
                 <tr>
                     <td>運費 : </td>
-                    <td colspan="3"><?echo $discount;?></td>
+                    <td colspan="3"><?echo $shipfee;?></td>
                 </tr>
                 <tr>
                     <td>留心語折扣 : </td>
-                    <td colspan="3"><?echo $shipfee;?></td>
+                    <td colspan="3"><?echo $discount;?></td>
                 </tr>
                 <tr>
                     <td>總計 : </td>
@@ -120,45 +120,41 @@
                 </tbody>
             </table><br>
             
-            <?
-            // update TOTALAMOUNT
-            $sql = "UPDATE ORDMAS SET TOTALAMT = '$total' WHERE ORDNO = '$ORDNO'";
-            mysql_query($sql);
-            ?>
-
-            <form method="post" action="cashing_test.php">
-                <label for="PAYTYPE">
-                    <div class="q-select">
-                        <select name="PAYTYPE" id="PAYTYPE" required>
-                            <option value="">選擇付款方式*</option>
-                            <option value="Credit">信用卡</option>
-                            <option value="ATM">ATM</option>
-                            <option value="WebATM">網路ATM</option>
-                        </select>
-                    </div>
-                </label>
-                <br>
-            <?
+            <?        
             if($ORDNO == '100000000'){
-            ?>
-                <button type="submit" class="promise"></button><a href="Create_ORDMAS2.php">確定結帳</a>
-            </form>
-            <br>
-            <?php
+                ?>
+                <button type="submit" class="promise"><a href="Create_ORDMAS2.php">確定結帳</a></button>
+                <?
             }
             else{
-            ?>
-                <button type="submit" class="promise"></buttom><a href="cashing_test.php">確定結帳</a>
-            </form>
-            <br>
-            <?php
+                ?>
+                <form method="post" action="cashing_test.php">
+                    <input type="hidden" name="FROM" value="oc" />
+                    <label for="PAYTYPE">
+                        <div class="q-select">
+                            <select name="PAYTYPE" id="PAYTYPE" required>
+                                <option value="">選擇付款方式*</option>
+                                <option value="A">信用卡</option>
+                                <option value="B">ATM</option>
+                                <option value="C">網路ATM</option>
+                            </select>
+                        </div>
+                    </label>
+                <br>
+                <button type="submit" class="promise">確定結帳</button>
+                </form>
+                <br>
+                <?php
             }
+            ?>
+            <button type="button" class="cancel"><a href="../Homepage/index.php">返回首頁</a></button>
+            <?
         }
         else{
             echo "<h2>目前沒有選擇任何商品</h2>";
             ?>
-            <button type="button" class="promise"></buttom><a href="../Homepage/index.php">返回首頁</a>
-            <button type="button" class="promise"></buttom><a href="../Homepage/product.php">返回商品頁</a>
+            <button type="button" class="promise"><a href="../Homepage/index.php">返回首頁</a></button>
+            <button type="button" class="promise"><a href="../Homepage/product.php">返回商品頁</a></button>
             <?
         }
     ?>   

@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: localhost
--- 產生時間： 2016 年 08 月 03 日 08:51
+-- 產生時間： 2016 年 08 月 08 日 08:46
 -- 伺服器版本: 10.1.13-MariaDB
--- PHP 版本： 5.6.21
+-- PHP 版本： 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -59,7 +59,7 @@ CREATE TABLE `CUSMAS` (
 --
 
 INSERT INTO `CUSMAS` (`EMAIL`, `CUSPW`, `CUSNM`, `CUSIDT`, `CUSADD`, `CUSBIRTHY`, `CUSBIRTHM`, `CUSBIRTHD`, `COUNTRY`, `ZCODE`, `TEL`, `CUSTYPE`, `KNOWTYPE`, `CREDITSTAT`, `TAXID`, `DISCOUNT`, `SALEAMTMTD`, `SALEAMTSTD`, `SALEAMTYTD`, `SALEAMT`, `CURAR`, `SPEINS`, `CREATEDATE`, `UPDATEDATE`, `ACTCODE`) VALUES
-('a0922825881@gmail.com', '7db4cd6e7093', '冷俊瑩', 'A', 'Home', 1995, 12, 6, 'Taiwan', NULL, '0922825881', 'A', 'A', 'A', 'No', 0, 0, 0, 0, 0, 0, '', '2016-07-25 10:17:55', '2016-07-25 10:17:55', 1),
+('a0922825881@gmail.com', '7db4cd6e7093', '冷俊瑩', 'A', 'Home', 1995, 12, 6, 'Taiwan', NULL, '0922825881', 'A', 'A', 'A', 'No', 0, 0, 0, 0, 0, 0, '', '2016-07-25 10:17:55', '2016-08-02 15:50:20', 1),
 ('tim841206@yahoo.com.tw', '7db4cd6e7093', '冷俊瑩', 'B', 'Home', 1995, 12, 6, 'Taiwan', NULL, '0922825881', 'A', 'A', 'A', 'No', 0, 0, 0, 0, 0, 0, '', '2016-07-25 09:42:09', '2016-07-25 09:42:09', 1);
 
 -- --------------------------------------------------------
@@ -74,6 +74,8 @@ CREATE TABLE `ITEMMAS` (
   `ITEMAMT` int(8) NOT NULL DEFAULT '0',
   `PRICE` int(8) DEFAULT NULL,
   `DESCRIPTION` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `PHOTO` mediumblob NOT NULL,
+  `PHOTOTYPE` varchar(50) COLLATE utf8_bin NOT NULL,
   `CREATEDATE` datetime NOT NULL,
   `UPDATEDATE` datetime NOT NULL,
   `ACTCODE` tinyint(1) NOT NULL DEFAULT '0'
@@ -83,11 +85,11 @@ CREATE TABLE `ITEMMAS` (
 -- 資料表的匯出資料 `ITEMMAS`
 --
 
-INSERT INTO `ITEMMAS` (`ITEMNO`, `ITEMNM`, `ITEMAMT`, `PRICE`, `DESCRIPTION`, `CREATEDATE`, `UPDATEDATE`, `ACTCODE`) VALUES
-(1, '田靜山巒禾風皂', 0, 300, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 0),
-(2, '釋迦手感果力皂', 0, 300, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 0),
-(3, '金絲森林渲染皂', 0, 300, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 0),
-(4, '三三台東意象禮盒組', 0, 900, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 0);
+INSERT INTO `ITEMMAS` (`ITEMNO`, `ITEMNM`, `ITEMAMT`, `PRICE`, `DESCRIPTION`, `PHOTO`, `PHOTOTYPE`, `CREATEDATE`, `UPDATEDATE`, `ACTCODE`) VALUES
+(1, '田靜山巒禾風皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
+(2, '金絲森林渲染皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
+(3, '釋迦手感果力皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
+(4, '三三台東意象禮盒組', 0, 900, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -136,7 +138,7 @@ CREATE TABLE `ORDMAS` (
   `ORDTYPE` varchar(1) COLLATE utf8_bin NOT NULL,
   `EMAIL` varchar(50) COLLATE utf8_bin NOT NULL,
   `INVOICENO` varchar(15) COLLATE utf8_bin DEFAULT NULL,
-  `BACKSTAT` tinyint(1) DEFAULT '1',
+  `BACKSTAT` tinyint(1) DEFAULT '0',
   `ORDSTAT` varchar(1) COLLATE utf8_bin DEFAULT 'E',
   `PAYSTAT` tinyint(1) DEFAULT '0',
   `PAYTYPE` varchar(1) COLLATE utf8_bin DEFAULT NULL,
