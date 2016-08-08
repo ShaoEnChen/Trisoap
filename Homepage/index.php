@@ -238,7 +238,7 @@
             有別於一般大型賣場，或是各式衛妝開架式商店所販售的工廠壓製肥皂或沐浴精
             </p>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
             <h3><a href="contact.php">聯絡我們</a></h3>
             <p>
               <i class="fa fa-phone fa-fw fa-lg"></i> <?echo $COMTEL;?> <br>
