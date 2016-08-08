@@ -110,9 +110,9 @@
               <!-- Wrapper for slides-->
               <div class="carousel-inner">
                 <div class="item active"><img src="img/product/detail/rice_soap.jpg" alt=""></div>
-                <div class="item"><img src="img/product/detail/rice_element.jpg" alt=""></div>
+                <!-- <div class="item"><img src="img/product/detail/rice_element.jpg" alt=""></div>
                 <div class="item"><img src="img/product/detail/rice_soap_small.jpg" alt=""></div>
-                <!-- <div class="item"><img src="img/shop/single5.jpg" alt=""></div> -->
+                <div class="item"><img src="img/shop/single5.jpg" alt=""></div> -->
               </div>
               <!-- Controls--><a href="#carousel-shop" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a><a href="#carousel-shop" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
             </div>
