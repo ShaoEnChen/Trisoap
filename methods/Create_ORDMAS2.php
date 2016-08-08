@@ -52,10 +52,12 @@
             if($queryTEL == null || $queryCUSADD == null){
                 ?><h1>請先補充會員資料</h1><?
                 if($queryTEL == null){
-                    ?><label for="tel"><input type="text" name="TEL" placeholder="您的聯絡電話" id="tel"/></label><?
+                    ?><label for="tel"><input type="hidden" name="TELid" value="Y"/>
+                    <input type="text" name="TEL" placeholder="您的聯絡電話" id="tel"/></label><?
                 }
                 if($queryCUSADD == null){
-                    ?><label for="add"><input type="text" name="CUSADD" placeholder="您的通訊地址" id="add"/></label><?
+                    ?><label for="add"><input type="hidden" name="CUSADDid" value="Y"/>
+                    <input type="text" name="CUSADD" placeholder="您的通訊地址" id="add"/></label><?
                 }
             }
             ?>

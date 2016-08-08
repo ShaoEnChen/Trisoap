@@ -8,22 +8,28 @@ $EMAIL = $_SESSION['EMAIL'];
 $ORDTYPE = input('ORDTYPE');
 $ORDINST = input('ORDINST');
 $TEL = input('TEL');
+$TELid = input('TELid');
 $CUSADD = input('CUSADD');
+$CUSADDid = input('CUSADDid');
 $message = '';
 if($EMAIL != null){
-    if($TEL != null){
-        $sql = "UPDATE CUSMAS SET TEL='$TEL' WHERE EMAIL='$EMAIL'";
-        mysql_query($sql);
+    if($TELid == 'Y'){
+        if($TEL != null){
+            $sql = "UPDATE CUSMAS SET TEL='$TEL' WHERE EMAIL='$EMAIL'";
+            mysql_query($sql);
+        }
+        else{
+            $message .= '請填寫您的聯絡電話 \n';
+        }
     }
-    else{
-        $message .= '請填寫您的聯絡電話 \n';
-    }
-    if($CUSADD != null){
-        $sql = "UPDATE CUSMAS SET CUSADD='$CUSADD' WHERE EMAIL='$EMAIL'";
-        mysql_query($sql);
-    }
-    else{
-        $message .= '請填寫您的通訊地址 \n';
+    if($CUSADDid == 'Y'){
+        if($CUSADD != null){
+            $sql = "UPDATE CUSMAS SET CUSADD='$CUSADD' WHERE EMAIL='$EMAIL'";
+            mysql_query($sql);
+        }
+        else{
+            $message .= '請填寫您的通訊地址 \n';
+        }
     }
     if($message != ''){
         ?>

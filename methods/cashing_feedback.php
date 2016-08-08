@@ -49,9 +49,19 @@ try
  		}
 
  		if($szRtnCode == 1){
- 			// do something
+ 			$sql = "UPDATE ORDMAS SET PAYTYPE = '$paytype' WHERE ORDNO = '$ORDNO'";
+		    mysql_query($sql);
+		    $sql = "UPDATE ORDMAS SET PAYSTAT = 1 WHERE ORDNO = '$ORDNO'";
+		    mysql_query($sql);
+		    $sql = "UPDATE ORDMAS SET TOTALAMT = $totalamount-$discount WHERE ORDNO = '$ORDNO'";
+		    mysql_query($sql);
+		    $sql = "UPDATE CUSMAS SET DISCOUNT = 0 WHERE EMAIL = '$EMAIL'";
+		    mysql_query($sql);
+		    unset($_SESSION['ORDNO']);
+		    unset($_SESSION['PAYTYPE']);
+		    unset($_SESSION['total']);
+		    print '1|OK';	//tell AllPay that we get the feedback
  		}
- 		print '1|OK';	//tell AllPay that we get the feedback
  	} 
  	else{
  		print '0|Fail';
