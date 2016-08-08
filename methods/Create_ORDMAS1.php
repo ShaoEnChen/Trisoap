@@ -40,26 +40,31 @@
 
 	if($EMAIL != null){
     ?>
-	<br>
+    <br>
     <div class="sign-block">
-    	<h1>建立訂單</h1>
-    	<form name="form" method="post" action="Create_ORDMAS1_finish.php">
+        <form name="form" method="post" action="Create_ORDMAS1_finish.php">
             <input type="hidden" name="ORDTYPE" value="G" />
-	        <label for="need"><textarea name="ORDINST" rows="5" placeholder="訂單特殊要求" id="need"></textarea></label>
-	        <button type="submit" class="promise">確定</button>
-	    </form>
-    	<button type="button" class="cancel"></buttom><a href="../Homepage/product.php">取消</a>
-		<?php
-		}
-		else{
-            ?>
-            <script>
-            alert("請先登入或註冊!");
-            </script>
-            <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/product.php>
             <?
-		}
-		?>
+            $queryTEL = search('TEL', 'CUSMAS', 'EMAIL', $EMAIL);
+            $queryCUSADD = search('CUSADD', 'CUSMAS', 'EMAIL', $EMAIL);
+            if($queryTEL == null || $queryCUSADD == null){
+                ?><h1>請先補充會員資料</h1><?
+                if($queryTEL == null){
+                    ?><label for="tel"><input type="hidden" name="TELid" value="Y"/>
+                    <input type="text" name="TEL" placeholder="您的聯絡電話" id="tel"/></label><?
+                }
+                if($queryCUSADD == null){
+                    ?><label for="add"><input type="hidden" name="CUSADDid" value="Y"/>
+                    <input type="text" name="CUSADD" placeholder="您的通訊地址" id="add"/></label><?
+                }
+            }
+            ?>
+            <label for="need"><textarea name="ORDINST" rows="5" placeholder="訂單特殊要求" id="need"></textarea></label>
+        </form>
+        <button type="button" class="cancel"></buttom><a href="Order_Confirm.php">取消</a>
+    <?php
+	}
+	?>
 	</div>
 </body>
 

@@ -51,7 +51,7 @@ if($EMAIL != null){
         <script>
         alert("<?echo $message;?>");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=Edit_ORDMAS.php>
+        <meta http-equiv=REFRESH CONTENT=0;url=Edit_ORDMAS.php>
         <?
     }
 }
@@ -60,7 +60,7 @@ else{
     <script>
     alert("您無權限觀看此頁面!");
     </script>
-    <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
+    <meta http-equiv=REFRESH CONTENT=0;url=../Homepage/index.php>
     <?
 }
 ?>

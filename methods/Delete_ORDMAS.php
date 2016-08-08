@@ -13,7 +13,7 @@ if($EMAIL != null){
                 <script>
                 alert("您沒有可取消的訂單!");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
+                <meta http-equiv=REFRESH CONTENT=0;url=View_ORDMAS.php>
                 <?
         }
         else{
@@ -38,7 +38,7 @@ else{
         <script>
         alert("請先註冊或登入!");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
+        <meta http-equiv=REFRESH CONTENT=0;url=../Homepage/index.php>
         <?
 }
 ?>

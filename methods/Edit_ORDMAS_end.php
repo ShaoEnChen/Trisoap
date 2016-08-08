@@ -61,7 +61,7 @@ if($EMAIL != null){
         <script>
         alert("<?echo $message;?>");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=Edit_ORDMAS.php>
+        <meta http-equiv=REFRESH CONTENT=0;url=Edit_ORDMAS.php>
         <?
     }
     if($message == null){
@@ -69,7 +69,7 @@ if($EMAIL != null){
         <script>
         alert("更新成功");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=View_ORDMAS.php>
+        <meta http-equiv=REFRESH CONTENT=0;url=View_ORDMAS.php>
         <?
     }
     else{
@@ -77,7 +77,7 @@ if($EMAIL != null){
         <script>
         alert("更新失敗");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=Edit_ORDMAS.php>
+        <meta http-equiv=REFRESH CONTENT=0;url=Edit_ORDMAS.php>
         <?
     }
 }

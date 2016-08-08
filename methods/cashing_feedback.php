@@ -3,8 +3,15 @@
 <title>結帳結果頁</title>
 -->
 <?php
-include('AllPay.Payment.Integration.php');
+session_start();
+include("AllPay.Payment.Integration.php");
 include("Helper/mysql_connect.php");
+include("Helper/sql_operation.php");
+include("Helper/handle_string.php");
+$ORDNO = $_SESSION['ORDNO'];
+$paytype = $_SESSION['PAYTYPE'];
+$totalamount = $_SESSION['total'];
+$discount = search('DISCOUNT', 'CUSMAS', 'EMAIL', $EMAIL);
 
 /*
 * get feedback from AllPay
@@ -41,17 +48,20 @@ try
 			}
  		}
 
- 		$F_TradeNo = $szMerchantTradeNo;
- 		//determine feedback content
  		if($szRtnCode == 1){
- 			$sql = "UPDATE ORDMAS SET PAYSTAT='1' WHERE MerchantTradeNo = '$F_TradeNo'";
- 			mysql_query($sql);
+ 			$sql = "UPDATE ORDMAS SET PAYTYPE = '$paytype' WHERE ORDNO = '$ORDNO'";
+		    mysql_query($sql);
+		    $sql = "UPDATE ORDMAS SET PAYSTAT = 1 WHERE ORDNO = '$ORDNO'";
+		    mysql_query($sql);
+		    $sql = "UPDATE ORDMAS SET TOTALAMT = $totalamount-$discount WHERE ORDNO = '$ORDNO'";
+		    mysql_query($sql);
+		    $sql = "UPDATE CUSMAS SET DISCOUNT = 0 WHERE EMAIL = '$EMAIL'";
+		    mysql_query($sql);
+		    unset($_SESSION['ORDNO']);
+		    unset($_SESSION['PAYTYPE']);
+		    unset($_SESSION['total']);
+		    print '1|OK';	//tell AllPay that we get the feedback
  		}
- 		else{
- 			$sql = "UPDATE ORDMAS SET PAYSTAT='0' WHERE MerchantTradeNo = '$F_TradeNo'";  //not necessary
- 			mysql_query($sql);
- 		}
- 		print '1|OK';	//tell AllPay that we get the feedback
  	} 
  	else{
  		print '0|Fail';

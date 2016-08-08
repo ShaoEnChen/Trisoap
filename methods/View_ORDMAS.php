@@ -21,6 +21,29 @@ include("Helper/sql_operation.php");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
+function show_ORDTYPE($id){
+	if($id == 'G') echo '一般';
+	elseif($id == 'S') echo '特殊';
+}
+function show_BACKSTAT($id){
+	if($id == '1') echo '缺貨中';
+	elseif($id == '0') echo '有存貨';
+}
+function show_ORDSTAT($id){
+	if($id == 'E') echo '待處理';
+	elseif($id == 'R') echo '處理中';
+	elseif($id == 'C') echo '已出貨';
+	elseif($id == 'F') echo '強制結束';
+}
+function show_PAYSTAT($id){
+	if($id == '1') echo '已付款';
+	elseif($id == '0') echo '未付款';
+}
+function show_PAYTYPE($id){
+	if($id == 'A') echo '信用卡';
+	elseif($id == 'B') echo '網路ATM';
+	elseif($id == 'C') echo 'ATM';
+}
 ?>
     <nav class="navbar navbar-fixed-top nav-custom">
         <div class="container-fluid">
@@ -78,32 +101,9 @@ $queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
         <div class="container">
             <h2>訂單紀錄</h2>
             <div class="manage">
-                <div class="row">
-                    <div class="visible-xs col-xs-2 col-xs-offset-1" id="pills-xs">
-                        <a class="btn dropdown-toggle" id="pills-xs-dropdown" data-toggle="dropdown" href="#">
-                            全部<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu"></ul>
-                    </div>
-                    <div class="hidden-xs col-sm-8 col-md-6" id="pills">
-                        <ul class="nav nav-pills">
-                            <li class="active"><a data-toggle="pill" href="#all">全部</a></li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="row table-responsive">
                     <div class="tab-content">
-                    <!-- use php for loop to generate each pill -->
-                        
-                    <!-- 全部 -->
-                    <?php switch(0):
-                    case 0:
-                        $queryManager = "SELECT * FROM CUSMAS WHERE CUSIDT = 'A' AND ACTCODE = '1'"; ?>
-                        <div id="all" class="tab-pane fade in active">
-                    <?php break; ?>
-                        
-                    <?php endswitch; ?>
-                        <!-- pill content -->
+                        <div id="all" class="tab-pane fade in active">                        
                         <table class="table table-hover">
                             <thead>
                                 <tr>
@@ -114,6 +114,7 @@ $queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
                                     <td>缺貨狀態</td>
                                     <td>訂單狀態</td>
                                     <td>付款狀態</td>
+                                    <td>付款方式</td>
                                     <td>訂單總額</td>
                                     <td>訂單總值</td>
                                     <td>建立日期</td>
@@ -130,68 +131,32 @@ $queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
                                         <tr>
                                             <!-- 訂單編號 -->
                                             <td>
-                                                <?php
-                                                    echo "<form name=\"form\" method=\"post\" action=\"View_ORDITEM.php\">";
-                                                    echo "<input type=\"hidden\" name=\"ORDNO\" value=\"$ORDNO\" />";
-                                                    echo "<input type=\"hidden\" name=\"RETURN\" value=\"view\" />";
-                                                    echo "<input type=\"submit\" name=\"button\" value=\"$ORDNO\" />";
-                                                    echo "</form>";
-                                                ?>
+                                                <form name="form" method="post" action="View_ORDITEM.php">
+                                                <input type="hidden" name="ORDNO" value="<?echo $ORDNO;?>" />
+                                                <input type="hidden" name="RETURN" value="view" />
+                                                <input type="submit" name="button" value="<?echo $ORDNO;?>" />
+                                                </form>
                                             </td>
                                             <!-- 訂單種類 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['ORDTYPE'];
-                                                ?>
-                                            </td>
+                                            <td><?show_ORDTYPE($row['ORDTYPE']);?></td>
                                             <!-- 顧客編號 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['EMAIL'];
-                                                ?>
-                                            </td>
+                                            <td><?echo $row['EMAIL'];?></td>
                                             <!-- 發票編號 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['INVOICENO'];
-                                                ?>
-                                            </td>
+                                            <td><?echo $row['INVOICENO'];?></td>
                                             <!-- 缺貨狀態 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['BACKSTAT'];
-                                                ?>
-                                            </td>
+                                            <td><?show_BACKSTAT($row['BACKSTAT']);?></td>
                                             <!-- 訂單狀態 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['ORDSTAT'];
-                                                ?>
-                                            </td>
+                                            <td><?show_ORDSTAT($row['ORDSTAT']);?></td>
                                             <!-- 付款狀態 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['PAYSTAT'];
-                                                ?>
-                                            </td>
+                                            <td><?show_PAYSTAT($row['PAYSTAT']);?></td>
+                                            <!-- 付款方式 -->
+                                            <td><?show_PAYTYPE($row['PAYTYPE']);?></td>
                                             <!-- 訂單總額 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['TOTALPRICE'];
-                                                ?>
-                                            </td>
+                                            <td><?echo $row['TOTALPRICE'];?></td>
                                             <!-- 訂單總值 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['TOTALAMT'];
-                                                ?>
-                                            </td>
+                                            <td><?echo $row['TOTALAMT'];?></td>
                                             <!-- 建立日期 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['CREATEDATE'];
-                                                ?>
-                                            </td>
+                                            <td><?echo $row['CREATEDATE'];?></td>
                                         </tr>
                                     <?php
                                     }
