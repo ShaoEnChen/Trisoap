@@ -118,13 +118,13 @@
           </div>
           <div class="col-lg-5 col-lg-offset-1 text-center">
             <h3>&nbsp;</h3>
-            <div data-value="0.99" class="circle"><span></span>
+            <div data-value="0.999" class="circle"><span></span>
               <div class="agenda">公益</div>
             </div>
-            <div data-value="0.99" class="circle"><span></span>
+            <div data-value="0.999" class="circle"><span></span>
               <div class="agenda">企業</div>
             </div>
-            <div data-value="0.99" class="circle"><span></span>
+            <div data-value="0.999" class="circle"><span></span>
               <div class="agenda">目標</div>
             </div>
           </div>
@@ -161,7 +161,14 @@
             <h4>王郁仁</h4>
             <p>國立臺灣大學工商管理學系</p>
             <p><img src="img/photo2.png" alt="" class="img-responsive center-block"></p>
-            <p>簡短介紹</p>
+            <p>來自台中的大孩子，<br>
+            對世界有永無止境的好奇心，<br>
+            把生活當作田野，<br>
+            把日常視為創新的根源。<br>
+            我們會一天一天長大，外表逐漸成熟，<br>
+            但內心卻得時時提醒自己<br>
+            要保有小時候的那種想像力與創造力。<br>
+            </p>
             <ul class="list-inline">
               <li><a href="/"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
               <li><a href="/"><i class="fa fa-youtube fa-2x fa-fw"></i></a></li>
@@ -172,7 +179,7 @@
           <div class="col-md-4 col-sm-6">
             <h4>陳雨彤 Maggy Chen</h4>
             <p>國立臺灣大學國際企業學系</p>
-            <p><img src="img/team/avatar3.jpg" alt="" class="img-responsive center-block"></p>
+            <p><img src="img/photo3.png" alt="" class="img-responsive center-block"></p>
             <p>期許自己結合愛心與能力，<br>
             一步一腳印，踏實地朝社會企業的夢想邁進。<br>
             Motto: Be the change that you wish to see in the world.<br>
