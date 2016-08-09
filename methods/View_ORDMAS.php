@@ -35,10 +35,6 @@ function show_ORDSTAT($id){
 	elseif($id == 'C') echo '已出貨';
 	elseif($id == 'F') echo '強制結束';
 }
-function show_PAYSTAT($id){
-	if($id == '1') echo '已付款';
-	elseif($id == '0') echo '未付款';
-}
 function show_PAYTYPE($id){
 	if($id == 'A') echo '信用卡';
 	elseif($id == 'B') echo '網路ATM';
@@ -148,7 +144,13 @@ function show_PAYTYPE($id){
                                             <!-- 訂單狀態 -->
                                             <td><?show_ORDSTAT($row['ORDSTAT']);?></td>
                                             <!-- 付款狀態 -->
-                                            <td><?show_PAYSTAT($row['PAYSTAT']);?></td>
+                                            <td><?
+                                                if($row['PAYSTAT'] == '1') echo '已付款';
+                                                elseif($row['PAYSTAT'] == '0'){
+                                                    $_SESSION['ORDNO'] = $ORDNO;
+                                                    ?><a href="Order_Confirm.php">前往付款</a><?
+                                                }
+                                            ?></td>
                                             <!-- 付款方式 -->
                                             <td><?show_PAYTYPE($row['PAYTYPE']);?></td>
                                             <!-- 訂單總額 -->
