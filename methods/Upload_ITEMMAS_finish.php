@@ -44,8 +44,8 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 <script>
                 alert("<?echo $message;?>");
                 </script>
+                <meta http-equiv=REFRESH CONTENT=0.5;url=Upload_ITEMMAS.php>
                 <?
-                echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Upload_ITEMMAS.php>';
         }
 }
 else{

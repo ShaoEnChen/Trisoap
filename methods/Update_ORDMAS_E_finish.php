@@ -23,7 +23,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
         $sql = "UPDATE ORDMAS SET ORDSTAT='$ORDSTAT', UPDATEDATE='$UPDATEDATE' WHERE ORDNO='$ORDNO'";
         if(mysql_query($sql)){
                 $queryEMAIL = search('EMAIL', 'ORDMAS', 'ORDNO', $ORDNO);
-                $queryPAYTYPE = show_PAYTYPE(search('PAYTYPE', 'ORDMAS', 'ORDNO', $ODRNO));
+                $queryPAYTYPE = show_PAYTYPE(search('PAYTYPE', 'ORDMAS', 'ORDNO', $ORDNO));
                 $queryName = search('CUSNM', 'CUSMAS', 'EMAIL', $queryEMAIL);
                 $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
                 $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');

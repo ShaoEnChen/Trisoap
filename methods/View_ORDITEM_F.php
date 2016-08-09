@@ -1,5 +1,32 @@
-<title>三三吾鄉手工皂 強制結束訂單</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='css/normal.css' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+
+    <title>三三社企-強制結束訂單</title>
+    <style>
+    .sign-block {
+        width: 650px;
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    .sign-block input {
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+<br>
+<div class="sign-block">
+<h1>強制結束訂單</h1>
 <?php
 session_start();
 include("Helper/mysql_connect.php");
@@ -9,12 +36,12 @@ $CUSIDT = $_SESSION['CUSIDT'];
 
 if($EMAIL != null && $CUSIDT == 'A'){
     $ORDNO = $_POST['ORDNO'];
+    $row = select('ORDMAS', 'ORDNO', $ORDNO);
     echo "<form name=\"form\" method=\"post\" action=\"Update_ORDMAS_F_finish.php\">";
     echo "<input type=\"hidden\" name=\"ORDNO\" value=\"$ORDNO\" />";
-    $row = select('ORDMAS', 'ORDNO', $ORDNO);
     echo "訂單編號：".$row['ORDNO']."<br>";
     echo "訂單種類：".$row['ORDTYPE']."<br>";
-    echo "顧客編號：".$row['CUSNO']."<br>";
+    echo "顧客信箱：".$row['EMAIL']."<br>";
     echo "額外指令：".$row['ORDINST']."<br>";
     echo "訂購商品：<br>";
     
@@ -31,17 +58,16 @@ if($EMAIL != null && $CUSIDT == 'A'){
     echo "運輸費用：".$row['SHIPFEE']."<br>";
     echo "訂單總值：".$row['TOTALAMT']."<br>";
     echo "建立日期：".$row['CREATEDATE']."</br>";
-
-    echo "訂單狀態：<select name=\"ORDSTAT\" >";
-    echo "<option value=\"F\">強制結束</option>";
-    echo "<option value=\"C\">已完成</option>";
-    echo "<option value=\"D\">刪除</option>";
-    echo "</select> <br>";
-    echo "<input type=\"submit\" name=\"button\" value=\"儲存\" />";
-    echo "</form>";
-?>
-<a href="Update_ORDMAS_F.php">返回</a> <br>
-<?php
+    ?>
+    <label for="ORDSTAT">訂單狀態：<select name="ORDSTAT">
+    <option value="F">強制結束</option>
+    <option value="C">已完成</option>
+    <option value="D">刪除</option>
+    </select></label><br><br><br>
+    <button type="submit" class="promise">儲存</button>
+    </form>
+    <button type="button" class="cancel"></buttom><a href="Update_ORDMAS_F.php">取消</a>
+    <?
 }
 else{
     ?>
@@ -51,3 +77,7 @@ else{
     <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
     <?
 }
+?>
+</div>
+</body>
+</html>
