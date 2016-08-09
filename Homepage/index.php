@@ -110,16 +110,19 @@
       <!-- Intro Header-->
       <div class="flexslider">
         <div class="intro-body">
-          <h1>三三 吾鄉皂</h1>
+          <!-- <h1>三三 吾鄉皂</h1>
           <div data-wow-delay="1.4s" class="scroll-btn hidden-xs wow fadeInDown"><a href="#about" class="page-scroll"><span class="mouse"><span class="weel"><span></span></span></span></a></div>
+          -->
         </div>
         <ul class="slides">
-          <li><div class="slide" id="flex-slider1"></div></li>
-          <li><div class="slide" id="flex-slider2"></div></li>
-          <li><div class="slide" id="flex-slider3"></div></li>
+          <li><div class="flexslide" id="flexslider1"></div></li>
+          <li><div class="flexslide" id="flexslider2"></div></li>
+          <li><div class="flexslide" id="flexslider3"></div></li>
+          <li><div class="flexslide" id="flexslider4"></div></li>
         </ul>
         <div class="flexslider-controls">
           <ol class="flex-control-nav">
+            <li></li>
             <li></li>
             <li></li>
             <li></li>
@@ -155,12 +158,10 @@
               <ol class="carousel-indicators">
                 <li data-target="#carousel-light" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-light" data-slide-to="1"></li>
-                <li data-target="#carousel-light" data-slide-to="2"></li>
               </ol>
               <div role="listbox" class="carousel-inner">
                 <div class="item active"><img src="img/production1.jpg" alt="" class="img-responsive center-block"></div>
                 <div class="item"><img src="img/production2.png" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="img/production3.png" alt="" class="img-responsive center-block"></div>
               </div>
             </div>
           </div>

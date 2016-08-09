@@ -1737,21 +1737,25 @@ li .shop-cart {
   border: none;
 }
 
-.slide {
+.flexslide {
   width: 100vw;
   height: 100vh;
 }
 
-#flex-slider1 {
-  background: url(../img/index1.jpg) center center no-repeat;
+#flexslider1 {
+  background: url(../img/index1.png) center center no-repeat;
 }
 
-#flex-slider2 {
-  background: url(../img/index2.jpg) center center no-repeat;
+#flexslider2 {
+  background: url(../img/index2.png) center center no-repeat;
 }
 
-#flex-slider3 {
-  background: url(../img/index3.jpg) center center no-repeat;
+#flexslider3 {
+  background: url(../img/index3.png) center center no-repeat;
+}
+
+#flexslider4 {
+  background: url(../img/index4.png) center center no-repeat;
 }
 
 .flex-control-nav {

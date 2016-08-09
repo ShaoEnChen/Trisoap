@@ -199,7 +199,7 @@
     <script src="js/tweecool.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.smartmenus.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGuJZxSh8-7yols35KtdE21XJI-GBlRGo"></script>
     <script src="js/map.js"></script>
     <!-- Custom Theme JavaScript-->
     <script src="js/pheromone.js"></script>

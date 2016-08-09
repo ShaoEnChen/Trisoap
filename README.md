@@ -1,7 +1,7 @@
 # Trisoap
 待完成部分
 
-3. Homepage的所有頁面學長希望能把最上面的功能列用白色獨立出來，如https://www.greenvines.com.tw 。這項有時間再做，我真的覺得現在這樣比較好看...
+### 3. Homepage的所有頁面學長希望能把最上面的功能列用白色獨立出來，如https://www.greenvines.com.tw 。這項有時間再做，我真的覺得現在這樣比較好看...
 
 6. View_ORDMAS.php左上logo尚未放
 
