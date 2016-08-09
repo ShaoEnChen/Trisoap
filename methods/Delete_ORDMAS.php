@@ -55,7 +55,7 @@ function show_PAYTYPE($id){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#page-top" class="navbar-brand"><img src="http://placehold.it/125x30" alt="" class="logo"></a>
+                <a href="#page-top" class="navbar-brand"><img src="image/logo.png" alt="" class="logo"></a>
             </div>
             <div class="collapse navbar-collapse navbar-main-collapse">
                 <ul class="nav navbar-nav navbar-right">

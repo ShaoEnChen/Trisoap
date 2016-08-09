@@ -1,32 +1,150 @@
-<title>三三吾鄉手工皂 管理商品頁</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<?php
-session_start();
-include("Helper/mysql_connect.php");
-$EMAIL = $_SESSION['EMAIL'];
-$CUSIDT = $_SESSION['CUSIDT'];
-
-if($EMAIL != null && $CUSIDT == 'A'){
-    echo "商品列表：<br>";
-    $queryITEMMAS = "SELECT * FROM ITEMMAS";
-    $result = mysql_query($queryITEMMAS);
-    while($row = mysql_fetch_array($result)){
-        echo "商品編號:".$row['ITEMNO']." 商品名稱:".$row['ITEMNM']." 商品數量:".$row['ITEMAMT']." 商品價格:".$row['PRICE']." 商品描述:".$row['DESCRIPTION']." 狀態:".$row['ACTCODE']."</br>";
-    }
-    echo "<br>";
-?>
-<a href="Create_ITEMMAS.php">新增商品</a> <br>
-<a href="Edit_ITEMMAS.php">更新商品</a> <br>
-<a href="Delete_ITEMMAS.php">下架商品</a> <br>
-<a href="Upload_ITEMMAS.php">上市商品</a> <br>
-<a href="../Homepage/index.php">返回主頁</a> <br>
-<?php
-}
-else{
-	?>
-	<script>
-	alert("您無權限觀看此頁面!");
-	</script>
-	<meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
-	<?
-}
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="image/icon/favicon.png">
+        <title>商品管理</title>
+        <meta name="author" content="2016 NTUIM SA GROUP7">
+        <meta name="description" content="">
+        <!-- bootstrap css -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- custim css -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body id="page-top">
+        <?php
+            session_start();
+            include("Helper/mysql_connect.php");
+            include("Helper/sql_operation.php");
+            $EMAIL = $_SESSION['EMAIL'];
+            $CUSIDT = $_SESSION['CUSIDT'];
+            if($EMAIL != null && $CUSIDT == 'A'){
+                    $queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
+        ?>
+        <nav class="navbar navbar-fixed-top nav-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#page-top" class="navbar-brand"><img src="image/logo.png" alt="" class="logo"></a>
+                </div>
+                <div class="collapse navbar-collapse navbar-main-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="../Homepage/index.php">
+                                回三三首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Create_ITEMMAS.php">
+                                新增商品<i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Edit_ITEMMAS.php">
+                                更新商品<i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Delete_ITEMMAS.php">
+                                下架商品<i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Upload_ITEMMAS.php">
+                                上市商品<i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- 要改成dropdown -->
+                            <!-- 更新使用者資料、密碼 -->
+                            <a href="#">
+                                <?php
+                                    echo $queryCUSNM."，您好<br>";
+                                ?>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="User_logout.php">
+                                登出<i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="container">
+                <h2>商品管理</h2>
+                <div class="manage">
+                    <div class="row table-responsive">
+                        <div class="tab-content">
+                            <div id="all" class="tab-pane fade in active">                        
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <td>商品編號</td>
+                                            <td>商品名稱</td>
+                                            <td>商品數量</td>
+                                            <td>商品價格</td>
+                                            <td>商品描述</td>
+                                            <td>商品狀態</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                        $queryITEMMAS = "SELECT * FROM ITEMMAS";
+                                        $result = mysql_query($queryITEMMAS);
+                                        while($row = mysql_fetch_array($result)){
+                                    ?>
+                                        <tr>
+                                            <!-- 商品編號 -->
+                                            <td><?php echo $row['ITEMNO'];?></td>
+                                            <!-- 商品名稱 -->
+                                            <td><?php echo $row['ITEMNM'];?></td>
+                                            <!-- 商品數量 -->
+                                            <td><?php echo $row['ITEMAMT'];?></td>
+                                            <!-- 商品價格 -->
+                                            <td><?php echo $row['PRICE'];?></td>
+                                            <!-- 商品描述 -->
+                                            <td><?php echo $row['DESCRIPTION'];?></td>
+                                            <!-- 商品狀態 -->
+                                            <td><?php echo $row['ACTCODE'];?></td>
+                                        </tr>
+                                    <?
+                                        }
+                                    ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+            }
+            else{
+                ?>
+                <script>
+                alert("您無權限觀看此頁面!");
+                </script>
+                <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
+                <?
+            }
+        ?>
+    </body>
+    <!-- jquery -->
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src="js/trisoap.js"></script>
+</html>

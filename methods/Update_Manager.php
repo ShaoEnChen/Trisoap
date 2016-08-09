@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
     <head>
@@ -16,6 +15,7 @@
     </head>
     <body id="page-top">
         <?php
+            session_start();
             include("Helper/mysql_connect.php");
             include("Helper/sql_operation.php");
             $EMAIL = $_SESSION['EMAIL'];
@@ -33,7 +33,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#page-top" class="navbar-brand"><img src="http://placehold.it/125x30" alt="" class="logo"></a>
+                    <a href="#page-top" class="navbar-brand"><img src="image/logo.png" alt="" class="logo"></a>
                 </div>
                 <div class="collapse navbar-collapse navbar-main-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -62,7 +62,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="../methods/User_logout.php">
+                            <a href="User_logout.php">
                                 登出<i class="fa fa-angle-down" aria-hidden="true"></i>
                             </a>
                         </li>
@@ -74,32 +74,9 @@
             <div class="container">
                 <h2>權限管理</h2>
                 <div class="manage">
-                    <div class="row">
-                        <div class="visible-xs col-xs-2 col-xs-offset-1" id="pills-xs">
-                            <a class="btn dropdown-toggle" id="pills-xs-dropdown" data-toggle="dropdown" href="#">
-                                全部<span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu"></ul>
-                        </div>
-                        <div class="hidden-xs col-sm-8 col-md-6" id="pills">
-                            <ul class="nav nav-pills">
-                                <li class="active"><a data-toggle="pill" href="#all">全部</a></li>
-                            </ul>
-                        </div>
-                    </div>
                     <div class="row table-responsive">
                         <div class="tab-content">
-                        <!-- use php for loop to generate each pill -->
-                        
-                        <!-- 全部 -->
-                        <?php switch(0):
-                        case 0:
-                            $queryManager = "SELECT * FROM CUSMAS WHERE CUSIDT = 'A' AND ACTCODE = '1'"; ?>
                             <div id="all" class="tab-pane fade in active">
-                        <?php break; ?>
-                        
-                        <?php endswitch; ?>
-                                <!-- pill content -->
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
@@ -112,40 +89,21 @@
                                     </thead>
                                     <tbody>
                                     <?php
+                                        $queryManager = "SELECT * FROM CUSMAS WHERE CUSIDT = 'A' AND ACTCODE = '1'";
                                         $result = mysql_query($queryManager);
                                         while($row = mysql_fetch_array($result)){
                                     ?>
                                         <tr>
                                             <!-- 電子信箱 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['EMAIL'];
-                                                ?>
-                                            </td>
+                                            <td><?php echo $row['EMAIL'];?></td>
                                             <!-- 姓名 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['CUSNM'];
-                                                ?>
-                                            </td>
+                                            <td><?php echo $row['CUSNM'];?></td>
                                             <!-- 電話 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['TEL'];
-                                                ?>
-                                            </td>
+                                            <td><?php echo $row['TEL'];?></td>
                                             <!-- 地址 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['CUSADD'];
-                                                ?>
-                                            </td>
+                                            <td><?php echo $row['CUSADD'];?></td>
                                             <!-- 帳號建立日期 -->
-                                            <td>
-                                                <?php
-                                                    echo $row['CREATEDATE'];
-                                                ?>
-                                            </td>
+                                            <td><?php echo $row['CREATEDATE'];?></td>
                                         </tr>
                                     <?
                                         }
