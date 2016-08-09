@@ -1,6 +1,4 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>三三吾鄉手工皂 上市商品</title>
-
 <?php
 session_start();
 include("Helper/mysql_connect.php");
@@ -12,31 +10,42 @@ $message = null;
 
 if($EMAIL != null && $CUSIDT == 'A'){
         $newITEMNO = input('ITEMNO');
-        if($newITEMNO == null){
-                $message = $message . '商品編號欄位不可空白<br>';
+        $PW = input('PW');
+        $queryPW = search('CUSPW', 'CUSMAS', 'EMAIL', $EMAIL);
+        if(encrypt($PW) != $queryPW){
+                $message = $message . '密碼錯誤 \n';
         }
         $row = select('ITEMMAS', 'ITEMNO', $newITEMNO);
         if($row['ACTCODE'] == '1'){
-                $message = $message . $row['ITEMNM'] . "已經上市<br>";
+                $message = $message . $row['ITEMNM'] . "已經上市";
         }
 
         if($message == null){
-                $_SESSION['newITEMNO'] = $newITEMNO;
-?>
-<form name="form" method="post" action="Upload_ITEMMAS_end.php">
-請再次輸入您的密碼以上市商品<br>
-密碼：<input type="password" name="PW" /> <br>
-<input type="submit" name="button" value="確定" />
-</form>
-<?php
+                $sql = "UPDATE ITEMMAS SET ACTCODE='1' WHERE ITEMNO='$newITEMNO'";
+                if(mysql_query($sql)){
+                        ?>
+                        <script>
+                        alert("上市成功");
+                        </script>
+                        <meta http-equiv=REFRESH CONTENT=0.5;url=Update_ITEMMAS.php>
+                        <?
+                }
+                else{
+                        ?>
+                        <script>
+                        alert("上市失敗");
+                        </script>
+                        <meta http-equiv=REFRESH CONTENT=0.5;url=Upload_ITEMMAS.php>
+                        <?
+                }
         }
         else{
                 ?>
                 <script>
                 alert("<?echo $message;?>");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0.5;url=Upload_ITEMMAS.php>
                 <?
+                echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Upload_ITEMMAS.php>';
         }
 }
 else{

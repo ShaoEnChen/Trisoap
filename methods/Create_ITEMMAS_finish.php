@@ -2,53 +2,63 @@
 <?php
 session_start();
 include("Helper/mysql_connect.php");
-include("Helper/sql_operation.php");
 include("Helper/handle_string.php");
-$message = null;
+include("Helper/sql_operation.php");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
+$newITEMNO = input('ITEMNO');
+$newITEMNM = input('ITEMNM');
+$newITEMAMT = input('ITEMAMT');
+$newPRICE = input('PRICE');
+$newDESCRIPTION = input('$DESCRIPTION');
+$message = null;
 
 if($EMAIL != null && $CUSIDT == 'A'){
-        $newITEMNO = input('ITEMNO');
-        $newITEMNM = input('ITEMNM');
-        $newITEMAMT = input('ITEMAMT');
-        $newPRICE = input('PRICE');
-        $newDESCRIPTION = input('$DESCRIPTION');
-
+        $PW = input('PW');
+        $queryPW = search('CUSPW', 'CUSMAS', 'EMAIL', $EMAIL);
+        if(encrypt($PW) != $queryPW){
+                $message = $message . '密碼錯誤 \n';
+        }
         if($newITEMNO == null){
-                $message = $message . '商品編號欄位不可空白<br>';
+                $message = $message . '商品編號欄位不可空白 \n';
         }  
         if($newITEMNM == null){
-                $message = $message . '商品名稱欄位不可空白<br>';
+                $message = $message . '商品名稱欄位不可空白 \n';
         }
         if($newPRICE == null){
-                $message = $message . '商品價格欄位不可空白<br>';
+                $message = $message . '商品價格欄位不可空白 \n';
         }
         $queryITEMNO = search('ITEMNO', 'ITEMMAS', 'ITEMNO', $newITEMNO);
         if($queryITEMNO != null){
-                $message = $message . '此商品編號已存在<br>';
+                $message = $message . '此商品編號已存在 \n';
         }
+
         if($message == null){
-                $_SESSION['newITEMNO'] = $newITEMNO;
-                $_SESSION['newITEMNM'] = $newITEMNM;
-                $_SESSION['newITEMAMT'] = $newITEMAMT;
-                $_SESSION['newPRICE'] = $newPRICE;
-                $_SESSION['newDESCRIPTION'] = $newDESCRIPTION;
-?>
-<form name="form" method="post" action="Create_ITEMMAS_end.php">
-請再次輸入您的密碼以新增商品<br>
-密碼：<input type="password" name="PW" /> <br>
-<input type="submit" name="button" value="確定" />
-</form>
-<?php
+                $sql = "insert into ITEMMAS (ITEMNO, ITEMNM, ITEMAMT, PRICE, DESCRIPTION) values ('$newITEMNO', '$newITEMNM', '$newITEMAMT', '$newPRICE', '$newDESCRIPTION')";
+                if(mysql_query($sql)){
+                        ?>
+                        <script>
+                        alert("新增成功");
+                        </script>
+                        <meta http-equiv=REFRESH CONTENT=0.5;url=Update_ITEMMAS.php>
+                        <?
+                }
+                else{
+                        ?>
+                        <script>
+                        alert("新增失敗");
+                        </script>
+                        <meta http-equiv=REFRESH CONTENT=0.5;url=Create_ITEMMAS.php>
+                        <?
+                }
         }
         else{
                 ?>
                 <script>
                 alert("<?echo $message;?>");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0.5;url=Create_ITEMMAS.php>
                 <?
+                echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Create_ITEMMAS.php>';
         }
 }
 else{
