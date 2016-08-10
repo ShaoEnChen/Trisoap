@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>三三社企-刪除管理員</title>
-
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
+    <title>三三社企-刪除管理員</title>
 	<!-- Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="css/animate.css">
 	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 

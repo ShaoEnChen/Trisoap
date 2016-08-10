@@ -2,11 +2,13 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
+    <title>三三社企-待執行訂單</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='css/normal.css' rel='stylesheet' type='text/css'>
-    <meta charset="UTF-8">
-
-    <title>三三社企-待執行訂單</title>
     <style>
     .sign-block {
         width: 650px;

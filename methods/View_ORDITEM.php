@@ -1,5 +1,6 @@
 <title>三三吾鄉手工皂 查看訂單</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
 session_start();
 include("Helper/mysql_connect.php");

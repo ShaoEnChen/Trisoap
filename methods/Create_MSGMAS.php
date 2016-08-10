@@ -1,4 +1,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <title>三三吾鄉手工皂 新增留心語</title>
 <?php
 session_start();

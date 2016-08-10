@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
 include("Helper/mysql_connect.php");
 $EMAIL = $_SESSION['EMAIL'];

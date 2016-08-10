@@ -2,24 +2,26 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
+    <title>三三社企-登入</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='css/sign.css' rel='stylesheet' type='text/css'>
-    <meta charset="UTF-8">
-
-    <title>三三社企-登入</title>
     <style>
-    .sign-block {
-        width: 350px;
-        padding: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    }
-    .sign-block input {
-        width: 100%;
-    }
+        .sign-block {
+            width: 350px;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+        .sign-block input {
+            width: 100%;
+        }
     </style>
 </head>
 

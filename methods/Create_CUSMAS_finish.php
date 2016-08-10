@@ -2,11 +2,16 @@
 <html>
 
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='css/sign.css' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
     <title>三三社企-註冊</title>
+    <meta name="author" content="2016 NTUIM SA GROUP7">
+    <meta name="description" content="">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- custim css -->
+    <link href="css/sign.css" rel="stylesheet">
     <style>
         .sign-block {
             width: 350px;
