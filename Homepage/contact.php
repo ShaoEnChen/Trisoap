@@ -98,7 +98,7 @@
       </div>
     </nav>
     <!-- Header-->
-    <header data-background="img/contact.jpg" class="intro introhalf">
+    <header data-background="img/jumbotrons/contact.jpg" class="intro introhalf">
       <!-- Intro Header-->
       <div class="intro-body">
         <h1>聯絡我們</h1>

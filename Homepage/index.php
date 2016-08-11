@@ -106,19 +106,19 @@
       </div>
     </nav>
     <!-- Header-->
-    <header class="intro">
+    <header>
       <!-- Intro Header-->
-      <div class="flexslider">
+      <div class="container-fluid flexslider">
+        <!--
         <div class="intro-body">
-          <!-- <h1>三三 吾鄉皂</h1>
+          <h1>三三 吾鄉皂</h1>
           <div data-wow-delay="1.4s" class="scroll-btn hidden-xs wow fadeInDown"><a href="#about" class="page-scroll"><span class="mouse"><span class="weel"><span></span></span></span></a></div>
-          -->
-        </div>
+        </div>-->
         <ul class="slides">
-          <li><div class="flexslide" id="flexslider1"></div></li>
-          <li><div class="flexslide" id="flexslider2"></div></li>
-          <li><div class="flexslide" id="flexslider3"></div></li>
-          <li><div class="flexslide" id="flexslider4"></div></li>
+          <li><img src="img/index1.png"></li>
+          <li><img src="img/index2.png"></li>
+          <li><img src="img/index3.png"></li>
+          <li><img src="img/index4.png"></li>
         </ul>
         <div class="flexslider-controls">
           <ol class="flex-control-nav">

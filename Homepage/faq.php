@@ -93,7 +93,7 @@
       </div>
     </nav>
     <!-- Header-->
-    <header data-background="img/attitude.jpg" class="intro introhalf">
+    <header data-background="img/jumbotrons/attitude.jpg" class="intro introhalf">
       <!-- Intro Header-->
       <div class="intro-body">
         <h1>FAQ</h1>

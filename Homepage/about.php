@@ -92,7 +92,7 @@
       </div>
     </nav>
     <!-- Header-->
-    <header data-background="img/about.png" class="intro introhalf">
+    <header data-background="img/jumbotrons/about.png" class="intro introhalf">
       <!-- Intro Header-->
       <div class="intro-body">
         <h1>關於我們</h1>

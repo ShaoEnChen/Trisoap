@@ -815,12 +815,12 @@ a.btn-nav .btn {
   height: auto !important; }
 
 .intro .intro-body {
-  text-align: center;
-  position: absolute;
-  top: 45%;
-  width: 100vw;
-  z-index: 99;
-}
+  display: table-cell;
+  vertical-align: middle;
+  padding: 170px 20px 80px;
+  width: 100%;
+  position: relative;
+  z-index: 1; }
 
 .landing .intro-body {
   padding: 170px 0 100px; }
@@ -829,14 +829,14 @@ a.btn-nav .btn {
   padding: 70px 0; }
 
 .intro-body:before {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
   content: " ";
   left: 0;
   top: 0;
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -99; }
+  z-index: -9; }
 
 .intro .intro-body .brand-heading {
   font-size: 40px;
@@ -1735,27 +1735,6 @@ li .shop-cart {
 
 .flexslider {
   border: none;
-}
-
-.flexslide {
-  width: 100vw;
-  height: 100vh;
-}
-
-#flexslider1 {
-  background: url(../img/index1.png) center center no-repeat;
-}
-
-#flexslider2 {
-  background: url(../img/index2.png) center center no-repeat;
-}
-
-#flexslider3 {
-  background: url(../img/index3.png) center center no-repeat;
-}
-
-#flexslider4 {
-  background: url(../img/index4.png) center center no-repeat;
 }
 
 .flex-control-nav {
