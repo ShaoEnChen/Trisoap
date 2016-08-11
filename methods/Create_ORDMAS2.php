@@ -37,8 +37,9 @@
 <body>
 	<?php
 	session_start();
-	include("Helper/mysql_connect.php");
-    include("Helper/sql_operation.php");
+	include_once("Helper/mysql_connect.php");
+    include_once("Helper/sql_operation.php");
+    include_once("Helper/redirect.js");
 	$EMAIL = $_SESSION['EMAIL'];
     $ORDNO = $_SESSION['ORDNO'];
 
@@ -84,9 +85,9 @@
 	else{
         ?>
         <script>
+        redirect("../Homepage/product.php");
         alert("請先登入或註冊!");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/product.php>
         <?
 	}
 		?>

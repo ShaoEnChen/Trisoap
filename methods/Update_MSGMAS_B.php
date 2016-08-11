@@ -3,7 +3,8 @@
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
 session_start();
-include("Helper/mysql_connect.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $number = 0;
@@ -39,8 +40,8 @@ if($EMAIL != null && $CUSIDT == 'A'){
 else{
     ?>
     <script>
+    redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
     <?
 }

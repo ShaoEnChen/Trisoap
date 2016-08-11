@@ -16,12 +16,12 @@
 	</head>
 	<body id="page-top">
 		<?php
-			include("../../methods/Helper/mysql_connect.php");
-			include("../../methods/Helper/sql_operation.php");
+			include_once("../../methods/Helper/mysql_connect.php");
+			include_once("../../methods/Helper/sql_operation.php");
+			include_once("../../methods/Helper/redirect.js");
 			$EMAIL = $_SESSION['EMAIL'];
 			$CUSIDT = $_SESSION['CUSIDT'];
-			if($EMAIL != null):
-				if($CUSIDT == 'A'):
+			if($EMAIL != null && $CUSIDT == 'A'):
 					$queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
 		?>
 		<nav class="navbar navbar-fixed-top nav-custom">
@@ -220,14 +220,14 @@
 				</div>
 			</div>
 		</section>
-		<?php
-				else:
-					print "您無權限觀看此頁面!";
-		        	echo '<meta http-equiv=REFRESH CONTENT=2;url=../../HomePages/index_Customer.php>';
-				endif;
+		<?
 			else:
-		        print "您無權限觀看此頁面!";
-		        echo '<meta http-equiv=REFRESH CONTENT=2;url=../../HomePages/index.php>';
+				?>
+				<script>
+				redirect("../../Homepage/index.php>");
+				alert("您無權限觀看此頁面!");
+				</script>
+				<?
 			endif;
 		?>
 	</body>

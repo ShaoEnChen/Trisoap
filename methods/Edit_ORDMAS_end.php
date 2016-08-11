@@ -2,9 +2,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
-include("Helper/mysql_connect.php");
-include("Helper/handle_string.php");
-include("Helper/update_price.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/handle_string.php");
+include_once("Helper/update_price.php");
+include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $ORDNO = $_SESSION['ORDNO'];
 $number = $_SESSION['number'];
@@ -60,34 +61,34 @@ if($EMAIL != null){
     else{
         ?>
         <script>
+        redirect("Edit_ORDMAS.php");
         alert("<?echo $message;?>");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0;url=Edit_ORDMAS.php>
         <?
     }
     if($message == null){
         ?>
         <script>
+        redirect("View_ORDMAS.php");
         alert("更新成功");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0;url=View_ORDMAS.php>
         <?
     }
     else{
         ?>
         <script>
+        redirect("Edit_ORDMAS.php");
         alert("更新失敗");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0;url=Edit_ORDMAS.php>
         <?
     }
 }
 else{
     ?>
     <script>
+    redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
     <?
 }
 ?>

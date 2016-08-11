@@ -109,7 +109,7 @@
             <div class="col-lg-6 carousel-outer">
               <!-- Wrapper for slides-->
               <div class="carousel-inner">
-                <div class="item active"><img src="img/product/detail/rice_soap.jpg" alt=""></div>
+                <div class="item active"><img src="img/product/detail/rice_soap_small.jpg" alt=""></div>
                 <!-- <div class="item"><img src="img/product/detail/rice_element.jpg" alt=""></div>
                 <div class="item"><img src="img/product/detail/rice_soap_small.jpg" alt=""></div>
                 <div class="item"><img src="img/shop/single5.jpg" alt=""></div> -->

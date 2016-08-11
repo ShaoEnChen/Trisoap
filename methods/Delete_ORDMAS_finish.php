@@ -2,8 +2,9 @@
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
 session_start();
-include("Helper/mysql_connect.php");
-include("Helper/sql_operation.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/sql_operation.php");
+include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $ORDNO = $_POST['ORDNO'];
 $message = null;
@@ -31,34 +32,34 @@ if($EMAIL != null){
         else{
                 ?>
                 <script>
+                redirect("Delete_ORDMAS.php");
                 alert("<?echo $message;?>");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0;url=Delete_ORDMAS.php>
                 <?
         }
         if($message == null){
                 ?>
                 <script>
+                redirect("View_ORDMAS.php");
                 alert("取消成功");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0;url=View_ORDMAS.php>
                 <?
         }
         else{
                 ?>
                 <script>
+                redirect("Delete_ORDMAS.php");
                 alert("取消失敗");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0;url=Delete_ORDMAS.php>
                 <?
         }
 }
 else{
         ?>
         <script>
+        redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0;url=../Homepage/index.php>
         <?
 }
 ?>

@@ -1,7 +1,12 @@
 <?
-include("Helper/mail/PHPMailerAutoload.php"); //匯入PHPMailer類別
+include_once(dirname(__FILE__)."/PHPMailerAutoload.php"); //匯入PHPMailer類別
+include_once(dirname(__FILE__)."/../mysql_connect.php");
+include_once(dirname(__FILE__)."/../sql_operation.php");
 
-function mail_receive_message($id, $COMADD, $COMEMAIL){
+function mail_receive_message($id){
+	  $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+	  $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+	  $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
@@ -31,14 +36,17 @@ function mail_receive_message($id, $COMADD, $COMEMAIL){
       三三吾鄉社會企業<br>
       地址 : ".$COMADD."<br>
       email : ".$COMEMAIL."<br>
-      網址 : xxxxxxxxxxxxx<br>"; //設定郵件內容
+      網址 : ".$COMWEB."<br>"; //設定郵件內容
       $mail->AddAddress($id); //設定收件者郵件及名稱
       if(!$mail->Send()) {        
           echo "Mail not sent!";        
       }
 }
 
-function mail_receive_order($id, $ORDNO, $PAYTYPE, $NAME, $COMADD, $COMEMAIL){
+function mail_receive_order($id, $ORDNO, $PAYTYPE, $NAME){
+	  $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+	  $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+	  $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
@@ -97,14 +105,17 @@ function mail_receive_order($id, $ORDNO, $PAYTYPE, $NAME, $COMADD, $COMEMAIL){
       三三吾鄉社會企業<br>
       地址 : ".$COMADD."<br>
       email : ".$COMEMAIL."<br>
-      網址 : xxxxxxxxxxxxx<br>"; //設定郵件內容
+      網址 : ".$COMWEB."<br>"; //設定郵件內容
       $mail->AddAddress($id); //設定收件者郵件及名稱
       if(!$mail->Send()) {        
           echo "Mail not sent!";        
       }
 }
 
-function mail_pass_message($id, $COMADD, $COMEMAIL){
+function mail_pass_message($id){
+	  $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+	  $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+	  $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
@@ -139,14 +150,17 @@ function mail_pass_message($id, $COMADD, $COMEMAIL){
       三三吾鄉社會企業<br>
       地址 : ".$COMADD."<br>
       email : ".$COMEMAIL."<br>
-      網址 : xxxxxxxxxxxxx<br>"; //設定郵件內容
+      網址 : ".$COMWEB."<br>"; //設定郵件內容
       $mail->AddAddress($id); //設定收件者郵件及名稱
       if(!$mail->Send()) {        
         echo "Mail not sent!";        
       }
 }
 
-function mail_pass_order($id, $ORDNO, $COMADD, $COMEMAIL){
+function mail_pass_order($id, $ORDNO){
+	  $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+	  $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+	  $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
@@ -176,14 +190,17 @@ function mail_pass_order($id, $ORDNO, $COMADD, $COMEMAIL){
       三三吾鄉社會企業<br>
       地址 : ".$COMADD."<br>
       email : ".$COMEMAIL."<br>
-      網址 : xxxxxxxxxxxxx<br>"; //設定郵件內容
+      網址 : ".$COMWEB."<br>"; //設定郵件內容
       $mail->AddAddress($id); //設定收件者郵件及名稱
       if(!$mail->Send()) {        
             echo "Mail not sent!";        
       }
 }
 
-function mail_verify($id, $code, $COMADD, $COMEMAIL){
+function mail_verify($id, $code){
+	  $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+	  $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+	  $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
@@ -213,13 +230,16 @@ function mail_verify($id, $code, $COMADD, $COMEMAIL){
       三三吾鄉社會企業<br>
       地址 : ".$COMADD."<br>
       email : ".$COMEMAIL."<br>
-      網址 : xxxxxxxxxxxxx<br>"; //設定郵件內容
+      網址 : ".$COMWEB."<br>"; //設定郵件內容
       $mail->AddAddress($id); //設定收件者郵件及名稱
       if(!$mail->Send()) {        
             echo "Mail not sent!";        
       }
 }
-function mail_reset_password($id, $code, $COMADD, $COMEMAIL){
+function mail_reset_password($id, $code){
+	  $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+	  $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+	  $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
@@ -251,7 +271,7 @@ function mail_reset_password($id, $code, $COMADD, $COMEMAIL){
       三三吾鄉社會企業<br>
       地址 : ".$COMADD."<br>
       email : ".$COMEMAIL."<br>
-      網址 : xxxxxxxxxxxxx<br>"; //設定郵件內容
+      網址 : ".$COMWEB."<br>"; //設定郵件內容
       $mail->AddAddress($id); //設定收件者郵件及名稱
       if(!$mail->Send()) {        
             echo "Mail not sent!";        

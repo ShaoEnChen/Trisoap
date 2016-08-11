@@ -2,9 +2,10 @@
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
 session_start();
-include("Helper/mysql_connect.php");
-include("Helper/sql_operation.php");
-include("Helper/handle_string.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/sql_operation.php");
+include_once("Helper/handle_string.php");
+include_once("Helper/redirect.js");
 $message = '';
 
 $EMAIL = input('EMAIL');
@@ -27,18 +28,18 @@ if($message == null){
         $_SESSION['CUSIDT'] = $queryCUSIDT;
         ?>
         <script>
+        redirect("../Homepage/index.php");
         alert("成功登入");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
         <?
 }
 else
 {
         ?>
         <script>
+        redirect("User_login1.php");
         alert("<?echo $message;?>");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=User_login1.php>
         <?
 }
 ?>

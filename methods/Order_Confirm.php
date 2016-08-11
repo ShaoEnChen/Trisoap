@@ -39,8 +39,8 @@
     <div class="sign-block">
         <?php
         session_start();
-        include("Helper/mysql_connect.php");
-        include("Helper/sql_operation.php");
+        include_once("Helper/mysql_connect.php");
+        include_once("Helper/sql_operation.php");
 
         $EMAIL = $_SESSION['EMAIL'];
         $ORDNO = $_SESSION['ORDNO'];

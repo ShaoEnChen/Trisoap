@@ -1,10 +1,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
-include("Helper/mysql_connect.php");
-include("Helper/sql_operation.php");
-include("Helper/handle_string.php");
-include("Helper/mail/mail.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/sql_operation.php");
+include_once("Helper/handle_string.php");
+include_once("Helper/mail/mail.php");
+include_once("Helper/redirect.js");
 $message = '';
 $EMAIL = input('EMAIL');
 $standard = "/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/";
@@ -30,37 +31,35 @@ if($message == ''){
         if(!mysql_query($sql)){
                 ?>
                 <script>
+                redirect("User_ForgetPW.php");
                 alert("系統錯誤，請重新操作");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0.5;url=User_ForgetPW.php>
                 <?php
         }
         else{
-                $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-                $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-                mail_reset_password($EMAIL, $code, $COMADD, $COMEMAIL);
+                mail_reset_password($EMAIL, $code);
                 ?>
                 <script>
+                redirect("User_login1.php");
                 alert("已將新密碼寄至您的信箱，請前往查看");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0.5;url=User_login1.php>
                 <?php
         }
 }
 elseif($message == '此電子信箱尚未註冊'){
         ?>
         <script>
+        redirect("Create_CUSMAS1.php");
         alert("此電子信箱尚未註冊");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=Create_CUSMAS1.php>
         <?php
 }
 else{
         ?>
         <script>
+        redirect("User_ForgetPW.php");
         alert("<?echo $message;?>");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=User_ForgetPW.php>
         <?php
 }
 ?>

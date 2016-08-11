@@ -2,9 +2,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
-include("Helper/mysql_connect.php");
-include("Helper/sql_operation.php");
-include("Helper/handle_string.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/sql_operation.php");
+include_once("Helper/handle_string.php");
+include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $message = null;
@@ -22,34 +23,34 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if(mysql_query($sql)){
             ?>
             <script>
+            redirect("Update_Manager.php");
             alert("新增成功");
             </script>
-            <meta http-equiv=REFRESH CONTENT=0.5;url=Update_Manager.php>
             <?
         }
         else{
             ?>
             <script>
+            redirect("Create_Manager.php");
             alert("新增失敗");
             </script>
-            <meta http-equiv=REFRESH CONTENT=0.5;url=Create_Manager.php>
             <?
         }
     }
     else{
         ?>
         <script>
+        redirect("Create_Manager.php");
         alert("密碼錯誤");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=Create_Manager.php>
         <?
     }
 }
 else{
     ?>
     <script>
-        alert("您無權限觀看此頁面!");
+    redirect("../Homepage/index.php");
+    alert("您無權限觀看此頁面!");
     </script>
-    <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
     <?
 }

@@ -2,9 +2,10 @@
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
 session_start();
-include("Helper/mysql_connect.php");
-include("Helper/handle_string.php");
-include("Helper/update_price.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/handle_string.php");
+include_once("Helper/update_price.php");
+include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $ORDTYPE = input('ORDTYPE');
 $TEL = input('TEL');
@@ -42,9 +43,9 @@ if($EMAIL != null){
     if($message != ''){
         ?>
         <script>
+        redirect("Create_ORDMAS2.php");
         alert("<?echo $message;?>");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=Create_ORDMAS2.php>
         <?
     }
     else{
@@ -66,17 +67,17 @@ if($EMAIL != null){
                 $_SESSION['ORDNO'] = $ORDNOG;
                 ?>
                 <script>
-                    alert("訂單建立成功，將為您導向歐付寶頁面。");
+                redirect("cashing_test.php");
+                alert("訂單建立成功，將為您導向歐付寶頁面。");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0.5;url=cashing_test.php>
                 <?
             }
             else{
                 ?>
                 <script>
-                    alert("訂單建立失敗");
+                redirect("Create_ORDMAS2.php");
+                alert("訂單建立失敗");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0.5;url=Create_ORDMAS2.php>
                 <?
             }
         }
@@ -92,17 +93,17 @@ if($EMAIL != null){
                 $_SESSION['ORDNO'] = $ORDNOS;
                 ?>
                 <script>
-                    alert("訂單建立成功，將為您導向歐付寶頁面。");
+                redirect("cashing_test.php");
+                alert("訂單建立成功，將為您導向歐付寶頁面。");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0.5;url=cashing_test.php>
                 <?
             }
             else{
                 ?>
                 <script>
-                    alert("訂單建立失敗");
+                redirect("Create_ORDMAS2.php");
+                alert("訂單建立失敗");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0.5;url=Create_ORDMAS2.php>
                 <?
             }
         }
@@ -111,8 +112,8 @@ if($EMAIL != null){
 else{
     ?>
     <script>
+    redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
     <?
 }
