@@ -1,21 +1,16 @@
-<!--
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>結帳結果頁</title>
--->
 <?php
 session_start();
 include("AllPay.Payment.Integration.php");
 include("Helper/mysql_connect.php");
 include("Helper/sql_operation.php");
 include("Helper/handle_string.php");
+$EMAIL = $_SESSION['EMAIL'];
 $ORDNO = $_SESSION['ORDNO'];
 $paytype = $_SESSION['PAYTYPE'];
 $totalamount = $_SESSION['total'];
 $discount = search('DISCOUNT', 'CUSMAS', 'EMAIL', $EMAIL);
 
-/*
-* get feedback from AllPay
-*/
+// get feedback from AllPay
 try
 {
 	$obj = new AllInOne();

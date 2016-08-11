@@ -78,19 +78,6 @@ try {
     array_push($obj->Send['Items'], array('Name' => "留心語折扣", 'Price' => $discount,
         'Currency' => "元", 'Quantity' => (int) "1", 'URL' => "xxx"));
 
-    /*//update info
-    $sql = "UPDATE ORDMAS SET PAYTYPE = '$paytype' WHERE ORDNO = '$ORDNO'";
-    mysql_query($sql);
-    $sql = "UPDATE ORDMAS SET PAYSTAT = 1 WHERE ORDNO = '$ORDNO'";
-    mysql_query($sql);
-    $sql = "UPDATE ORDMAS SET TOTALAMT = $totalamount-$discount WHERE ORDNO = '$ORDNO'";
-    mysql_query($sql);
-    $sql = "UPDATE CUSMAS SET DISCOUNT = 0 WHERE EMAIL = '$EMAIL'";
-    mysql_query($sql);
-    unset($_SESSION['ORDNO']);
-    unset($_SESSION['PAYTYPE']);
-    unset($_SESSION['total']);*/
-
     //Create Order(auto submit to AllPay)
     $obj->CheckOut();
       
