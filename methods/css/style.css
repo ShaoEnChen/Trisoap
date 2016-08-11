@@ -48,9 +48,18 @@ h1, h2, h3, h4, h5, h6, p, a {
 .nav-custom .navbar-brand {
 	padding: 0 15px;
 }
-.container {
-	margin-top: 54px;
-	font-family: "Open Sans", sans-serif;
+.container,
+.orders {
+	margin-top: 60px;
+}
+.orders {
+	text-align: center;
+}
+.btn-dark,
+.btn-dark:hover {
+  border: 2px solid #18191B;
+  background-color: #18191B;
+  color: #fff; 
 }
 .manage {
 	margin-top: 20px;
@@ -59,7 +68,6 @@ h1, h2, h3, h4, h5, h6, p, a {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus,
 #pills-xs a {
-	font-family: "Open Sans", sans-serif;
 	font-weight: 200;
     background-color: #000;
 }

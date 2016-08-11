@@ -119,7 +119,8 @@ function show_PAYTYPE($id){
                         <?
                 }
                 else{
-                        ?><br><br><br><?
+                        ?><?
+                        echo "<section><div class=\"orders\">";
                         echo "<form name=\"form\" method=\"post\" action=\"Delete_ORDMAS_finish.php\">";
                         echo "訂單編號：<select name=\"ORDNO\" />";
                         $ORDNO = $item['ORDNO'];
@@ -129,8 +130,9 @@ function show_PAYTYPE($id){
                                 echo "<option value=\"$ORDNO\">$ORDNO</option>";       
                         }
                         echo "</select> <br>";
-                        echo "<input type=\"submit\" name=\"button\" value=\"確定\" />";
+                        echo "<input type=\"submit\" name=\"button\" class=\"btn btn-dark\" value=\"確定\" />";
                         echo "</form>";
+                        echo "</div></section>";
                         include("Helper/Chart_Delete_ORDMAS.php");
                 }
         }
