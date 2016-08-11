@@ -50,6 +50,7 @@
                   <li><a href="../methods/Update_ITEMMAS.php">商品管理</a></li>
                   <li><a href="../methods/Update_ORDMAS.php">訂單管理</a></li>
                   <li><a href="../methods/Update_MSGMAS.php">留心語管理</a></li>
+                  <li><a href="../methods/View_CUSMAS.php">查看客戶</a></li>
                 </ul>
               </li>
               <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
