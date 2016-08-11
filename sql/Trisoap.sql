@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: localhost
--- 產生時間： 2016 年 08 月 11 日 09:12
+-- 產生時間： 2016 年 08 月 08 日 08:46
 -- 伺服器版本: 10.1.13-MariaDB
 -- PHP 版本： 5.6.23
 
@@ -86,7 +86,7 @@ CREATE TABLE `ITEMMAS` (
 --
 
 INSERT INTO `ITEMMAS` (`ITEMNO`, `ITEMNM`, `ITEMAMT`, `PRICE`, `DESCRIPTION`, `PHOTO`, `PHOTOTYPE`, `CREATEDATE`, `UPDATEDATE`, `ACTCODE`) VALUES
-(1, '田靜山巒禾風皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-08-09 15:23:28', 1),
+(1, '田靜山巒禾風皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
 (2, '金絲森林渲染皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
 (3, '釋迦手感果力皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
 (4, '三三台東意象禮盒組', 0, 900, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1);
@@ -127,10 +127,6 @@ CREATE TABLE `ORDITEMMAS` (
   `ACTCODE` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- 資料表的匯出資料 `ORDITEMMAS`
---
-
 -- --------------------------------------------------------
 
 --
@@ -157,10 +153,6 @@ CREATE TABLE `ORDMAS` (
   `ACTCODE` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- 資料表的匯出資料 `ORDMAS`
---
-
 -- --------------------------------------------------------
 
 --
@@ -172,7 +164,6 @@ CREATE TABLE `OWNMAS` (
   `COMADD` varchar(100) COLLATE utf8_bin NOT NULL,
   `COMTEL` varchar(15) COLLATE utf8_bin NOT NULL,
   `COMEMAIL` varchar(50) COLLATE utf8_bin NOT NULL,
-  `COMWEB` varchar(50) COLLATE utf8_bin NOT NULL,
   `COMTAXID` varchar(15) COLLATE utf8_bin NOT NULL,
   `NORDNOG` int(15) NOT NULL,
   `NORDNOS` int(15) NOT NULL,
@@ -183,8 +174,8 @@ CREATE TABLE `OWNMAS` (
 -- 資料表的匯出資料 `OWNMAS`
 --
 
-INSERT INTO `OWNMAS` (`COMNM`, `COMADD`, `COMTEL`, `COMEMAIL`, `COMWEB`, `COMTAXID`, `NORDNOG`, `NORDNOS`, `NMSGNO`) VALUES
-('Trisoap', '台灣台北市大安區和平東路二段265巷3號', '0952527077', 'trisoap2015@gmail.com', 'needs replenishment', '43864595', 100000001, 999000001, 100001);
+INSERT INTO `OWNMAS` (`COMNM`, `COMADD`, `COMTEL`, `COMEMAIL`, `COMTAXID`, `NORDNOG`, `NORDNOS`, `NMSGNO`) VALUES
+('Trisoap', '台灣台北市大安區和平東路二段265巷3號', '0952527077', 'trisoap2015@gmail.com', '43864595', 100000001, 999000001, 100001);
 
 --
 -- 已匯出資料表的索引

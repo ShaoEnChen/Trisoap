@@ -57,8 +57,15 @@
           date_default_timezone_set('Asia/Taipei');
           $CREATEDATE = date("Y-m-d H:i:s");
           $UPDATEDATE = date("Y-m-d H:i:s");
-          $sql = "insert into ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNO', '$ITEMNO', '$ORDAMT', '$EMAIL', '$CREATEDATE', '$UPDATEDATE')";
-          unset($_SESSION['ITEMNO']);
+          $checkorder1 = "SELECT ORDAMT FROM ORDITEMMAS WHERE ORDNO='$ORDNO' AND EMAIL='$EMAIL' AND ITEMNO='$ITEMNO'";
+          $checkorder2 = mysql_query($checkorder1);
+          $result = mysql_fetch_row($checkorder2);
+          if($result[0] == FALSE){
+            $sql = "INSERT INTO ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNO', '$ITEMNO', '$ORDAMT', '$EMAIL', '$CREATEDATE', '$UPDATEDATE')";
+          }
+          else{
+            $sql = "UPDATE ORDITEMMAS SET ORDAMT=ORDAMT+$ORDAMT WHERE ORDNO='$ORDNO' AND EMAIL='$EMAIL' AND ITEMNO='$ITEMNO'";
+          }
           if(mysql_query($sql)){
             echo "<br><h1>商品已成功加入購物車</h1>";
             if($ORDNO != '100000000'){

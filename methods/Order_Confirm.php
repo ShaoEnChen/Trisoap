@@ -12,7 +12,7 @@
     <link href='css/table.css' rel='stylesheet' type='text/css'>
     <style>
     .sign-block {
-        width: 350px;
+        width: 400px;
         padding: 20px;
         border-top: 10px solid #AA0000;
         position: absolute;
