@@ -2,8 +2,9 @@
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
 session_start();
-include("Helper/mysql_connect.php");
-include("Helper/handle_string.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/handle_string.php");
+include_once("Helper/redirect.js");
 $VERIFY = input('VERIFY');
 if($VERIFY == $_SESSION['COMMIT']){
         $CUSNM = $_SESSION['CUSNM'];
@@ -24,11 +25,6 @@ if($VERIFY == $_SESSION['COMMIT']){
         $sql = "insert into CUSMAS (CUSNM, CUSPW, CUSADD, CUSTYPE, CUSBIRTHY, CUSBIRTHM, CUSBIRTHD, TEL, EMAIL, TAXID, KNOWTYPE, SPEINS, CREATEDATE, UPDATEDATE) values ('$CUSNM', '$CUSPW', '$CUSADD', '$CUSTYPE', '$CUSBIRTHY', '$CUSBIRTHM', '$CUSBIRTHD', '$TEL', '$EMAIL', '$TAXID', '$KNOWTYPE', '$SPEINS', '$CREATEDATE', '$UPDATEDATE')";
         if(mysql_query($sql)){
                 $_SESSION['CUSIDT'] = 'B';
-                ?>
-                <script>
-                alert("註冊成功");
-                </script>
-                <?php
                 unset($_SESSION['CUSNM']);
                 unset($_SESSION['CUSPW']);
                 unset($_SESSION['CUSADD']);
@@ -41,24 +37,29 @@ if($VERIFY == $_SESSION['COMMIT']){
                 unset($_SESSION['KNOWTYPE']);
                 unset($_SESSION['SPEINS']);
                 unset($_SESSION['COMMIT']);
-                echo '<meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>';
-        }
-        else{
                 ?>
                 <script>
+                redirect("../Homepage/index.php");
+                alert("註冊成功");
+                </script>
+                <?
+        }
+        else{
+                unset($_SESSION['COMMIT']);
+                ?>
+                <script>
+                redirect("Create_CUSMAS1.php");
                 alert("系統錯誤，註冊失敗");
                 </script>
-                <?php
-                unset($_SESSION['COMMIT']);
-                echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Create_CUSMAS1.php>';
+                <?
         }
 }
 else{
+        unset($_SESSION['COMMIT']);
         ?>
         <script>
+        redirect("Create_CUSMAS1.php");
         alert("驗證碼錯誤，註冊失敗");
         </script>
-        <?php
-        unset($_SESSION['COMMIT']);
-        echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Create_CUSMAS1.php>';
+        <?
 }

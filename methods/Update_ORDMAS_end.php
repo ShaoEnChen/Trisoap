@@ -2,8 +2,9 @@
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
 session_start();
-include("Helper/mysql_connect.php");
-include("Helper/handle_string.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/handle_string.php");
+include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $ORIGIN = $_SESSION['ORIGIN'];
@@ -41,19 +42,22 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 }
                 unset($_SESSION['ORDNO']);
                 unset($_SESSION['ORIGIN']);
-                if($ORIGIN == '1')
-                        ?><meta http-equiv=REFRESH CONTENT=0.5;url=Update_ORDMAS_1.php><?
-                elseif($ORIGIN == 'F')
-                        ?><meta http-equiv=REFRESH CONTENT=0.5;url=Update_ORDMAS_F.php><?
-                else
-                        ?><meta http-equiv=REFRESH CONTENT=0.5;url=Update_ORDMAS_R.php><?
+                if($ORIGIN == '1'){
+                        ?><script>redirect("Update_ORDMAS_1.php");</script><?
+                }
+                elseif($ORIGIN == 'F'){
+                        ?><script>redirect("Update_ORDMAS_F.php");</script><?
+                }
+                else{
+                        ?><script>redirect("Update_ORDMAS_R.php");</script><?
+                }
 }
 else{
         ?>
         <script>
+        redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
         <?
 }
 ?>

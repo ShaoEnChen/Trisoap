@@ -1,9 +1,9 @@
 <?php
 session_start();
-include("AllPay.Payment.Integration.php");
-include("Helper/mysql_connect.php");
-include("Helper/sql_operation.php");
-include("Helper/handle_string.php");
+include_once("AllPay.Payment.Integration.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/sql_operation.php");
+include_once("Helper/handle_string.php");
 $EMAIL = $_SESSION['EMAIL'];
 $ORDNO = $_SESSION['ORDNO'];
 $paytype = $_SESSION['PAYTYPE'];

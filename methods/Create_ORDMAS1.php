@@ -37,7 +37,7 @@
 <body>
 	<?php
 	session_start();
-	include("Helper/mysql_connect.php");
+	include_once("Helper/mysql_connect.php");
 	$EMAIL = $_SESSION['EMAIL'];
 
 	if($EMAIL != null){

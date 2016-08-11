@@ -2,10 +2,11 @@
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
 session_start();
-include("Helper/mysql_connect.php");
-include("Helper/sql_operation.php");
-include("Helper/handle_string.php");
-include("Helper/mail/mail.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/sql_operation.php");
+include_once("Helper/handle_string.php");
+include_once("Helper/mail/mail.php");
+include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $message = null;
@@ -37,10 +38,8 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 if($message == null){
                         $_SESSION['ORIGIN'] = 'F';
                         $queryEMAIL = search('EMAIL', 'ORDMAS', 'ORDNO', $ORDNO);
-                        $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-                        $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-                        mail_pass_order($queryEMAIL, $ORDNO, $COMADD, $COMEMAIL);
-                        ?><meta http-equiv=REFRESH CONTENT=0.5;url=Update_ORDMAS_finish.php><?
+                        mail_pass_order($queryEMAIL, $ORDNO);
+                        ?><script>redirect("Update_ORDMAS_finish.php");</script><?
                 }
         }
         else
@@ -49,6 +48,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if($message == null){
                 ?>
                 <script>
+                redirect("Update_ORDMAS_F.php");
                 alert("儲存成功");
                 </script>
                 <?
@@ -56,18 +56,18 @@ if($EMAIL != null && $CUSIDT == 'A'){
         else{
                 ?>
                 <script>
+                redirect("Update_ORDMAS_F.php");
                 alert("<?echo $message;?>");
                 </script>
                 <?
         }
-        ?><meta http-equiv=REFRESH CONTENT=0.5;url=Update_ORDMAS_F.php><?
 }
 else{
         ?>
         <script>
+        redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
         <?
 }
 ?>

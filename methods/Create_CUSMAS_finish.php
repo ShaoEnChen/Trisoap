@@ -34,10 +34,11 @@
 <!-- PHP Area -->
 <?
 session_start();
-include("Helper/mysql_connect.php");
-include("Helper/sql_operation.php");
-include("Helper/handle_string.php");
-include("Helper/mail/mail.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/sql_operation.php");
+include_once("Helper/handle_string.php");
+include_once("Helper/mail/mail.php");
+include_once("Helper/redirect.js");
 $message = '';
 
 $CUSNM = input('CUSNM');
@@ -110,9 +111,7 @@ if($message == ''){
         $code .= $str[mt_rand(0, strlen($str)-1)];
     }
     $_SESSION['COMMIT'] = $code;
-    $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-    $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-    mail_verify($EMAIL, $code, $COMADD, $COMEMAIL);
+    mail_verify($EMAIL, $code);
 ?>
 <!-- End PHP Area -->    
 
@@ -123,7 +122,7 @@ if($message == ''){
         <hr>
         <p>您的會員註冊驗證碼已寄至您的信箱，煩請您前往確認，並輸入驗證碼。</p>
         <form name="form" method="post" action="Create_CUSMAS_end.php">
-            <label for="VERIFY"><p>驗證碼*</p><input type="text" name="VERIFY" id="VERIFY"/></label><br>
+            <label for="VERIFY"><p>驗證碼：</p><input type="text" name="VERIFY" id="VERIFY"/></label><br>
             <button type="submit" class="promise">確定</button>
         </form>
         <button type="button" class="cancel"></buttom><a href="../Homepage/index.php">取消</a>
@@ -135,9 +134,9 @@ if($message == ''){
 else{
     ?>
     <script>
+    redirect("Create_CUSMAS1.php");
     alert("<?echo $message;?>");
     </script>
-    <meta http-equiv=REFRESH CONTENT=0.5;url=Create_CUSMAS1.php>
     <?
 }
 ?>

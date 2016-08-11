@@ -2,10 +2,11 @@
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
 session_start();
-include("Helper/mysql_connect.php");
-include("Helper/sql_operation.php");
-include("Helper/handle_string.php");
-include("Helper/mail/mail.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/sql_operation.php");
+include_once("Helper/handle_string.php");
+include_once("Helper/mail/mail.php");
+include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $message = null;
 
@@ -47,39 +48,37 @@ if($EMAIL != null){
         if(mysql_query($enter)){
             $sql = "UPDATE OWNMAS SET NMSGNO=NMSGNO+1 where COMNM='Trisoap'";
             mysql_query($sql);
-            $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-            $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-            mail_receive_message($EMAIL, $COMADD, $COMEMAIL);
+            mail_receive_message($EMAIL);
             ?>
             <script>
+            redirect("../message/Message.html");
             alert("留心語成功，已寄發通知信至您的信箱。");
             </script>
-            <meta http-equiv=REFRESH CONTENT=0.5;url=../message/Message.html>
             <?
         }
         else{
             ?>
             <script>
+            redirect("Create_MSGMAS.php");
             alert("留心語失敗");
             </script>
-            <meta http-equiv=REFRESH CONTENT=0.5;url=Create_MSGMAS.php>
             <?
         }
     }
     else{
         ?>
         <script>
+        redirect("Create_MSGMAS.php");
         alert("<?echo $message;?>");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=Create_MSGMAS.php>
         <?
     }
 }
 else{
     ?>
     <script>
+    redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
     <?
 }

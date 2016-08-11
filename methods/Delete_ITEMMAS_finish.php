@@ -2,9 +2,10 @@
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
 session_start();
-include("Helper/mysql_connect.php");
-include("Helper/sql_operation.php");
-include("Helper/handle_string.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/sql_operation.php");
+include_once("Helper/handle_string.php");
+include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $message = null;
@@ -27,34 +28,34 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 if(mysql_query($sql)){
                         ?>
                         <script>
+                        redirect("Update_ITEMMAS.php");
                         alert("下架成功");
                         </script>
-                        <meta http-equiv=REFRESH CONTENT=0.5;url=Update_ITEMMAS.php>
                         <?
                 }
                 else{
                         ?>
                         <script>
+                        redirect("Delete_ITEMMAS.php");
                         alert("下架失敗");
                         </script>
-                        <meta http-equiv=REFRESH CONTENT=0.5;url=Delete_ITEMMAS.php>
                         <?
                 }
         }
         else{
                 ?>
                 <script>
+                redirect("Delete_ITEMMAS.php");
                 alert("<?echo $message;?>");
                 </script>
                 <?
-                echo '<meta http-equiv=REFRESH CONTENT=0.5;url=Delete_ITEMMAS.php>';
         }
 }
 else{
         ?>
         <script>
+        redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
         <?
 }

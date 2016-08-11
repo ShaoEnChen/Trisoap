@@ -38,9 +38,10 @@
   <div class="sign-block">
     <?php
       session_start();
-      include("Helper/mysql_connect.php");
-      include("Helper/handle_string.php");
-      include("Helper/update_price.php");
+      include_once("Helper/mysql_connect.php");
+      include_once("Helper/handle_string.php");
+      include_once("Helper/update_price.php");
+      include_once("Helper/redirect.js");
       $EMAIL = $_SESSION['EMAIL'];
       $ORDNO = $_SESSION['ORDNO'];
       $ITEMNO = input('ITEMNO');
@@ -73,27 +74,27 @@
           else{
             ?>
             <script>
+            redirect("../Homepage/product.php");
             alert("系統錯誤，加入購物車失敗");
             </script>
-            <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/product.php>
             <?
           }
         }
         else{
           ?>
           <script>
+          redirect("../Homepage/product.php");
           alert("請先選擇商品");
           </script>
-          <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/product.php>
           <?
         }
       }
       else{
         ?>
         <script>
+        redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
         <?
       }
       ?>

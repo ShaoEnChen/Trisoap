@@ -16,8 +16,9 @@
 <body id="page-top">
 <?php
 session_start();
-include("Helper/mysql_connect.php");
-include("Helper/sql_operation.php");
+include_once("Helper/mysql_connect.php");
+include_once("Helper/sql_operation.php");
+include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
@@ -101,9 +102,9 @@ function show_PAYTYPE($id){
         if($EMAIL == null){
                 ?>
                 <script>
+                redirect("../Homepage/index.php");
                 alert("請先註冊或登入!");
                 </script>
-                <meta http-equiv=REFRESH CONTENT=0;url=../Homepage/index.php>
                 <?
         }
         else{
@@ -113,9 +114,9 @@ function show_PAYTYPE($id){
                 if($item == false){
                         ?>
                         <script>
+                        redirect("View_ORDMAS.php");
                         alert("您沒有可更新的訂單!");
                         </script>
-                        <meta http-equiv=REFRESH CONTENT=0;url=View_ORDMAS.php>
                         <?
                 }
                 else{

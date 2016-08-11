@@ -1,6 +1,6 @@
 <?php
-include(dirname(__FILE__)."/mysql_connect.php");
-include(dirname(__FILE__)."/sql_operation.php");
+include_once(dirname(__FILE__)."/mysql_connect.php");
+include_once(dirname(__FILE__)."/sql_operation.php");
 function update_price($ORDNO){
 	$row = select('ORDMAS', 'ORDNO', $ORDNO);
 	$TOTALPRICE = $row['TOTALPRICE'];
