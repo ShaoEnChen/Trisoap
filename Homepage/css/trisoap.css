@@ -1737,6 +1737,10 @@ li .shop-cart {
   border: none;
 }
 
+.flexslides {
+  z-index: -1;
+}
+
 .flex-control-nav {
   position: absolute;
   bottom: 30px;
@@ -1756,4 +1760,42 @@ li .shop-cart {
   -o-border-radius: 4px;
   list-style-type: none;
   z-index: 1002;
+}
+
+.slide-textarea {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  width: 22vw;
+  height: 22vw;
+  text-align: center;
+  border: solid #fff 0.3vw;
+}
+
+/* 垂直置中 */
+.slide-textarea:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+@font-face {
+  font-family: FOUNTAIN;
+  src: url(../fonts/fountainpenW2.TTC);
+}
+
+.slide-text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 4vw;
+  margin: 0;
+  color: #fff;
+  font-family: FOUNTAIN;
+}
+
+.slogan-text {
+  text-align: left;
+  white-space: pre-line;
 }

@@ -110,16 +110,22 @@
     <header>
       <!-- Intro Header-->
       <div class="container-fluid flexslider">
-        <!--
-        <div class="intro-body">
-          <h1>三三 吾鄉皂</h1>
-          <div data-wow-delay="1.4s" class="scroll-btn hidden-xs wow fadeInDown"><a href="#about" class="page-scroll"><span class="mouse"><span class="weel"><span></span></span></span></a></div>
-        </div>-->
         <ul class="slides">
-          <li><img src="img/index1.png"></li>
-          <li><img src="img/index2.png"></li>
-          <li><img src="img/index3.png"></li>
-          <li><img src="img/index4.png"></li>
+          <li>
+            <img class="flexslides" src="img/index1.png">
+            <div class="slide-textarea">
+              <p class="slide-text">三三手皂<br>x<br>來自吾鄉</p>
+            </div>
+          </li>
+          <li>
+            <img class="flexslides" src="img/index2.png">
+          </li>
+          <li>
+            <img class="flexslides" src="img/index3.png">
+          </li>
+          <li>
+            <img class="flexslides" src="img/index4.png">
+          </li>
         </ul>
         <div class="flexslider-controls">
           <ol class="flex-control-nav">
@@ -207,13 +213,11 @@
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2">
             <p><i class="icon fa fa-quote-left fa-lg"></i></p>
-            <h4>社會企業<br><br>
-              第三個故事就是被憨兒們的可愛笑容和在地小農的堅持與用心所深深感動的我們。
-
-              在更多的拜訪與研究過後我們發現，
+            <h4>社會企業</h4>
+            <h4 class="slogan-text">
+              第三個故事就是被憨兒們的可愛笑容和在地小農的堅持與用心所深深感動的我們。在更多的拜訪與研究過後我們發現，
               臺灣社福團體做的公益手工皂普遍銷路不佳紛紛面臨困境，不僅人員技術不足、通路不穩、行銷、研發......各項經驗更是挑戰，
               讓學員們作皂明明是一件一石二鳥的事情但卻常常成為社福團體的一大困擾。
-
               我們希望串聯起各地區的資源，和社福團體一同打造一個手工皂界的生態。
               透過社福團體、社會企業、當地小農三方協力的過程，
               並由我們研發當地素材入皂並技術移轉及培訓身障朋友，精煉生產流程再以品牌的力量作行銷與推廣。
@@ -230,15 +234,11 @@
         <div class="row">
           <div class="col-md-4">
             <h3><a href="about.php">關於我們</a></h3>
-            <p>一切都是從一個座落在寧靜城市裡的、專門開辦二手販售以及手工皂製作的小型作業所---「李勝賢文教基金會」開始的
-            參訪李勝賢文教基金會的經驗讓我們留下了深刻的印象那天，我們第一次學做皂，也是第一次深深地被憨兒們打皂時嶄露出來的自信與笑容深深吸引
-            </p>
+            <p>一切都是從一個座落在寧靜城市裡的、專門開辦二手販售以及手工皂製作的小型作業所---「李勝賢文教基金會」開始的，參訪李勝賢文教基金會的經驗讓我們留下了深刻的印象。那天，我們第一次學做皂，也是第一次深深地被憨兒們打皂時嶄露出來的自信與笑容深深吸引</p>
           </div>
           <div class="col-md-4">
             <h3><a href="faq.php">常見問題</a></h3>
-            <p>「冷製手工皂」是使用純天然的基底植物油，搭配上鹼水調配再經過攪拌、保溫、晾皂等各種精細的過程，而後皂化成一個具有不同皂性的產品。
-            有別於一般大型賣場，或是各式衛妝開架式商店所販售的工廠壓製肥皂或沐浴精
-            </p>
+            <p>「冷製手工皂」是使用純天然的基底植物油，搭配上鹼水調配再經過攪拌、保溫、晾皂等各種精細的過程，而後皂化成一個具有不同皂性的產品。有別於一般大型賣場，或是各式衛妝開架式商店所販售的工廠壓製肥皂或沐浴精</p>
           </div>
           <div class="col-md-4">
             <h3><a href="contact.php">聯絡我們</a></h3>
