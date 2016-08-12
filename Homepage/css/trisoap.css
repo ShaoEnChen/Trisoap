@@ -770,7 +770,8 @@ a.btn-nav .btn {
   background: url(../img/header/17.jpg); }
 
 .bg-img3 {
-  background: url(../img/header/16.jpg); }
+  /* background: url(../img/header/16.jpg); */
+  background: rgba(0, 0, 0, 0.3); }
 
 .bg-img4 {
   background: url(../img/header/10.jpg); }
@@ -1729,10 +1730,9 @@ li .shop-cart {
 
 .intro.demo h1 {
   font-size: 47px; }
-
 /*# sourceMappingURL=pheromone.css.map */
-/* Sean's */
 
+/* Sean's */
 .flexslider {
   border: none;
 }
@@ -1761,11 +1761,21 @@ li .shop-cart {
   list-style-type: none;
   z-index: 1002;
 }
+/* slide文字div */
+@font-face {
+  font-family: FOUNTAIN;
+  src: url(../fonts/fountainpenW2.TTC);
+}
 
-.slide-textarea {
+.slide-text {
+  font-family: FOUNTAIN;
+  margin: 0;
+}
+
+#slide-textarea1 {
   position: absolute;
-  left: 32px;
-  bottom: 32px;
+  left: 33px;
+  bottom: 33px;
   width: 22vw;
   height: 22vw;
   text-align: center;
@@ -1773,7 +1783,7 @@ li .shop-cart {
 }
 
 /* 垂直置中 */
-.slide-textarea:before {
+#slide-textarea1:before {
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -1781,20 +1791,28 @@ li .shop-cart {
   height: 100%;
 }
 
-@font-face {
-  font-family: FOUNTAIN;
-  src: url(../fonts/fountainpenW2.TTC);
-}
-
-.slide-text {
+#slide-text1 {
   display: inline-block;
   vertical-align: middle;
   font-size: 4vw;
-  margin: 0;
   color: #fff;
-  font-family: FOUNTAIN;
 }
 
+#slide-textarea3 {
+  position: absolute;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  background-color: rgba(255, 255, 0, 0.5);
+  height: 100%;
+  padding: 76px 45px 30px;
+}
+
+#slide-text3 {
+  font-size: 3vw;
+  color: rgba(0, 0, 40, 1);
+}
+
+/* 社會企業 slogan */
 .slogan-text {
   text-align: left;
   white-space: pre-line;

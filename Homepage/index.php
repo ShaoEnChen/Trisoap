@@ -113,15 +113,26 @@
         <ul class="slides">
           <li>
             <img class="flexslides" src="img/index1.png">
-            <div class="slide-textarea">
-              <p class="slide-text">三三手皂<br>x<br>來自吾鄉</p>
+            <div id="slide-textarea1">
+              <p class="slide-text" id="slide-text1">三三手皂<br>x<br>來自吾鄉</p>
             </div>
           </li>
           <li>
             <img class="flexslides" src="img/index2.png">
+            <!--<div id="slide-textarea2-1">
+              <p class="slide-text" id="slide-text2-1-1">小農</p>
+              <p class="slide-text" id="slide-text2-1-2">素材</p>
+            </div>
+            <div id="slide-textarea2-2">
+              <p class="slide-text" id="slide-text2-2-1">每個細節都是</p>
+              <p class="slide-text" id="slide-text2-2-2">嚴選</p>
+            </div>-->
           </li>
           <li>
             <img class="flexslides" src="img/index3.png">
+            <div id="slide-textarea3">
+              <p class="slide-text" id="slide-text3">每一顆手工皂，<br>都是注入憨兒們歡笑的純淨手作。</p>
+            </div>
           </li>
           <li>
             <img class="flexslides" src="img/index4.png">
