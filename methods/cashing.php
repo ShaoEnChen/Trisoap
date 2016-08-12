@@ -19,7 +19,7 @@ try {
     $obj->MerchantID = '2000132';                                                    //MerchantID
 
     //Basic Order Parameter
-    $obj->Send['ReturnURL'] = "http://localhost/methods/cashing_feedback.php"; //付款完成通知回傳的網址
+    $obj->Send['ReturnURL'] = "http://140.112.244.217/methods/cashing_feedback.php"; //付款完成通知回傳的網址
     $TradeNo = "Test".time();  //use time to produce TradeNo
     $obj->Send['MerchantTradeNo']   = $TradeNo;                                 //Order_id
     $obj->Send['MerchantTradeDate'] = date("Y/m/d H:i:s");                      //Order_time
@@ -34,10 +34,10 @@ try {
     else{
         $obj->Send['ChoosePayment'] = PaymentMethod::Credit;                    //Payment Method
     }
-    $obj->Send['ClientBackURL']     = "http://localhost/Homepage/index.php";
+    $obj->Send['ClientBackURL']     = "http://140.112.244.217/Homepage/index.php";
 
-    // $sql = "UPDATE ORDMAS SET MerchantTradeNo = '$TradeNo' WHERE ORDNO = '$ORDNO'";
-    // mysql_query($sql);
+    $sql = "UPDATE ORDMAS SET MerchantTradeNo = '$TradeNo' WHERE ORDNO = '$ORDNO'";
+    mysql_query($sql);
 
     //Order Item Lists
     $ItemNo = array("ItemNo");
@@ -82,6 +82,11 @@ try {
     $obj->CheckOut();
       
     //Exception
-    } catch (Exception $e) {
-        echo $e->getMessage();
-    }?>
+}
+catch (Exception $e) {
+    echo $e->getMessage();
+}
+unset($_SESSION['ORDNO']);
+unset($_SESSION['PAYTYPE']);
+unset($_SESSION['total']);
+?>

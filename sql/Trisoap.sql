@@ -154,7 +154,8 @@ CREATE TABLE `ORDMAS` (
   `DATEREQ` date DEFAULT NULL,
   `CREATEDATE` datetime NOT NULL,
   `UPDATEDATE` datetime NOT NULL,
-  `ACTCODE` tinyint(1) NOT NULL DEFAULT '1'
+  `ACTCODE` tinyint(1) NOT NULL DEFAULT '1',
+  `MerchantTradeNo` varchar(50) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --

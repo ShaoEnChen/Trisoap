@@ -1,14 +1,8 @@
-<?php
-session_start();
+<?
 include_once("AllPay.Payment.Integration.php");
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
 include_once("Helper/handle_string.php");
-$EMAIL = $_SESSION['EMAIL'];
-$ORDNO = $_SESSION['ORDNO'];
-$paytype = $_SESSION['PAYTYPE'];
-$totalamount = $_SESSION['total'];
-$discount = search('DISCOUNT', 'CUSMAS', 'EMAIL', $EMAIL);
 
 // get feedback from AllPay
 try
@@ -44,17 +38,15 @@ try
  		}
 
  		if($szRtnCode == 1){
- 			$sql = "UPDATE ORDMAS SET PAYTYPE = '$paytype' WHERE ORDNO = '$ORDNO'";
+ 			$sql = "UPDATE ORDMAS SET PAYTYPE = '$szPaymentType' WHERE MerchantTradeNo = '$szMerchantTradeNo'";
 		    mysql_query($sql);
-		    $sql = "UPDATE ORDMAS SET PAYSTAT = 1 WHERE ORDNO = '$ORDNO'";
+		    $sql = "UPDATE ORDMAS SET PAYSTAT = 1 WHERE MerchantTradeNo = '$szMerchantTradeNo'";
 		    mysql_query($sql);
-		    $sql = "UPDATE ORDMAS SET TOTALAMT = $totalamount-$discount WHERE ORDNO = '$ORDNO'";
+		    $sql = "UPDATE ORDMAS SET TOTALAMT = '$szPayAmt' WHERE MerchantTradeNo = '$szMerchantTradeNo'";
 		    mysql_query($sql);
-		    $sql = "UPDATE CUSMAS SET DISCOUNT = 0 WHERE EMAIL = '$EMAIL'";
+		    $queryEMAIL = search('EMAIL', 'ORDMAS', 'MerchantTradeNo', $szMerchantTradeNo);
+		    $sql = "UPDATE CUSMAS SET DISCOUNT = 0 WHERE EMAIL = '$queryEMAIL'";
 		    mysql_query($sql);
-		    unset($_SESSION['ORDNO']);
-		    unset($_SESSION['PAYTYPE']);
-		    unset($_SESSION['total']);
 		    print '1|OK';	//tell AllPay that we get the feedback
  		}
  	} 
