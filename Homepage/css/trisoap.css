@@ -1743,7 +1743,7 @@ li .shop-cart {
 
 .flex-control-nav {
   position: absolute;
-  bottom: 30px;
+  bottom: 16%;
   height: 30px;
   width: 100vw;
   z-index: 1000;
@@ -1774,8 +1774,8 @@ li .shop-cart {
 
 #slide-textarea1 {
   position: absolute;
-  left: 33px;
-  bottom: 33px;
+  left: 9vw;
+  bottom: 8vw;
   width: 22vw;
   height: 22vw;
   text-align: center;
