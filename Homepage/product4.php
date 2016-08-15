@@ -112,11 +112,9 @@
               <div class="carousel-inner">
                 <div class="item active"><img src="img/product/detail/taitung_small.jpg" alt=""></div>
                 <div class="item"><img src="img/product/detail/taitung_green.jpg" alt=""></div>
-                <!-- <div class="item"><img src="img/shop/single3.jpg" alt=""></div>
-                <div class="item"><img src="img/shop/single4.jpg" alt=""></div>
-                <div class="item"><img src="img/shop/single5.jpg" alt=""></div> -->
               </div>
-              <!-- Controls--><a href="#carousel-shop" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a><a href="#carousel-shop" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
+              <!-- Controls-->
+              <a href="#carousel-shop" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a><a href="#carousel-shop" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
             </div>
             <div class="col-lg-6 slide">
               <h4>三三臺東意象禮盒組</h4>
