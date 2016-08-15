@@ -59,8 +59,7 @@ CREATE TABLE `CUSMAS` (
 --
 
 INSERT INTO `CUSMAS` (`EMAIL`, `CUSPW`, `CUSNM`, `CUSIDT`, `CUSADD`, `CUSBIRTHY`, `CUSBIRTHM`, `CUSBIRTHD`, `COUNTRY`, `ZCODE`, `TEL`, `CUSTYPE`, `KNOWTYPE`, `CREDITSTAT`, `TAXID`, `DISCOUNT`, `SALEAMTMTD`, `SALEAMTSTD`, `SALEAMTYTD`, `SALEAMT`, `CURAR`, `SPEINS`, `CREATEDATE`, `UPDATEDATE`, `ACTCODE`) VALUES
-('a0922825881@gmail.com', '7db4cd6e7093', '冷俊瑩', 'A', 'Home', 1995, 12, 6, 'Taiwan', NULL, '0922825881', 'A', 'A', 'A', 'No', 0, 0, 0, 0, 0, 0, '', '2016-07-25 10:17:55', '2016-08-02 15:50:20', 1),
-('tim841206@yahoo.com.tw', '7db4cd6e7093', '冷俊瑩', 'B', 'Home', 1995, 12, 6, 'Taiwan', NULL, '0922825881', 'A', 'A', 'A', 'No', 0, 0, 0, 0, 0, 0, '', '2016-07-25 09:42:09', '2016-07-25 09:42:09', 1);
+('trisoap2015@gmail.com', '975b425268c9', '三三預設管理員', 'A', '', 333, 3, 3, 'Taiwan', NULL, '', 'A', 'A', 'A', 'No', 0, 0, 0, 0, 0, 0, '', '2016-08-15 00:00:00', '2016-08-15 00:00:00', 1);
 
 -- --------------------------------------------------------
 

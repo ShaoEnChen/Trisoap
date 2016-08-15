@@ -18,6 +18,7 @@
             session_start();
             include_once("Helper/mysql_connect.php");
             include_once("Helper/sql_operation.php");
+            include_once("Helper/handle_string.php");
             include_once("Helper/redirect.js");
             $EMAIL = $_SESSION['EMAIL'];
             $CUSIDT = $_SESSION['CUSIDT'];
@@ -86,6 +87,23 @@
                 </div>
             </div>
         </nav>
+
+        <section>
+            <div class="orders">
+                <form name="form" method="post" action="Update_ORDMAS.php">
+                    搜尋依據：<select name="keytype" />
+                    <option value=""></option>
+                    <option value="ORDNO">訂單編號</option>
+                    <option value="ORDTYPE">訂單種類</option>
+                    <option value="EMAIL">顧客信箱</option>
+                    <option value="INVOICENO">發票號碼</option>
+                    </select>
+                    搜尋關鍵：<input type="text" name="keyvalue" /> <br>
+                    <input type="submit" name="button" class="btn btn-dark" value="確定" />
+                </form>
+            </div>
+        </section>
+
         <section>
             <div class="container">
                 <h2>訂單管理</h2>
@@ -108,8 +126,15 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php
-                                        $queryORDMAS = "SELECT * FROM ORDMAS WHERE ACTCODE=1";
+                                    <?
+                                        $keytype = input('keytype');
+                                        $keyvalue = input('keyvalue');
+                                        if($keytype == null){
+                                            $queryORDMAS = "SELECT * FROM ORDMAS WHERE ACTCODE=1";
+                                        }
+                                        else{
+                                            $queryORDMAS = "SELECT * FROM ORDMAS WHERE ACTCODE=1 AND $keytype = '$keyvalue'";
+                                        }
                                         $result = mysql_query($queryORDMAS);
                                         while($row = mysql_fetch_array($result)){
                                             $ORDNO = $row['ORDNO'];

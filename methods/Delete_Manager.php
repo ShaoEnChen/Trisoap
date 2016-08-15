@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 	<meta charset="UTF-8">
@@ -7,34 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
     <title>三三社企-刪除管理員</title>
-	<!-- Google Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
-	<!-- Custom Stylesheet -->
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>   
+    <link href='css/sign.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-	<div class="container">
-		<div class="top">
-			<!--
-			<h1 id="title" class="hidden"><span id="logo">Daily <span>UI</span></span></h1>
-			-->
-		</div>
-		<div class="login-box animated fadeInUp">
-			<div class="box-header">
-				<h2>刪除管理員</h2>
-			</div>
+<br>
+	<?php
+	session_start();
+	include_once("Helper/mysql_connect.php");
+	include_once("Helper/redirect.js");
+	$EMAIL = $_SESSION['EMAIL'];
+	$CUSIDT = $_SESSION['CUSIDT'];
+	if($EMAIL != null && $CUSIDT == 'A'){
+	?>
+	<div class="sign-block">
+    	<h1>刪除管理員</h1>
 			<form name="form" method="post" action="Delete_Manager_finish.php">
-				<label for="username">電子信箱<input type="text" name="newEMAIL" />  </label><br>
-				<label for="password">再次輸入您的密碼<input type="password" name="CUSPW" />  </label><br>			
-				<label for="username"></label>
-				<button type="submit">刪除</button>
+				<label for="email">欲刪除之管理員信箱<br><input type="text" name="newEMAIL" id="email"/></label><br>
+				<label for="password">請再次輸入您的密碼<br><input type="password" name="CUSPW" id="password"/></label><br>
+				<button type="submit" class="promise">確定</button>
 			</form>
-			<button type="button"></buttom><a href="Update_Manager.php">取消</a>
-		</div>
+		<button type="button" class="cancel"></buttom><a href="Update_Manager.php">取消</a>
 	</div>
+	<?php
+	}
+	else{
+		?>
+		<script>
+		redirect("../Homepage/index.php");
+		alert("您無權限觀看此頁面!");
+		</script>
+		<?
+	}
+	?>
 </body>
 
 <script>

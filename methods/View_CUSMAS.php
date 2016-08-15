@@ -18,6 +18,7 @@
             session_start();
             include_once("Helper/mysql_connect.php");
             include_once("Helper/sql_operation.php");
+            include_once("Helper/handle_string.php");
             include_once("Helper/redirect.js");
             $EMAIL = $_SESSION['EMAIL'];
             $CUSIDT = $_SESSION['CUSIDT'];
@@ -61,6 +62,22 @@
                 </div>
             </div>
         </nav>
+
+        <section>
+            <div class="orders">
+                <form name="form" method="post" action="View_CUSMAS.php">
+                    搜尋依據：<select name="keytype" />
+                    <option value=""></option>
+                    <option value="EMAIL">電子信箱</option>
+                    <option value="CUSNM">客戶姓名</option>
+                    <option value="TEL">聯絡電話</option>
+                    </select>
+                    搜尋關鍵：<input type="text" name="keyvalue" /> <br>
+                    <input type="submit" name="button" class="btn btn-dark" value="確定" />
+                </form>
+            </div>
+        </section>
+
         <section>
             <div class="container">
                 <h2>客戶一覽</h2>
@@ -84,7 +101,14 @@
                                     </thead>
                                     <tbody>
                                     <?
-                                        $queryCustomer = "SELECT * FROM CUSMAS";
+                                        $keytype = input('keytype');
+                                        $keyvalue = input('keyvalue');
+                                        if($keytype == null){
+                                            $queryCustomer = "SELECT * FROM CUSMAS";
+                                        }
+                                        else{
+                                            $queryCustomer = "SELECT * FROM CUSMAS WHERE $keytype = '$keyvalue'";
+                                        }
                                         $result = mysql_query($queryCustomer);
                                         while($row = mysql_fetch_array($result)){
                                             $queryEMAIL = $row['EMAIL'];

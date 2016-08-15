@@ -11,9 +11,9 @@ $CUSIDT = $_SESSION['CUSIDT'];
 $message = null;
 
 if($EMAIL != null && $CUSIDT == 'A'){
-    $newEMAIL = $_POST['newEMAIL'];
+    $newEMAIL = input('newEMAIL');
     $PW = input('CUSPW');
-    $queryPW = search('CUSPW', 'CUSAMS', 'EMAIL', $EMAIL);
+    $queryPW = search('CUSPW', 'CUSMAS', 'EMAIL', $EMAIL);
     if(encrypt($PW) != $queryPW){
         $message = $message . '密碼錯誤<br>';
     }
@@ -40,7 +40,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
     else{
         ?>
         <script>
-        redirect("Update_Manager.php");
+        redirect("Delete_Manager.php");
         alert("密碼錯誤");
         </script>
         <?
