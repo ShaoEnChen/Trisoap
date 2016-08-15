@@ -5,6 +5,14 @@
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/redirect.js");
+
+?>
+<script>
+redirect("../Homepage/index.php");
+alert("此功能暫不開放");
+</script>
+<?
+
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 
