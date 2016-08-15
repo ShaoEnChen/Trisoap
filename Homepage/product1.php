@@ -110,10 +110,9 @@
             <div class="col-lg-6 carousel-outer">
               <!-- Wrapper for slides-->
               <div class="carousel-inner">
-                <div class="item active"><img src="img/product/detail/rice_soap_small.jpg" alt=""></div>
-                <!-- <div class="item"><img src="img/product/detail/rice_element.jpg" alt=""></div>
+                <div class="item active"><img src="img/product/detail/rice_soap.jpg" alt=""></div>
                 <div class="item"><img src="img/product/detail/rice_soap_small.jpg" alt=""></div>
-                <div class="item"><img src="img/shop/single5.jpg" alt=""></div> -->
+                <div class="item"><img src="img/product/detail/rice_element.jpg" alt=""></div>
               </div>
               <!-- Controls--><a href="#carousel-shop" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a><a href="#carousel-shop" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
             </div>
@@ -124,11 +123,9 @@
               艾草底層與金盞花粉夾層的色澤設計，凸顯台東的小農意象。</p>
               <!-- Indicators-->
               <ol class="carousel-indicators mCustomScrollbar">
-                <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/detail/rice_soap_small.jpg" alt=""></li>
-                <!--<li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/rice_element.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="2"><img src="img/product/detail/rice_soap_small.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="3"><img src="img/shop/single4.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="4"><img src="img/shop/single5.jpg" alt=""></li> -->
+                <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/detail/rice_soap.jpg" alt=""></li>
+                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/rice_soap_small.jpg" alt=""></li>
+                <li data-target="#carousel-shop" data-slide-to="2"><img src="img/product/detail/rice_element.jpg" alt=""></li>
               </ol>
               <hr>
               <p>主要成分 / 乳油木果脂、甜杏仁油、橄欖油、椰子油、棕梠油、池上米、研磨艾草粉、研磨金盞花粉</p>
