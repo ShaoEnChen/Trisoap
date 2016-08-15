@@ -12,7 +12,7 @@
     <link href='css/table.css' rel='stylesheet' type='text/css'>
     <style>
     .sign-block {
-        width: 400px;
+        width: 500px;
         padding: 20px;
         border-top: 10px solid #AA0000;
         position: absolute;
@@ -86,12 +86,14 @@
                         <td>單價(台幣)</td>
                         <td>數量</td>
                         <td>金額(台幣)</td>
+                        <td></td>
                     </tr>
                 </thead>
 
                 <tbody>
                 <?php
                 for($i = 1; $i <= $number; $i++){
+                    $queryITEMNO = search('ITEMNO', 'ITEMMAS', 'ITEMNM', $ItemName[$i]);
                     ?>
                     <tr>
                         <td><?echo $ItemName[$i];?></td>
@@ -102,6 +104,14 @@
                         $total += $price;
                         ?>
                         <td><?echo $price;?></td>
+                        <td>
+                            <form name="remove" method="post" action="Delete_ORDITEMMAS.php">
+                            <input type="hidden" name="ORDNO" value="<?echo $ORDNO;?>" />
+                            <input type="hidden" name="EMAIL" value="<?echo $EMAIL;?>" />
+                            <input type="hidden" name="ITEMNO" value="<?echo $queryITEMNO;?>" />
+                            <button type="submit" class="cancel">移除</button>
+                            </form>
+                        </td>
                     </tr>
                     <?
                 }
