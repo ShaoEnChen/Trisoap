@@ -112,9 +112,7 @@
               <!-- Wrapper for slides-->
               <div class="carousel-inner">
                 <div class="item active"><img src="img/product/detail/shakya_soap.jpg" alt=""></div>
-                <div class="item"><img src="img/product/detail/shakya_soap_small.jpg" alt=""></div>
-                <div class="item"><img src="img/product/detail/shakya_farmer.jpg" alt=""></div>
-                <div class="item"><img src="img/product/detail/shakya_element.jpg" alt=""></div>
+                <div class="item"><img src="img/product/detail/shakya.png" alt=""></div>
               </div>
               <!-- Controls--><a href="#carousel-shop" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a><a href="#carousel-shop" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
             </div>
@@ -126,9 +124,7 @@
               <!-- Indicators-->
               <ol class="carousel-indicators mCustomScrollbar">
                 <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/detail/shakya_soap.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/shakya_soap_small.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="2"><img src="img/product/detail/shakya_farmer.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="3"><img src="img/product/detail/shakya_element.jpg" alt=""></li>
+                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/shakya.png" alt=""></li>
               </ol>
               <hr>
               <p>主要成分 / 葡萄籽油 橄欖油 棕梠油 乳油木果脂 葡萄籽油 釋迦果砂</p>

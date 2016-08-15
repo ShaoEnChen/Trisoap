@@ -3,6 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Great+Vibes);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 @import url(https://fonts.googleapis.com/css?family=Kanit:400,200,100,300,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 @import url(../js/vegas/vegas.min.css);
 @import url(ionicons.min.css);
 @import url(font-awesome.min.css);
@@ -1743,7 +1744,7 @@ li .shop-cart {
 
 .flex-control-nav {
   position: absolute;
-  bottom: 16%;
+  bottom: 14%;
   height: 30px;
   width: 100vw;
   z-index: 1000;
@@ -1800,17 +1801,33 @@ li .shop-cart {
 
 #slide-textarea3 {
   position: absolute;
-  top: 0;
-  -webkit-writing-mode: vertical-rl;
-  writing-mode: vertical-rl;
-  background-color: rgba(255, 255, 0, 0.5);
-  height: 100%;
-  padding: 76px 45px 30px;
+  bottom: 22%;
+  right: 0;
+  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 16px 0 0 16px;
+  -webkit-border-radius: 16px 0 0 16px;
+  -moz-border-radius: 16px 0 0 16px;
+  -o-border-radius: 16px 0 0 16px;
 }
 
 #slide-text3 {
   font-size: 3vw;
   color: rgba(0, 0, 40, 1);
+}
+
+#slide-textarea4 {
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  position: absolute;
+  top: 30%;
+  right: 13vw;
+}
+
+#slide-text4 {
+  font-size: 4vw;
+  letter-spacing: 4px;
+  color: rgba(0, 0, 40, 0.8);
 }
 
 /* 社會企業 slogan */
