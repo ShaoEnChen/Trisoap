@@ -1842,7 +1842,7 @@ li .shop-cart {
 #slide-textarea2-1 span:last-of-type::after {
   content: '';
   position: absolute;
-  top: 10vw;
+  top: 11vw;
   right: 0;
   height: 70%;
   border-right: 1px solid #666;
@@ -1852,8 +1852,8 @@ li .shop-cart {
   content: '';
   position: absolute;
   top: -1vw;
-  left: -20vw;
-  width: 700%;
+  left: -17vw;
+  width: 600%;
   border-top: 1px solid #666;
 }
 
