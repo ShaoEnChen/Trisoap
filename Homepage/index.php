@@ -120,12 +120,15 @@
           <li>
             <img class="flexslides" src="img/index2.png">
             <div id="slide-textarea2-1">
-              <p class="slide-text" id="slide-text2-1-1">小農</p>
-              <p class="slide-text" id="slide-text2-1-2">素材</p>
+              <span class="slide-text" id="slide-text2-1-1">小農</span>
+              <span class="slide-text" id="slide-text2-1-2">素材</span>
             </div>
             <div id="slide-textarea2-2">
-              <p class="slide-text" id="slide-text2-2-1">每個細節都是</p>
-              <p class="slide-text" id="slide-text2-2-2">嚴選。</p>
+              <span class="slide-text" id="slide-text2-2-1">每個細節都是</span>
+              <span class="slide-text" id="slide-text2-2-2">嚴選</span>
+            </div>
+            <div id="slide-textarea2-3">
+              <span class="slide-text" id="slide-text2-3">。</span>
             </div>
           </li>
           <li>
