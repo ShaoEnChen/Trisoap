@@ -1799,9 +1799,43 @@ li .shop-cart {
   color: #fff;
 }
 
+#slide-textarea2-1,
+#slide-textarea2-2 {
+  position: absolute;
+}
+
+#slide-textarea2-1 {
+  top: 13vw;
+  right: 25vw;
+  writing-mode: vertical-lr;
+}
+
+#slide-textarea2-2 {
+  top: 33vw;
+  right: 30vw;
+}
+
+#slide-text2-1-1,
+#slide-text2-1-2,
+#slide-text2-2-1,
+#slide-text2-2-2 {
+  font-size: 5vw;
+  float: left;
+}
+
+#slide-text2-1-1,
+#slide-text2-2-1 {
+  color: #973208;
+}
+
+#slide-text2-1-2,
+#slide-text2-2-2 {
+  color: #201000;
+}
+
 #slide-textarea3 {
   position: absolute;
-  bottom: 22%;
+  bottom: 15vw;
   right: 0;
   padding: 24px;
   background-color: rgba(255, 255, 255, 0.3);

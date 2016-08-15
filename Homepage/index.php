@@ -119,14 +119,14 @@
           </li>
           <li>
             <img class="flexslides" src="img/index2.png">
-            <!--<div id="slide-textarea2-1">
+            <div id="slide-textarea2-1">
               <p class="slide-text" id="slide-text2-1-1">小農</p>
               <p class="slide-text" id="slide-text2-1-2">素材</p>
             </div>
             <div id="slide-textarea2-2">
               <p class="slide-text" id="slide-text2-2-1">每個細節都是</p>
-              <p class="slide-text" id="slide-text2-2-2">嚴選</p>
-            </div>-->
+              <p class="slide-text" id="slide-text2-2-2">嚴選。</p>
+            </div>
           </li>
           <li>
             <img class="flexslides" src="img/index3.png">
