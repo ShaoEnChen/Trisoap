@@ -84,7 +84,6 @@
 								<li><a data-toggle="pill" href="#fail">未通過</a></li>
 								<li><a data-toggle="pill" href="#published">公開中</a></li>
 								<li><a data-toggle="pill" href="#epic">典藏</a></li>
-								<!--<li><a data-toggle="pill" href="#letter">編輯信件</a></li>-->
 							</ul>
 						</div>
 						<a href="#" class="btn btn-primary col-xs-1 col-xs-offset-7 col-sm-offset-2 col-md-offset-4">儲存</a>

@@ -1,32 +1,47 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-<title>三三吾鄉手工皂 新增留心語</title>
-<?php
-session_start();
-include_once("Helper/mysql_connect.php");
-include_once("Helper/redirect.js");
-$EMAIL = $_SESSION['EMAIL'];
-$message = null;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
+    <title>三三社企-留心語</title>
+    <meta name="author" content="2016 NTUIM SA GROUP7">
+    <meta name="description" content="">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- custim css -->
+    <link href="css/sign.css" rel="stylesheet">
+</head>
 
-if($EMAIL != null){
-    ?>
-    顧客帳號：<?echo $EMAIL;?> <br>
-    <form name="form" method="post" action="Create_MSGMAS_finish.php" Enctype="multipart/form-data>" />
-    <input type="hidden" name="MSG" /> <br>
-    留言文字*：<input type="text" name="MSGTXT" /> <br>
-    留言照片：<input type="file" name="MSGPHOTO" /> <br>
-    留言影片：<input type="text" name="MSGVIDEO" />   請自行上傳後在此輸入網址 <br>
-    <input type="submit" name="button" value="確定" />
-    </form>
-    <a href="../message/Message.html">取消</a>
-<?php
-}
-else{
-    ?>
-    <script>
-    redirect("../Homepage/index.php");
-    alert("請先登入或註冊!");
-    </script>
+<body>
+<br>
+<div class="sign-block">
+    <h1>留心語</h1>
     <?
-}
-?>
+    session_start();
+    include_once("Helper/mysql_connect.php");
+    include_once("Helper/redirect.js");
+    $EMAIL = $_SESSION['EMAIL'];
+    if($EMAIL != null){
+        ?>
+        <form method="post" action="Create_MSGMAS_finish.php" enctype="multipart/form-data" >
+        <label for="MSGTXT"><textarea name="MSGTXT" placeholder="文字(必填)" id="MSGTXT"></textarea></label>
+        <label for="MSGPHOTO">照片<input type="file" name="MSGPHOTO" placeholder="照片" id="MSGPHOTO"/></label><br>
+        <label for="MSGVIDEO">影片<input type="file" name="MSGVIDEO" placeholder="影片" id="MSGVIDEO"/></label>   
+        <button type="submit" class="promise">上傳</button>
+        </form>
+        <button type="button" class="cancel"><a href="../Homepage/index.php">取消</a></button>
+        <?
+    }
+    else{
+        ?>
+        <script>
+        redirect("../Homepage/index.php");
+        alert("請先登入或註冊!");
+        </script>
+        <?
+    }
+    ?>
+</div>
+</body>
+</html>

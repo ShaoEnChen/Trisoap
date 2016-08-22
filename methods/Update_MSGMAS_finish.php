@@ -32,9 +32,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                         if($findREWARD == 0){
                                 $queryEMAIL = search('EMAIL', 'MSGMAS', 'MSGNO', $MSGNO);
                                 $setREWARD = "UPDATE MSGMAS SET REWARDSTAT='1' WHERE MSGNO='$MSGNO'";
-                                mysql_query($setREWARD);
                                 $putREWARD = "UPDATE CUSMAS SET DISCOUNT=DISCOUNT+25 WHERE EMAIL='$queryEMAIL'";
-                                mysql_query($putREWARD);
                                 if(mysql_query($setREWARD) && mysql_query($putREWARD)){
                                         mail_pass_message($queryEMAIL);
                                 }
@@ -42,7 +40,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                         else{
                                 $sql = "UPDATE MSGMAS SET MSGSTAT='$MSGSTAT' WHERE MSGNO='$MSGNO'";
                         }
-                {
+                }
                 else{
                         $sql = "UPDATE MSGMAS SET MSGSTAT='$MSGSTAT' WHERE MSGNO='$MSGNO'";
                 }
