@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: localhost
--- 產生時間： 2016 年 08 月 11 日 09:12
+-- 產生時間： 2016 年 08 月 25 日 05:10
 -- 伺服器版本: 10.1.13-MariaDB
 -- PHP 版本： 5.6.23
 
@@ -35,7 +35,7 @@ CREATE TABLE `CUSMAS` (
   `CUSBIRTHY` smallint(4) NOT NULL,
   `CUSBIRTHM` tinyint(2) NOT NULL,
   `CUSBIRTHD` tinyint(2) NOT NULL,
-  `COUNTRY` varchar(15) COLLATE utf8_bin DEFAULT 'Taiwan',
+  `COUNTRY` varchar(15) COLLATE utf8_bin DEFAULT NULL,
   `ZCODE` varchar(5) COLLATE utf8_bin DEFAULT NULL,
   `TEL` varchar(15) COLLATE utf8_bin DEFAULT NULL,
   `CUSTYPE` varchar(1) COLLATE utf8_bin NOT NULL,
@@ -59,7 +59,24 @@ CREATE TABLE `CUSMAS` (
 --
 
 INSERT INTO `CUSMAS` (`EMAIL`, `CUSPW`, `CUSNM`, `CUSIDT`, `CUSADD`, `CUSBIRTHY`, `CUSBIRTHM`, `CUSBIRTHD`, `COUNTRY`, `ZCODE`, `TEL`, `CUSTYPE`, `KNOWTYPE`, `CREDITSTAT`, `TAXID`, `DISCOUNT`, `SALEAMTMTD`, `SALEAMTSTD`, `SALEAMTYTD`, `SALEAMT`, `CURAR`, `SPEINS`, `CREATEDATE`, `UPDATEDATE`, `ACTCODE`) VALUES
-('trisoap2015@gmail.com', '975b425268c9', '三三預設管理員', 'A', '', 333, 3, 3, 'Taiwan', NULL, '', 'A', 'A', 'A', 'No', 0, 0, 0, 0, 0, 0, '', '2016-08-15 00:00:00', '2016-08-15 00:00:00', 1);
+('trisoap2015@gmail.com', '975b425268c9', '三三預設管理員', 'A', 'home', 333, 3, 3, NULL, NULL, '0952527077', 'A', 'A', 'A', 'no', 0, 0, 0, 0, 0, 0, '', '2016-08-25 11:07:11', '2016-08-25 11:07:11', 1);
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `DCTMAS`
+--
+
+CREATE TABLE `DCTMAS` (
+  `DCTID` varchar(50) COLLATE utf8_bin NOT NULL,
+  `DCTPRICE` smallint(4) NOT NULL,
+  `DCTSTAT` tinyint(1) NOT NULL,
+  `DCTNM` varchar(50) COLLATE utf8_bin NOT NULL,
+  `CREATEPERSON` varchar(50) COLLATE utf8_bin NOT NULL,
+  `CREATEDATE` datetime NOT NULL,
+  `USEDATE` datetime NOT NULL,
+  `ACTCODE` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -85,7 +102,7 @@ CREATE TABLE `ITEMMAS` (
 --
 
 INSERT INTO `ITEMMAS` (`ITEMNO`, `ITEMNM`, `ITEMAMT`, `PRICE`, `DESCRIPTION`, `PHOTO`, `PHOTOTYPE`, `CREATEDATE`, `UPDATEDATE`, `ACTCODE`) VALUES
-(1, '田靜山巒禾風皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
+(1, '田靜山巒禾風皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-08-09 15:23:28', 1),
 (2, '金絲森林渲染皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
 (3, '釋迦手感果力皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
 (4, '三三台東意象禮盒組', 0, 900, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1);
@@ -125,10 +142,6 @@ CREATE TABLE `ORDITEMMAS` (
   `ACTCODE` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- 資料表的匯出資料 `ORDITEMMAS`
---
-
 -- --------------------------------------------------------
 
 --
@@ -155,10 +168,6 @@ CREATE TABLE `ORDMAS` (
   `ACTCODE` tinyint(1) NOT NULL DEFAULT '1',
   `MerchantTradeNo` varchar(50) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- 資料表的匯出資料 `ORDMAS`
---
 
 -- --------------------------------------------------------
 
@@ -194,6 +203,12 @@ INSERT INTO `OWNMAS` (`COMNM`, `COMADD`, `COMTEL`, `COMEMAIL`, `COMWEB`, `COMTAX
 --
 ALTER TABLE `CUSMAS`
   ADD PRIMARY KEY (`EMAIL`);
+
+--
+-- 資料表索引 `DCTMAS`
+--
+ALTER TABLE `DCTMAS`
+  ADD PRIMARY KEY (`DCTID`);
 
 --
 -- 資料表索引 `ITEMMAS`
