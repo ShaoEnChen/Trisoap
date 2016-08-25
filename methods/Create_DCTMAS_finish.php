@@ -17,7 +17,10 @@ $message = null;
 if($EMAIL != null && $CUSIDT == 'A'){
         $queryPW = search('CUSPW', 'CUSMAS', 'EMAIL', $EMAIL);
         if(encrypt($PW) != $queryPW){
-                $message = $message . '密碼錯誤';
+                $message .= '密碼錯誤 \n';
+        }
+        if($DCTSTAT == null){
+                $message .= '請選擇折扣有效方法 \n';
         }
 
         if($message == null){

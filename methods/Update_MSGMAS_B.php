@@ -114,18 +114,37 @@
                                         $queryMSGMAS = "SELECT * FROM MSGMAS WHERE ACTCODE=1 AND MSGSTAT = 'B'";
                                         $result = mysql_query($queryMSGMAS);
                                         while($row = mysql_fetch_array($result)){
+                                            $MSGNO = $row['MSGNO'];
                                     ?>
                                         <tr>
                                             <!-- 留言編號 -->
-                                            <td><?echo $row['MSGNO'];?></td>
+                                            <td><?echo $MSGNO;?></td>
                                             <!-- 顧客信箱 -->
                                             <td><?echo $row['EMAIL'];?></td>
                                             <!-- 留言文字 -->
                                             <td><?echo $row['MSGTXT'];?></td>
                                             <!-- 留言照片 -->
-                                            <td><?echo $row['MSGPHOTO'];?></td>
+                                            <td>
+                                                <?
+                                                if($row['MSGPHOTO'] == '1'){
+                                                    echo "<a target=\"_blank\" href=\"../message/picture/$MSGNO.png\">";
+                                                    echo "<img src=\"../message/picture/$MSGNO.png\" width=\"360\" height=\"270\" />";
+                                                    echo "</a>";
+                                                }
+                                                ?>
+                                            </td>
                                             <!-- 留言影片 -->
-                                            <td><?echo $row['MSGVIDEO'];?></td>
+                                            <td>
+                                                <?
+                                                if($row['MSGVIDEO'] == '1'){
+                                                    echo "<a target=\"_blank\" href=\"../message/video/$MSGNO.mp4\">";
+                                                    echo "<video width=\"360\" height=\"270\" controls>";
+                                                    echo "<source src=\"../message/video/$MSGNO.mp4\" type=\"video/mp4\">";
+                                                    echo "</video>";
+                                                    echo "</a>";
+                                                }
+                                                ?>
+                                            </td>
                                             <!-- 建立日期 -->
                                             <td><?echo $row['CREATEDATE'];?></td>
                                             <!-- 發佈日期 -->
