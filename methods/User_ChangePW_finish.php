@@ -51,7 +51,7 @@ if($EMAIL != null){
                 else{
                         ?>
                         <script>
-                        redirect("User_ChangePW1.php");
+                        redirect("User_ChangePW.php");
                         alert("密碼修改失敗");
                         </script>
                         <?
@@ -60,7 +60,7 @@ if($EMAIL != null){
         else{
                 ?>
                 <script>
-                redirect("User_ChangePW1.php");
+                redirect("User_ChangePW.php");
                 alert("<?echo $message;?>");
                 </script>
                 <?

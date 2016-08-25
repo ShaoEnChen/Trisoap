@@ -37,7 +37,7 @@ else
 {
         ?>
         <script>
-        redirect("User_login1.php");
+        redirect("User_login.php");
         alert("<?echo $message;?>");
         </script>
         <?

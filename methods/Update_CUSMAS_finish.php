@@ -57,7 +57,7 @@ if($EMAIL != null){
         else{
                 ?>
                 <script>
-                redirect("Update_CUSMAS1.php");
+                redirect("Update_CUSMAS.php");
                 alert("<?echo $message;?>");
                 </script>
                 <?

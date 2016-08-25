@@ -63,8 +63,8 @@
               <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="../methods/View_ORDMAS.php">查看訂單</a></li>
-                  <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
-                  <li><a href="../methods/User_ChangePW1.php">修改密碼</a></li>
+                  <li><a href="../methods/Update_CUSMAS.php">修改資料</a></li>
+                  <li><a href="../methods/User_ChangePW.php">修改密碼</a></li>
                   <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
@@ -76,8 +76,8 @@
               <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="../methods/View_ORDMAS.php">查看訂單</a></li>
-                  <li><a href="../methods/Update_CUSMAS1.php">修改資料</a></li>
-                  <li><a href="../methods/User_ChangePW1.php">修改密碼</a></li>
+                  <li><a href="../methods/Update_CUSMAS.php">修改資料</a></li>
+                  <li><a href="../methods/User_ChangePW.php">修改密碼</a></li>
                   <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
@@ -88,8 +88,8 @@
               ?>
               <li><a href="#">註冊/登入<i class="fa fa-angle-down"></i><span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="../methods/Create_CUSMAS1.php">註冊</a></li>
-                  <li><a href="../methods/User_login1.php">登入</a></li>
+                  <li><a href="../methods/Create_CUSMAS.php">註冊</a></li>
+                  <li><a href="../methods/User_login.php">登入</a></li>
                 </ul>
               </li>
               <?

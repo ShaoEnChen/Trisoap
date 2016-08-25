@@ -7,6 +7,7 @@ include_once("Helper/handle_string.php");
 include_once("Helper/redirect.js");
 $VERIFY = input('VERIFY');
 if($VERIFY == $_SESSION['COMMIT']){
+        unset($_SESSION['COMMIT']);
         $CUSNM = $_SESSION['CUSNM'];
         $CUSPW = encrypt($_SESSION['CUSPW']);
         $CUSADD = $_SESSION['CUSADD'];
@@ -36,7 +37,6 @@ if($VERIFY == $_SESSION['COMMIT']){
                 unset($_SESSION['TAXID']);
                 unset($_SESSION['KNOWTYPE']);
                 unset($_SESSION['SPEINS']);
-                unset($_SESSION['COMMIT']);
                 ?>
                 <script>
                 redirect("../Homepage/index.php");
@@ -45,10 +45,9 @@ if($VERIFY == $_SESSION['COMMIT']){
                 <?
         }
         else{
-                unset($_SESSION['COMMIT']);
                 ?>
                 <script>
-                redirect("Create_CUSMAS1.php");
+                redirect("Create_CUSMAS.php");
                 alert("系統錯誤，註冊失敗");
                 </script>
                 <?
@@ -58,7 +57,7 @@ else{
         unset($_SESSION['COMMIT']);
         ?>
         <script>
-        redirect("Create_CUSMAS1.php");
+        redirect("Create_CUSMAS.php");
         alert("驗證碼錯誤，註冊失敗");
         </script>
         <?

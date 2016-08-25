@@ -45,15 +45,16 @@ $CUSNM = input('CUSNM');
 $CUSPW1 = input('CUSPW1');
 $CUSPW2 = input('CUSPW2');
 $CUSADD = input('CUSADD');
-$CUSTYPE = $_POST['CUSTYPE'];
-$CUSBIRTH = explode('-', input('CUSBIRTH'));
-$CUSBIRTHY = $CUSBIRTH[0];
-$CUSBIRTHM = $CUSBIRTH[1];
-$CUSBIRTHD = $CUSBIRTH[2];
+$CUSTYPE = input('CUSTYPE');
+$CUSBIRTH = input('CUSBIRTH');
+$newCUSBIRTH = explode('-', input('CUSBIRTH'));
+$CUSBIRTHY = $newCUSBIRTH[0];
+$CUSBIRTHM = $newCUSBIRTH[1];
+$CUSBIRTHD = $newCUSBIRTH[2];
 $TEL = input('TEL');
 $EMAIL = input('EMAIL');
 $TAXID = input('TAXID');
-$KNOWTYPE = $_POST['KNOWTYPE'];
+$KNOWTYPE = input('KNOWTYPE');
 $SPEINS = input('SPEINS');
 
 if($EMAIL == null){
@@ -95,9 +96,7 @@ $_SESSION['CUSNM'] = $CUSNM;
 $_SESSION['CUSPW'] = $CUSPW1;
 $_SESSION['CUSADD'] = $CUSADD;
 $_SESSION['CUSTYPE'] = $CUSTYPE;
-$_SESSION['CUSBIRTHY'] = $CUSBIRTHY;
-$_SESSION['CUSBIRTHM'] = $CUSBIRTHM;
-$_SESSION['CUSBIRTHD'] = $CUSBIRTHD;
+$_SESSION['CUSBIRTH'] = $CUSBIRTH;
 $_SESSION['TEL'] = $TEL;
 $_SESSION['EMAIL'] = $EMAIL;
 $_SESSION['TAXID'] = $TAXID;
@@ -134,7 +133,7 @@ if($message == ''){
 else{
     ?>
     <script>
-    redirect("Create_CUSMAS1.php");
+    redirect("Create_CUSMAS.php");
     alert("<?echo $message;?>");
     </script>
     <?
