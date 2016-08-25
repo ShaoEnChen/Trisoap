@@ -64,6 +64,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="Replenish_ITEMMAS.php">
+                                商品進貨<i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
                             <!-- 要改成dropdown -->
                             <!-- 更新使用者資料、密碼 -->
                             <a href="#">

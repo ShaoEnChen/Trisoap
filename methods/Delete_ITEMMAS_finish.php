@@ -24,7 +24,6 @@ if($EMAIL != null && $CUSIDT == 'A'){
 
         if($message == null){
                 $sql = "UPDATE ITEMMAS SET ACTCODE='0' WHERE ITEMNO='$newITEMNO'";
-                unset($_SESSION['newITEMNO']);
                 if(mysql_query($sql)){
                         ?>
                         <script>
