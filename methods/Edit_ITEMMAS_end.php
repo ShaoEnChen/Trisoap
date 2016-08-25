@@ -10,7 +10,6 @@ $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $newITEMNO = $_SESSION['newITEMNO'];
 $newITEMNM = input('ITEMNM');
-$newITEMAMT = input('ITEMAMT');
 $newPRICE = input('PRICE');
 $newDESCRIPTION = input('$DESCRIPTION');
 $message1 = null;
@@ -33,9 +32,6 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 $sql = "update ITEMMAS set ITEMNM='$newITEMNM' WHERE ITEMNO='$newITEMNO'";
                 if(!mysql_query($sql))
                         $message2 = $message2 . '更新商品名稱失敗 \n';
-                $sql = "update ITEMMAS set ITEMAMT='$newITEMAMT' WHERE ITEMNO='$newITEMNO'";
-                if(!mysql_query($sql))
-                        $message2 = $message2 . '更新商品數量失敗 \n';
                 $sql = "update ITEMMAS set PRICE='$newPRICE' WHERE ITEMNO='$newITEMNO'";
                 if(!mysql_query($sql))
                         $message2 = $message2 . '更新商品價格失敗 \n';

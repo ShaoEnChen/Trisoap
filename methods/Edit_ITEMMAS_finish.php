@@ -33,10 +33,11 @@
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
+include_once("Helper/handle_string.php");
 include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
-$newITEMNO = $_POST['ITEMNO'];
+$newITEMNO = input('ITEMNO');
 $message = null;
 
 if($EMAIL != null && $CUSIDT == 'A'){
@@ -44,16 +45,12 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 $message = $message . '商品編號欄位不可空白<br>';
         }
         $row = select('ITEMMAS', 'ITEMNO', $newITEMNO);
-        if($row['ITEMNO'] == null){
-                $message = $message . '查無此商品編號之商品<br>';
-        }
         if($message == null){
                 $_SESSION['newITEMNO'] = $newITEMNO;
                 ?>
                 <form name="form" method="post" action="Edit_ITEMMAS_end.php">
                 <label for="ITEMNO">商品編號：<?echo $newITEMNO;?></label><br><br>
                 <label for="ITEMNM">商品名稱：<input type="text" name="ITEMNM" value="<?echo $row['ITEMNM'];?>" /></label>
-                <label for="ITEMAMT">商品數量：<input type="text" name="ITEMAMT" value="<?echo $row['ITEMAMT'];?>" /></label>
                 <label for="PRICE">商品價格：<input type="text" name="PRICE" value="<?echo $row['PRICE'];?>" /></label>
                 <label for="DESCRIPTION">商品敘述：<input type="text" name="DESCRIPTION" value="<?echo $row['DESCRIPTION'];?>" /></label>
                 <label for="PW">請再次輸入您的密碼：<input type="password" name="PW" /></label>
