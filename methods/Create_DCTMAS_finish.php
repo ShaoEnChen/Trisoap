@@ -19,6 +19,15 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if(encrypt($PW) != $queryPW){
                 $message .= '密碼錯誤 \n';
         }
+        if($DCTNM == null){
+                $message .= '折扣名稱欄位不可空白 \n';
+        }
+        if($DCTPRICE == null){
+                $message .= '折扣金額欄位不可空白 \n';
+        }
+        if(is_int($DCTPRICE) == FALSE || $DCTPRICE < 0){
+                $message .= '折扣金額必須為正整數 \n';
+        }
         if($DCTSTAT == null){
                 $message .= '請選擇折扣有效方法 \n';
         }

@@ -22,16 +22,15 @@ if($EMAIL != null && $CUSIDT == 'A'){
         $alert .= "信用狀態：".$row['CREDITSTAT'].'\n';
         $alert .= "統一編號：".$row['TAXID'].'\n';
         $alert .= "累積折扣：".$row['DISCOUNT'].'\n';
-        $alert .= "月消費額：".$row['SALEAMTMTD'].'\n';
-        $alert .= "季消費額：".$row['SALEAMTSTD'].'\n';
-        $alert .= "年消費額：".$row['SALEAMTYTD'].'\n';
+        $alert .= "最近一月消費額：".$row['SALEAMTMTD'].'\n';
+        $alert .= "最近一季消費額：".$row['SALEAMTSTD'].'\n';
+        $alert .= "最近一年消費額：".$row['SALEAMTYTD'].'\n';
         $alert .= "總消費額：".$row['SALEAMT'].'\n';
         $alert .= "應收帳款：".$row['CURAR'].'\n';
         $alert .= "特殊需求：".$row['SPEINS'].'\n';
         $alert .= "建立時間：".$row['CREATEDATE'].'\n';
         $alert .= "最後修改時間：".$row['UPDATEDATE'].'\n';
         $alert .= "如何認識三三：".$row['KNOWTYPE'].'\n';
-        $alert .= "狀態：".$row['ACTCODE'].'\n';
 
         ?>
         <script>

@@ -90,8 +90,6 @@ CREATE TABLE `ITEMMAS` (
   `ITEMAMT` int(8) NOT NULL DEFAULT '0',
   `PRICE` int(8) DEFAULT NULL,
   `DESCRIPTION` varchar(50) COLLATE utf8_bin DEFAULT NULL,
-  `PHOTO` mediumblob NOT NULL,
-  `PHOTOTYPE` varchar(50) COLLATE utf8_bin NOT NULL,
   `CREATEDATE` datetime NOT NULL,
   `UPDATEDATE` datetime NOT NULL,
   `ACTCODE` tinyint(1) NOT NULL DEFAULT '0'
@@ -101,11 +99,11 @@ CREATE TABLE `ITEMMAS` (
 -- 資料表的匯出資料 `ITEMMAS`
 --
 
-INSERT INTO `ITEMMAS` (`ITEMNO`, `ITEMNM`, `ITEMAMT`, `PRICE`, `DESCRIPTION`, `PHOTO`, `PHOTOTYPE`, `CREATEDATE`, `UPDATEDATE`, `ACTCODE`) VALUES
-(1, '田靜山巒禾風皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-08-09 15:23:28', 1),
-(2, '金絲森林渲染皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
-(3, '釋迦手感果力皂', 0, 300, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
-(4, '三三台東意象禮盒組', 0, 900, '', '', '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1);
+INSERT INTO `ITEMMAS` (`ITEMNO`, `ITEMNM`, `ITEMAMT`, `PRICE`, `DESCRIPTION`, `CREATEDATE`, `UPDATEDATE`, `ACTCODE`) VALUES
+(1, '田靜山巒禾風皂', 0, 300, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
+(2, '金絲森林渲染皂', 0, 300, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
+(3, '釋迦手感果力皂', 0, 300, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
+(4, '三三台東意象禮盒組', 0, 900, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1);
 
 -- --------------------------------------------------------
 

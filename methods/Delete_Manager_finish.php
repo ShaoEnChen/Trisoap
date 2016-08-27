@@ -17,6 +17,10 @@ if($EMAIL != null && $CUSIDT == 'A'){
     if(encrypt($PW) != $queryPW){
         $message = $message . '密碼錯誤<br>';
     }
+    $querynewEMAIL = search('EMAIL', 'CUSMAS', 'EMAIL', $newEMAIL);
+    if($querynewEMAIL == null){
+        $message .= '請輸入正確的會員信箱 \n';
+    }
 
     if($message == null){
         $sql = "UPDATE CUSMAS SET CUSIDT='B' WHERE EMAIL='$newEMAIL'";
@@ -41,7 +45,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
         ?>
         <script>
         redirect("Delete_Manager.php");
-        alert("密碼錯誤");
+        alert("<?echo $message;?>");
         </script>
         <?
     }

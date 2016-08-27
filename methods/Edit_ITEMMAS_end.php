@@ -27,6 +27,9 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if($newPRICE == null){
                 $message1 = $message1 . '商品價格欄位不可空白 \n';
         }
+        if(is_int($newPRICE) == FALSE || $newPRICE < 0){
+                $message1 = $message1 . '商品價格必須為正整數 \n';
+        }
 
         if($message1 == null){
                 $sql = "update ITEMMAS set ITEMNM='$newITEMNM' WHERE ITEMNO='$newITEMNO'";

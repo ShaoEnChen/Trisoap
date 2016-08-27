@@ -15,7 +15,10 @@ $message = null;
 if($EMAIL != null && $CUSIDT == 'A'){
         $queryPW = search('CUSPW', 'CUSMAS', 'EMAIL', $EMAIL);
         if(encrypt($PW) != $queryPW){
-                $message = $message . '密碼錯誤';
+                $message .= $message . '密碼錯誤 \n';
+        }
+        if($DCTID == null){
+                $message .= $message . '折扣兌換碼欄位不可空白 \n';
         }
 
         if($message == null){
@@ -41,7 +44,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 ?>
                 <script>
                 redirect("Delete_DCTMAS.php");
-                alert("密碼錯誤");
+                alert("<?echo $message;?>");
                 </script>
                 <?
         }

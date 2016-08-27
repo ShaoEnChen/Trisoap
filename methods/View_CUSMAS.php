@@ -88,15 +88,15 @@
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <td>電子信箱</td>
-                                            <td>客戶姓名</td>
-                                            <td>客戶地址</td>
-                                            <td>客戶膚質</td>
-                                            <td>客戶生日</td>
+                                            <td>信箱</td>
+                                            <td>姓名</td>
+                                            <td>地址</td>
+                                            <td>膚質</td>
+                                            <td>生日</td>
                                             <td>聯絡電話</td>
                                             <td>如何認識三三</td>
-                                            <td>建立日期</td>
-                                            <td>最後修改日期</td>
+                                            <td>建立時間</td>
+                                            <td>最後修改時間</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -136,7 +136,7 @@
                                             <!-- 建立日期 -->
                                             <td><?echo $row['CREATEDATE'];?></td>
                                             <!-- 最後修改日期 -->
-                                            <td><?echo $row['UPDATETEDATE'];?></td>
+                                            <td><?echo $row['UPDATEDATE'];?></td>
                                         </tr>
                                     <?
                                         }

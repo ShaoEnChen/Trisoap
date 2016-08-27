@@ -30,9 +30,7 @@ if($VERIFY == $_SESSION['COMMIT']){
                 unset($_SESSION['CUSPW']);
                 unset($_SESSION['CUSADD']);
                 unset($_SESSION['CUSTYPE']);
-                unset($_SESSION['CUSBIRTHY']);
-                unset($_SESSION['CUSBIRTHM']);
-                unset($_SESSION['CUSBIRTHD']);
+                unset($_SESSION['CUSBIRTH']);
                 unset($_SESSION['TEL']);
                 unset($_SESSION['TAXID']);
                 unset($_SESSION['KNOWTYPE']);

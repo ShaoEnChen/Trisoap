@@ -15,7 +15,11 @@ if($EMAIL != null && $CUSIDT == 'A'){
     $PW = input('CUSPW');
     $queryPW = search('CUSPW', 'CUSMAS', 'EMAIL', $EMAIL);
     if(encrypt($PW) != $queryPW){
-        $message = $message . '密碼錯誤<br>';
+        $message .= '密碼錯誤 \n';
+    }
+    $querynewEMAIL = search('EMAIL', 'CUSMAS', 'EMAIL', $newEMAIL);
+    if($querynewEMAIL == null){
+        $message .= '請輸入正確的會員信箱 \n';
     }
 
     if($message == null){
@@ -41,7 +45,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
         ?>
         <script>
         redirect("Create_Manager.php");
-        alert("密碼錯誤");
+        alert("<?echo $message;?>");
         </script>
         <?
     }

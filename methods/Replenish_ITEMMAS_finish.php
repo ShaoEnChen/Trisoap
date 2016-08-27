@@ -23,6 +23,9 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 $queryITEMNO = search('ITEMNM', 'ITEMMAS', 'ITEMNO', $ITEMNO);
                 $message = $message . $queryITEMNO . '下架中 \n';
         }
+        if($AMT == null){
+                $message = $message . '進貨數量欄位不可空白 \n';
+        }
         if(is_int($AMT) == FALSE || $AMT < 0){
                 $message .= '進貨數量必須為正整數 \n';
         }
