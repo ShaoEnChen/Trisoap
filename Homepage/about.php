@@ -12,6 +12,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->
     <link href="css/trisoap.css" rel="stylesheet">
+    <script>
+    function closed(){
+    	alert("此功能將在近期開放，敬請期待");
+    }
+    </script>
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
     <!-- Preloader-->
@@ -38,7 +43,7 @@
             </li>
             <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <li><a href="../message/Message.html">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="#" onClick="closed()">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <?
             session_start();
             $CUSIDT = $_SESSION['CUSIDT'];
