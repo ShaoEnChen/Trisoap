@@ -114,6 +114,7 @@ function show_PAYTYPE($id){
                                     <td>付款方式</td>
                                     <td>訂單總額</td>
                                     <td>訂單總值</td>
+                                    <td>實收金額</td>
                                     <td>建立日期</td>
                                 </tr>
                             </thead>
@@ -158,6 +159,11 @@ function show_PAYTYPE($id){
                                             <td><?echo $row['TOTALPRICE'];?></td>
                                             <!-- 訂單總值 -->
                                             <td><?echo $row['TOTALAMT'];?></td>
+                                            <!-- 實收金額 -->
+                                            <td><?
+                                            if($row['PAYSTAT'] == '1') echo $row['REALPRICE'];
+                                            else echo '0';
+                                            ?></td>
                                             <!-- 建立日期 -->
                                             <td><?echo $row['CREATEDATE'];?></td>
                                         </tr>

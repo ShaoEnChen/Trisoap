@@ -44,6 +44,13 @@
 
         $EMAIL = $_SESSION['EMAIL'];
         $ORDNO = $_SESSION['ORDNO'];
+        $DISCOUNT = $_SESSION['DISCOUNT'];
+        if($DISCOUNT != null){
+            $checkDISCOUNT = 'A';
+        }
+        else{
+            $checkDISCOUNT = 'B';
+        }
         if(is_null($ORDNO)){
             $ORDNO = '100000000';
         }
@@ -115,7 +122,6 @@
                     </tr>
                     <?
                 }
-                $_SESSION['total'] = $total;
                 ?>
                 <tr>
                     <td>運費 : </td>
@@ -125,14 +131,37 @@
                     <td>留心語折扣 : </td>
                     <td colspan="3"><?echo $discount;?></td>
                 </tr>
+                <?
+                if($checkDISCOUNT == 'A'){
+                    $DISCOUNTNM = search('DCTNM', 'DCTMAS', 'DCTID', $DISCOUNT);
+                    $DISCOUNTPRICE = search('DCTPRICE', 'DCTMAS', 'DCTID', $DISCOUNT);
+                    $total -= $DISCOUNTPRICE;
+                    ?>
+                    <tr>
+                    <td><?echo $DISCOUNTNM;?> : </td>
+                    <td colspan="3"><?echo $DISCOUNTPRICE;?></td>
+                    </tr>
+                    <?
+                }
+                ?>
                 <tr>
                     <td>總計 : </td>
                     <td colspan="3"><?echo $total;?></td>
                 </tr>
+                <?
+                if($checkDISCOUNT == 'B'){
+                    ?>
+                    <tr>
+                    <td><button type="button" class="discount"><a href="discount.php">使用折價卷</a></button></td>
+                    </tr>
+                    <?
+                }
+                $_SESSION['total'] = $total;
+                ?>
                 </tbody>
             </table><br>
             
-            <?        
+            <?     
             if($ORDNO == '100000000'){
                 ?>
                 <button type="submit" class="promise"><a href="Create_ORDMAS2.php">確定結帳</a></button>

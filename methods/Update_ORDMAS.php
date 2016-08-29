@@ -122,6 +122,7 @@
                                             <td>付款狀態</td>
                                             <td>訂單總額</td>
                                             <td>訂單總值</td>
+                                            <td>實收金額</td>
                                             <td>建立日期</td>
                                         </tr>
                                     </thead>
@@ -162,6 +163,8 @@
                                             <td><?php echo $row['TOTALPRICE'];?></td>
                                             <!-- 訂單總值 -->
                                             <td><?php echo $row['TOTALAMT'];?></td>
+                                            <!-- 實收金額 -->
+                                            <td><?php echo $row['REALPRICE'];?></td>
                                             <!-- 建立日期 -->
                                             <td><?php echo $row['CREATEDATE'];?></td>
                                         </tr>

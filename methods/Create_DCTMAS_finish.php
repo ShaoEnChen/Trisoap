@@ -25,7 +25,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if($DCTPRICE == null){
                 $message .= '折扣金額欄位不可空白 \n';
         }
-        if(is_int($DCTPRICE) == FALSE || $DCTPRICE < 0){
+        if(is_numeric($DCTPRICE) == FALSE || $DCTPRICE < 0 || is_float($DCTPRICE)){
                 $message .= '折扣金額必須為正整數 \n';
         }
         if($DCTSTAT == null){
@@ -71,7 +71,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 ?>
                 <script>
                 redirect("Create_DCTMAS.php");
-                alert("密碼錯誤");
+                alert("<?echo $message;?>");
                 </script>
                 <?
         }

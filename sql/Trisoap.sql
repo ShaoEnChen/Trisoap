@@ -75,7 +75,8 @@ CREATE TABLE `DCTMAS` (
   `CREATEPERSON` varchar(50) COLLATE utf8_bin NOT NULL,
   `CREATEDATE` datetime NOT NULL,
   `USEDATE` datetime NOT NULL,
-  `ACTCODE` tinyint(1) NOT NULL DEFAULT '1'
+  `ACTCODE` tinyint(1) NOT NULL DEFAULT '1',
+  `MerchantTradeNo` varchar(50) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -103,7 +104,7 @@ INSERT INTO `ITEMMAS` (`ITEMNO`, `ITEMNM`, `ITEMAMT`, `PRICE`, `DESCRIPTION`, `C
 (1, '田靜山巒禾風皂', 0, 300, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
 (2, '金絲森林渲染皂', 0, 300, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
 (3, '釋迦手感果力皂', 0, 300, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1),
-(4, '三三台東意象禮盒組', 0, 900, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1);
+(4, '三三臺東意象禮盒組', 0, 900, '', '2016-05-20 00:00:00', '2016-05-20 00:00:00', 1);
 
 -- --------------------------------------------------------
 

@@ -63,6 +63,7 @@
                   <li><a href="../methods/Update_DCTMAS.php">折扣管理</a></li>
                   <li><a href="../methods/Update_MSGMAS.php">留心語管理</a></li>
                   <li><a href="../methods/View_CUSMAS.php">查看客戶</a></li>
+                  <li><a href="../methods/Create_ORDMAS1.php">建立訂單</a></li>
                 </ul>
               </li>
               <li><a href="#">會員中心/登出<i class="fa fa-angle-down"></i><span class="caret"></span></a>
