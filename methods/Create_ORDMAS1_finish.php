@@ -104,7 +104,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
             else{
                 ?>
                 <script>
-                redirect("../Homepage/index.php");
+                redirect("Create_ORDMAS1.php");
                 alert("訂單建立失敗");
                 </script>
                 <?
@@ -112,7 +112,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
         }
         else{
             $SHIPFEE = 50;
-            $sql = "INSERT INTO ORDMAS (ORDNO, ORDTYPE, EMAIL, SHIPFEE, CREATEDATE, UPDATEDATE) values ('$ORDNOS', '$ORDTYPE', '$EMAIL', '$SHIPFEE', '$CREATEDATE', '$UPDATEDATE')";
+            $sql = "INSERT INTO ORDMAS (ORDNO, ORDTYPE, EMAIL, ORDINST, SHIPFEE, CREATEDATE, UPDATEDATE) values ('$ORDNOS', '$ORDTYPE', '$EMAIL', '$ORDINST, '$SHIPFEE', '$CREATEDATE', '$UPDATEDATE')";
             if(mysql_query($sql)){
                 $sql = "UPDATE OWNMAS SET NORDNOS=NORDNOS+1 where COMNM='Trisoap'";
                 mysql_query($sql);
@@ -163,7 +163,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
             else{
                 ?>
                 <script>
-                redirect("../Homepage/index.php");
+                redirect("Create_ORDMAS1.php");
                 alert("訂單建立失敗");
                 </script>
                 <?
