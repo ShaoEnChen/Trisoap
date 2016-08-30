@@ -33,7 +33,7 @@
         <label for="number">請輸入兌換碼：<input type="text" name="DISCOUNT" id="number" /></label>
         <button type="submit" class="promise">確定</button>
     </form>
-    <button type="button" class="cancel"></buttom><a href="Order_Confirm.php">取消</a>
+    <a href="Order_Confirm.php"><button type="button" class="cancel">取消</button></a>
 </div>
 </body>
 </html>

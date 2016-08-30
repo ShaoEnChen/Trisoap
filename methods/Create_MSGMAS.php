@@ -24,15 +24,15 @@
     $EMAIL = $_SESSION['EMAIL'];
     if($EMAIL != null){
         ?>
-        <form method="post" action="Create_MSGMAS_finish.php" enctype="multipart/form-data" >
-        <label for="MSGTXT"><textarea name="MSGTXT" placeholder="文字(必填)" id="MSGTXT"></textarea></label>
-        <label for="MSGPHOTO">照片<input type="file" name="MSGPHOTO" id="MSGPHOTO"/></label>
-        上傳格式限制：jpeg/jpg/png<br>
-        <label for="MSGVIDEO">影片<input type="file" name="MSGVIDEO" id="MSGVIDEO"/></label>
-        上傳格式限制：mp4<br>
-        <button type="submit" class="promise">上傳</button>
+        <form method="post" action="Create_MSGMAS_finish.php" enctype="multipart/form-data">
+            <label for="MSGTXT"><textarea name="MSGTXT" placeholder="文字(必填)" id="MSGTXT"></textarea></label>
+            <label for="MSGPHOTO">照片（上傳格式限制：jpeg/jpg/png）<br>
+            <input type="file" name="MSGPHOTO" id="MSGPHOTO"/></label><br>
+            <label for="MSGVIDEO">影片（上傳格式限制：mp4）<br>
+            <input type="file" name="MSGVIDEO" id="MSGVIDEO"/></label><br>
+            <button type="submit" class="promise">上傳</button>
         </form>
-        <button type="button" class="cancel"><a href="../Homepage/index.php">取消</a></button>
+        <a href="../message/message.html"><button type="button" class="cancel">取消</button></a>
         <?
     }
     else{

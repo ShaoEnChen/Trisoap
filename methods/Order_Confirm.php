@@ -152,7 +152,7 @@
                 if($checkDISCOUNT == 'B'){
                     ?>
                     <tr>
-                    <td><button type="button" class="discount"><a href="discount.php">使用折價卷</a></button></td>
+                    <td><a href="discount.php"><button type="button" class="discount">使用折價卷</button></a></td>
                     </tr>
                     <?
                 }
@@ -164,7 +164,7 @@
             <?     
             if($ORDNO == '100000000'){
                 ?>
-                <button type="submit" class="promise"><a href="Create_ORDMAS2.php">確定結帳</a></button>
+                <a href="Create_ORDMAS2.php"><button type="submit" class="promise">確定結帳</button></a>
                 <?
             }
             else{
@@ -188,14 +188,14 @@
                 <?php
             }
             ?>
-            <button type="button" class="cancel"><a href="../Homepage/index.php">返回首頁</a></button>
+            <a href="../Homepage/index.php"><button type="button" class="cancel">返回首頁</button></a>
             <?
         }
         else{
             echo "<h2>目前沒有選擇任何商品</h2>";
             ?>
-            <button type="button" class="promise"><a href="../Homepage/index.php">返回首頁</a></button>
-            <button type="button" class="promise"><a href="../Homepage/product.php">返回商品頁</a></button>
+            <a href="../Homepage/index.php"><button type="button" class="promise">返回首頁</button></a>
+            <a href="../Homepage/product.php"><button type="button" class="promise">返回商品頁</button></a>
             <?
         }
     ?>   

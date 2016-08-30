@@ -30,7 +30,7 @@
 				<label for="password2">再一次輸入新密碼<br><input type="password" name="newCUSPW2" id="password2"/></label><br>
 				<button type="submit" class="promise">確定</button>
 			</form>
-		<button type="button" class="cancel"></buttom><a href="../Homepage/index.php">取消</a>
+		<a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
 	</div>
 	<?php
 	}

@@ -51,7 +51,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
     </label>
     <button type="submit" class="promise">確定</button>
     </form>
-    <button type="button" class="cancel"></buttom><a href="Update_ITEMMAS.php">取消</a>
+    <a href="Update_ITEMMAS.php"><button type="button" class="cancel">取消</button></a>
     <?
 }
 else{

@@ -35,25 +35,25 @@
 	?>
 	<div class="sign-block">
     	<h1>修改資料</h1>
-			<form name="form" method="post" action="Update_CUSMAS_finish.php">
-				<label for="username">電子信箱：<?echo $EMAIL;?></label><br>
-				<label for="username">您的姓名：<input type="text" name="CUSNM" value="<?echo $CUSNM;?>"/></label><br>
-				<label for="username">通訊地址：<input type="text" name="CUSADD" value="<?echo $CUSADD;?>"/></label><br>
-				<label for="username">聯絡電話：<input type="text" name="TEL" value="<?echo $TEL;?>"/></label><br>
-				<label for="username">統一編號：<input type="text" name="TAXID" value="<?echo $TAXID;?>"/></label><br>
-				<div class="styled-select">您的膚質：
-					<select name="CUSTYPE">
-					  	<option value="A" <?checkCUSTYPE($CUSTYPE, 'A');?>>乾性</option>
-					  	<option value="B" <?checkCUSTYPE($CUSTYPE, 'B');?>>中性</option>
-					  	<option value="C" <?checkCUSTYPE($CUSTYPE, 'C');?>>油性</option>
-					  	<option value="D" <?checkCUSTYPE($CUSTYPE, 'D');?>>混和性</option>
-					</select>
-				</div>
-				</label><br>
-				<label for="username">特殊要求：<textarea name="SPEINS" cols="45" rows="5"><?echo $SPEINS;?></textarea></label><br>
-				<button type="submit" class="promise">確定</button>
-			</form>
-		<button type="button" class="cancel"></buttom><a href="../Homepage/index.php">取消</a>
+		<form name="form" method="post" action="Update_CUSMAS_finish.php">
+			<label for="username">電子信箱：<?echo $EMAIL;?></label><br>
+			<label for="username">您的姓名：<input type="text" name="CUSNM" value="<?echo $CUSNM;?>"/></label><br>
+			<label for="username">通訊地址：<input type="text" name="CUSADD" value="<?echo $CUSADD;?>"/></label><br>
+			<label for="username">聯絡電話：<input type="text" name="TEL" value="<?echo $TEL;?>"/></label><br>
+			<label for="username">統一編號：<input type="text" name="TAXID" value="<?echo $TAXID;?>"/></label><br>
+			<div class="styled-select">您的膚質：
+				<select name="CUSTYPE">
+				  	<option value="A" <?checkCUSTYPE($CUSTYPE, 'A');?>>乾性</option>
+				  	<option value="B" <?checkCUSTYPE($CUSTYPE, 'B');?>>中性</option>
+				  	<option value="C" <?checkCUSTYPE($CUSTYPE, 'C');?>>油性</option>
+				  	<option value="D" <?checkCUSTYPE($CUSTYPE, 'D');?>>混和性</option>
+				</select>
+			</div>
+			</label><br>
+			<label for="username">特殊要求：<textarea name="SPEINS" cols="45" rows="5"><?echo $SPEINS;?></textarea></label><br>
+			<button type="submit" class="promise">確定</button>
+		</form>
+		<a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
 	</div>
 	<?php
 	}

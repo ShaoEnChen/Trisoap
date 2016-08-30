@@ -68,7 +68,7 @@
         <label for="request"><textarea name="SPEINS" value="<?echo $SPEINS;?>" placeholder="特殊要求" id="request"></textarea></label>
         <button type="submit" class="promise">註冊</button>
     </form>
-    <button type="button" class="cancel"></buttom><a href="../Homepage/index.php">取消</a>
+    <a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
 </div>
 </body>
 </html>

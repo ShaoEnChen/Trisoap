@@ -34,8 +34,8 @@
         <label for="password"><input type="password" value="" placeholder="密碼" name="CUSPW" id="password" /></label>
         <button type="submit" class="promise">登入</button>
     </form>
-    <button type="button" class="cancel"></buttom><a href="../Homepage/index.php">取消</a>
-    <button type="button" class="cancel"></buttom><a href="User_ForgetPW.php">忘記密碼</a>
+    <a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
+    <a href="User_ForgetPW.php"><button type="button" class="cancel">忘記密碼</button></a>
 </div>
 </body>
 </html>

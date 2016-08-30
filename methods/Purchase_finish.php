@@ -73,8 +73,8 @@
             }
       ?>
 
-      <button type="button" class="promise"></buttom><a href="Order_Confirm.php">前往結帳</a>
-      <button type="button" class="promise"></buttom><a href="../Homepage/product.php">繼續購物</a>
+      <a href="Order_Confirm.php"><button type="button" class="promise">前往結帳</button></a>
+      <a href="../Homepage/product.php"><button type="button" class="promise">繼續購物</button></a>
     
       <?
           }

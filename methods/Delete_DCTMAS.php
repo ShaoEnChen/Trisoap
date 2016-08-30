@@ -29,7 +29,7 @@
             <label for="PW"><input type="text" name="PW" placeholder="再次輸入您的密碼" id="PW"/></label>
             <button type="submit" class="promise">確定</button>
             </form>
-            <button type="button" class="cancel"></buttom><a href="Update_DCTMAS.php">取消</a>
+            <a href="Update_DCTMAS.php"><button type="button" class="cancel">取消</button></a>
             <?
         }
         else{

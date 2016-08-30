@@ -46,7 +46,7 @@ if($EMAIL != null){
             mail_receive_message($EMAIL);
             ?>
             <script>
-            redirect("../message/Message.html");
+            redirect("../message/message.html");
             alert("留心語成功，已寄發通知信至您的信箱。");
             </script>
             <?

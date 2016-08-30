@@ -28,7 +28,7 @@
 				<label for="password">請再次輸入您的密碼<br><input type="password" name="CUSPW" id="password"/></label><br>
 				<button type="submit" class="promise">確定</button>
 			</form>
-		<button type="button" class="cancel"></buttom><a href="Update_Manager.php">取消</a>
+		<a href="Update_Manager.php"><button type="button" class="cancel">取消</button></a>
 	</div>
 	<?php
 	}

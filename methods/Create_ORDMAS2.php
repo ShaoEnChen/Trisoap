@@ -78,7 +78,7 @@
                 </div>
             </label>
             <button type="submit" class="promise">確定</button><br>
-            <button type="button" class="cancel"><a href="Order_Confirm.php">取消</a></button>
+            <a href="Order_Confirm.php"><button type="button" class="cancel">取消</button></a>
 	    </form>
     </div>
 	<?php

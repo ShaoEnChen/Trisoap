@@ -33,7 +33,7 @@
 		<label for="forget_email">請輸入您的電子信箱<br><input type="text" name="EMAIL" id="forget_email"/></label><br>
 		<button type="submit" class="promise">確定</button>
 	</form>
-	<button type="button" class="cancel"></buttom><a href="User_login1.php">取消</a>
+	<a href="User_login1.php"><button type="button" class="cancel">取消</button></a>
 </div>
 </body>
 

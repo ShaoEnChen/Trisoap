@@ -12,23 +12,6 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- custim css -->
     <link href="css/sign.css" rel="stylesheet">
-    <style>
-        .sign-block {
-            width: 350px;
-            padding: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%);
-        }
-        .sign-block h1 {
-            font-family: 微軟正黑體;
-        }
-        .sign-block input {
-            width: 100%;
-        }
-    </style>
 </head>
 
 <!-- PHP Area -->
@@ -124,7 +107,7 @@ if($message == ''){
             <label for="VERIFY"><p>驗證碼：</p><input type="text" name="VERIFY" id="VERIFY"/></label><br>
             <button type="submit" class="promise">確定</button>
         </form>
-        <button type="button" class="cancel"></buttom><a href="../Homepage/index.php">取消</a>
+        <a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
     </div>
 </body>
 

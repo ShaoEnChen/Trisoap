@@ -33,17 +33,17 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="#page-top" class="navbar-brand"><img src="http://placehold.it/125x30" alt="" class="logo"></a>
+					<a href="#page-top" class="navbar-brand"><img src="img/logo2.png" alt="" class="logo"></a>
 				</div>
 				<div class="collapse navbar-collapse navbar-main-collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="../../Homepage/index.php">
+							<a href="../Homepage/index.php">
 								回三三首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
 							</a>
 						</li>
 						<li>
-							<a href="../Message.html">
+							<a href="../message/message.html">
 								回留心語首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
 							</a>
 						</li>

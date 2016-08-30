@@ -49,7 +49,7 @@
                 <label for="need"><textarea name="ORDINST" rows="3" placeholder="訂單特殊要求" id="need"></textarea></label>
                 <label for="PW">請再次輸入您的密碼：<input name="PW" id="PW"></input></label><br>
                 <button type="submit" class="promise">確定</button><br>
-                <button type="button" class="cancel"></buttom><a href="../Homepage/index.php">取消</a>
+                <a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
             </form>
         </div>
         <?
