@@ -183,15 +183,16 @@ CREATE TABLE `OWNMAS` (
   `COMTAXID` varchar(15) COLLATE utf8_bin NOT NULL,
   `NORDNOG` int(15) NOT NULL,
   `NORDNOS` int(15) NOT NULL,
-  `NMSGNO` int(15) NOT NULL
+  `NMSGNO` int(15) NOT NULL,
+  `SALEAMTDATE` date DEFAULT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- 資料表的匯出資料 `OWNMAS`
 --
 
-INSERT INTO `OWNMAS` (`COMNM`, `COMADD`, `COMTEL`, `COMEMAIL`, `COMWEB`, `COMTAXID`, `NORDNOG`, `NORDNOS`, `NMSGNO`) VALUES
-('Trisoap', '台灣台北市大安區和平東路二段265巷3號', '0952527077', 'trisoap2015@gmail.com', 'needs replenishment', '43864595', 100000001, 999000001, 100001);
+INSERT INTO `OWNMAS` (`COMNM`, `COMADD`, `COMTEL`, `COMEMAIL`, `COMWEB`, `COMTAXID`, `NORDNOG`, `NORDNOS`, `NMSGNO`, `SALEAMTDATE`) VALUES
+('Trisoap', '台灣台北市大安區和平東路二段265巷3號', '0952527077', 'trisoap2015@gmail.com', 'needs replenishment', '43864595', 100000001, 999000001, 100001, '');
 
 --
 -- 已匯出資料表的索引
