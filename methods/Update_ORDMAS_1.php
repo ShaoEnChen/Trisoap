@@ -104,6 +104,7 @@
                                             <td>付款狀態</td>
                                             <td>訂單總額</td>
                                             <td>訂單總值</td>
+                                            <td>實收金額</td>
                                             <td>建立日期</td>
                                         </tr>
                                     </thead>
@@ -111,6 +112,17 @@
                                     <?php
                                         $queryORDMAS = "SELECT * FROM ORDMAS WHERE ACTCODE=1 AND BACKSTAT='1'";
                                         $result = mysql_query($queryORDMAS);
+                                        $data_nums = mysql_num_rows($result);
+                                        $per = 15; 
+                                        $pages = ceil($data_nums/$per); 
+                                        if(!isset($_GET["page"])){ 
+                                            $page=1; 
+                                        }
+                                        else {
+                                            $page = intval($_GET["page"]); 
+                                        }
+                                        $start = ($page-1)*$per; 
+                                        $result = mysql_query($queryCustomer.' LIMIT '.$start.', '.$per);
                                         while($row = mysql_fetch_array($result)){
                                             $ORDNO = $row['ORDNO'];
                                     ?>
@@ -136,6 +148,8 @@
                                             <td><?php echo $row['TOTALPRICE'];?></td>
                                             <!-- 訂單總值 -->
                                             <td><?php echo $row['TOTALAMT'];?></td>
+                                            <!-- 實收金額 -->
+                                            <td><?php echo $row['REALPRICE'];?></td>
                                             <!-- 建立日期 -->
                                             <td><?php echo $row['CREATEDATE'];?></td>
                                         </tr>
@@ -144,6 +158,18 @@
                                     ?>
                                     </tbody>
                                 </table>
+                                <br>
+                                <?
+                                    echo '共 '.$data_nums.' 筆 - 第 '.$page.' 頁 - 共 '.$pages.' 頁';
+                                    echo "<br><a href=?page=1>首頁</a>  ";
+                                    echo "第 ";
+                                    for( $i=1 ; $i<=$pages ; $i++ ) {
+                                        if ( $page-3 < $i && $i < $page+3 ) {
+                                            echo "<a href=?page=".$i.">".$i."</a> ";
+                                        }
+                                    } 
+                                    echo " 頁  <a href=?page=".$pages.">末頁</a><br>";
+                                ?>
                             </div>
                         </div>
                     </div>

@@ -42,11 +42,24 @@ try
 		    mysql_query($sql);
 		    $sql = "UPDATE ORDMAS SET PAYSTAT = 1 WHERE MerchantTradeNo = '$szMerchantTradeNo'";
 		    mysql_query($sql);
-		    $sql = "UPDATE ORDMAS SET TOTALAMT = '$szPayAmt' WHERE MerchantTradeNo = '$szMerchantTradeNo'";
+		    $sql = "UPDATE ORDMAS SET REALPRICE = '$szPayAmt' WHERE MerchantTradeNo = '$szMerchantTradeNo'";
 		    mysql_query($sql);
 		    $queryEMAIL = search('EMAIL', 'ORDMAS', 'MerchantTradeNo', $szMerchantTradeNo);
 		    $sql = "UPDATE CUSMAS SET DISCOUNT = 0 WHERE EMAIL = '$queryEMAIL'";
 		    mysql_query($sql);
+		    date_default_timezone_set('Asia/Taipei');
+        	$USEDATE = date("Y-m-d H:i:s");
+		    $queryDCTSTAT = search('DCTSTAT', 'DCTMAS', 'MerchantTradeNo', $szMerchantTradeNo);
+		    if($queryDCTSTAT == '1'){
+		    	$sql = "UPDATE DCTMAS SET DCTSTAT = 0 WHERE MerchantTradeNo = '$szMerchantTradeNo'";
+		    	mysql_query($sql);
+		    	$sql = "UPDATE DCTMAS SET USEDATE = '$USEDATE' WHERE MerchantTradeNo = '$szMerchantTradeNo'";
+		    	mysql_query($sql);
+		    }
+		    elseif($queryDCTSTAT == '2'){
+		    	$sql = "UPDATE DCTMAS SET USEDATE = '$USEDATE' WHERE MerchantTradeNo = '$szMerchantTradeNo'";
+		    	mysql_query($sql);
+		    }
 		    print '1|OK';	//tell AllPay that we get the feedback
  		}
  	} 

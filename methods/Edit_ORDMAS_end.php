@@ -30,7 +30,7 @@ if($EMAIL != null){
             $ITEMAMTnumber = 'ITEMAMT' . "$number";
             $ITEMNO = input($ITEMNOnumber);
             $ORDAMT = input($ITEMAMTnumber);
-            if(is_numeric($ORDAMT)==FALSE || $ORDAMT < 0 || is_float($ORDAMT)){
+            if(is_numeric($ORDAMT) == FALSE || $ORDAMT < 0 || is_float($ORDAMT)){
                 $ORDAMT = 0;
             }
             $sql = "SELECT * FROM ORDITEMMAS WHERE ORDNO=$ORDNO AND ITEMNO=$number";
@@ -38,7 +38,7 @@ if($EMAIL != null){
 			$row = mysql_fetch_array($result);
             if($row == false){
             	if($ORDAMT != 0){
-					$sql = "insert into ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNO', '$ITEMNO', '$ORDAMT', '$EMAIL', '$CREATEDATE', '$UPDATEDATE')";
+					$sql = "INSERT INTO ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNO', '$ITEMNO', '$ORDAMT', '$EMAIL', '$CREATEDATE', '$UPDATEDATE')";
                 }
                 else{
 					$sql = '';

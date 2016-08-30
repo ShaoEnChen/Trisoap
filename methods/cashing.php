@@ -5,9 +5,11 @@ include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
 include_once("Helper/handle_string.php");
 
+$EMAIL = $_SESSION['EMAIL'];
 $ORDNO = $_SESSION['ORDNO'];
 $paytype = $_SESSION['PAYTYPE'];
 $totalamount = $_SESSION['total'];
+$DCT = $_SESSION['DISCOUNT'];
 
 try {
     $obj = new AllInOne();
@@ -38,6 +40,10 @@ try {
 
     $sql = "UPDATE ORDMAS SET MerchantTradeNo = '$TradeNo' WHERE ORDNO = '$ORDNO'";
     mysql_query($sql);
+    if($DCT != null){
+        $sql = "UPDATE DCTMAS SET MerchantTradeNo = '$TradeNo' WHERE DCTID = '$DCT'";
+        mysql_query($sql);
+    }
 
     //Order Item Lists
     $ItemNo = array("ItemNo");
@@ -70,13 +76,20 @@ try {
 
     //shipfee
     $shipfee = search('SHIPFEE', 'ORDMAS', 'ORDNO', $ORDNO);
-    array_push($obj->Send['Items'], array('Name' => "運費", 'Price' => $shipfee,
-        'Currency' => "元", 'Quantity' => (int) "1", 'URL' => "xxx"));
+    array_push($obj->Send['Items'], array('Name' => "運費", 'Price' => $shipfee, 'Currency' => "元", 'Quantity' => (int) "1", 'URL' => "xxx"));
     
-    //discount
+    //discount_MSGMAS
     $discount = search('DISCOUNT', 'CUSMAS', 'EMAIL', $EMAIL);
-    array_push($obj->Send['Items'], array('Name' => "留心語折扣", 'Price' => $discount,
-        'Currency' => "元", 'Quantity' => (int) "1", 'URL' => "xxx"));
+    if($discount != 0){
+        array_push($obj->Send['Items'], array('Name' => "留心語折扣", 'Price' => $discount, 'Currency' => "元", 'Quantity' => (int) "1", 'URL' => "xxx"));
+    }
+
+    //discount_DCTMAS
+    if($DCT != null){
+        $DISCOUNTNM = search('DCTNM', 'DCTMAS', 'DCTID', $DCT);
+        $DISCOUNTPRICE = search('DCTPRICE', 'DCTMAS', 'DCTID', $DCT);
+        array_push($obj->Send['Items'], array('Name' => "$DISCOUNTNM", 'Price' => $DISCOUNTPRICE, 'Currency' => "元", 'Quantity' => (int) "1", 'URL' => "xxx"));
+    }
 
     //Create Order(auto submit to AllPay)
     $obj->CheckOut();
@@ -89,4 +102,5 @@ catch (Exception $e) {
 unset($_SESSION['ORDNO']);
 unset($_SESSION['PAYTYPE']);
 unset($_SESSION['total']);
+UNSET($_SESSION['DISCOUNT']);
 ?>

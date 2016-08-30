@@ -16,7 +16,7 @@ $message = addslashes(htmlspecialchars($_POST['message']));
 // Create the email and send the message
 $to = 'trisoap2015@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
 $email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
+$email_body = "這是一封來自形象網站的信件\n\n"."來信者姓名: $name\n\n來信者信箱: $email_address\n\n來信者電話: $phone\n\n來信內容:\n$message";
 $headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email_address";
 mail($to,$email_subject,$email_body,$headers);

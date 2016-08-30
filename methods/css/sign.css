@@ -24,15 +24,6 @@ body {
 .sign-block h1 {
     text-align: center;
     color: #000;
-    font-size: 18px;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.sign-block h1 {
-    text-align: center;
-    color: #000;
     font-size: 15px;
     text-transform: uppercase;
     margin-top: 0;
@@ -75,6 +66,23 @@ body {
 
 .promise:hover {
     background: #FF9224;
+}
+
+.discount {
+    width: 60%;
+    height: 25px;
+    background: #FFA042;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #FF9224;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 微軟正黑體;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .sign-block textarea {

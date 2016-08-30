@@ -44,6 +44,9 @@ if($EMAIL != null){
         $alert .= "訂單總額：".$row['TOTALPRICE'].'\n';
         $alert .= "運輸費用：".$row['SHIPFEE'].'\n';
         $alert .= "訂單總值：".$row['TOTALAMT'].'\n';
+        if($row['PAYSTAT'] == '1'){
+                $alert .= "實收金額：".$row['REALPRICE'].'\n';
+        }
         $alert .= "付款狀態：".show_PAYSTAT($row['PAYSTAT']).'\n';
         ?>
         <script>

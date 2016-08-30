@@ -12,9 +12,11 @@ if($VERIFY == $_SESSION['COMMIT']){
         $CUSPW = encrypt($_SESSION['CUSPW']);
         $CUSADD = $_SESSION['CUSADD'];
         $CUSTYPE = $_SESSION['CUSTYPE'];
-        $CUSBIRTHY = $_SESSION['CUSBIRTHY'];
-        $CUSBIRTHM = $_SESSION['CUSBIRTHM'];
-        $CUSBIRTHD = $_SESSION['CUSBIRTHD'];
+        $CUSBIRTH = $_SESSION['CUSBIRTH'];
+        $newCUSBIRTH = explode('-', $CUSBIRTH);
+        $CUSBIRTHY = $newCUSBIRTH[0];
+        $CUSBIRTHM = $newCUSBIRTH[1];
+        $CUSBIRTHD = $newCUSBIRTH[2];
         $TEL = $_SESSION['TEL'];
         $EMAIL = $_SESSION['EMAIL'];
         $TAXID = $_SESSION['TAXID'];

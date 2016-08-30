@@ -80,6 +80,7 @@
             <button type="submit" class="promise">確定</button><br>
             <button type="button" class="cancel"><a href="Order_Confirm.php">取消</a></button>
 	    </form>
+    </div>
 	<?php
 	}
 	else{
@@ -91,7 +92,6 @@
         <?
 	}
 		?>
-	</div>
 </body>
 
 <script>
