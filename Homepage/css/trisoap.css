@@ -1814,6 +1814,7 @@ li .shop-cart {
   top: 11vw;
   right: 29vw;
   writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
 }
 
 #slide-textarea2-2 {
@@ -1823,7 +1824,7 @@ li .shop-cart {
 
 #slide-textarea2-3 {
   top: 34vw;
-  right: 32vw;
+  right: 31.5vw;
 }
 
 #slide-text2-1-1,
