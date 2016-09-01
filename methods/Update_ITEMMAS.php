@@ -108,23 +108,25 @@
                                     <?php
                                         $queryITEMMAS = "SELECT * FROM ITEMMAS";
                                         $result = mysql_query($queryITEMMAS);
-                                        while($row = mysql_fetch_array($result)){
-                                    ?>
-                                        <tr>
-                                            <!-- 商品編號 -->
-                                            <td><?php echo $row['ITEMNO'];?></td>
-                                            <!-- 商品名稱 -->
-                                            <td><?php echo $row['ITEMNM'];?></td>
-                                            <!-- 商品數量 -->
-                                            <td><?php echo $row['ITEMAMT'];?></td>
-                                            <!-- 商品價格 -->
-                                            <td><?php echo $row['PRICE'];?></td>
-                                            <!-- 商品描述 -->
-                                            <td><?php echo $row['DESCRIPTION'];?></td>
-                                            <!-- 商品狀態 -->
-                                            <td><?php echo $row['ACTCODE'];?></td>
-                                        </tr>
-                                    <?
+                                        if($result != false){
+                                            while($row = mysql_fetch_array($result)){
+                                                ?>
+                                                <tr>
+                                                    <!-- 商品編號 -->
+                                                    <td><?php echo $row['ITEMNO'];?></td>
+                                                    <!-- 商品名稱 -->
+                                                    <td><?php echo $row['ITEMNM'];?></td>
+                                                    <!-- 商品數量 -->
+                                                    <td><?php echo $row['ITEMAMT'];?></td>
+                                                    <!-- 商品價格 -->
+                                                    <td><?php echo $row['PRICE'];?></td>
+                                                    <!-- 商品描述 -->
+                                                    <td><?php echo $row['DESCRIPTION'];?></td>
+                                                    <!-- 商品狀態 -->
+                                                    <td><?php echo $row['ACTCODE'];?></td>
+                                                </tr>
+                                                <?
+                                            }
                                         }
                                     ?>
                                     </tbody>

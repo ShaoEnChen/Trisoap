@@ -29,9 +29,7 @@
         else{
             $checkDISCOUNT = 'B';
         }
-        if(is_null($ORDNO)){
-            $ORDNO = '100000000';
-        }
+
         echo "<h2>已選擇的商品</h2>";
 
         $ItemNo = array("ItemNo");
@@ -139,38 +137,28 @@
                 </tbody>
             </table><br>
             
-            <?     
-            if($ORDNO == '100000000'){
-                ?>
-                <a href="Create_ORDMAS2.php"><button type="submit" class="promise">確定結帳</button></a>
-                <?
-            }
-            else{
-                ?>
-                <form method="post" action="cashing_test.php">
-                    <input type="hidden" name="FROM" value="oc" />
-                    <label for="PAYTYPE">
-                        <div class="q-select">
-                            <select name="PAYTYPE" id="PAYTYPE" required>
-                                <option value="">選擇付款方式*</option>
-                                <option value="A">信用卡</option>
-                                <option value="B">ATM</option>
-                                <option value="C">網路ATM</option>
-                            </select>
-                        </div>
-                    </label>
-                <br>
-                <button type="submit" class="promise">確定結帳</button>
-                </form>
-                <br>
-                <?php
-            }
-            ?>
+            <form method="post" action="cashing_test.php">
+                <input type="hidden" name="FROM" value="oc" />
+                <label for="PAYTYPE">
+                    <div class="q-select">
+                        <select name="PAYTYPE" id="PAYTYPE" required>
+                            <option value="">選擇付款方式*</option>
+                            <option value="A">信用卡</option>
+                            <option value="B">ATM</option>
+                            <option value="C">網路ATM</option>
+                        </select>
+                    </div>
+                </label>
+            <br>
+            <button type="submit" class="promise">確定結帳</button>
+            </form>
+            <br>
+
             <a href="../Homepage/index.php"><button type="button" class="cancel">返回首頁</button></a>
             <?
         }
         else{
-            echo "<h2>目前沒有選擇任何商品</h2>";
+            echo "<h2>這筆訂單沒有任何商品</h2>";
             ?>
             <a href="../Homepage/index.php"><button type="button" class="promise">返回首頁</button></a>
             <a href="../Homepage/product.php"><button type="button" class="promise">返回商品頁</button></a>

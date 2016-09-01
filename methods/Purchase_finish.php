@@ -21,7 +21,7 @@
       include_once("Helper/update_price.php");
       include_once("Helper/redirect.js");
       $EMAIL = $_SESSION['EMAIL'];
-      $ORDNO = $_SESSION['ORDNO'];
+      $ORDNO = '100000000';
       $ITEMNO = input('ITEMNO');
       $ORDAMT = input('ORDAMT');
       if(is_numeric($ORDAMT) == FALSE || $ORDAMT < 0 || is_float($ORDAMT)){
@@ -29,29 +29,22 @@
       }
       if($EMAIL != null){
         if($ITEMNO != null){
-          if($ORDNO == null){
-            $ORDNO = '100000000';
-          }
           date_default_timezone_set('Asia/Taipei');
           $CREATEDATE = date("Y-m-d H:i:s");
           $UPDATEDATE = date("Y-m-d H:i:s");
           $checkorder1 = "SELECT ORDAMT FROM ORDITEMMAS WHERE ORDNO='$ORDNO' AND EMAIL='$EMAIL' AND ITEMNO='$ITEMNO'";
           $checkorder2 = mysql_query($checkorder1);
-          $result = mysql_fetch_row($checkorder2);
-          if($result[0] == FALSE){
+          if($checkorder2 == false){
             $sql = "INSERT INTO ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNO', '$ITEMNO', '$ORDAMT', '$EMAIL', '$CREATEDATE', '$UPDATEDATE')";
           }
           else{
             $sql = "UPDATE ORDITEMMAS SET ORDAMT=ORDAMT+$ORDAMT WHERE ORDNO='$ORDNO' AND EMAIL='$EMAIL' AND ITEMNO='$ITEMNO'";
           }
-          if(mysql_query($sql)){
+          if(mysql_query($sql))
             echo "<br><h1>商品已成功加入購物車</h1>";
-            if($ORDNO != '100000000'){
-              update_price($ORDNO);
-            }
       ?>
 
-      <a href="Order_Confirm.php"><button type="button" class="promise">前往結帳</button></a>
+      <a href="View_Purchase.php"><button type="button" class="promise">前往結帳</button></a>
       <a href="../Homepage/product.php"><button type="button" class="promise">繼續購物</button></a>
     
       <?

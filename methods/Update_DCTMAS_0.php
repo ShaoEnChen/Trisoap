@@ -145,7 +145,7 @@
                                             $page = intval($_GET["page"]); 
                                         }
                                         $start = ($page-1)*$per; 
-                                        $result = mysql_query($queryCustomer.' LIMIT '.$start.', '.$per);
+                                        $result = mysql_query($queryDCTMAS.' LIMIT '.$start.', '.$per);
                                         if($result != false){
                                             while($row = mysql_fetch_array($result)){
                                                 ?>

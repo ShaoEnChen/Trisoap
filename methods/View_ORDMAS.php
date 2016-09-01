@@ -133,53 +133,53 @@ function show_PAYTYPE($id){
                                         $page = intval($_GET["page"]); 
                                     }
                                     $start = ($page-1)*$per; 
-                                    $result = mysql_query($queryCustomer.' LIMIT '.$start.', '.$per);
+                                    $result = mysql_query($queryORDMAS.' LIMIT '.$start.', '.$per);
                                     if($result != false){
                                         while($row = mysql_fetch_array($result)){
-                                        $ORDNO = $row['ORDNO'];
-                                        ?>
-                                        <tr>
-                                            <!-- 訂單編號 -->
-                                            <td>
-                                                <form name="form" method="post" action="View_ORDITEM.php">
-                                                <input type="hidden" name="ORDNO" value="<?echo $ORDNO;?>" />
-                                                <input type="hidden" name="RETURN" value="view" />
-                                                <input type="submit" name="button" value="<?echo $ORDNO;?>" />
-                                                </form>
-                                            </td>
-                                            <!-- 訂單種類 -->
-                                            <td><?show_ORDTYPE($row['ORDTYPE']);?></td>
-                                            <!-- 顧客編號 -->
-                                            <td><?echo $row['EMAIL'];?></td>
-                                            <!-- 發票編號 -->
-                                            <td><?echo $row['INVOICENO'];?></td>
-                                            <!-- 缺貨狀態 -->
-                                            <td><?show_BACKSTAT($row['BACKSTAT']);?></td>
-                                            <!-- 訂單狀態 -->
-                                            <td><?show_ORDSTAT($row['ORDSTAT']);?></td>
-                                            <!-- 付款狀態 -->
-                                            <td><?
-                                                if($row['PAYSTAT'] == '1') echo '已付款';
-                                                elseif($row['PAYSTAT'] == '0'){
-                                                    $_SESSION['ORDNO'] = $ORDNO;
-                                                    ?><a href="Order_Confirm.php">前往付款</a><?
-                                                }
-                                            ?></td>
-                                            <!-- 付款方式 -->
-                                            <td><?show_PAYTYPE($row['PAYTYPE']);?></td>
-                                            <!-- 訂單總額 -->
-                                            <td><?echo $row['TOTALPRICE'];?></td>
-                                            <!-- 訂單總值 -->
-                                            <td><?echo $row['TOTALAMT'];?></td>
-                                            <!-- 實收金額 -->
-                                            <td><?
-                                            if($row['PAYSTAT'] == '1') echo $row['REALPRICE'];
-                                            else echo '0';
-                                            ?></td>
-                                            <!-- 建立日期 -->
-                                            <td><?echo $row['CREATEDATE'];?></td>
-                                        </tr>
-                                        <?
+                                            $ORDNO = $row['ORDNO'];
+                                            ?>
+                                            <tr>
+                                                <!-- 訂單編號 -->
+                                                <td>
+                                                    <form name="form" method="post" action="View_ORDITEM.php">
+                                                    <input type="hidden" name="ORDNO" value="<?echo $ORDNO;?>" />
+                                                    <input type="hidden" name="RETURN" value="view" />
+                                                    <input type="submit" name="button" value="<?echo $ORDNO;?>" />
+                                                    </form>
+                                                </td>
+                                                <!-- 訂單種類 -->
+                                                <td><?show_ORDTYPE($row['ORDTYPE']);?></td>
+                                                <!-- 顧客編號 -->
+                                                <td><?echo $row['EMAIL'];?></td>
+                                                <!-- 發票編號 -->
+                                                <td><?echo $row['INVOICENO'];?></td>
+                                                <!-- 缺貨狀態 -->
+                                                <td><?show_BACKSTAT($row['BACKSTAT']);?></td>
+                                                <!-- 訂單狀態 -->
+                                                <td><?show_ORDSTAT($row['ORDSTAT']);?></td>
+                                                <!-- 付款狀態 -->
+                                                <td><?
+                                                    if($row['PAYSTAT'] == '1') echo '已付款';
+                                                    elseif($row['PAYSTAT'] == '0'){
+                                                        $_SESSION['ORDNO'] = $ORDNO;
+                                                        ?><a href="Order_Confirm.php">前往付款</a><?
+                                                    }
+                                                ?></td>
+                                                <!-- 付款方式 -->
+                                                <td><?show_PAYTYPE($row['PAYTYPE']);?></td>
+                                                <!-- 訂單總額 -->
+                                                <td><?echo $row['TOTALPRICE'];?></td>
+                                                <!-- 訂單總值 -->
+                                                <td><?echo $row['TOTALAMT'];?></td>
+                                                <!-- 實收金額 -->
+                                                <td><?
+                                                if($row['PAYSTAT'] == '1') echo $row['REALPRICE'];
+                                                else echo '0';
+                                                ?></td>
+                                                <!-- 建立日期 -->
+                                                <td><?echo $row['CREATEDATE'];?></td>
+                                            </tr>
+                                            <?
                                         }
                                     }
                                 }

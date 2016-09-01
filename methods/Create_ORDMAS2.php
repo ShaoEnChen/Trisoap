@@ -19,7 +19,6 @@
     include_once("Helper/sql_operation.php");
     include_once("Helper/redirect.js");
 	$EMAIL = $_SESSION['EMAIL'];
-    $ORDNO = $_SESSION['ORDNO'];
 
 	if($EMAIL != null){
     ?>
@@ -56,7 +55,7 @@
                 </div>
             </label>
             <button type="submit" class="promise">確定</button><br>
-            <a href="Order_Confirm.php"><button type="button" class="cancel">取消</button></a>
+            <a href="View_Purchase.php"><button type="button" class="cancel">取消</button></a>
 	    </form>
     </div>
 	<?php
