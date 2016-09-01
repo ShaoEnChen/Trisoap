@@ -145,23 +145,25 @@
                                         }
                                         $start = ($page-1)*$per; 
                                         $result = mysql_query($queryCustomer.' LIMIT '.$start.', '.$per);
-                                        while($row = mysql_fetch_array($result)){
-                                    ?>
-                                        <tr>
-                                            <!-- 折扣兌換碼 -->
-                                            <td><?php echo $row['DCTID'];?></td>
-                                            <!-- 折扣名稱 -->
-                                            <td><?php echo $row['DCTNM'];?></td>
-                                            <!-- 折扣金額 -->
-                                            <td><?php echo $row['DCTPRICE'];?></td>
-                                            <!-- 折扣狀態 -->
-                                            <td><?php echo $row['DCTSTAT'];?></td>
-                                            <!-- 設定人員 -->
-                                            <td><?php echo $row['CREATEPERSON'];?></td>
-                                            <!-- 建立日期 -->
-                                            <td><?php echo $row['CREATEDATE'];?></td>
-                                        </tr>
-                                    <?
+                                        if($result != false){
+                                            while($row = mysql_fetch_array($result)){
+                                                ?>
+                                                    <tr>
+                                                        <!-- 折扣兌換碼 -->
+                                                        <td><?php echo $row['DCTID'];?></td>
+                                                        <!-- 折扣名稱 -->
+                                                        <td><?php echo $row['DCTNM'];?></td>
+                                                        <!-- 折扣金額 -->
+                                                        <td><?php echo $row['DCTPRICE'];?></td>
+                                                        <!-- 折扣狀態 -->
+                                                        <td><?php echo $row['DCTSTAT'];?></td>
+                                                        <!-- 設定人員 -->
+                                                        <td><?php echo $row['CREATEPERSON'];?></td>
+                                                        <!-- 建立日期 -->
+                                                        <td><?php echo $row['CREATEDATE'];?></td>
+                                                    </tr>
+                                                <?
+                                            }
                                         }
                                     ?>
                                     </tbody>

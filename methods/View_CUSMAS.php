@@ -122,35 +122,37 @@
                                         }
                                         $start = ($page-1)*$per; 
                                         $result = mysql_query($queryCustomer.' LIMIT '.$start.', '.$per);
-                                        while($row = mysql_fetch_array($result)){
-                                            $queryEMAIL = $row['EMAIL'];
-                                    ?>
-                                        <tr>
-                                            <!-- 電子信箱 -->
-                                            <td>
-                                                <form name="form" method="post" action="View_CUSMAS_Detail.php">
-                                                <input type="hidden" name="EMAIL" value="<?echo $queryEMAIL;?>" />
-                                                <input type="submit" name="button" value="<?echo $queryEMAIL;?>" />
-                                                </form>
-                                            </td>
-                                            <!-- 客戶姓名 -->
-                                            <td><?echo $row['CUSNM'];?></td>
-                                            <!-- 客戶地址 -->
-                                            <td><?echo $row['CUSADD'];?></td>
-                                            <!-- 客戶膚質 -->
-                                            <td><?echo $row['CUSTYPE'];?></td>
-                                            <!-- 客戶生日 -->
-                                            <td><?echo $row['CUSBIRTHY'].'/'.$row['CUSBIRTHM'].'/'.$row['CUSBIRTHD'];?></td>
-                                            <!-- 聯絡電話 -->
-                                            <td><?echo $row['TEL'];?></td>
-                                            <!-- 如何認識三三 -->
-                                            <td><?echo $row['KNOWTYPE'];?></td>
-                                            <!-- 建立日期 -->
-                                            <td><?echo $row['CREATEDATE'];?></td>
-                                            <!-- 最後修改日期 -->
-                                            <td><?echo $row['UPDATEDATE'];?></td>
-                                        </tr>
-                                    <?
+                                        if($result != false){
+                                            while($row = mysql_fetch_array($result)){
+                                                $queryEMAIL = $row['EMAIL'];
+                                                ?>
+                                                <tr>
+                                                    <!-- 電子信箱 -->
+                                                    <td>
+                                                        <form name="form" method="post" action="View_CUSMAS_Detail.php">
+                                                        <input type="hidden" name="EMAIL" value="<?echo $queryEMAIL;?>" />
+                                                        <input type="submit" name="button" value="<?echo $queryEMAIL;?>" />
+                                                        </form>
+                                                    </td>
+                                                    <!-- 客戶姓名 -->
+                                                    <td><?echo $row['CUSNM'];?></td>
+                                                    <!-- 客戶地址 -->
+                                                    <td><?echo $row['CUSADD'];?></td>
+                                                    <!-- 客戶膚質 -->
+                                                    <td><?echo $row['CUSTYPE'];?></td>
+                                                    <!-- 客戶生日 -->
+                                                    <td><?echo $row['CUSBIRTHY'].'/'.$row['CUSBIRTHM'].'/'.$row['CUSBIRTHD'];?></td>
+                                                    <!-- 聯絡電話 -->
+                                                    <td><?echo $row['TEL'];?></td>
+                                                    <!-- 如何認識三三 -->
+                                                    <td><?echo $row['KNOWTYPE'];?></td>
+                                                    <!-- 建立日期 -->
+                                                    <td><?echo $row['CREATEDATE'];?></td>
+                                                    <!-- 最後修改日期 -->
+                                                    <td><?echo $row['UPDATEDATE'];?></td>
+                                                </tr>
+                                                <?
+                                            }
                                         }
                                     ?>
                                     </tbody>

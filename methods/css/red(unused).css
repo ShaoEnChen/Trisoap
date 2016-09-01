@@ -1,0 +1,12 @@
+.promise {
+        background: #AA0000;
+        border: 1px solid #880000;
+}
+
+.promise:hover {
+    background: #880000;
+}
+
+.sign-block {
+	border-top: 10px solid #AA0000;
+}

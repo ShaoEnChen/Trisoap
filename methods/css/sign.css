@@ -19,12 +19,18 @@ body {
     border-radius: 5px;
     border-top: 5px solid #FFA042;
     margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 .sign-block h1 {
     text-align: center;
     color: #000;
     font-size: 15px;
+    font-family: 微軟正黑體;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 20px;
@@ -69,7 +75,7 @@ body {
 }
 
 .discount {
-    width: 60%;
+    width: 70%;
     height: 25px;
     background: #FFA042;
     box-sizing: border-box;

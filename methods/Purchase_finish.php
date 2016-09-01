@@ -9,33 +9,11 @@
     <title>商品加入購物車</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='css/sign.css' rel='stylesheet' type='text/css'>
-    <style>
-    .sign-block {
-       width: 350px;
-       padding: 20px;
-       border-top: 10px solid #AA0000;
-       position: absolute;
-       top: 50%;
-       left: 50%;
-       margin-right: -50%;
-       transform: translate(-50%, -50%);
-    }
-    .sign-block h1 {
-        font-family: 微軟正黑體;
-    }
-    .promise {
-        background: #AA0000;
-        border: 1px solid #880000;
-    }
-    .promise:hover {
-        background: #880000;
-    }
-    </style>
 </head>
 
 <body>
   <br>
-  <div class="sign-block">
+  <div class="sign-block" style="width: 350px;">
     <?php
       session_start();
       include_once("Helper/mysql_connect.php");

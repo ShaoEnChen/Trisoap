@@ -9,11 +9,6 @@
     <title>建立訂單</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>   
     <link href='css/sign.css' rel='stylesheet' type='text/css'>
-    <style>
-    .sign-block input {
-        width: 35%;
-    }
-    </style>
 </head>
 
 <body>
@@ -30,10 +25,10 @@
             <h1>建立訂單</h1>
             <form name="form" method="post" action="Create_ORDMAS1_finish.php">
                 <label for="hidden"><input type="hidden" name="ORDTYPE" value="G" id="hidden"></input></label>
-                <label for="num">田靜山巒禾風皂：<input type="text" name="ORDAMT_1" id="num"></input></label> 個<br>
-                <label for="num">金絲森林渲染皂：<input type="text" name="ORDAMT_2" id="num"></input></label> 個<br>
-                <label for="num">釋迦手感果力皂：<input type="text" name="ORDAMT_3" id="num"></input></label> 個<br>
-                <label for="num">三三臺東意象禮盒組：<input type="text" name="ORDAMT_4" id="num"></input></label> 組<br>
+                <label for="num"><input type="text" name="ORDAMT_1" placeholder="田靜山巒禾風皂" id="num"></input></label>
+                <label for="num"><input type="text" name="ORDAMT_2" placeholder="金絲森林渲染皂" id="num"></input></label>
+                <label for="num"><input type="text" name="ORDAMT_3" placeholder="釋迦手感果力皂" id="num"></input></label>
+                <label for="num"><input type="text" name="ORDAMT_4" placeholder="三三臺東意象禮盒組" id="num"></input></label>
                 <label for="pricing">計價方式：
                     <select name="PRICETYPE" id="pricing">
                         <option value=""></option>

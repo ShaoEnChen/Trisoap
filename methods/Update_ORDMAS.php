@@ -148,38 +148,40 @@
                                         }
                                         $start = ($page-1)*$per; 
                                         $result = mysql_query($queryCustomer.' LIMIT '.$start.', '.$per);
-                                        while($row = mysql_fetch_array($result)){
+                                        if($result != false){
+                                            while($row = mysql_fetch_array($result)){
                                             $ORDNO = $row['ORDNO'];
-                                    ?>
-                                        <tr>
-                                            <!-- 訂單編號 -->
-                                            <td>
-                                                <form name="form" method="post" action="View_ORDITEM.php">
-                                                <input type="hidden" name="ORDNO" value="<?echo $ORDNO;?>" />
-                                                <input type="hidden" name="RETURN" value="update" />
-                                                <input type="submit" name="button" value="<?echo $ORDNO;?>" />
-                                                </form>
-                                            </td>
-                                            <!-- 訂單種類 -->
-                                            <td><?php echo $row['ORDTYPE'];?></td>
-                                            <!-- 發票編號 -->
-                                            <td><?php echo $row['INVOICENO'];?></td>
-                                            <!-- 缺貨狀態 -->
-                                            <td><?php echo $row['BACKSTAT'];?></td>
-                                            <!-- 訂單狀態 -->
-                                            <td><?php echo $row['ORDSTAT'];?></td>
-                                            <!-- 付款狀態 -->
-                                            <td><?php echo $row['PAYSTAT'];?></td>
-                                            <!-- 訂單總額 -->
-                                            <td><?php echo $row['TOTALPRICE'];?></td>
-                                            <!-- 訂單總值 -->
-                                            <td><?php echo $row['TOTALAMT'];?></td>
-                                            <!-- 實收金額 -->
-                                            <td><?php echo $row['REALPRICE'];?></td>
-                                            <!-- 建立日期 -->
-                                            <td><?php echo $row['CREATEDATE'];?></td>
-                                        </tr>
-                                    <?
+                                            ?>
+                                            <tr>
+                                                <!-- 訂單編號 -->
+                                                <td>
+                                                    <form name="form" method="post" action="View_ORDITEM.php">
+                                                    <input type="hidden" name="ORDNO" value="<?echo $ORDNO;?>" />
+                                                    <input type="hidden" name="RETURN" value="update" />
+                                                    <input type="submit" name="button" value="<?echo $ORDNO;?>" />
+                                                    </form>
+                                                </td>
+                                                <!-- 訂單種類 -->
+                                                <td><?php echo $row['ORDTYPE'];?></td>
+                                                <!-- 發票編號 -->
+                                                <td><?php echo $row['INVOICENO'];?></td>
+                                                <!-- 缺貨狀態 -->
+                                                <td><?php echo $row['BACKSTAT'];?></td>
+                                                <!-- 訂單狀態 -->
+                                                <td><?php echo $row['ORDSTAT'];?></td>
+                                                <!-- 付款狀態 -->
+                                                <td><?php echo $row['PAYSTAT'];?></td>
+                                                <!-- 訂單總額 -->
+                                                <td><?php echo $row['TOTALPRICE'];?></td>
+                                                <!-- 訂單總值 -->
+                                                <td><?php echo $row['TOTALAMT'];?></td>
+                                                <!-- 實收金額 -->
+                                                <td><?php echo $row['REALPRICE'];?></td>
+                                                <!-- 建立日期 -->
+                                                <td><?php echo $row['CREATEDATE'];?></td>
+                                            </tr>
+                                            <?
+                                            }
                                         }
                                     ?>
                                     </tbody>

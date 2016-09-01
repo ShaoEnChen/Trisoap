@@ -8,26 +8,12 @@
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
     <title>三三社企-待執行訂單</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='css/normal.css' rel='stylesheet' type='text/css'>
-    <style>
-    .sign-block {
-        width: 650px;
-        padding: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    }
-    .sign-block input {
-        width: 100%;
-    }
-    </style>
+    <link href='css/sign.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 <br>
-<div class="sign-block">
+<div class="sign-block" style="width: 650px;">
 <h1>待執行訂單</h1>
 <?php
 session_start();

@@ -159,9 +159,9 @@
             「三三不僅是一個品牌，更是改變社會的一個生活態度。」
             </p>
             <ul class="list-inline">
-              <li><a href="/"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
-              <li><a href="/"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
-              <li><a href="/"><i class="fa fa-google-plus fa-2x fa-fw"></i></a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=100000281748300&fref=ts" target="_blank"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus fa-2x fa-fw"></i></a></li>
             </ul>
             <h5>C.E.O</h5>
           </div>
@@ -178,9 +178,9 @@
             要保有小時候的那種想像力與創造力。<br>
             </p>
             <ul class="list-inline">
-              <li><a href="/"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
-              <li><a href="/"><i class="fa fa-youtube fa-2x fa-fw"></i></a></li>
-              <li><a href="/"><i class="fa fa-steam fa-2x fa-fw"></i></a></li>
+              <li><a href="https://www.facebook.com/jason.wang.315213?fref=ts" target="_blank"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube fa-2x fa-fw"></i></a></li>
             </ul>
             <h5>C.O.O</h5>
           </div>
@@ -196,9 +196,9 @@
             夢想，在三三彩繪吾鄉的美好！<br>
             </p>
             <ul class="list-inline">
-              <li><a href="/"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
-              <li><a href="/"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
-              <li><a href="/"><i class="fa fa-instagram fa-2x fa-fw"></i></a></li>
+              <li><a href="https://www.facebook.com/maggy.chen?fref=ts" target="_blank"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram fa-2x fa-fw"></i></a></li>
             </ul>
             <h5>C.M.O</h5>
           </div>

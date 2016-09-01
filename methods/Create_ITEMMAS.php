@@ -11,26 +11,13 @@
     <meta name="description" content="">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- custim css -->
-    <link href="css/normal.css" rel="stylesheet">
-    <style>
-    .sign-block {
-        width: 350px;
-        padding: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    }
-    .sign-block input {
-        width: 100%;
-    }
-    </style>
+    <link href="css/sign.css" rel="stylesheet">
+    <link href="css/single.css" rel="stylesheet">
 </head>
 
 <body>
 <br>
-<div class="sign-block">
+<div class="sign-block" style="width: 350px;">
 <h1>新增商品</h1>
 <?php
 session_start();

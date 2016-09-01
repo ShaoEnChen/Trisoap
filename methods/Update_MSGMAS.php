@@ -144,46 +144,48 @@
                                         }
                                         $start = ($page-1)*$per; 
                                         $result = mysql_query($queryCustomer.' LIMIT '.$start.', '.$per);
-                                        while($row = mysql_fetch_array($result)){
-                                            $MSGNO = $row['MSGNO'];
-                                    ?>
-                                        <tr>
-                                            <!-- 留言編號 -->
-                                            <td><?php echo $MSGNO;?></td>
-                                            <!-- 顧客信箱 -->
-                                            <td><?php echo $row['EMAIL'];?></td>
-                                            <!-- 留言文字 -->
-                                            <td><?php echo $row['MSGTXT'];?></td>
-                                            <!-- 留言照片 -->
-                                            <td>
-                                                <?
-                                                if($row['MSGPHOTO'] == '1'){
-                                                    echo "<a target=\"_blank\" href=\"../message/picture/$MSGNO.png\">";
-                                                    echo "<img src=\"../message/picture/$MSGNO.png\" width=\"360\" height=\"270\" />";
-                                                    echo "</a>";
-                                                }
+                                        if($result != false){
+                                            while($row = mysql_fetch_array($result)){
+                                                $MSGNO = $row['MSGNO'];
                                                 ?>
-                                            </td>
-                                            <!-- 留言影片 -->
-                                            <td>
+                                                <tr>
+                                                    <!-- 留言編號 -->
+                                                    <td><?php echo $MSGNO;?></td>
+                                                    <!-- 顧客信箱 -->
+                                                    <td><?php echo $row['EMAIL'];?></td>
+                                                    <!-- 留言文字 -->
+                                                    <td><?php echo $row['MSGTXT'];?></td>
+                                                    <!-- 留言照片 -->
+                                                    <td>
+                                                        <?
+                                                        if($row['MSGPHOTO'] == '1'){
+                                                            echo "<a target=\"_blank\" href=\"../message/picture/$MSGNO.png\">";
+                                                            echo "<img src=\"../message/picture/$MSGNO.png\" width=\"360\" height=\"270\" />";
+                                                            echo "</a>";
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                    <!-- 留言影片 -->
+                                                    <td>
+                                                        <?
+                                                        if($row['MSGVIDEO'] == '1'){
+                                                            echo "<a target=\"_blank\" href=\"../message/video/$MSGNO.mp4\">";
+                                                            echo "<video width=\"360\" height=\"270\" controls>";
+                                                            echo "<source src=\"../message/video/$MSGNO.mp4\" type=\"video/mp4\">";
+                                                            echo "</video>";
+                                                            echo "</a>";
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                    <!-- 留言狀態 -->
+                                                    <td><?php echo $row['MSGSTAT'];?></td>
+                                                    <!-- 建立日期 -->
+                                                    <td><?php echo $row['CREATEDATE'];?></td>
+                                                    <!-- 發佈日期 -->
+                                                    <td><?php echo $row['PUBLICDATE'];?></td>
+                                                </tr>
                                                 <?
-                                                if($row['MSGVIDEO'] == '1'){
-                                                    echo "<a target=\"_blank\" href=\"../message/video/$MSGNO.mp4\">";
-                                                    echo "<video width=\"360\" height=\"270\" controls>";
-                                                    echo "<source src=\"../message/video/$MSGNO.mp4\" type=\"video/mp4\">";
-                                                    echo "</video>";
-                                                    echo "</a>";
-                                                }
-                                                ?>
-                                            </td>
-                                            <!-- 留言狀態 -->
-                                            <td><?php echo $row['MSGSTAT'];?></td>
-                                            <!-- 建立日期 -->
-                                            <td><?php echo $row['CREATEDATE'];?></td>
-                                            <!-- 發佈日期 -->
-                                            <td><?php echo $row['PUBLICDATE'];?></td>
-                                        </tr>
-                                    <?
+                                            }
                                         }
                                     ?>
                                     </tbody>

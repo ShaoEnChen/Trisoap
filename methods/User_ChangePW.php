@@ -9,6 +9,7 @@
     <title>三三社企-註冊</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>   
     <link href='css/sign.css' rel='stylesheet' type='text/css'>
+    <link href='css/single.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -21,10 +22,10 @@
 	$CUSIDT = $_SESSION['CUSIDT'];
 	if($EMAIL != null){
 	?>
-	<div class="sign-block">
+	<div class="sign-block" style="width: 350px;">
     	<h1>修改密碼</h1>
 			<form name="form" method="post" action="User_ChangePW_finish.php">
-				<label for="ori_password">原始密碼<br><input type="password" name="CUSPW" id="ori_password"/></label><br>
+				<label for="ori_password">舊密碼<br><input type="password" name="CUSPW" id="ori_password"/></label><br>
 				<p>密碼限定使用英數字，長度上限為15字元</p>
 				<label for="password">新密碼<br><input type="password" name="newCUSPW1" id="password"/></label><br>
 				<label for="password2">再一次輸入新密碼<br><input type="password" name="newCUSPW2" id="password2"/></label><br>

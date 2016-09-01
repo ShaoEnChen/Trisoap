@@ -24,8 +24,8 @@
 	<div class="sign-block">
     	<h1>新增管理員</h1>
 			<form name="form" method="post" action="Create_Manager_finish.php">
-				<label for="email">欲新增之管理員信箱<br><input type="text" name="newEMAIL" id="email"/></label><br>
-				<label for="password">請再次輸入您的密碼<br><input type="password" name="CUSPW" id="password"/></label><br>
+				<label for="email">欲新增之管理員信箱：<input type="text" name="newEMAIL" id="email"/></label><br>
+				<label for="password">請再次輸入您的密碼：<input type="password" name="CUSPW" id="password"/></label><br>
 				<button type="submit" class="promise">確定</button>
 			</form>
 		<a href="Update_Manager.php"><button type="button" class="cancel">取消</button></a>

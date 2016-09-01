@@ -9,25 +9,12 @@
     <title>三三社企-使用折價卷</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='css/sign.css' rel='stylesheet' type='text/css'>
-    <style>
-        .sign-block {
-            width: 350px;
-            padding: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%);
-        }
-        .sign-block input {
-            width: 100%;
-        }
-    </style>
+    <link href='css/single.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 <br>
-<div class="sign-block">
+<div class="sign-block" style="width: 350px;">
     <h1>使用折價卷</h1>
     <form name="form" method="post" action="discount_finish.php">
         <label for="number">請輸入兌換碼：<input type="text" name="DISCOUNT" id="number" /></label>

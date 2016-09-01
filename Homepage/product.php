@@ -15,7 +15,7 @@
     <link href="css/trisoap.css" rel="stylesheet">
     <script>
     function closed(){
-    	alert("此功能將在近期開放，敬請期待");
+      alert("此功能將在近期開放，敬請期待");
     }
     </script>
   </head>

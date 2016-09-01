@@ -89,7 +89,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php
+                                    <?
                                         $queryManager = "SELECT * FROM CUSMAS WHERE CUSIDT = 'A' AND ACTCODE = '1' ORDER BY CREATEDATE DESC";
                                         $result = mysql_query($queryManager);
                                         $data_nums = mysql_num_rows($result);
@@ -103,21 +103,23 @@
                                         }
                                         $start = ($page-1)*$per; 
                                         $result = mysql_query($queryCustomer.' LIMIT '.$start.', '.$per);
-                                        while($row = mysql_fetch_array($result)){
-                                    ?>
-                                        <tr>
-                                            <!-- 電子信箱 -->
-                                            <td><? echo $row['EMAIL'];?></td>
-                                            <!-- 姓名 -->
-                                            <td><? echo $row['CUSNM'];?></td>
-                                            <!-- 電話 -->
-                                            <td><? echo $row['TEL'];?></td>
-                                            <!-- 地址 -->
-                                            <td><? echo $row['CUSADD'];?></td>
-                                            <!-- 帳號建立日期 -->
-                                            <td><? echo $row['CREATEDATE'];?></td>
-                                        </tr>
-                                    <?
+                                        if($result != false){
+                                            while($row = mysql_fetch_array($result)){
+                                                ?>
+                                                <tr>
+                                                    <!-- 電子信箱 -->
+                                                    <td><? echo $row['EMAIL'];?></td>
+                                                    <!-- 姓名 -->
+                                                    <td><? echo $row['CUSNM'];?></td>
+                                                    <!-- 電話 -->
+                                                    <td><? echo $row['TEL'];?></td>
+                                                    <!-- 地址 -->
+                                                    <td><? echo $row['CUSADD'];?></td>
+                                                    <!-- 帳號建立日期 -->
+                                                    <td><? echo $row['CREATEDATE'];?></td>
+                                                </tr>
+                                                <?
+                                            }
                                         }
                                     ?>
                                     </tbody>

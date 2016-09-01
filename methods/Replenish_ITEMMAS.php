@@ -8,26 +8,13 @@
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
     <title>三三社企-商品進貨</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='css/normal.css' rel='stylesheet' type='text/css'>
-    <style>
-    .sign-block {
-        width: 350px;
-        padding: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    }
-    .sign-block input {
-        width: 100%;
-    }
-    </style>
+    <link href='css/sign.css' rel='stylesheet' type='text/css'>
+    <link href='css/single.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 <br>
-<div class="sign-block">
+<div class="sign-block" style="width: 350px;">
 <h1>商品進貨</h1>
 <?php
 session_start();

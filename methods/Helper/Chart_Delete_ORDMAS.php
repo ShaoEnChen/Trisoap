@@ -36,7 +36,8 @@
                                     }
                                     $start = ($page-1)*$per; 
                                     $result = mysql_query($queryCustomer.' LIMIT '.$start.', '.$per);
-                                    while($row = mysql_fetch_array($result)){
+                                    if($result != false){
+                                        while($row = mysql_fetch_array($result)){
                                         ?>
                                         <tr>
                                             <!-- 訂單編號 -->
@@ -62,7 +63,8 @@
                                             <!-- 建立日期 -->
                                             <td><?echo $row['CREATEDATE'];?></td>
                                         </tr>
-                                    <?php
+                                        <?
+                                        }
                                     }
                                 ?>
                             </tbody>
