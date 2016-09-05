@@ -14,7 +14,7 @@
 
 <body>
     <br>
-    <div class="sign-block" style="width: 400px;">
+    <div class="sign-block" style="width: 500px;">
         <?php
         session_start();
         include_once("Helper/mysql_connect.php");
