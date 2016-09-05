@@ -75,8 +75,7 @@ CREATE TABLE `DCTMAS` (
   `CREATEPERSON` varchar(50) COLLATE utf8_bin NOT NULL,
   `CREATEDATE` datetime NOT NULL,
   `USEDATE` datetime NOT NULL,
-  `ACTCODE` tinyint(1) NOT NULL DEFAULT '1',
-  `MerchantTradeNo` varchar(50) COLLATE utf8_bin DEFAULT NULL
+  `ACTCODE` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------

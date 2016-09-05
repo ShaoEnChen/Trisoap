@@ -9,9 +9,11 @@ include_once("Helper/redirect.js");
 $message = '';
 
 $DISCOUNT = input('DISCOUNT');
+$from = $_SESSION['from'];
+$type = $_SESSION['type'];
 
 $queryDISCOUNT = select('DCTMAS', 'DCTID', $DISCOUNT);
-if($queryDISCOUNT == null){
+if(!$queryDISCOUNT){
         $message = $message . '此兌換碼不存在 \n';
 }
 elseif($queryDISCOUNT['ACTCODE'] == '0'){
@@ -21,20 +23,49 @@ elseif($queryDISCOUNT['DCTSTAT'] == '0'){
         $message = $message . '此兌換碼已使用過 \n';
 }
 if($message == null){
+        unset($_SESSION['from']);
         $_SESSION['DISCOUNT'] = $queryDISCOUNT['DCTID'];
-        ?>
-        <script>
-        redirect("Order_Confirm.php");
-        </script>
-        <?
+        if($queryDISCOUNT['DCTSTAT'] == '1'){
+                $DCTID = $queryDISCOUNT['DCTID'];
+                date_default_timezone_set('Asia/Taipei');
+                $USEDATE = date("Y-m-d H:i:s");
+                $sql = "UPDATE DCTMAS SET DCTSTAT='0' WHERE DCTID='$DCTID'";
+                mysql_query($sql);
+                $sql = "UPDATE DCTMAS SET USEDATE = '$USEDATE' WHERE DCTID='$DCTID'";
+                mysql_query($sql);
+        }
+        if($from == 'oc'){
+                ?>
+                <script>
+                redirect("Order_Confirm.php");
+                </script>
+                <?
+        }
+        elseif($from == 'vp'){
+                ?>
+                <script>
+                redirect("View_Purchase.php");
+                </script>
+                <?
+        }
 }
 else
 {
-        ?>
-        <script>
-        redirect("discount.php");
-        alert("<?echo $message;?>");
-        </script>
-        <?
+        if($type == 'dc'){
+                ?>
+                <script>
+                redirect("discount_change.php");
+                alert("<?echo $message;?>");
+                </script>
+                <?
+        }
+        else{
+                ?>
+                <script>
+                redirect("discount.php");
+                alert("<?echo $message;?>");
+                </script>
+                <?
+        }
 }
 ?>

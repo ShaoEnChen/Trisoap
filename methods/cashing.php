@@ -40,10 +40,6 @@ try {
 
     $sql = "UPDATE ORDMAS SET MerchantTradeNo = '$TradeNo' WHERE ORDNO = '$ORDNO'";
     mysql_query($sql);
-    if($DCT != null){
-        $sql = "UPDATE DCTMAS SET MerchantTradeNo = '$TradeNo' WHERE DCTID = '$DCT'";
-        mysql_query($sql);
-    }
 
     //Order Item Lists
     $ItemNo = array("ItemNo");

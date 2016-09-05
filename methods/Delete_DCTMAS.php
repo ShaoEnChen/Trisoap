@@ -26,7 +26,7 @@
             ?>
             <form name="form" method="post" action="Delete_DCTMAS_finish.php">
             <label for="id"><input type="text" name="DCTID" placeholder="折扣兌換碼" id="id"/></label>
-            <label for="PW"><input type="text" name="PW" placeholder="再次輸入您的密碼" id="PW"/></label>
+            <label for="PW"><input type="password" name="PW" placeholder="再次輸入您的密碼" id="PW"/></label>
             <button type="submit" class="promise">確定</button>
             </form>
             <a href="Update_DCTMAS.php"><button type="button" class="cancel">取消</button></a>

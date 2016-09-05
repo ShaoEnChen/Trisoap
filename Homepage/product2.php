@@ -66,7 +66,7 @@
                   <li><a href="../methods/View_ORDMAS.php">查看訂單</a></li>
                   <li><a href="../methods/Update_CUSMAS.php">修改資料</a></li>
                   <li><a href="../methods/User_ChangePW.php">修改密碼</a></li>
-                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
+                  <li><a href="../methods/View_Purchase.php">購物車內容</a></li>
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>
@@ -79,7 +79,7 @@
                   <li><a href="../methods/View_ORDMAS.php">查看訂單</a></li>
                   <li><a href="../methods/Update_CUSMAS.php">修改資料</a></li>
                   <li><a href="../methods/User_ChangePW.php">修改密碼</a></li>
-                  <li><a href="../methods/Order_Confirm.php">購物車內容</a></li>
+                  <li><a href="../methods/View_Purchase.php">購物車內容</a></li>
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>

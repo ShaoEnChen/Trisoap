@@ -19,6 +19,8 @@
         session_start();
         include_once("Helper/mysql_connect.php");
         include_once("Helper/sql_operation.php");
+        unset($_SESSION['from']);
+        unset($_SESSION['type']);
 
         $EMAIL = $_SESSION['EMAIL'];
         $ORDNO = $_SESSION['ORDNO'];
@@ -115,7 +117,15 @@
                     ?>
                     <tr>
                     <td><?echo $DISCOUNTNM;?> : </td>
-                    <td colspan="3"><?echo $DISCOUNTPRICE;?></td>
+                    <td><?echo $DISCOUNTPRICE;?></td>
+                    <td colspan="2">
+                        <form name="form" method="post" action="discount_change.php">
+                        <input type="hidden" name="type" value="dc" />
+                        <input type="hidden" name="from" value="oc" />
+                        <input type="hidden" name="id" value="<?echo $DISCOUNT;?>" />
+                        <button type="submit" class="discount">更換折價卷</button>
+                        </form>
+                    </td>
                     </tr>
                     <?
                 }
@@ -128,7 +138,13 @@
                 if($checkDISCOUNT == 'B'){
                     ?>
                     <tr>
-                    <td><a href="discount.php"><button type="button" class="discount">使用折價卷</button></a></td>
+                    <td>
+                        <form name="form" method="post" action="discount.php">
+                        <input type="hidden" name="type" value="d" />
+                        <input type="hidden" name="from" value="oc" />
+                        <button type="submit" class="discount">使用折價卷</button>
+                        </form>
+                    </td>
                     </tr>
                     <?
                 }
@@ -138,7 +154,7 @@
             </table><br>
             
             <form method="post" action="cashing_test.php">
-                <input type="hidden" name="FROM" value="oc" />
+                <input type="hidden" name="ori" value="oc" />
                 <label for="PAYTYPE">
                     <div class="q-select">
                         <select name="PAYTYPE" id="PAYTYPE" required>
