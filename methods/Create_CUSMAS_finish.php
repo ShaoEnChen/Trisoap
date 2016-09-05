@@ -72,6 +72,9 @@ if($CUSTYPE == null){
 if($CUSBIRTHY == null || $CUSBIRTHM == null || $CUSBIRTHD == null){
     $message = $message . '生日欄位不可空白 \n';
 }
+if(!checkdate($CUSBIRTHM, $CUSBIRTHD, $CUSBIRTHY)){
+    $message = $message . '請輸入正確的生日格式 \n';
+}
 if($KNOWTYPE == null){
     $message = $message . '如何認識三三欄位不可空白 \n';
 }
