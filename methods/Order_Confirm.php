@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>購物車內容</title>
+    <title>訂單內容</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='css/sign.css' rel='stylesheet' type='text/css'>
     <link href='css/table.css' rel='stylesheet' type='text/css'>

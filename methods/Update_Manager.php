@@ -27,13 +27,6 @@
         <nav class="navbar navbar-fixed-top nav-custom">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a href="#page-top" class="navbar-brand"><img src="image/logo.png" alt="" class="logo"></a>
                 </div>
                 <div class="collapse navbar-collapse navbar-main-collapse">
@@ -54,12 +47,8 @@
                             </a>
                         </li>
                         <li>
-                            <!-- 要改成dropdown -->
-                            <!-- 更新使用者資料、密碼 -->
                             <a href="#">
-                                <?php
-                                    echo $queryCUSNM."，您好<br>";
-                                ?>
+                                <? echo $queryCUSNM."，您好<br>"; ?>
                             </a>
                         </li>
                         <li>
