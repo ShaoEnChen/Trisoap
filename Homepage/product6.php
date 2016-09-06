@@ -168,7 +168,7 @@
               <li><a href="https://www.facebook.com/trisoap/?fref=ts"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter fa-fw fa-lg"></i></a></li>
               <li><a href="#"><i class="fa fa-google-plus fa-fw fa-lg"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin fa-fw fa-lg"></i></a></li>
+              <li><a href="contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
             </ul>
           </div>
           
