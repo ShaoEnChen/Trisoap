@@ -190,8 +190,8 @@
         <div class="row">
           <div class="col-md-4">
             <ul class="list-inline">
+              <li><a href="https://www.facebook.com/trisoap/?fref=ts"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter fa-fw fa-lg"></i></a></li>
-              <li><a href="#"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
               <li><a href="#"><i class="fa fa-google-plus fa-fw fa-lg"></i></a></li>
               <li><a href="#"><i class="fa fa-linkedin fa-fw fa-lg"></i></a></li>
             </ul>
