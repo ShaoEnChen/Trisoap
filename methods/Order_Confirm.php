@@ -24,7 +24,7 @@
 
         $EMAIL = $_SESSION['EMAIL'];
         $ORDNO = $_SESSION['ORDNO'];
-        $DISCOUNT = $_SESSION['DISCOUNT'];
+        $DISCOUNT = search('DCTID', 'ORDMAS', 'ORDNO', $ORDNO);
         if($DISCOUNT != null){
             $checkDISCOUNT = 'A';
         }

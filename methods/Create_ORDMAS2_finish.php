@@ -4,9 +4,11 @@
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/handle_string.php");
+include_once("Helper/sql_operation.php");
 include_once("Helper/update_price.php");
 include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
+$DISCOUNT = $_SESSION['DISCOUNT'];
 $ORDTYPE = input('ORDTYPE');
 $TEL = input('TEL');
 $TELid = input('TELid');
@@ -55,6 +57,7 @@ if($EMAIL != null){
         date_default_timezone_set('Asia/Taipei');
         $CREATEDATE = date("Y-m-d H:i:s");
         $UPDATEDATE = date("Y-m-d H:i:s");
+        $USEDATE = date("Y-m-d H:i:s");
         if($ORDTYPE == 'G'){
             $SHIPFEE = 20;
             $sql = "INSERT INTO ORDMAS (ORDNO, ORDTYPE, EMAIL, ORDINST, SHIPFEE, CREATEDATE, UPDATEDATE) values ('$ORDNOG', '$ORDTYPE', '$EMAIL', '$ORDINST', '$SHIPFEE', '$CREATEDATE', '$UPDATEDATE')";
@@ -63,6 +66,27 @@ if($EMAIL != null){
                 mysql_query($sql);
                 $sql = "UPDATE ORDITEMMAS SET ORDNO = $ORDNOG WHERE ORDNO = 100000000 AND EMAIL = '$EMAIL'";
                 mysql_query($sql);
+                if($DISCOUNT != null){
+                    $queryDCTSTAT = search('DCTSTAT', 'DCTMAS', 'DCTID', $DISCOUNT);
+                    if($queryDCTSTAT == 0){
+                        ?>
+                        <script>
+                        alert("此兌換卷已被使用");
+                        </script>
+                        <?
+                    }
+                    else{
+                        $sql = "UPDATE ORDMAS SET DCTID = '$DISCOUNT' WHERE ORDNO = '$ORDNOG'";
+                        mysql_query($sql);
+                        if($queryDCTSTAT == 1){
+                            $sql = "UPDATE DCTMAS SET DCTSTAT = 0 WHERE DCTID = '$DISCOUNT'";
+                            mysql_query($sql);
+                        }
+                        $sql = "UPDATE DCTMAS SET USEDATE = '$USEDATE' WHERE DCTID = '$DISCOUNT'";
+                        mysql_query($sql);
+                    }
+                    unset($_SESSION['DISCOUNT']);
+                }
                 update_price($ORDNOG);
                 $_SESSION['ORDNO'] = $ORDNOG;
                 ?>
@@ -89,7 +113,28 @@ if($EMAIL != null){
                 mysql_query($sql);
                 $sql = "UPDATE ORDITEMMAS SET ORDNO = $ORDNOS WHERE ORDNO = 100000000 AND EMAIL = '$EMAIL'";
                 mysql_query($sql);
-                update_price($ORDNOG);
+                if($DISCOUNT != null){
+                    $queryDCTSTAT = search('DCTSTAT', 'DCTMAS', 'DCTID', $DISCOUNT);
+                    if($queryDCTSTAT == 0){
+                        ?>
+                        <script>
+                        alert("此兌換卷已被使用");
+                        </script>
+                        <?
+                    }
+                    else{
+                        $sql = "UPDATE ORDMAS SET DCTID = '$DISCOUNT' WHERE ORDNO = '$ORDNOS'";
+                        mysql_query($sql);
+                        if($queryDCTSTAT == 1){
+                            $sql = "UPDATE DCTMAS SET DCTSTAT = 0 WHERE DCTID = '$DISCOUNT'";
+                            mysql_query($sql);
+                        }
+                        $sql = "UPDATE DCTMAS SET USEDATE = '$USEDATE' WHERE DCTID = '$DISCOUNT'";
+                        mysql_query($sql);
+                    }
+                    unset($_SESSION['DISCOUNT']);
+                }
+                update_price($ORDNOS);
                 $_SESSION['ORDNO'] = $ORDNOS;
                 ?>
                 <script>

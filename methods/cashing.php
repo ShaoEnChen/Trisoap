@@ -9,7 +9,6 @@ $EMAIL = $_SESSION['EMAIL'];
 $ORDNO = $_SESSION['ORDNO'];
 $paytype = $_SESSION['PAYTYPE'];
 $totalamount = $_SESSION['total'];
-$DCT = $_SESSION['DISCOUNT'];
 
 try {
     $obj = new AllInOne();
@@ -81,6 +80,7 @@ try {
     }
 
     //discount_DCTMAS
+    $DCT = search('DCTID', 'ORDMAS', 'ORDNO', $ORDNO);
     if($DCT != null){
         $DISCOUNTNM = search('DCTNM', 'DCTMAS', 'DCTID', $DCT);
         $DISCOUNTPRICE = search('DCTPRICE', 'DCTMAS', 'DCTID', $DCT);
@@ -98,5 +98,4 @@ catch (Exception $e) {
 unset($_SESSION['ORDNO']);
 unset($_SESSION['PAYTYPE']);
 unset($_SESSION['total']);
-UNSET($_SESSION['DISCOUNT']);
 ?>

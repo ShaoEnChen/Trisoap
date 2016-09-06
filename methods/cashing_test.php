@@ -11,11 +11,20 @@ $ORDNO = $_SESSION['ORDNO'];
 $total = $_SESSION['total'];
 $paytype = input('PAYTYPE');
 $from = input('ori');
-if($total <= 0 || $total == null){
+$queryORDITEM = select('ORDITEMMAS', 'ORDNO', $ORDNO);
+if(!$queryORDITEM){
     ?>
     <script>
     redirect("../Homepage/index.php");
-    alert("這筆訂單沒有任何商品或付款金額為負!");
+    alert("這筆訂單沒有任何商品!");
+    </script>
+    <?
+}
+elseif($total <= 0 || $total == null){
+    ?>
+    <script>
+    redirect("../Homepage/index.php");
+    alert("這筆訂單付款金額為負!");
     </script>
     <?
 }

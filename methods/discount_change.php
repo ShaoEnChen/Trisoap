@@ -15,10 +15,10 @@
 <body>
 <?
 session_start();
-unset($_SESSION['DISCOUNT']);
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
 include_once("Helper/handle_string.php");
+$ORDNO = $_SESSION['ORDNO'];
 if($_SESSION['from'] != null){
     $from = $_SESSION['from'];
 }
@@ -30,12 +30,21 @@ else{
 }
 $id = input('id');
 $queryDCTSTAT = search('DCTSTAT', 'DCTMAS', 'DCTID', $id);
-if($queryDCTSTAT == '0'){
-    $sql = "UPDATE DCTMAS SET DCTSTAT='1' WHERE DCTID='$id'";
+
+if($from == 'oc'){
+    $sql = "UPDATE ORDMAS SET DCTID='' WHERE ORDNO='$ORDNO'";
     mysql_query($sql);
-    $sql = "UPDATE DCTMAS SET USEDATE='' WHERE DCTID='$id'";
-    mysql_query($sql);
+    if($queryDCTSTAT == '0'){
+        $sql = "UPDATE DCTMAS SET DCTSTAT='1' WHERE DCTID='$id'";
+        mysql_query($sql);
+        $sql = "UPDATE DCTMAS SET USEDATE='' WHERE DCTID='$id'";
+        mysql_query($sql);
+    }
 }
+elseif($from == 'vp'){
+    unset($_SESSION['DISCOUNT']);
+}
+
 ?>
 <br>
 <div class="sign-block" style="width: 350px;">
