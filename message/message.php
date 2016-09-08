@@ -10,7 +10,7 @@
 		<meta name="description" content="">
 		<!-- bootstrap css -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!-- custim css -->
+		<!-- custom css -->
 		<link href="css/message.css" rel="stylesheet">
 	</head>
 	<body>
@@ -24,19 +24,19 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="message.html" class="navbar-brand">
+						<a href="message.php" class="navbar-brand">
 							<img src="image/icon/logo.png" alt="" class="logo">
 						</a>
 					</div>
 					<div class="collapse navbar-collapse navbar-main-collapse">
 						<ul class="nav navbar-nav navbar-right">
 							<li>
-								<a href="message.html">
+								<a href="message.php">
 									心語首頁
 								</a>
 							</li>
 							<li>
-								<a href="gallery.html">
+								<a href="gallery.php">
 									精彩畫廊
 								</a>
 							</li>
@@ -200,21 +200,28 @@
 					<div class="row">
 						<div class="col-sm-4">
 							<ul class="list-inline">
-								<li><a href="/"><i class="fa fa-twitter fa-fw fa-lg"></i></a></li>
-								<li><a href="/"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
-								<li><a href="/"><i class="fa fa-google-plus fa-fw fa-lg"></i></a></li>
-								<li><a href="/"><i class="fa fa-linkedin fa-fw fa-lg"></i></a></li>
+								<li><a href="https://www.facebook.com/trisoap/?fref=ts"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter fa-fw fa-lg"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus fa-fw fa-lg"></i></a></li>
+								<li><a href="../Homepage/contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
 							</ul>
 						</div>
 						<div class="col-sm-4">
 							<p class="small">&copy;2016 TriSoap All Rights Reserved</p>
 						</div>
 						<div class="col-sm-4">
-				          	<a href="../contact.html">聯絡我們</a>
+				          	<a href="../Homepage/contact.php">聯絡我們</a>
+				          	<?
+				          	include("../methods/Helper/mysql_connect.php");
+				            include("../methods/Helper/sql_operation.php");
+							$COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
+							$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+							$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+							?>
 			            	<p>
-			            		<i class="fa fa-phone fa-fw"></i> (03)1234567 <br> 
-			            		<i class="fa fa-envelope fa-fw"></i> loveyou@gamil.com<br> 
-			            		<i class="fa fa-map-marker fa-fw"></i>台灣台北市
+			            		<i class="fa fa-phone fa-fw fa-lg"></i> <?echo $COMTEL;?> <br>
+								<i class="fa fa-envelope fa-fw fa-lg"></i> <?echo $COMEMAIL;?> <br>
+								<i class="fa fa-map-marker fa-fw fa-lg"></i> <?echo $COMADD;?>
 			            	</p>
 			          	</div>
 					</div>

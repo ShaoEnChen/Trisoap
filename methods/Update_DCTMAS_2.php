@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-        <title>折扣管理 永久有效折扣</title>
+        <title>永久有效折扣</title>
         <meta name="author" content="2016 NTUIM SA GROUP7">
         <meta name="description" content="">
         <!-- bootstrap css -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!-- custim css -->
+        <!-- custom css -->
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body id="page-top">
@@ -80,7 +80,7 @@
 
         <section>
             <div class="orders">
-                <form name="form" method="post" action="Update_DCTMAS_0.php">
+                <form method="post" action="Update_DCTMAS_0.php">
                     搜尋依據：<select name="keytype" />
                     <option value=""></option>
                     <option value="DCTID">折扣兌換碼</option>
@@ -89,7 +89,7 @@
                     <option value="CREATEPERSON">設定人員</option>
                     </select>
                     搜尋關鍵：<input type="text" name="keyvalue" /> <br>
-                    <input type="submit" name="button" class="btn btn-dark" value="確定" />
+                    <input type="submit" class="btn btn-dark" value="確定" />
                 </form>
             </div>
         </section>

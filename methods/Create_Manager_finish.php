@@ -1,7 +1,7 @@
-<?php session_start(); ?>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
+session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
 include_once("Helper/handle_string.php");

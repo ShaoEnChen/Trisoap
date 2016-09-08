@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <!-- bootstrap css -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!-- custim css -->
+        <!-- custom css -->
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body id="page-top">
@@ -121,7 +121,7 @@
                                                 <tr>
                                                     <!-- 訂單編號 -->
                                                     <td>
-                                                        <form name="form" method="post" action="View_ORDITEM_1.php">
+                                                        <form method="post" action="View_ORDITEM_1.php">
                                                         <input type="hidden" name="ORDNO" value="<?echo $ORDNO;?>" />
                                                         <input type="submit" name="button" value="<?echo $ORDNO;?>" />
                                                         </form>

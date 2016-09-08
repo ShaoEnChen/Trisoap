@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>三三吾鄉手工皂 查看訂單</title>
+    <title>查看訂單</title>
     <meta name="author" content="2016 NTUIM SA GROUP7">
     <meta name="description" content="">
     <!-- bootstrap css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- custim css -->
+    <!-- custom css -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body id="page-top">
@@ -77,8 +77,6 @@ function show_PAYTYPE($id){
                         </a>
                     </li>
                     <li>
-                        <!-- 要改成dropdown -->
-                        <!-- 更新使用者資料、密碼 -->
                         <a href="#">
                             <? echo $queryCUSNM."，您好<br>"; ?>
                         </a>
@@ -139,7 +137,7 @@ function show_PAYTYPE($id){
                                             <tr>
                                                 <!-- 訂單編號 -->
                                                 <td>
-                                                    <form name="form" method="post" action="View_ORDITEM.php">
+                                                    <form method="post" action="View_ORDITEM.php">
                                                     <input type="hidden" name="ORDNO" value="<?echo $ORDNO;?>" />
                                                     <input type="hidden" name="RETURN" value="view" />
                                                     <input type="submit" name="button" value="<?echo $ORDNO;?>" />

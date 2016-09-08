@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>三三社企-修改資料</title>
+    <title>修改資料</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='css/sign.css' rel='stylesheet' type='text/css'>
 </head>
@@ -35,12 +35,12 @@
 	?>
 	<div class="sign-block">
     	<h1>修改資料</h1>
-		<form name="form" method="post" action="Update_CUSMAS_finish.php">
-			<label for="username">電子信箱：<?echo $EMAIL;?></label><br>
-			<label for="username">您的姓名：<input type="text" name="CUSNM" value="<?echo $CUSNM;?>"/></label><br>
-			<label for="username">通訊地址：<input type="text" name="CUSADD" value="<?echo $CUSADD;?>"/></label><br>
-			<label for="username">聯絡電話：<input type="text" name="TEL" value="<?echo $TEL;?>"/></label><br>
-			<label for="username">統一編號：<input type="text" name="TAXID" value="<?echo $TAXID;?>"/></label><br>
+		<form method="post" action="Update_CUSMAS_finish.php">
+			電子信箱：<?echo $EMAIL;?></label><br>
+			您的姓名：<input type="text" name="CUSNM" value="<?echo $CUSNM;?>" /><br>
+			通訊地址：<input type="text" name="CUSADD" value="<?echo $CUSADD;?>" /><br>
+			聯絡電話：<input type="text" name="TEL" value="<?echo $TEL;?>" /><br>
+			統一編號：<input type="text" name="TAXID" value="<?echo $TAXID;?>" /><br>
 			<div class="styled-select">您的膚質：
 				<select name="CUSTYPE">
 				  	<option value="A" <?checkCUSTYPE($CUSTYPE, 'A');?>>乾性</option>
@@ -49,8 +49,8 @@
 				  	<option value="D" <?checkCUSTYPE($CUSTYPE, 'D');?>>混和性</option>
 				</select>
 			</div>
-			</label><br>
-			<label for="username">特殊要求：<textarea name="SPEINS" cols="45" rows="5"><?echo $SPEINS;?></textarea></label><br>
+			<br>
+			特殊要求：<textarea name="SPEINS" cols="45" rows="5"><?echo $SPEINS;?></textarea><br>
 			<button type="submit" class="promise">確定</button>
 		</form>
 		<a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
@@ -67,24 +67,4 @@
 	}
 	?>
 </body>
-
-<script>
-	$(document).ready(function () {
-    	$('#logo').addClass('animated fadeInDown');
-    	$("input:text:visible:first").focus();
-	});
-	$('#username').focus(function() {
-		$('label[for="username"]').addClass('selected');
-	});
-	$('#username').blur(function() {
-		$('label[for="username"]').removeClass('selected');
-	});
-	$('#password').focus(function() {
-		$('label[for="password"]').addClass('selected');
-	});
-	$('#password').blur(function() {
-		$('label[for="password"]').removeClass('selected');
-	});
-</script>
-
 </html>

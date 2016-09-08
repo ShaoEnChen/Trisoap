@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <!-- bootstrap css -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!-- custim css -->
+        <!-- custom css -->
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body id="page-top">

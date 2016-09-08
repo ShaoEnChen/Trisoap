@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <!-- bootstrap css -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!-- custim css -->
+        <!-- custom css -->
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body id="page-top">
@@ -62,8 +62,6 @@
                             </a>
                         </li>
                         <li>
-                            <!-- 要改成dropdown -->
-                            <!-- 更新使用者資料、密碼 -->
                             <a href="#">
                                 <? echo $queryCUSNM."，您好<br>"; ?>
                             </a>
@@ -121,7 +119,7 @@
                                                 <tr>
                                                     <!-- 訂單編號 -->
                                                     <td>
-                                                        <form name="form" method="post" action="View_ORDITEM_C.php">
+                                                        <form method="post" action="View_ORDITEM_C.php">
                                                         <input type="hidden" name="ORDNO" value="<?echo $ORDNO;?>" />
                                                         <input type="submit" name="button" value="<?echo $ORDNO;?>" />
                                                         </form>

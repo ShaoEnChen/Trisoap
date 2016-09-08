@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>三三社企-強制結束訂單</title>
+    <title>強制結束訂單</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='css/sign.css' rel='stylesheet' type='text/css'>
 </head>
@@ -26,7 +26,7 @@ $CUSIDT = $_SESSION['CUSIDT'];
 if($EMAIL != null && $CUSIDT == 'A'){
     $ORDNO = $_POST['ORDNO'];
     $row = select('ORDMAS', 'ORDNO', $ORDNO);
-    echo "<form name=\"form\" method=\"post\" action=\"Update_ORDMAS_F_finish.php\">";
+    echo "<form method=\"post\" action=\"Update_ORDMAS_F_finish.php\">";
     echo "<input type=\"hidden\" name=\"ORDNO\" value=\"$ORDNO\" />";
     echo "訂單編號：".$row['ORDNO']."<br>";
     echo "訂單種類：".$row['ORDTYPE']."<br>";
@@ -49,11 +49,11 @@ if($EMAIL != null && $CUSIDT == 'A'){
     echo "實收金額：".$row['REALPRICE']."<br>";
     echo "建立日期：".$row['CREATEDATE']."</br>";
     ?>
-    <label for="ORDSTAT">訂單狀態：<select name="ORDSTAT">
-    <option value="F">強制結束</option>
-    <option value="C">已完成</option>
-    <option value="D">刪除</option>
-    </select></label><br><br><br>
+    訂單狀態：<select name="ORDSTAT">
+        <option value="F">強制結束</option>
+        <option value="C">已完成</option>
+        <option value="D">刪除</option>
+    </select><br><br><br>
     <button type="submit" class="promise">儲存</button>
     </form>
     <a href="Update_ORDMAS_F.php"><button type="button" class="cancel">取消</button></a>

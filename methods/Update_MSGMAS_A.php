@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-        <title>留心語管理 待審核留言</title>
+        <title>待審核留言</title>
         <meta name="author" content="2016 NTUIM SA GROUP7">
         <meta name="description" content="">
         <!-- bootstrap css -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!-- custim css -->
+        <!-- custom css -->
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body id="page-top">
@@ -97,7 +97,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <form name="form" method="post" action="Update_MSGMAS_finish.php">
+                                    <form method="post" action="Update_MSGMAS_finish.php">
                                     <?
                                         $queryMSGMAS = "SELECT * FROM MSGMAS WHERE ACTCODE=1 AND MSGSTAT = 'A'";
                                         $result = mysql_query($queryMSGMAS);

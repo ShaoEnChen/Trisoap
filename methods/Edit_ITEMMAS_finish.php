@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>三三社企-更新商品</title>
+    <title>更新商品</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='css/sign.css' rel='stylesheet' type='text/css'>
     <link href='css/single.css' rel='stylesheet' type='text/css'>
@@ -35,12 +35,12 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if($message == null){
                 $_SESSION['newITEMNO'] = $newITEMNO;
                 ?>
-                <form name="form" method="post" action="Edit_ITEMMAS_end.php">
-                <label for="ITEMNO">商品編號：<?echo $newITEMNO;?></label><br><br>
-                <label for="ITEMNM">商品名稱：<input type="text" name="ITEMNM" value="<?echo $row['ITEMNM'];?>" /></label>
-                <label for="PRICE">商品價格：<input type="text" name="PRICE" value="<?echo $row['PRICE'];?>" /></label>
-                <label for="DESCRIPTION">商品敘述：<input type="text" name="DESCRIPTION" value="<?echo $row['DESCRIPTION'];?>" /></label>
-                <label for="PW">請再次輸入您的密碼：<input type="password" name="PW" /></label>
+                <form method="post" action="Edit_ITEMMAS_end.php">
+                商品編號：<?echo $newITEMNO;?><br><br>
+                商品名稱：<input type="text" name="ITEMNM" value="<?echo $row['ITEMNM'];?>" />
+                商品價格：<input type="text" name="PRICE" value="<?echo $row['PRICE'];?>" />
+                商品敘述：<input type="text" name="DESCRIPTION" value="<?echo $row['DESCRIPTION'];?>" />
+                請再次輸入您的密碼：<input type="password" name="PW" />
                 <button type="submit" class="promise">確定</button>
                 </form>
                 <a href="Update_ITEMMAS.php"><button type="button" class="cancel">取消</button></a>

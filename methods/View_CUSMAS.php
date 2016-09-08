@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <!-- bootstrap css -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!-- custim css -->
+        <!-- custom css -->
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body id="page-top">
@@ -39,8 +39,6 @@
                             </a>
                         </li>
                         <li>
-                            <!-- 要改成dropdown -->
-                            <!-- 更新使用者資料、密碼 -->
                             <a href="#">
                                 <? echo $queryCUSNM."，您好<br>"; ?>
                             </a>
@@ -57,15 +55,15 @@
 
         <section>
             <div class="orders">
-                <form name="form" method="post" action="View_CUSMAS.php">
-                    搜尋依據：<select name="keytype" />
+                <form method="post" action="View_CUSMAS.php">
+                    搜尋依據：<select name="keytype">
                     <option value=""></option>
                     <option value="EMAIL">電子信箱</option>
                     <option value="CUSNM">客戶姓名</option>
                     <option value="TEL">聯絡電話</option>
                     </select>
                     搜尋關鍵：<input type="text" name="keyvalue" /> <br>
-                    <input type="submit" name="button" class="btn btn-dark" value="確定" />
+                    <input type="submit" class="btn btn-dark" value="確定" />
                 </form>
             </div>
         </section>
@@ -120,7 +118,7 @@
                                                 <tr>
                                                     <!-- 電子信箱 -->
                                                     <td>
-                                                        <form name="form" method="post" action="View_CUSMAS_Detail.php">
+                                                        <form method="post" action="View_CUSMAS_Detail.php">
                                                         <input type="hidden" name="EMAIL" value="<?echo $queryEMAIL;?>" />
                                                         <input type="submit" name="button" value="<?echo $queryEMAIL;?>" />
                                                         </form>

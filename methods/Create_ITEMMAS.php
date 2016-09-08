@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>三三社企-新增商品</title>
+    <title>新增商品</title>
     <meta name="author" content="2016 NTUIM SA GROUP7">
     <meta name="description" content="">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <!-- custim css -->
+    <!-- custom css -->
     <link href="css/sign.css" rel="stylesheet">
     <link href="css/single.css" rel="stylesheet">
 </head>
@@ -27,13 +27,13 @@ $CUSIDT = $_SESSION['CUSIDT'];
 
 if($EMAIL != null && $CUSIDT == 'A'){
 	?>
-    <form name="form" method="post" action="Create_ITEMMAS_finish.php">
-    <label for="ITEMNO">商品編號：<input type="text" name="ITEMNO" /> </label>
-	<label for="ITEMNM">商品名稱：<input type="text" name="ITEMNM" /> </label>
-	<label for="ITEMAMT">商品數量：<input type="text" name="ITEMAMT" /> </label>
-	<label for="PRICE">商品價格：<input type="text" name="PRICE" /> </label>
-	<label for="DESCRIPTION">商品描述：<input type="text" name="DESCRIPTION" /> </label>
-    <label for="PW">請再次輸入您的密碼：<input type="password" name="PW" /></label>
+    <form method="post" action="Create_ITEMMAS_finish.php">
+    商品編號：<input type="text" name="ITEMNO" />
+	商品名稱：<input type="text" name="ITEMNM" />
+	商品數量：<input type="text" name="ITEMAMT" />
+	商品價格：<input type="text" name="PRICE" />
+	商品描述：<input type="text" name="DESCRIPTION" />
+    請再次輸入您的密碼：<input type="password" name="PW" />
     <button type="submit" class="promise">確定</button>
     </form>
     <a href="Update_ITEMMAS.php"><button type="button" class="cancel">取消</button></a>

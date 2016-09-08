@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>三三社企-上市商品</title>
+    <title>上市商品</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='css/sign.css' rel='stylesheet' type='text/css'>
     <link href='css/single.css' rel='stylesheet' type='text/css'>
@@ -25,18 +25,16 @@ $CUSIDT = $_SESSION['CUSIDT'];
 
 if($EMAIL != null && $CUSIDT == 'A'){
 	?>
-    <form name="form" method="post" action="Upload_ITEMMAS_finish.php">
-    <label for="ITEMNO">
-        <div class="q-select">商品編號：
-            <select name="ITEMNO" id="ITEMNO">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-        </div>
-    </label>
-    <label for="PW">請再次輸入您的密碼：<input type="password" name="PW" /></label>
+    <form method="post" action="Upload_ITEMMAS_finish.php">
+    <div class="q-select">商品編號：
+        <select name="ITEMNO">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+    請再次輸入您的密碼：<input type="password" name="PW" />
     <button type="submit" class="promise">確定</button>
     </form>
     <a href="Update_ITEMMAS.php"><button type="button" class="cancel">取消</button></a>

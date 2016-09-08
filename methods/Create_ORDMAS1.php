@@ -23,26 +23,25 @@
         ?>
         <div class="sign-block">
             <h1>建立訂單</h1>
-            <form name="form" method="post" action="Create_ORDMAS1_finish.php">
-                <label for="hidden"><input type="hidden" name="ORDTYPE" value="G" id="hidden"></input></label>
-                <label for="num"><input type="text" name="ORDAMT_1" placeholder="田靜山巒禾風皂" id="num"></input></label>
-                <label for="num"><input type="text" name="ORDAMT_2" placeholder="金絲森林渲染皂" id="num"></input></label>
-                <label for="num"><input type="text" name="ORDAMT_3" placeholder="釋迦手感果力皂" id="num"></input></label>
-                <label for="num"><input type="text" name="ORDAMT_4" placeholder="三三臺東意象禮盒組" id="num"></input></label>
-                <label for="pricing">計價方式：
-                    <select name="PRICETYPE" id="pricing">
-                        <option value=""></option>
-                        <option value="A">原價收費</option>
-                        <option value="B">九折收費</option>
-                        <option value="C">八折收費</option>
-                        <option value="D">七折收費</option>
-                        <option value="E">六折收費</option>
-                        <option value="F">五折收費</option>
-                    </select>
-                </label>
-                <label for="price">或 自訂價格：<input name="SETPRICE" id="price"></input></label><br>
-                <label for="need"><textarea name="ORDINST" rows="3" placeholder="訂單特殊要求" id="need"></textarea></label>
-                <label for="PW">請再次輸入您的密碼：<input name="PW" id="PW"></input></label><br>
+            <form method="post" action="Create_ORDMAS1_finish.php">
+                <input type="hidden" name="ORDTYPE" value="G" />
+                <input type="text" name="ORDAMT_1" placeholder="田靜山巒禾風皂" />
+                <input type="text" name="ORDAMT_2" placeholder="金絲森林渲染皂" />
+                <input type="text" name="ORDAMT_3" placeholder="釋迦手感果力皂" />
+                <input type="text" name="ORDAMT_4" placeholder="三三臺東意象禮盒組" />
+                計價方式：
+                <select name="PRICETYPE">
+                    <option value=""></option>
+                    <option value="A">原價收費</option>
+                    <option value="B">九折收費</option>
+                    <option value="C">八折收費</option>
+                    <option value="D">七折收費</option>
+                    <option value="E">六折收費</option>
+                    <option value="F">五折收費</option>
+                </select>
+                或 自訂價格：<input name="SETPRICE" /><br>
+                <textarea name="ORDINST" rows="3" placeholder="訂單特殊要求"></textarea>
+                請再次輸入您的密碼：<input name="PW" /><br>
                 <button type="submit" class="promise">確定</button><br>
                 <a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
             </form>
@@ -59,24 +58,4 @@
     }
 	?>
 </body>
-
-<script>
-	$(document).ready(function () {
-    	$('#logo').addClass('animated fadeInDown');
-    	$("input:text:visible:first").focus();
-	});
-	$('#username').focus(function() {
-		$('label[for="username"]').addClass('selected');
-	});
-	$('#username').blur(function() {
-		$('label[for="username"]').removeClass('selected');
-	});
-	$('#password').focus(function() {
-		$('label[for="password"]').addClass('selected');
-	});
-	$('#password').blur(function() {
-		$('label[for="password"]').removeClass('selected');
-	});
-</script>
-
 </html>

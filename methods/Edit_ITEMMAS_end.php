@@ -1,4 +1,4 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <?php
 session_start();
@@ -32,13 +32,13 @@ if($EMAIL != null && $CUSIDT == 'A'){
         }
 
         if($message1 == null){
-                $sql = "update ITEMMAS set ITEMNM='$newITEMNM' WHERE ITEMNO='$newITEMNO'";
+                $sql = "UPDATE ITEMMAS SET ITEMNM='$newITEMNM' WHERE ITEMNO='$newITEMNO'";
                 if(!mysql_query($sql))
                         $message2 = $message2 . '更新商品名稱失敗 \n';
-                $sql = "update ITEMMAS set PRICE='$newPRICE' WHERE ITEMNO='$newITEMNO'";
+                $sql = "UPDATE ITEMMAS SET PRICE='$newPRICE' WHERE ITEMNO='$newITEMNO'";
                 if(!mysql_query($sql))
                         $message2 = $message2 . '更新商品價格失敗 \n';
-                $sql = "update ITEMMAS set DESCRIPTION='$newDESCRIPTION' WHERE ITEMNO='$newITEMNO'";
+                $sql = "UPDATE ITEMMAS SET DESCRIPTION='$newDESCRIPTION' WHERE ITEMNO='$newITEMNO'";
                 if(!mysql_query($sql))
                         $message2 = $message2 . '更新商品敘述失敗 \n';
                 unset($_SESSION['newITEMNO']);

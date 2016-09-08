@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>三三社企-刪除折扣</title>
+    <title>刪除折扣</title>
     <meta name="author" content="2016 NTUIM SA GROUP7">
     <meta name="description" content="">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <!-- custim css -->
+    <!-- custom css -->
     <link href="css/sign.css" rel="stylesheet">
 </head>
 
@@ -24,9 +24,9 @@
         $CUSIDT = $_SESSION['CUSIDT'];
         if($EMAIL != null && $CUSIDT == 'A'){
             ?>
-            <form name="form" method="post" action="Delete_DCTMAS_finish.php">
-            <label for="id"><input type="text" name="DCTID" placeholder="折扣兌換碼" id="id"/></label>
-            <label for="PW"><input type="password" name="PW" placeholder="再次輸入您的密碼" id="PW"/></label>
+            <form method="post" action="Delete_DCTMAS_finish.php">
+            <input type="text" name="DCTID" placeholder="折扣兌換碼" />
+            <input type="password" name="PW" placeholder="再次輸入您的密碼" />
             <button type="submit" class="promise">確定</button>
             </form>
             <a href="Update_DCTMAS.php"><button type="button" class="cancel">取消</button></a>

@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <!-- bootstrap css -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!-- custim css -->
+        <!-- custom css -->
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body id="page-top">
@@ -79,14 +79,14 @@
 
         <section>
             <div class="orders">
-                <form name="form" method="post" action="Update_MSGMAS.php">
+                <form method="post" action="Update_MSGMAS.php">
                     搜尋依據：<select name="keytype" />
                     <option value=""></option>
                     <option value="ORDNO">留心語編號</option>
                     <option value="EMAIL">顧客信箱</option>
                     </select>
                     搜尋關鍵：<input type="text" name="keyvalue" /> <br>
-                    <input type="submit" name="button" class="btn btn-dark" value="確定" />
+                    <input type="submit" class="btn btn-dark" value="確定" />
                 </form>
             </div>
         </section>

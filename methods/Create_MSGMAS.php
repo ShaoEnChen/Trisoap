@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>三三社企-留心語</title>
+    <title>留心語</title>
     <meta name="author" content="2016 NTUIM SA GROUP7">
     <meta name="description" content="">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -25,11 +25,11 @@
     if($EMAIL != null){
         ?>
         <form method="post" action="Create_MSGMAS_finish.php" enctype="multipart/form-data">
-            <label for="MSGTXT"><textarea name="MSGTXT" placeholder="文字(必填)" id="MSGTXT"></textarea></label>
-            <label for="MSGPHOTO">照片（上傳格式限制：jpeg/jpg/png）<br>
-            <input type="file" name="MSGPHOTO" id="MSGPHOTO"/></label><br>
-            <label for="MSGVIDEO">影片（上傳格式限制：mp4）<br>
-            <input type="file" name="MSGVIDEO" id="MSGVIDEO"/></label><br>
+            <textarea name="MSGTXT" placeholder="文字(必填)"></textarea>
+            照片（上傳格式限制：jpeg/jpg/png）<br>
+            <input type="file" name="MSGPHOTO" /><br>
+            影片（上傳格式限制：mp4）<br>
+            <input type="file" name="MSGVIDEO" /><br>
             <button type="submit" class="promise">上傳</button>
         </form>
         <a href="../message/message.html"><button type="button" class="cancel">取消</button></a>

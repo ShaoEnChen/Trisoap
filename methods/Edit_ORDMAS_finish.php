@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>三三吾鄉手工皂 更新訂單</title>
+    <title>更新訂單</title>
     <meta name="author" content="2016 NTUIM SA GROUP7">
     <meta name="description" content="">
     <!-- bootstrap css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- custim css -->
+    <!-- custom css -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body id="page-top">

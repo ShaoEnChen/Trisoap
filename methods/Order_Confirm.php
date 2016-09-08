@@ -90,7 +90,7 @@
                         ?>
                         <td><?echo $price;?></td>
                         <td>
-                            <form name="remove" method="post" action="Delete_ORDITEMMAS.php">
+                            <form method="post" action="Delete_ORDITEMMAS.php">
                             <input type="hidden" name="ORDNO" value="<?echo $ORDNO;?>" />
                             <input type="hidden" name="EMAIL" value="<?echo $EMAIL;?>" />
                             <input type="hidden" name="ITEMNO" value="<?echo $queryITEMNO;?>" />
@@ -119,7 +119,7 @@
                     <td><?echo $DISCOUNTNM;?> : </td>
                     <td><?echo $DISCOUNTPRICE;?></td>
                     <td colspan="2">
-                        <form name="form" method="post" action="discount_change.php">
+                        <form method="post" action="discount_change.php">
                         <input type="hidden" name="type" value="dc" />
                         <input type="hidden" name="from" value="oc" />
                         <input type="hidden" name="id" value="<?echo $DISCOUNT;?>" />
@@ -139,7 +139,7 @@
                     ?>
                     <tr>
                     <td>
-                        <form name="form" method="post" action="discount.php">
+                        <form method="post" action="discount.php">
                         <input type="hidden" name="type" value="d" />
                         <input type="hidden" name="from" value="oc" />
                         <button type="submit" class="discount">使用折價卷</button>
@@ -155,16 +155,14 @@
             
             <form method="post" action="cashing_test.php">
                 <input type="hidden" name="ori" value="oc" />
-                <label for="PAYTYPE">
-                    <div class="q-select">
-                        <select name="PAYTYPE" id="PAYTYPE" required>
-                            <option value="">選擇付款方式*</option>
-                            <option value="A">信用卡</option>
-                            <option value="B">ATM</option>
-                            <option value="C">網路ATM</option>
-                        </select>
-                    </div>
-                </label>
+                <div class="q-select">
+                    <select name="PAYTYPE">
+                        <option value="">選擇付款方式</option>
+                        <option value="A">信用卡</option>
+                        <option value="B">ATM</option>
+                        <option value="C">網路ATM</option>
+                    </select>
+                </div>
             <br>
             <button type="submit" class="promise">確定結帳</button>
             </form>

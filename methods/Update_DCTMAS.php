@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <!-- bootstrap css -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!-- custim css -->
+        <!-- custom css -->
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body id="page-top">
@@ -79,7 +79,7 @@
 
         <section>
             <div class="orders">
-                <form name="form" method="post" action="Update_DCTMAS.php">
+                <form method="post" action="Update_DCTMAS.php">
                     搜尋依據：<select name="keytype" />
                     <option value=""></option>
                     <option value="DCTID">折扣兌換碼</option>

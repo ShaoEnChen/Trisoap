@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>三三社企-新增管理員</title>
+    <title>新增管理員</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>   
     <link href='css/sign.css' rel='stylesheet' type='text/css'>
 </head>
@@ -23,9 +23,9 @@
 	?>
 	<div class="sign-block">
     	<h1>新增管理員</h1>
-			<form name="form" method="post" action="Create_Manager_finish.php">
-				<label for="email">欲新增之管理員信箱：<input type="text" name="newEMAIL" id="email"/></label><br>
-				<label for="password">請再次輸入您的密碼：<input type="password" name="CUSPW" id="password"/></label><br>
+			<form method="post" action="Create_Manager_finish.php">
+				欲新增之管理員信箱：<input type="text" name="newEMAIL" /><br>
+				請再次輸入您的密碼：<input type="password" name="CUSPW" /><br>
 				<button type="submit" class="promise">確定</button>
 			</form>
 		<a href="Update_Manager.php"><button type="button" class="cancel">取消</button></a>
@@ -42,24 +42,4 @@
 	}
 	?>
 </body>
-
-<script>
-	$(document).ready(function () {
-    	$('#logo').addClass('animated fadeInDown');
-    	$("input:text:visible:first").focus();
-	});
-	$('#username').focus(function() {
-		$('label[for="username"]').addClass('selected');
-	});
-	$('#username').blur(function() {
-		$('label[for="username"]').removeClass('selected');
-	});
-	$('#password').focus(function() {
-		$('label[for="password"]').addClass('selected');
-	});
-	$('#password').blur(function() {
-		$('label[for="password"]').removeClass('selected');
-	});
-</script>
-
 </html>

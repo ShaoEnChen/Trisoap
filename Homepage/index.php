@@ -7,8 +7,7 @@
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>三三社企
-    </title>
+    <title>三三社企</title>
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- FlexSlider CSS -->
@@ -98,7 +97,7 @@
             <?
             }
             ?>
-            <li><a href="#" class="dropdown-toggle" onClick="closed()"><span class="lang">Eng</span><span class="caret"></span></a></li>
+            <li><a href="#" onClick="closed()"><span class="lang">Eng</span></a></li>
           </ul>
         </div>
       </div>

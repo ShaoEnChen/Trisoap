@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>三三社企-新增折扣</title>
+    <title>新增折扣</title>
     <meta name="author" content="2016 NTUIM SA GROUP7">
     <meta name="description" content="">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -24,19 +24,17 @@
         $CUSIDT = $_SESSION['CUSIDT'];
         if($EMAIL != null && $CUSIDT == 'A'){
             ?>
-            <form name="form" method="post" action="Create_DCTMAS_finish.php">
-            <label for="name"><input type="text" name="DCTNM" placeholder="折扣名稱" id="name"/></label>
-            <label for="price"><input type="text" name="DCTPRICE" placeholder="折扣金額" id="price"/></label>
-            <label for="type">
-                <div class="q-select">
-                    <select name="DCTSTAT" id="type">
-                        <option value="">有效方法</option>
-                        <option value="1">一次有效</option>
-                        <option value="2">永久有效</option>
-                    </select>
-                </div>
-            </label>
-            <label for="password"><input type="password" name="PW" placeholder="再次輸入您的密碼" id="password"/></label>
+            <form method="post" action="Create_DCTMAS_finish.php">
+            <input type="text" name="DCTNM" placeholder="折扣名稱" />
+            <input type="text" name="DCTPRICE" placeholder="折扣金額" />
+            <div class="q-select">
+                <select name="DCTSTAT">
+                    <option value="">有效方法</option>
+                    <option value="1">一次有效</option>
+                    <option value="2">永久有效</option>
+                </select>
+            </div>
+            <input type="password" name="PW" placeholder="再次輸入您的密碼" />
             <button type="submit" class="promise">確定</button>
             </form>
             <a href="Update_DCTMAS.php"><button type="button" class="cancel">取消</button></a>

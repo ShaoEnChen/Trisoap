@@ -90,7 +90,7 @@
                         ?>
                         <td><?echo $price;?></td>
                         <td>
-                            <form name="remove" method="post" action="Delete_ORDITEMMAS.php">
+                            <form method="post" action="Delete_ORDITEMMAS.php">
                             <input type="hidden" name="ITEMNO" value="<?echo $queryITEMNO;?>" />
                             <button type="submit" class="cancel">移除</button>
                             </form>
@@ -117,7 +117,7 @@
                     <td><?echo $DISCOUNTNM;?> : </td>
                     <td><?echo $DISCOUNTPRICE;?></td>
                     <td colspan="2">
-                        <form name="form" method="post" action="discount_change.php">
+                        <form method="post" action="discount_change.php">
                         <input type="hidden" name="type" value="dc" />
                         <input type="hidden" name="from" value="vp" />
                         <input type="hidden" name="id" value="<?echo $DISCOUNT;?>" />
@@ -137,7 +137,7 @@
                     ?>
                     <tr>
                     <td>
-                        <form name="form" method="post" action="discount.php">
+                        <form method="post" action="discount.php">
                         <input type="hidden" name="type" value="d" />
                         <input type="hidden" name="from" value="vp" />
                         <button type="submit" class="discount">使用折價卷</button>
