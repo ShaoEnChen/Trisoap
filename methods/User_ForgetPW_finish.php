@@ -40,7 +40,7 @@ if($message == ''){
                 mail_reset_password($EMAIL, $code);
                 ?>
                 <script>
-                redirect("User_login1.php");
+                redirect("User_login.php");
                 alert("已將新密碼寄至您的信箱，請前往查看");
                 </script>
                 <?php
@@ -49,7 +49,7 @@ if($message == ''){
 elseif($message == '此電子信箱尚未註冊'){
         ?>
         <script>
-        redirect("Create_CUSMAS1.php");
+        redirect("Create_CUSMAS.php");
         alert("此電子信箱尚未註冊");
         </script>
         <?php

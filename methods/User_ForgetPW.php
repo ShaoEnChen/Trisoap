@@ -20,7 +20,7 @@
 		請輸入您的電子信箱<br><input type="text" name="EMAIL" /><br>
 		<button type="submit" class="promise">確定</button>
 	</form>
-	<a href="User_login1.php"><button type="button" class="cancel">取消</button></a>
+	<a href="User_login.php"><button type="button" class="cancel">取消</button></a>
 </div>
 </body>
 </html>
