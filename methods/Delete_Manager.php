@@ -21,7 +21,7 @@
 	$CUSIDT = $_SESSION['CUSIDT'];
 	if($EMAIL != null && $CUSIDT == 'A'){
 	?>
-	<div class="sign-block">
+	<div class="sign-block" style="width: 450px;">
     	<h1>刪除管理員</h1>
 			<form method="post" action="Delete_Manager_finish.php">
 				欲刪除之管理員信箱：<input type="text" name="newEMAIL" /><br>

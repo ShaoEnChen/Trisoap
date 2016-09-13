@@ -62,6 +62,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="Sold_ITEMMAS.php">
+                                商品售出<i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
                             <a href="#">
                                 <? echo $queryCUSNM."，您好<br>"; ?>
                             </a>

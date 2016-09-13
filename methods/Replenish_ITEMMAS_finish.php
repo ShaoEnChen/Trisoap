@@ -31,7 +31,9 @@ if($EMAIL != null && $CUSIDT == 'A'){
         }
 
         if($message == null){
-                $sql = "UPDATE ITEMMAS SET ITEMAMT = ITEMAMT+$AMT WHERE ITEMNO='$ITEMNO'";
+        		date_default_timezone_set('Asia/Taipei');
+                $UPDATEDATE = date("Y-m-d H:i:s");
+                $sql = "UPDATE ITEMMAS SET ITEMAMT=ITEMAMT+$AMT, UPDATEDATE='$UPDATEDATE' WHERE ITEMNO='$ITEMNO'";
                 if(mysql_query($sql)){
                         ?>
                         <script>

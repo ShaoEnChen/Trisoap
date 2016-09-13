@@ -23,8 +23,8 @@ $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
 function show_ORDTYPE($id){
-	if($id == 'G') echo '一般';
-	elseif($id == 'S') echo '特殊';
+	if($id == 'G') echo '網路';
+	elseif($id == 'S') echo '門市';
 }
 function show_BACKSTAT($id){
 	if($id == '1') echo '缺貨中';

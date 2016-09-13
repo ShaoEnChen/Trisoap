@@ -62,8 +62,6 @@
                             </a>
                         </li>
                         <li>
-                            <!-- 要改成dropdown -->
-                            <!-- 更新使用者資料、密碼 -->
                             <a href="#">
                                 <? echo $queryCUSNM."，您好<br>"; ?>
                             </a>

@@ -9,8 +9,8 @@ include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 function show_ORDTYPE($id){
-        if($id == 'G') return '一般';
-        elseif($id == 'S') return '特殊';
+        if($id == 'G') return '網路';
+        elseif($id == 'S') return '門市';
 }
 function show_ORDSTAT($id){
         if($id == 'E') return '待處理';
@@ -37,7 +37,7 @@ if($EMAIL != null){
                 $ITEMNO = $item['ITEMNO'];
                 $ITEMAMT = $item['ORDAMT'];
                 $name = select('ITEMMAS', 'ITEMNO', $ITEMNO);
-                $alert .= '商品名稱 : '.$name['ITEMNM'].' , 商品價格 : '.$name['PRICE'].' , 訂購數量 : '.$ITEMAMT.' , 總價 : '.$name['PRICE']*$ITEMAMT.'\n';
+                $alert .= '  商品名稱 : '.$name['ITEMNM'].' , 商品價格 : '.$name['PRICE'].' , 訂購數量 : '.$ITEMAMT.' , 總價 : '.$name['PRICE']*$ITEMAMT.'\n';
         }
         $alert .= '\n';
         $alert .= "額外指令：".$row['ORDINST'].'\n';
