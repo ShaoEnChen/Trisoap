@@ -42,7 +42,7 @@
             }
             ?>
         	<h1>請先建立訂單</h1>
-	        <textarea name="ORDINST" rows="5" placeholder="訂單特殊要求"></textarea>
+	        <textarea name="ORDINST" rows="5" placeholder="訂單特殊要求(可不填)"></textarea>
             <h1>請選擇付款方式</h1>
             <div class="q-select">
                 <select name="PAYTYPE">

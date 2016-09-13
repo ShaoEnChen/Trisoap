@@ -33,14 +33,14 @@
           $CREATEDATE = date("Y-m-d H:i:s");
           $UPDATEDATE = date("Y-m-d H:i:s");
           $checkorder1 = "SELECT ORDAMT FROM ORDITEMMAS WHERE ORDNO='$ORDNO' AND EMAIL='$EMAIL' AND ITEMNO='$ITEMNO'";
-          $checkorder2 = mysql_query($checkorder1);
-          if($checkorder2 == false){
+          $checkorder2 = mysql_fetch_row(mysql_query($checkorder1));
+          if($checkorder2[0] == ''){
             $sql = "INSERT INTO ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNO', '$ITEMNO', '$ORDAMT', '$EMAIL', '$CREATEDATE', '$UPDATEDATE')";
           }
           else{
             $sql = "UPDATE ORDITEMMAS SET ORDAMT=ORDAMT+$ORDAMT WHERE ORDNO='$ORDNO' AND EMAIL='$EMAIL' AND ITEMNO='$ITEMNO'";
           }
-          if(mysql_query($sql))
+          if(mysql_query($sql)){
             echo "<br><h1>商品已成功加入購物車</h1>";
       ?>
 

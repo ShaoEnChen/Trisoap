@@ -61,7 +61,7 @@
                 <option value="E" <?checkTYPE($KNOWTYPE, 'E');?>>其它</option>
             </select>
         </div>
-        <textarea name="SPEINS" value="<?echo $SPEINS;?>" placeholder="特殊要求"></textarea>
+        <textarea name="SPEINS" value="<?echo $SPEINS;?>" placeholder="特殊要求(可不填)"></textarea>
         <button type="submit" class="promise">註冊</button>
     </form>
     <a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
