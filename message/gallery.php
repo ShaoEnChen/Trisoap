@@ -104,7 +104,7 @@
 						<div class="col-sm-4">
 							<p class="small">&copy;2016 TriSoap All Rights Reserved</p>
 						</div>
-						<div class="col-sm-4">
+						<div class="col-sm-4 contact">
 				          	<a href="../Homepage/contact.php">聯絡我們</a>
 				          	<?
 				          	include("../methods/Helper/mysql_connect.php");
