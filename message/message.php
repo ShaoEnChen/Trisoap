@@ -74,7 +74,7 @@
 					<div class="choices">
 						<h4>精采選集</h4>
 						<div class="row">
-							<div class="choice choice-text col-sm-4">
+							<div class="choice choice-text col-md-4">
 								<p>
 									蒹葭蒼蒼，白露為霜。
 									所謂伊人，在水一方。
@@ -102,16 +102,15 @@
 									溯游從之，宛在水中央。
 								</p>
 							</div>
-							<div class="choice choice-photo col-sm-4">
-								<p>
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-								</p>
+							<div class="choice choice-photo col-md-4">
+								<div class="desc">
+									<p>
+										<3
+									</p>
+								</div>
 								<img src="image/choice-photo.jpg" alt="精選相片" class="selected">
 							</div>
-							<div class="choice choice-text col-sm-4">
+							<div class="choice choice-text col-md-4">
 								<p>
 									蒹葭采采，白露未已。
 									所謂伊人，在水之涘。
@@ -125,35 +124,12 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="choice choice-text col-sm-4">
+							<div class="choice choice-text col-md-4">
 								<p>
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
+									謝謝
 								</p>
 							</div>
-							<div class="choice choice-text col-sm-4">
+							<div class="choice choice-text col-md-4">
 								<p>
 									蒹葭采采，白露未已。
 									所謂伊人，在水之涘。
@@ -181,13 +157,15 @@
 									溯游從之，宛在水中沚。
 								</p>
 							</div>
-							<div class="choice choice-photo col-sm-4">
-								<p>
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-								</p>
+							<div class="choice choice-photo col-md-4">
+								<div class="desc">
+									<p>
+										蒹葭蒼蒼，白露為霜。
+										所謂伊人，在水一方。
+										溯洄從之，道阻且長。
+										溯游從之，宛在水中央。
+									</p>
+								</div>
 								<img src="image/choice-photo.jpg" alt="精選相片" class="selected">
 							</div>
 						</div>
@@ -234,5 +212,5 @@
 	<!-- bootstrap js -->
 	<script src="js/bootstrap.min.js"></script>
 	<!-- custom js -->
-	<script src="js/custom.js"></script>
+	<script src="js/message.js"></script>
 </html>

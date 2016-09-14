@@ -57,7 +57,7 @@
 			<section class="content">
 				<div class="container">
 					<div>
-						<h4>文字</h4>
+						<h4>文字&nbsp;<i class="fa fa-pencil" aria-hidden="true"></i></h4>
 						<div class="row">
 							<div class="choice choice-text col-sm-6 col-md-4">
 								<p></p>
@@ -71,21 +71,21 @@
 						</div>
 					</div>
 					<div>
-						<h4>照片</h4>
+						<h4>照片&nbsp;<i class="fa fa-camera" aria-hidden="true"></i></h4>
 						<div class="row">
 							<div class="choice choice-photo col-sm-6 col-md-4">
-								
-							</div>
-							<div class="choice choice-photo col-sm-6 col-md-4">
-								
-							</div>
-							<div class="choice choice-photo col-sm-6 col-md-4">
-								
+								<img src="image/choice-photo.jpg">
+								<div class="desc">123</div>
 							</div>
 						</div>
 					</div>
 					<div>
-						<h4>影片</h4>
+						<h4>影片&nbsp;<i class="fa fa-video-camera" aria-hidden="true"></i></h4>
+						<div class="row">
+							<div class="choice choice-video col-sm-6 col-md-4">
+								<div class="desc">123</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -129,5 +129,5 @@
 	<!-- bootstrap js -->
 	<script src="js/bootstrap.min.js"></script>
 	<!-- custom js -->
-	<script src="js/custom.js"></script>
+	<script src="js/gallery.js"></script>
 </html>
