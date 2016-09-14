@@ -25,7 +25,6 @@
 	<br>
     <div class="sign-block" style="width: 400px;">
         <form method="post" action="Create_ORDMAS2_finish.php">
-            <input type="hidden" name="ORDTYPE" value="G" />
             <?
             $queryTEL = search('TEL', 'CUSMAS', 'EMAIL', $EMAIL);
             $queryCUSADD = search('CUSADD', 'CUSMAS', 'EMAIL', $EMAIL);

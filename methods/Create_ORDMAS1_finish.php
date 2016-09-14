@@ -66,7 +66,6 @@ if($EMAIL != null && $CUSIDT == 'A'){
     if($message == ''){
         $row = select('OWNMAS', 'COMNM', 'Trisoap');
         $ORDNOG = $row['NORDNOG'];
-        $ORDNOS = $row['NORDNOS'];
         date_default_timezone_set('Asia/Taipei');
         $CREATEDATE = date("Y-m-d H:i:s");
         $UPDATEDATE = date("Y-m-d H:i:s");
@@ -76,26 +75,20 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if(mysql_query($sql)){
             $sql = "UPDATE OWNMAS SET NORDNOG=NORDNOG+1 where COMNM='Trisoap'";
             mysql_query($sql);
-            ?>
-            <script>
-            redirect("../Homepage/index.php");
-            alert("訂單建立成功。");
-            </script>
-            <?
             if($ORDAMT_1 != 0){
-                $sql = "INSERT INTO ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, ORDINST, CREATEDATE, UPDATEDATE) values ('$ORDNOG', '1', '$ORDAMT_1', '$EMAIL', '$ORDINST', '$CREATEDATE', '$UPDATEDATE')";
+                $sql = "INSERT INTO ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNOG', '1', '$ORDAMT_1', '$EMAIL', '$CREATEDATE', '$UPDATEDATE')";
                 mysql_query($sql);
             }
             if($ORDAMT_2 != 0){
-                $sql = "INSERT INTO ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, ORDINST, CREATEDATE, UPDATEDATE) values ('$ORDNOG', '2', '$ORDAMT_2', '$EMAIL', '$ORDINST', '$CREATEDATE', '$UPDATEDATE')";
+                $sql = "INSERT INTO ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNOG', '2', '$ORDAMT_2', '$EMAIL', '$CREATEDATE', '$UPDATEDATE')";
                 mysql_query($sql);
             }
             if($ORDAMT_3 != 0){
-                $sql = "INSERT INTO ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, ORDINST, CREATEDATE, UPDATEDATE) values ('$ORDNOG', '3', '$ORDAMT_3', '$EMAIL', '$ORDINST', '$CREATEDATE', '$UPDATEDATE')";
+                $sql = "INSERT INTO ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNOG', '3', '$ORDAMT_3', '$EMAIL', '$CREATEDATE', '$UPDATEDATE')";
                 mysql_query($sql);
             }
             if($ORDAMT_4 != 0){
-                $sql = "INSERT INTO ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, ORDINST, CREATEDATE, UPDATEDATE) values ('$ORDNOG', '4', '$ORDAMT_4', '$EMAIL', '$ORDINST', '$CREATEDATE', '$UPDATEDATE')";
+                $sql = "INSERT INTO ORDITEMMAS (ORDNO, ITEMNO, ORDAMT, EMAIL, CREATEDATE, UPDATEDATE) values ('$ORDNOG', '4', '$ORDAMT_4', '$EMAIL', '$CREATEDATE', '$UPDATEDATE')";
                 mysql_query($sql);
             }
             if($PRICETYPE == 'A'){
@@ -119,6 +112,12 @@ if($EMAIL != null && $CUSIDT == 'A'){
             elseif($PRICETYPE == ''){
                 set_price_dir($ORDNOG, $SETPRICE);
             }
+            ?>
+            <script>
+            redirect("../Homepage/index.php");
+            alert("訂單建立成功。");
+            </script>
+            <?
         }
         else{
             ?>

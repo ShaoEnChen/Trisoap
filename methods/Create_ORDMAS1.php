@@ -24,7 +24,6 @@
         <div class="sign-block">
             <h1>建立訂單</h1>
             <form method="post" action="Create_ORDMAS1_finish.php">
-                <input type="hidden" name="ORDTYPE" value="G" />
                 <input type="text" name="ORDAMT_1" placeholder="田靜山巒禾風皂" />
                 <input type="text" name="ORDAMT_2" placeholder="金絲森林渲染皂" />
                 <input type="text" name="ORDAMT_3" placeholder="釋迦手感果力皂" />
@@ -41,7 +40,7 @@
                 </select>
                 或 自訂價格：<input name="SETPRICE" /><br>
                 <textarea name="ORDINST" rows="3" placeholder="訂單特殊要求"></textarea>
-                請再次輸入您的密碼：<input name="PW" /><br>
+                請再次輸入您的密碼：<input name="PW" type="password" /><br>
                 <button type="submit" class="promise">確定</button><br>
                 <a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
             </form>
