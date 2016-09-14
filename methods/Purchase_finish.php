@@ -71,7 +71,7 @@
         ?>
         <script>
         redirect("../Homepage/index.php");
-        alert("您無權限觀看此頁面!");
+        alert("請先登入或註冊!");
         </script>
         <?
       }

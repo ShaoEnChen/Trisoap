@@ -12,18 +12,23 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <!-- custom css -->
         <link href="css/style.css" rel="stylesheet">
+        <script>
+        function show_text(){
+            alert("text");
+        }
+        </script>
     </head>
     <body id="page-top">
         <?php
-            session_start();
-            include_once("Helper/mysql_connect.php");
-            include_once("Helper/sql_operation.php");
-            include_once("Helper/handle_string.php");
-            include_once("Helper/redirect.js");
-            $EMAIL = $_SESSION['EMAIL'];
-            $CUSIDT = $_SESSION['CUSIDT'];
-            if($EMAIL != null && $CUSIDT == 'A'){
-                    $queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
+        session_start();
+        include_once("Helper/mysql_connect.php");
+        include_once("Helper/sql_operation.php");
+        include_once("Helper/handle_string.php");
+        include_once("Helper/redirect.js");
+        $EMAIL = $_SESSION['EMAIL'];
+        $CUSIDT = $_SESSION['CUSIDT'];
+        if($EMAIL != null && $CUSIDT == 'A'){
+                $queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
         ?>
         <nav class="navbar navbar-fixed-top nav-custom">
             <div class="container-fluid">
@@ -143,13 +148,16 @@
                                                     <!-- 顧客信箱 -->
                                                     <td><?php echo $row['EMAIL'];?></td>
                                                     <!-- 留言文字 -->
-                                                    <td><?php echo $row['MSGTXT'];?></td>
+                                                    <td>
+                                                        <? $text = $row['MSGTXT']; ?>
+                                                        <button onclick="alert('<?echo $text;?>');">顯示</button>
+                                                    </td>
                                                     <!-- 留言照片 -->
                                                     <td>
                                                         <?
                                                         if($row['MSGPHOTO'] == '1'){
                                                             echo "<a target=\"_blank\" href=\"../message/picture/$MSGNO.png\">";
-                                                            echo "<img src=\"../message/picture/$MSGNO.png\" width=\"360\" height=\"270\" />";
+                                                            echo "<img src=\"../message/picture/$MSGNO.png\" width=\"120\" height=\"90\" />";
                                                             echo "</a>";
                                                         }
                                                         ?>
@@ -159,7 +167,7 @@
                                                         <?
                                                         if($row['MSGVIDEO'] == '1'){
                                                             echo "<a target=\"_blank\" href=\"../message/video/$MSGNO.mp4\">";
-                                                            echo "<video width=\"360\" height=\"270\" controls>";
+                                                            echo "<video width=\"120\" height=\"90\" controls>";
                                                             echo "<source src=\"../message/video/$MSGNO.mp4\" type=\"video/mp4\">";
                                                             echo "</video>";
                                                             echo "</a>";

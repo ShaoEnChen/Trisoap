@@ -32,7 +32,7 @@
             <input type="file" name="MSGVIDEO" /><br>
             <button type="submit" class="promise">上傳</button>
         </form>
-        <a href="../message/message.html"><button type="button" class="cancel">取消</button></a>
+        <a href="../message/message.php"><button type="button" class="cancel">取消</button></a>
         <?
     }
     else{
