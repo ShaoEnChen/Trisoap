@@ -12,11 +12,6 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <!-- custom css -->
         <link href="css/style.css" rel="stylesheet">
-        <script>
-        function show_text(){
-            alert("text");
-        }
-        </script>
     </head>
     <body id="page-top">
         <?php
