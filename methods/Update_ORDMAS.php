@@ -120,10 +120,10 @@
                                         $keytype = input('keytype');
                                         $keyvalue = input('keyvalue');
                                         if($keytype == null){
-                                            $queryORDMAS = "SELECT * FROM ORDMAS WHERE ACTCODE=1";
+                                            $queryORDMAS = "SELECT * FROM ORDMAS WHERE ACTCODE=1 AND PAYSTAT=1";
                                         }
                                         else{
-                                            $queryORDMAS = "SELECT * FROM ORDMAS WHERE ACTCODE=1 AND $keytype = '$keyvalue'";
+                                            $queryORDMAS = "SELECT * FROM ORDMAS WHERE ACTCODE=1 AND PAYSTAT=1 AND $keytype='$keyvalue'";
                                         }
                                         $result = mysql_query($queryORDMAS);
                                         $data_nums = mysql_num_rows($result);

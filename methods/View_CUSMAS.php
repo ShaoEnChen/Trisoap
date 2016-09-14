@@ -113,15 +113,32 @@
                                         $result = mysql_query($queryCustomer.' LIMIT '.$start.', '.$per);
                                         if($result != false){
                                             while($row = mysql_fetch_array($result)){
-                                                $queryEMAIL = $row['EMAIL'];
                                                 ?>
                                                 <tr>
                                                     <!-- 電子信箱 -->
                                                     <td>
-                                                        <form method="post" action="View_CUSMAS_Detail.php">
-                                                        <input type="hidden" name="EMAIL" value="<?echo $queryEMAIL;?>" />
-                                                        <input type="submit" name="button" value="<?echo $queryEMAIL;?>" />
-                                                        </form>
+                                                        <?
+                                                        $alert = '';
+                                                        $alert .= "電子信箱：".$row['EMAIL'].'\n';
+                                                        $alert .= "客戶姓名：".$row['CUSNM'].'\n';
+                                                        $alert .= "客戶地址：".$row['CUSADD'].'\n';
+                                                        $alert .= "客戶生日：".$row['CUSBIRTHY'].'/'.$row['CUSBIRTHM'].'/'.$row['CUSBIRTHD'].'\n';
+                                                        $alert .= "聯絡電話：".$row['TEL'].'\n';
+                                                        $alert .= "客戶膚質：".$row['CUSTYPE'].'\n';
+                                                        $alert .= "信用狀態：".$row['CREDITSTAT'].'\n';
+                                                        $alert .= "統一編號：".$row['TAXID'].'\n';
+                                                        $alert .= "累積折扣：".$row['DISCOUNT'].'\n';
+                                                        $alert .= "最近一月消費額：".$row['SALEAMTMTD'].'\n';
+                                                        $alert .= "最近一季消費額：".$row['SALEAMTSTD'].'\n';
+                                                        $alert .= "最近一年消費額：".$row['SALEAMTYTD'].'\n';
+                                                        $alert .= "總消費額：".$row['SALEAMT'].'\n';
+                                                        $alert .= "應收帳款：".$row['CURAR'].'\n';
+                                                        $alert .= "特殊需求：".$row['SPEINS'].'\n';
+                                                        $alert .= "建立時間：".$row['CREATEDATE'].'\n';
+                                                        $alert .= "最後修改時間：".$row['UPDATEDATE'].'\n';
+                                                        $alert .= "如何認識三三：".$row['KNOWTYPE'].'\n';
+                                                        ?>
+                                                        <button onclick="alert('<?echo $alert;?>');"><?echo $row['EMAIL'];?></button>
                                                     </td>
                                                     <!-- 客戶姓名 -->
                                                     <td><?echo $row['CUSNM'];?></td>

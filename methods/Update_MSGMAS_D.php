@@ -123,13 +123,16 @@
                                                     <!-- 顧客信箱 -->
                                                     <td><?echo $row['EMAIL'];?></td>
                                                     <!-- 留言文字 -->
-                                                    <td><?echo $row['MSGTXT'];?></td>
+                                                    <td>
+                                                        <? $text = $row['MSGTXT']; ?>
+                                                        <a href="#" onclick="alert('<?echo $text;?>');">顯示</a>
+                                                    </td>
                                                     <!-- 留言照片 -->
                                                     <td>
                                                         <?
                                                         if($row['MSGPHOTO'] == '1'){
                                                             echo "<a target=\"_blank\" href=\"../message/picture/$MSGNO.png\">";
-                                                            echo "<img src=\"../message/picture/$MSGNO.png\" width=\"360\" height=\"270\" />";
+                                                            echo "<img src=\"../message/picture/$MSGNO.png\" width=\"120\" height=\"90\" />";
                                                             echo "</a>";
                                                         }
                                                         ?>
@@ -139,7 +142,7 @@
                                                         <?
                                                         if($row['MSGVIDEO'] == '1'){
                                                             echo "<a target=\"_blank\" href=\"../message/video/$MSGNO.mp4\">";
-                                                            echo "<video width=\"360\" height=\"270\" controls>";
+                                                            echo "<video width=\"120\" height=\"90\" controls>";
                                                             echo "<source src=\"../message/video/$MSGNO.mp4\" type=\"video/mp4\">";
                                                             echo "</video>";
                                                             echo "</a>";

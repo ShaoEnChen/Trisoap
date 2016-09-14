@@ -9,7 +9,6 @@ $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $ORIGIN = $_SESSION['ORIGIN'];
 $ORDNO = $_SESSION['ORDNO'];
-$message = null;
 
 if($EMAIL != null && $CUSIDT == 'A'){
                 $INVOICENO = input('INVOICENO');
