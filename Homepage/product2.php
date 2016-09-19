@@ -151,7 +151,7 @@
                   <div class="panel-body">小農食在 －－ 清淨後花園的金針故鄉<br>
                   金絲森林渲染皂當中的金針，乃是由「小農食在」所提供。小農食在的金針花田，有別於一般種植於高山上，而是在台東縣池上鄉的平地栽培，因此在非高山金針產季時，也能夠提供最新鮮的金針花。<br>
                   市面上的金針花的加工品，為保有其鮮豔色澤與延長保存期間，經常添加二氧化硫，使含硫量超標，這些含硫金針，亦稱為「紅針、有毒金針」。而小農食在在製作過程中，完全不添加亞硫酸及其他添加物，是用於製作肥皂最好、安心的無硫金針。<br>
-                  小農食在  https://www.facebook.com/pinganmipu/</div>
+                  小農食在  <a target="_blank" href="https://www.facebook.com/pinganmipu/">https://www.facebook.com/pinganmipu/</a></div>
                 </div>
               </div>
               <div class="panel panel-default">
