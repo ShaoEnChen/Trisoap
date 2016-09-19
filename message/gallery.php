@@ -58,34 +58,157 @@
 				<div class="container">
 					<div>
 						<h4>文字&nbsp;<i class="fa fa-pencil" aria-hidden="true"></i></h4>
-						<div class="row">
-							<div class="choice choice-text col-sm-6 col-md-4">
-								<p></p>
-							</div>
-							<div class="choice choice-text col-sm-6 col-md-4">
-								<p></p>
-							</div>
-							<div class="choice choice-text col-sm-6 col-md-4">
-								<p></p>
-							</div>
-						</div>
+						<?
+						session_start();
+						include_once("../methods/Helper/mysql_connect.php");
+
+						$query_msg_text = "SELECT * FROM MSGMAS WHERE MSGPHOTO = 0 AND MSGVIDEO = 0";
+						$results = mysql_query($query_msg_text);
+						if($results) {
+							$msg_num = mysql_num_rows($results);
+							$per = 3;
+							$html_rows_num = ceil($msg_num / $per);
+
+							for($i = 0; $i < $html_rows_num; $i++) {
+						?>
+								<div class="row">
+									<?
+									for($j = 0; $j < $per; $j++) {
+										$result = mysql_fetch_array($results);
+										if($result) {
+									?>
+											<div class="choice choice-text col-sm-6 col-md-4">
+												<p class="msg-text"><?echo $result['MSGTXT']; ?></p>
+												<p class="author">
+													<?
+														$cus_email = $result['EMAIL'];
+														$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
+														$cusnm_result = mysql_query($query_cusnm);
+														if($cusnm_result) {
+															echo mysql_result($cusnm_result, 0);
+														}
+														else {
+															echo $cus_email;
+														}
+													?>
+												</p>
+											</div>
+									<?
+										}
+									}
+									?>
+								</div>
+							<?
+							}
+						}
+						else {
+							?>
+							<p class="alarm-no-content">暫無內容！</p>
+							<?
+						}
+						?>
 					</div>
 					<div>
 						<h4>照片&nbsp;<i class="fa fa-camera" aria-hidden="true"></i></h4>
-						<div class="row">
-							<div class="choice choice-photo col-sm-6 col-md-4">
-								<img src="image/choice-photo.jpg">
-								<div class="desc">123</div>
-							</div>
-						</div>
+						<?
+						$query_msg_photo = "SELECT * FROM MSGMAS WHERE MSGPHOTO = 1 AND MSGVIDEO = 0";
+						$results = mysql_query($query_msg_photo);
+						if($results) {
+							$msg_num = mysql_num_rows($results);
+							$per = 3;
+							$html_rows_num = ceil($msg_num / $per);
+
+							for($i = 0; $i < $html_rows_num; $i++) {
+						?>
+								<div class="row">
+									<?
+									for($j = 0; $j < $per; $j++) {
+										$result = mysql_fetch_array($results);
+										if($result) {
+											$msgno = $result['MSGNO'];
+									?>
+											<div class="choice choice-photo col-sm-6 col-md-4">
+												<img src="picture/<? echo $msgno; ?>.png">
+												<div class="desc"><?echo $result['MSGTXT']; ?></div>
+												<p class="author">
+													<?
+														$cus_email = $result['EMAIL'];
+														$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
+														$cusnm_result = mysql_query($query_cusnm);
+														if($cusnm_result) {
+															echo mysql_result($cusnm_result, 0);
+														}
+														else {
+															echo $cus_email;
+														}
+													?>
+												</p>
+											</div>
+									<?
+										}
+									}
+									?>
+								</div>
+							<?
+							}
+						}
+						else {
+							?>
+							<p class="alarm-no-content">暫無內容！</p>
+							<?
+						}
+						?>
 					</div>
 					<div>
 						<h4>影片&nbsp;<i class="fa fa-video-camera" aria-hidden="true"></i></h4>
-						<div class="row">
-							<div class="choice choice-video col-sm-6 col-md-4">
-								<div class="desc">123</div>
-							</div>
-						</div>
+						<?
+						$query_msg_video = "SELECT * FROM MSGMAS WHERE MSGPHOTO = 0 AND MSGVIDEO = 1";
+						$results = mysql_query($query_msg_video);
+						if($results) {
+							$msg_num = mysql_num_rows($results);
+							$per = 3;
+							$html_rows_num = ceil($msg_num / $per);
+
+							for($i = 0; $i < $html_rows_num; $i++) {
+						?>
+								<div class="row">
+									<?
+									for($j = 0; $j < $per; $j++) {
+										$result = mysql_fetch_array($results);
+										if($result) {
+											$msgno = $result['MSGNO'];
+									?>
+											<div class="choice choice-video col-sm-6 col-md-4">
+												<!-- video here -->
+												<div class="desc"><?echo $result['MSGTXT']; ?></div>
+												<p class="author">
+													<?
+														$cus_email = $result['EMAIL'];
+														$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
+														$cusnm_result = mysql_query($query_cusnm);
+														if($cusnm_result) {
+															echo mysql_result($cusnm_result, 0);
+														}
+														else {
+															echo $cus_email;
+														}
+													?>
+												</p>
+											</div>
+									<?
+										}
+									}
+									?>
+								</div>
+							<?
+							}
+						}
+						else {
+							?>
+							<p class="alarm-no-content">暫無內容！</p>
+							<?
+						}
+						?>
 					</div>
 				</div>
 			</section>

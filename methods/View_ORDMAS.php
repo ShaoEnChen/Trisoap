@@ -117,20 +117,20 @@ function show_PAYTYPE($id){
                             <tbody>
                                 <?
                                 if($EMAIL != null){
-                                    $queryORDMAS = "SELECT * FROM ORDMAS WHERE EMAIL = '$EMAIL' AND ACTCODE=1";
+                                    $queryORDMAS = "SELECT * FROM ORDMAS WHERE EMAIL = '$EMAIL' AND ACTCODE = 1";
                                     $result = mysql_query($queryORDMAS);
                                     $data_nums = mysql_num_rows($result);
                                     $per = 15; 
-                                    $pages = ceil($data_nums/$per); 
+                                    $pages = ceil($data_nums / $per);
                                     if(!isset($_GET["page"])){ 
-                                        $page=1; 
+                                        $page = 1; 
                                     }
                                     else {
                                         $page = intval($_GET["page"]); 
                                     }
-                                    $start = ($page-1)*$per; 
+                                    $start = ($page-1) * $per; 
                                     $result = mysql_query($queryORDMAS.' LIMIT '.$start.', '.$per);
-                                    if($result != false){
+                                    if($result != false) {
                                         while($row = mysql_fetch_array($result)){
                                             $ORDNO = $row['ORDNO'];
                                             ?>
