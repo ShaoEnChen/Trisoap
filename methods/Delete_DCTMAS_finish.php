@@ -20,6 +20,10 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if($DCTID == null){
                 $message .= $message . '折扣兌換碼欄位不可空白 \n';
         }
+        $queryDCT = search('DCTID', 'DCTMAS', 'DCTID', $DCTID);
+        if($queryDCT == null){
+                $message .= $message . '查無此折扣兌換碼 \n';
+        }
 
         if($message == null){
                 $sql = "UPDATE DCTMAS SET ACTCODE = '0' WHERE DCTID = '$DCTID'";
