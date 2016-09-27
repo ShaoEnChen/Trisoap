@@ -130,7 +130,7 @@
           <div class="col-md-8">
             <h3 class="no-pad">誠摯邀請您，輕鬆填寫連結表單，免費試用，體驗天然純淨的洗感，加入三三擁者的行列！ </h3>
           </div>
-          <div class="col-md-4"><a href="https://trisoap.typeform.com/to/voNGpg" class="btn btn-dark">免費試用 </a></div>
+          <div class="col-md-4"><a target="_blank" href="https://trisoap.typeform.com/to/voNGpg" class="btn btn-dark">免費試用 </a></div>
         </div>
       </div>
     </div>

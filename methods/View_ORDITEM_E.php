@@ -47,7 +47,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
     echo "運輸費用：".$row['SHIPFEE']."<br>";
     echo "訂單總值：".$row['TOTALAMT']."<br>";
     echo "實收金額：".$row['REALPRICE']."<br>";
-    echo "建立日期：".$row['CREATEDATE']."</br>";
+    echo "建立日期：".$row['CREATEDATE']."<br><br>";
     ?>
     訂單狀態：<select name="ORDSTAT">
         <option value="E">待執行</option>

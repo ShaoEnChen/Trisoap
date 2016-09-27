@@ -26,6 +26,9 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if($real == null){
                 $message .= '銷售總額不可空白 \n';
         }
+        if($invoice == null){
+                $message .= '發票號碼不可空白 \n';
+        }
         else{
                 if(is_numeric($real) == FALSE || $real < 0 || is_float($real)){
                         $message .= '銷售總額必須為正整數 \n';

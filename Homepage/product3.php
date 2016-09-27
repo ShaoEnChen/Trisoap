@@ -151,7 +151,7 @@
                   <div class="panel-body">釋迦小羊牧場 －－ 青綠糖蘋果的純真天堂<br>
                   座落太麻里的「釋迦小羊牧場」。牧場在向陽面陽光充足的情況下，搭配上山泉水的灌溉，產出的台東二號釋迦碩大又飽滿。堅持產地自銷，從施肥、剪枝、開花、授粉、疏果、除草、套袋，親手處理每一個從小羊牧場產出的釋迦；對於各種細節的注重，以及對於果實品質安全的堅持，都可看出負責人陳志韋的認真和堅毅。<br>
                   高溫後的降雨容易使釋迦產生裂果，裂果賣相不佳，常是小農的困擾。三三向釋迦小羊牧場合作購買部分裂果，純手工取出果泥、果皮與果沙整顆果實充分利用，製作成三三臺東意象的原料之一。「裂果的釋迦，像是在開懷大笑的小羊。」<br>
-                  釋迦小羊牧場  https://www.facebook.com/taimalicustardapple/</div>
+                  釋迦小羊牧場  <a target="_blank" href="https://www.facebook.com/taimalicustardapple/">https://www.facebook.com/taimalicustardapple/</a></div>
                 </div>
               </div>
               <div class="panel panel-default">

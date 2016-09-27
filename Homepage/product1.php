@@ -150,7 +150,7 @@
                   <div class="panel-body">高家米倉 －－ 田園風的原始餐桌<br>
                   田靜山巒禾風皂，其中的米糠乃是由台東池上的「高家米倉」合作提供。產量不到全台灣1%極為珍貴的高家米倉池上米，位於花東縱谷制高點的池上鄉，擁有肥沃土壤及清澈水質，在零工業污染的潔淨環境孕育出的高品質稻米，是我們的首選素材。<br>
                   從嚴謹的檢驗過程、精密的倉儲量控管、不定期的抽查及農藥殘毒檢驗，對於每項品質把關程序都不馬虎，這是高媽媽對池上米栽培發展的堅持，也是我們選擇高家米倉池上米的信念。<br>
-                  高家米倉  http://atp.cs.gov.tw/rplace.php</div>
+                  高家米倉  <a target="_blank" href="http://atp.cs.gov.tw/rplace.php">http://atp.cs.gov.tw/rplace.php</a></div>
                 </div>
               </div>
               <div class="panel panel-default">
