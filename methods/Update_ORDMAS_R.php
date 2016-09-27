@@ -99,7 +99,7 @@
                                     </thead>
                                     <tbody>
                                     <?
-                                        $queryORDMAS = "SELECT * FROM ORDMAS WHERE ACTCODE=1 AND ORDSTAT='R'";
+                                        $queryORDMAS = "SELECT * FROM ORDMAS WHERE ACTCODE=1 AND ORDSTAT='R' AND BACKSTAT=0";
                                         $result = mysql_query($queryORDMAS);
                                         $data_nums = mysql_num_rows($result);
                                         $per = 15; 

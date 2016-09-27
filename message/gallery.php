@@ -62,7 +62,7 @@
 						session_start();
 						include_once("../methods/Helper/mysql_connect.php");
 
-						$query_msg_text = "SELECT * FROM MSGMAS WHERE MSGPHOTO = 0 AND MSGVIDEO = 0";
+						$query_msg_text = "SELECT * FROM MSGMAS WHERE MSGPHOTO = 0 AND MSGVIDEO = 0 AND MSGSTAT = 'D' AND ACTCODE = 1";
 						$results = mysql_query($query_msg_text);
 						if($results) {
 							$msg_num = mysql_num_rows($results);
@@ -79,7 +79,7 @@
 									?>
 											<div class="choice choice-text col-sm-6 col-md-4">
 												<p class="msg-text"><?echo $result['MSGTXT']; ?></p>
-												<p class="author">
+												<p class="author"> -
 													<?
 														$cus_email = $result['EMAIL'];
 														$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
@@ -111,7 +111,7 @@
 					<div>
 						<h4>照片&nbsp;<i class="fa fa-camera" aria-hidden="true"></i></h4>
 						<?
-						$query_msg_photo = "SELECT * FROM MSGMAS WHERE MSGPHOTO = 1 AND MSGVIDEO = 0";
+						$query_msg_photo = "SELECT * FROM MSGMAS WHERE MSGPHOTO = 1 AND MSGSTAT = 'D' AND ACTCODE = 1";
 						$results = mysql_query($query_msg_photo);
 						if($results) {
 							$msg_num = mysql_num_rows($results);
@@ -129,8 +129,12 @@
 									?>
 											<div class="choice choice-photo col-sm-6 col-md-4">
 												<img src="picture/<? echo $msgno; ?>.png">
-												<div class="desc"><?echo $result['MSGTXT']; ?></div>
-												<p class="author">
+												<div class="desc">
+													<p>
+														<?echo $result['MSGTXT']; ?>
+													</p>
+												</div>
+												<p class="author"> -
 													<?
 														$cus_email = $result['EMAIL'];
 														$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
@@ -162,7 +166,7 @@
 					<div>
 						<h4>影片&nbsp;<i class="fa fa-video-camera" aria-hidden="true"></i></h4>
 						<?
-						$query_msg_video = "SELECT * FROM MSGMAS WHERE MSGPHOTO = 0 AND MSGVIDEO = 1";
+						$query_msg_video = "SELECT * FROM MSGMAS WHERE MSGVIDEO = 1 AND MSGSTAT = 'D' AND ACTCODE = 1";
 						$results = mysql_query($query_msg_video);
 						if($results) {
 							$msg_num = mysql_num_rows($results);
@@ -180,8 +184,11 @@
 									?>
 											<div class="choice choice-video col-sm-6 col-md-4">
 												<!-- video here -->
+												<video controls>
+													<source type="video/mp4" src="video/<? echo $msgno; ?>.mp4"></iframe>
+												</video>
 												<div class="desc"><?echo $result['MSGTXT']; ?></div>
-												<p class="author">
+												<p class="author"> -
 													<?
 														$cus_email = $result['EMAIL'];
 														$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
@@ -228,7 +235,9 @@
 							<p class="small">&copy;2016 TriSoap All Rights Reserved</p>
 						</div>
 						<div class="col-sm-4 contact">
-				          	<a href="../Homepage/contact.php">聯絡我們</a>
+				          	<p>
+				          		<a href="../Homepage/contact.php">聯絡我們</a>
+				          	</p>
 				          	<?
 				          	include("../methods/Helper/mysql_connect.php");
 				            include("../methods/Helper/sql_operation.php");
@@ -237,8 +246,12 @@
 							$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
 							?>
 			            	<p>
-			            		<i class="fa fa-phone fa-fw fa-lg"></i> <?echo $COMTEL;?> <br>
-								<i class="fa fa-envelope fa-fw fa-lg"></i> <?echo $COMEMAIL;?> <br>
+			            		<i class="fa fa-phone fa-fw fa-lg"></i> <?echo $COMTEL;?>
+		            		</p>
+		            		<p>
+								<i class="fa fa-envelope fa-fw fa-lg"></i> <?echo $COMEMAIL;?>
+		            		</p>
+		            		<p>
 								<i class="fa fa-map-marker fa-fw fa-lg"></i> <?echo $COMADD;?>
 			            	</p>
 			          	</div>

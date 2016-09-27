@@ -24,8 +24,15 @@
     <nav class="navbar navbar-custom navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#page-top" class="navbar-brand page-scroll">
-            <!-- Img or text logo--><img src="img/logo2.png" alt="" class="logo"></a>
+          <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#page-top" class="navbar-brand page-scroll">
+          <!-- Img or text logo-->
+          <img src="img/logo2.png" alt="" class="logo"></a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
           <ul class="nav navbar-nav navbar-left">
