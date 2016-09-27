@@ -43,7 +43,7 @@
             </li>
             <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <li><a href="#" onClick="closed()">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <?
             session_start();
             $CUSIDT = $_SESSION['CUSIDT'];

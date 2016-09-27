@@ -59,7 +59,7 @@
 
         if($number != 0){
             // $shipfee = search('SHIPFEE', 'ORDMAS', 'ORDNO', $ORDNO);
-            $shipfee = 20;  //need revise
+            $shipfee = 70;
             $total = $shipfee;
             $discount = search('DISCOUNT', 'CUSMAS', 'EMAIL', $EMAIL);
             $total -= $discount;
