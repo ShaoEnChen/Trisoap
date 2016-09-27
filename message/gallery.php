@@ -57,15 +57,20 @@
 			<section class="content">
 				<div class="container">
 					<div>
-						<h4>文字&nbsp;<i class="fa fa-pencil" aria-hidden="true"></i></h4>
+						<h4>
+							文字&nbsp;
+							<a href="../methods/Create_MSGMAS.php">
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+							</a>
+						</h4>
 						<?
 						session_start();
 						include_once("../methods/Helper/mysql_connect.php");
 
 						$query_msg_text = "SELECT * FROM MSGMAS WHERE MSGPHOTO = 0 AND MSGVIDEO = 0 AND MSGSTAT = 'D' AND ACTCODE = 1";
 						$results = mysql_query($query_msg_text);
-						if($results) {
-							$msg_num = mysql_num_rows($results);
+						$msg_num = mysql_num_rows($results);
+						if($msg_num) {
 							$per = 3;
 							$html_rows_num = ceil($msg_num / $per);
 
@@ -77,7 +82,7 @@
 										$result = mysql_fetch_array($results);
 										if($result) {
 									?>
-											<div class="choice choice-text col-sm-6 col-md-4">
+											<div class="choice col-sm-6 col-md-4">
 												<p class="msg-text"><?echo $result['MSGTXT']; ?></p>
 												<p class="author"> -
 													<?
@@ -95,6 +100,9 @@
 											</div>
 									<?
 										}
+										else {
+											break;
+										}
 									}
 									?>
 								</div>
@@ -104,17 +112,22 @@
 						else {
 							?>
 							<p class="alarm-no-content">暫無內容！</p>
-							<?
+						<?
 						}
 						?>
 					</div>
 					<div>
-						<h4>照片&nbsp;<i class="fa fa-camera" aria-hidden="true"></i></h4>
+						<h4>
+							照片&nbsp;
+							<a href="../methods/Create_MSGMAS.php">
+								<i class="fa fa-camera" aria-hidden="true"></i>
+							</a>
+						</h4>
 						<?
 						$query_msg_photo = "SELECT * FROM MSGMAS WHERE MSGPHOTO = 1 AND MSGSTAT = 'D' AND ACTCODE = 1";
 						$results = mysql_query($query_msg_photo);
-						if($results) {
-							$msg_num = mysql_num_rows($results);
+						$msg_num = mysql_num_rows($results);
+						if($msg_num) {
 							$per = 3;
 							$html_rows_num = ceil($msg_num / $per);
 
@@ -159,17 +172,21 @@
 						else {
 							?>
 							<p class="alarm-no-content">暫無內容！</p>
-							<?
+						<?
 						}
 						?>
 					</div>
 					<div>
-						<h4>影片&nbsp;<i class="fa fa-video-camera" aria-hidden="true"></i></h4>
+						<h4>影片&nbsp;
+							<a href="../methods/Create_MSGMAS.php">
+								<i class="fa fa-video-camera" aria-hidden="true"></i>
+							</a>
+						</h4>
 						<?
 						$query_msg_video = "SELECT * FROM MSGMAS WHERE MSGVIDEO = 1 AND MSGSTAT = 'D' AND ACTCODE = 1";
 						$results = mysql_query($query_msg_video);
-						if($results) {
-							$msg_num = mysql_num_rows($results);
+						$msg_num = mysql_num_rows($results);
+						if($msg_num) {
 							$per = 3;
 							$html_rows_num = ceil($msg_num / $per);
 
@@ -213,7 +230,7 @@
 						else {
 							?>
 							<p class="alarm-no-content">暫無內容！</p>
-							<?
+						<?
 						}
 						?>
 					</div>

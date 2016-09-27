@@ -82,8 +82,8 @@ hr {
 	margin: 140px auto 0 auto;
 	background-color: #fff;
 	max-width: 90%;
-	-webkit-animation: left-in 1500ms ease 1;
-			animation: left-in 1500ms ease 1;
+	-webkit-animation: left-in 1000ms ease 1;
+			animation: left-in 1000ms ease 1;
 }
 .intro h1 {
 	color: #56EAD8;
@@ -130,28 +130,11 @@ hr {
 .choices {
 	text-align: center;
 }
-@media (max-width: 767px) {
-	.choice {
-		width: 90%;
-		margin: 20px auto;
-	}
-}
-@media (min-width: 768px) {
-	.choice {
-		width: 48%;
-		margin: 20px 1%;
-	}
-}
-@media (min-width: 992px) {
-	.choice {
-		width: 31%;
-		margin: 20px 1%;
-	}
-}
 .choice {
 	background-color: #fff;
 	/* 高度上限 */
 	max-height: 340px;
+	margin: 20px 10px;
 	padding: 50px;
 	/* 自動生成滾軸 */
 	overflow: auto;
@@ -174,18 +157,17 @@ hr {
 }
 
 .choice-video {
-	padding: 50px 10px;
+	padding: 50px;
 }
 .choice-video video {
 	width: 100%;
 	height: auto;
 }
 
-/* 精選相片/影片 */
-.selected {
-	margin-top: 10px;
-	width: 100%;
-	height: auto;
+/* Arrows */
+.slick-prev:before,
+.slick-next:before {
+	font-size: 30px;
 }
 
 /* footer */

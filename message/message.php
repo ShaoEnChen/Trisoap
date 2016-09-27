@@ -10,6 +10,9 @@
 		<meta name="description" content="">
 		<!-- bootstrap css -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- slick css -->
+		<link href="slick/slick.css" rel="stylesheet">
+		<link href="slick/slick-theme.css" rel="stylesheet">
 		<!-- custom css -->
 		<link href="css/message.css" rel="stylesheet">
 	</head>
@@ -73,101 +76,98 @@
 					</div>
 					<div class="choices">
 						<h4>精采選集</h4>
-						<div class="row">
-							<div class="choice choice-text col-md-4">
-								<p>
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-									蒹葭蒼蒼，白露為霜。
-									所謂伊人，在水一方。
-									溯洄從之，道阻且長。
-									溯游從之，宛在水中央。
-								</p>
-							</div>
-							<div class="choice choice-photo col-md-4">
-								<div class="desc">
-									<p>
-										<3
-									</p>
-								</div>
-								<img src="image/choice-photo.jpg" alt="精選相片" class="selected">
-							</div>
-							<div class="choice choice-text col-md-4">
-								<p>
-									蒹葭采采，白露未已。
-									所謂伊人，在水之涘。
-									溯洄從之，道阻且右。
-									溯游從之，宛在水中沚。
-									蒹葭采采，白露未已。
-									所謂伊人，在水之涘。
-									溯洄從之，道阻且右。
-									溯游從之，宛在水中沚。
-								</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="choice choice-text col-md-4">
-								<p>
-									謝謝
-								</p>
-							</div>
-							<div class="choice choice-text col-md-4">
-								<p>
-									蒹葭采采，白露未已。
-									所謂伊人，在水之涘。
-									溯洄從之，道阻且右。
-									溯游從之，宛在水中沚。
-									蒹葭采采，白露未已。
-									所謂伊人，在水之涘。
-									溯洄從之，道阻且右。
-									溯游從之，宛在水中沚。
-									蒹葭采采，白露未已。
-									所謂伊人，在水之涘。
-									溯洄從之，道阻且右。
-									溯游從之，宛在水中沚。
-									蒹葭采采，白露未已。
-									所謂伊人，在水之涘。
-									溯洄從之，道阻且右。
-									溯游從之，宛在水中沚。
-									蒹葭采采，白露未已。
-									所謂伊人，在水之涘。
-									溯洄從之，道阻且右。
-									溯游從之，宛在水中沚。
-									蒹葭采采，白露未已。
-									所謂伊人，在水之涘。
-									溯洄從之，道阻且右。
-									溯游從之，宛在水中沚。
-								</p>
-							</div>
-							<div class="choice choice-photo col-md-4">
-								<div class="desc">
-									<p>
-										蒹葭蒼蒼，白露為霜。
-										所謂伊人，在水一方。
-										溯洄從之，道阻且長。
-										溯游從之，宛在水中央。
-									</p>
-								</div>
-								<img src="image/choice-photo.jpg" alt="精選相片" class="selected">
-							</div>
+						<div class="slickshow">
+							<?
+							session_start();
+							include_once("../methods/Helper/mysql_connect.php");
+
+							$query = "SELECT * FROM MSGMAS WHERE ACTCODE = 1";
+							$results = mysql_query($query);
+							$msg_num = mysql_num_rows($results);
+							if($msg_num) {
+								for($i = 0; $i < $msg_num; $i++) {
+									$result = mysql_fetch_array($results);
+									// text only
+									if($result['MSGPHOTO'] == 0 && $result['MSGVIDEO'] == 0) {
+							?>
+										<div class="choice">
+											<p class="msg-text"><?echo $result['MSGTXT']; ?></p>
+											<p class="author"> -
+												<?
+													$cus_email = $result['EMAIL'];
+													$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
+													$cusnm_result = mysql_query($query_cusnm);
+													if($cusnm_result) {
+														echo mysql_result($cusnm_result, 0);
+													}
+													else {
+														echo $cus_email;
+													}
+												?>
+											</p>
+										</div>
+									<?
+									}
+									else {
+										$msgno = $result['MSGNO'];
+										if($result['MSGPHOTO'] == 1) {
+									?>
+											<div class="choice choice-photo">
+												<img src="picture/<? echo $msgno; ?>.png">
+												<div class="desc">
+													<p>
+														<?echo $result['MSGTXT']; ?>
+													</p>
+												</div>
+												<p class="author"> -
+													<?
+														$cus_email = $result['EMAIL'];
+														$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
+														$cusnm_result = mysql_query($query_cusnm);
+														if($cusnm_result) {
+															echo mysql_result($cusnm_result, 0);
+														}
+														else {
+															echo $cus_email;
+														}
+													?>
+												</p>
+											</div>
+									<?
+										}
+										if($result['MSGVIDEO'] == 1) {
+									?>
+											<div class="choice choice-video">
+												<!-- video here -->
+												<video controls>
+													<source type="video/mp4" src="video/<? echo $msgno; ?>.mp4"></iframe>
+												</video>
+												<div class="desc"><?echo $result['MSGTXT']; ?></div>
+												<p class="author"> -
+													<?
+														$cus_email = $result['EMAIL'];
+														$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
+														$cusnm_result = mysql_query($query_cusnm);
+														if($cusnm_result) {
+															echo mysql_result($cusnm_result, 0);
+														}
+														else {
+															echo $cus_email;
+														}
+													?>
+												</p>
+											</div>
+							<?
+										}
+									}
+								}
+							}
+							else {
+							?>
+								<p class="alarm-no-content">暫無內容！</p>
+							<?
+							}
+							?>
 						</div>
 					</div>
 				</div>
@@ -188,7 +188,9 @@
 							<p class="small">&copy;2016 TriSoap All Rights Reserved</p>
 						</div>
 						<div class="col-sm-4">
-				          	<a href="../Homepage/contact.php">聯絡我們</a>
+				          	<p>
+				          		<a href="../Homepage/contact.php">聯絡我們</a>
+				          	</p>
 				          	<?
 				          	include("../methods/Helper/mysql_connect.php");
 				            include("../methods/Helper/sql_operation.php");
@@ -198,7 +200,11 @@
 							?>
 			            	<p>
 			            		<i class="fa fa-phone fa-fw fa-lg"></i> <?echo $COMTEL;?> <br>
+							</p>
+							<p>
 								<i class="fa fa-envelope fa-fw fa-lg"></i> <?echo $COMEMAIL;?> <br>
+							</p>
+							<p>
 								<i class="fa fa-map-marker fa-fw fa-lg"></i> <?echo $COMADD;?>
 			            	</p>
 			          	</div>
@@ -211,6 +217,8 @@
 	<script src="js/jquery-1.12.3.min.js"></script>
 	<!-- bootstrap js -->
 	<script src="js/bootstrap.min.js"></script>
+	<!-- slick -->
+	<script src="slick/slick.min.js"></script>
 	<!-- custom js -->
 	<script src="js/message.js"></script>
 </html>
