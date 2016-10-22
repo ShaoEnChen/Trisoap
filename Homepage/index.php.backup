@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="Homepage/img/misc/favicon.png">
+    <link rel="shortcut icon" href="img/misc/favicon.png">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>三三社企</title>
     <!-- Bootstrap Core CSS-->
-    <link href="Homepage/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- FlexSlider CSS -->
     <link href="../FlexSlider/flexslider.css" rel="stylesheet">
     <!-- Custom CSS-->
-    <link href="Homepage/css/trisoap.css" rel="stylesheet">
+    <link href="css/trisoap.css" rel="stylesheet">
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
     <!-- Preloader-->
@@ -32,7 +32,7 @@
           </button>
           <a href="#page-top" class="navbar-brand page-scroll">
           <!-- Img or text logo-->
-          <img src="Homepage/img/logo2.png" alt="" class="logo"></a>
+          <img src="img/logo2.png" alt="" class="logo"></a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
           <ul class="nav navbar-nav navbar-left">
@@ -40,13 +40,13 @@
             <li><a href="/">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href=#>關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="Homepage/about.php">三三團隊</a></li>
-                <li><a href="Homepage/faq.php">顧客問答</a></li>
-                <li><a href="Homepage/contact.php">聯絡我們</a></li>
+                <li><a href="about.php">三三團隊</a></li>
+                <li><a href="faq.php">顧客問答</a></li>
+                <li><a href="contact.php">聯絡我們</a></li>
               </ul>
             </li>
-            <li><a href="Homepage/product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <li><a href="Homepage/service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <?
             session_start();
@@ -115,13 +115,13 @@
       <div class="container-fluid flexslider">
         <ul class="slides">
           <li>
-            <img class="flexslides" src="Homepage/img/index1.png">
+            <img class="flexslides" src="img/index1.png">
             <div id="slide-textarea1">
               <p class="slide-text" id="slide-text1">三三手皂<br>x<br>來自吾鄉</p>
             </div>
           </li>
           <li>
-            <img class="flexslides" src="Homepage/img/index2.png">
+            <img class="flexslides" src="img/index2.png">
             <div id="slide-textarea2-1">
               <span class="slide-text" id="slide-text2-1-1">小農</span>
               <span class="slide-text" id="slide-text2-1-2">素材</span>
@@ -135,13 +135,13 @@
             </div>
           </li>
           <li>
-            <img class="flexslides" src="Homepage/img/index3.png">
+            <img class="flexslides" src="img/index3.png">
             <div id="slide-textarea3">
               <p class="slide-text" id="slide-text3">每一顆手工皂，<br>都是注入憨兒們歡笑的純淨手作。</p>
             </div>
           </li>
           <li>
-            <img class="flexslides" src="Homepage/img/index4.png">
+            <img class="flexslides" src="img/index4.png">
             <div id="slide-textarea4">
               <p class="slide-text" id="slide-text4">手作的溫度</p>
             </div>
@@ -186,8 +186,8 @@
                 <li data-target="#carousel-light" data-slide-to="1"></li>
               </ol>
               <div role="listbox" class="carousel-inner">
-                <div class="item active"><img src="Homepage/img/production1.jpg" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="Homepage/img/production2.png" alt="" class="img-responsive center-block"></div>
+                <div class="item active"><img src="img/production1.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/production2.png" alt="" class="img-responsive center-block"></div>
               </div>
             </div>
           </div>
@@ -213,9 +213,9 @@
                 <li data-target="#carousel-light2" data-slide-to="2"></li>
               </ol>
               <div role="listbox" class="carousel-inner">
-                <div class="item active"><img src="Homepage/img/farmer1.jpg" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="Homepage/img/farmer2.png" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="Homepage/img/farmer3.png" alt="" class="img-responsive center-block"></div>
+                <div class="item active"><img src="img/farmer1.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/farmer2.png" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/farmer3.png" alt="" class="img-responsive center-block"></div>
               </div>
             </div>
           </div>
@@ -286,31 +286,31 @@
       </div>
     </section>
     <!-- jQuery-->
-    <script src="Homepage/js/jquery-1.12.3.min.js"></script>
+    <script src="js/jquery-1.12.3.min.js"></script>
     <!-- Bootstrap Core JavaScript-->
-    <script src="Homepage/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- Plugin JavaScript-->
-    <script src="Homepage/js/jquery.easing.min.js"></script>
-    <script src="Homepage/js/jquery.countdown.min.js"></script>
-    <script src="Homepage/js/device.min.js"></script>
-    <script src="Homepage/js/form.min.js"></script>
-    <script src="Homepage/js/jquery.placeholder.min.js"></script>
-    <script src="Homepage/js/jquery.shuffle.min.js"></script>
-    <script src="Homepage/js/jquery.parallax.min.js"></script>
-    <script src="Homepage/js/jquery.circle-progress.min.js"></script>
-    <script src="Homepage/js/jquery.swipebox.min.js"></script>
-    <script src="Homepage/js/smoothscroll.min.js"></script>
-    <script src="Homepage/js/tweecool.min.js"></script>
-    <script src="Homepage/js/wow.min.js"></script>
-    <script src="Homepage/js/jquery.smartmenus.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/form.min.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/jquery.parallax.min.js"></script>
+    <script src="js/jquery.circle-progress.min.js"></script>
+    <script src="js/jquery.swipebox.min.js"></script>
+    <script src="js/smoothscroll.min.js"></script>
+    <script src="js/tweecool.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.smartmenus.js"></script>
     <!-- FlexSlider JS -->
     <script src="../FlexSlider/jquery.flexslider-min.js"></script>
         <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/-->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3E86i8mx1BZDlAaLcknh_mWl4F70i4os"></script>
-        <script src="Homepage/js/map.js"></script>
+        <script src="js/map.js"></script>
     <!-- Custom Theme JavaScript-->
-    <script src="Homepage/js/pheromone.js"></script>
-    <script src="Homepage/js/custom.js"></script>
+    <script src="js/pheromone.js"></script>
+    <script src="js/custom.js"></script>
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

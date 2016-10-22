@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse navbar-main-collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="hidden"><a href="#page-top"></a></li>
-            <li><a href="index.php">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="/">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href=#>關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="about.php">三三團隊</a></li>

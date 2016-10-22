@@ -116,7 +116,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?
+                                    <?php
                                         $keytype = input('keytype');
                                         $keyvalue = input('keyvalue');
                                         if($keytype == null){
@@ -169,7 +169,7 @@
                                                 <!-- 建立日期 -->
                                                 <td><?php echo $row['CREATEDATE'];?></td>
                                             </tr>
-                                            <?
+                                            <?php
                                             }
                                         }
                                     ?>
@@ -201,7 +201,7 @@
                 redirect("../Homepage/index.php");
                 alert("您無權限觀看此頁面!");
                 </script>
-                <?
+                <?php
             }
         ?>
     </body>
