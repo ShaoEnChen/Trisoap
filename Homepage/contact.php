@@ -44,16 +44,16 @@
             <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <?
+            <?php
             session_start();
-            include("../methods/Helper/mysql_connect.php");
-            include("../methods/Helper/sql_operation.php");
+            include "../methods/Helper/mysql_connect.php";
+            include "../methods/Helper/sql_operation.php";
             $COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
             $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
             $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
             $CUSIDT = $_SESSION['CUSIDT'];
             if($CUSIDT == 'A'){
-              ?>
+            ?>
               <li><a href="#">管理平台<i class="fa fa-angle-down"></i><span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="../methods/Update_Manager.php">權限管理</a></li>
@@ -97,7 +97,7 @@
                   <li><a href="../methods/User_login.php">登入</a></li>
                 </ul>
               </li>
-              <?
+              <?php
             }
             ?>
           </ui>
@@ -206,7 +206,7 @@
     <script src="js/tweecool.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.smartmenus.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGuJZxSh8-7yols35KtdE21XJI-GBlRGo"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkgvqaeUhwvRuSvrBjp9OCZOgP2mPGL9M"></script>
     <script src="js/map.js"></script>
     <!-- Custom Theme JavaScript-->
     <script src="js/pheromone.js"></script>

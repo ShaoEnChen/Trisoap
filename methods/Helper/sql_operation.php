@@ -1,5 +1,6 @@
-<?
+<?php
 include_once(dirname(__FILE__)."/mysql_connect.php");
+// include_once("mysql_connect.php");
 
 function delete($db, $con, $con_value){
 	if(!mysql_query("UPDATE $db SET ACTCODE = 0 WHERE $con = '$con_value'"))
