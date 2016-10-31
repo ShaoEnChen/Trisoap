@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse navbar-main-collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="hidden"><a href="#page-top"></a></li>
-            <li><a href="index.php">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="/">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href=#>關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="about.php">三三團隊</a></li>
@@ -43,7 +43,7 @@
             </li>
             <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <li><a href="#" onClick="closed()">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+            <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <?
             session_start();
             $CUSIDT = $_SESSION['CUSIDT'];

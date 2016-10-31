@@ -49,7 +49,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="../Homepage/index.php">
+								<a href="/">
 									回到首頁
 								</a>
 							</li>

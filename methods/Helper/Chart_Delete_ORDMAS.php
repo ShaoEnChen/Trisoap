@@ -22,7 +22,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?
+                                <?php
                                     $queryORDMAS = "SELECT * FROM ORDMAS where EMAIL='$EMAIL' AND ORDSTAT='E' AND PAYSTAT='0' AND ACTCODE='1'";
                                     $result = mysql_query($queryORDMAS);
                                     $data_nums = mysql_num_rows($result);
@@ -41,36 +41,36 @@
                                         ?>
                                         <tr>
                                             <!-- 訂單編號 -->
-                                            <td><?echo $row['ORDNO'];?></td>
+                                            <td><?php echo $row['ORDNO'];?></td>
                                             <!-- 訂單種類 -->
-                                            <td><?show_ORDTYPE($row['ORDTYPE']);?></td>
+                                            <td><?php show_ORDTYPE($row['ORDTYPE']);?></td>
                                             <!-- 顧客編號 -->
-                                            <td><?echo $row['EMAIL'];?></td>
+                                            <td><?php echo $row['EMAIL'];?></td>
                                             <!-- 發票編號 -->
-                                            <td><?echo $row['INVOICENO'];?></td>
+                                            <td><?php echo $row['INVOICENO'];?></td>
                                             <!-- 缺貨狀態 -->
-                                            <td><?show_BACKSTAT($row['BACKSTAT']);?></td>
+                                            <td><?php show_BACKSTAT($row['BACKSTAT']);?></td>
                                             <!-- 訂單狀態 -->
-                                            <td><?show_ORDSTAT($row['ORDSTAT']);?></td>
+                                            <td><?php show_ORDSTAT($row['ORDSTAT']);?></td>
                                             <!-- 付款狀態 -->
-                                            <td><?show_PAYSTAT($row['PAYSTAT']);?></td>
+                                            <td><?php show_PAYSTAT($row['PAYSTAT']);?></td>
                                             <!-- 付款方式 -->
-                                            <td><?show_PAYTYPE($row['PAYTYPE']);?></td>
+                                            <td><?php show_PAYTYPE($row['PAYTYPE']);?></td>
                                             <!-- 訂單總額 -->
-                                            <td><?echo $row['TOTALPRICE'];?></td>
+                                            <td><?php echo $row['TOTALPRICE'];?></td>
                                             <!-- 訂單總值 -->
-                                            <td><?echo $row['TOTALAMT'];?></td>
+                                            <td><?php echo $row['TOTALAMT'];?></td>
                                             <!-- 建立日期 -->
-                                            <td><?echo $row['CREATEDATE'];?></td>
+                                            <td><?php echo $row['CREATEDATE'];?></td>
                                         </tr>
-                                        <?
+                                        <?php
                                         }
                                     }
                                 ?>
                             </tbody>
                         </table>
                         <br>
-                        <?
+                        <?php
                             echo '共 '.$data_nums.' 筆 - 第 '.$page.' 頁 - 共 '.$pages.' 頁';
                             echo "<br><a href=?page=1>首頁</a>  ";
                             echo "第 ";

@@ -46,7 +46,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="../Homepage/index.php">
+								<a href="/">
 									回到三三
 								</a>
 							</li>
