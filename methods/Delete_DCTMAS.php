@@ -18,7 +18,7 @@
 <br>
 <div class="sign-block">
     <h1>刪除折扣</h1>
-        <?
+        <?php
         session_start();
         $EMAIL = $_SESSION['EMAIL'];
         $CUSIDT = $_SESSION['CUSIDT'];
@@ -30,7 +30,7 @@
             <button type="submit" class="promise">確定</button>
             </form>
             <a href="Update_DCTMAS.php"><button type="button" class="cancel">取消</button></a>
-            <?
+            <?php
         }
         else{
             ?>
@@ -38,7 +38,7 @@
             redirect("../Homepage/index.php");
             alert("您無權限觀看此頁面!");
             </script>
-            <?
+            <?php
         }
         ?>
 </div>

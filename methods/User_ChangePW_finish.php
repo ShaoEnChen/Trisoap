@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-<?php
+<?php 
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
@@ -46,7 +46,7 @@ if($EMAIL != null){
                         redirect("../Homepage/index.php");
                         alert("密碼修改成功");
                         </script>
-                        <?                       
+                        <?php                        
                 }
                 else{
                         ?>
@@ -54,16 +54,16 @@ if($EMAIL != null){
                         redirect("User_ChangePW.php");
                         alert("密碼修改失敗");
                         </script>
-                        <?
+                        <?php 
                 }
         }
         else{
                 ?>
                 <script>
                 redirect("User_ChangePW.php");
-                alert("<?echo $message;?>");
+                alert("<?php echo $message;?>");
                 </script>
-                <?
+                <?php 
         }
 }
 else{
@@ -72,6 +72,6 @@ else{
         redirect("../HomePage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <?
+        <?php 
 }
 ?>

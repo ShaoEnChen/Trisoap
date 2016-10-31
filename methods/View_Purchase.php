@@ -80,58 +80,58 @@
                     $queryITEMNO = search('ITEMNO', 'ITEMMAS', 'ITEMNM', $ItemName[$i]);
                     ?>
                     <tr>
-                        <td><?echo $ItemName[$i];?></td>
-                        <td><?echo $Price[$i];?></td>
-                        <td><?echo $ItemAmount[$i];?></td>
-                        <?
+                        <td><?php echo $ItemName[$i];?></td>
+                        <td><?php echo $Price[$i];?></td>
+                        <td><?php echo $ItemAmount[$i];?></td>
+                        <?php 
                         $price = $Price[$i] * $ItemAmount[$i];
                         $total += $price;
                         ?>
-                        <td><?echo $price;?></td>
+                        <td><?php echo $price;?></td>
                         <td>
                             <form method="post" action="Delete_ORDITEMMAS.php">
-                            <input type="hidden" name="ITEMNO" value="<?echo $queryITEMNO;?>" />
+                            <input type="hidden" name="ITEMNO" value="<?php echo $queryITEMNO;?>" />
                             <button type="submit" class="cancel">移除</button>
                             </form>
                         </td>
                     </tr>
-                    <?
+                    <?php 
                 }
                 ?>
                 <tr>
                     <td>運費 : </td>
-                    <td colspan="3"><?echo $shipfee;?></td>
+                    <td colspan="3"><?php echo $shipfee;?></td>
                 </tr>
                 <tr>
                     <td>留心語折扣 : </td>
-                    <td colspan="3"><?echo $discount;?></td>
+                    <td colspan="3"><?php echo $discount;?></td>
                 </tr>
-                <?
+                <?php 
                 if($checkDISCOUNT == 'A'){
                     $DISCOUNTNM = search('DCTNM', 'DCTMAS', 'DCTID', $DISCOUNT);
                     $DISCOUNTPRICE = search('DCTPRICE', 'DCTMAS', 'DCTID', $DISCOUNT);
                     $total -= $DISCOUNTPRICE;
                     ?>
                     <tr>
-                    <td><?echo $DISCOUNTNM;?> : </td>
-                    <td><?echo $DISCOUNTPRICE;?></td>
+                    <td><?php echo $DISCOUNTNM;?> : </td>
+                    <td><?php echo $DISCOUNTPRICE;?></td>
                     <td colspan="2">
                         <form method="post" action="discount_change.php">
                         <input type="hidden" name="type" value="dc" />
                         <input type="hidden" name="from" value="vp" />
-                        <input type="hidden" name="id" value="<?echo $DISCOUNT;?>" />
+                        <input type="hidden" name="id" value="<?php echo $DISCOUNT;?>" />
                         <button type="submit" class="discount">更換折價卷</button>
                         </form>
                     </td>
                     </tr>
-                    <?
+                    <?php 
                 }
                 ?>
                 <tr>
                     <td>總計 : </td>
-                    <td colspan="3"><?echo $total;?></td>
+                    <td colspan="3"><?php echo $total;?></td>
                 </tr>
-                <?
+                <?php 
                 if($checkDISCOUNT == 'B'){
                     ?>
                     <tr>
@@ -143,7 +143,7 @@
                         </form>
                     </td>
                     </tr>
-                    <?
+                    <?php 
                 }
                 $_SESSION['total'] = $total;
                 ?>
@@ -153,14 +153,14 @@
             <a href="Create_ORDMAS2.php"><button type="submit" class="promise">確定結帳</button></a>
             <br>
             <a href="../Homepage/index.php"><button type="button" class="cancel">返回首頁</button></a>
-            <?
+            <?php 
         }
         else{
             echo "<h2>目前沒有選擇任何商品</h2>";
             ?>
             <a href="../Homepage/index.php"><button type="button" class="promise">返回首頁</button></a>
             <a href="../Homepage/product.php"><button type="button" class="promise">返回商品頁</button></a>
-            <?
+            <?php 
         }
     ?>   
     </div>

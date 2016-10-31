@@ -78,7 +78,7 @@ function show_PAYTYPE($id){
                     </li>
                     <li>
                         <a href="#">
-                            <? echo $queryCUSNM."，您好<br>"; ?>
+                            <?php  echo $queryCUSNM."，您好<br>"; ?>
                         </a>
                     </li>
                     <li>
@@ -115,7 +115,7 @@ function show_PAYTYPE($id){
                                 </tr>
                             </thead>
                             <tbody>
-                                <?
+                                <?php 
                                 if($EMAIL != null){
                                     $queryORDMAS = "SELECT * FROM ORDMAS WHERE EMAIL = '$EMAIL' AND ACTCODE = 1";
                                     $result = mysql_query($queryORDMAS);
@@ -138,44 +138,44 @@ function show_PAYTYPE($id){
                                                 <!-- 訂單編號 -->
                                                 <td>
                                                     <form method="post" action="View_ORDITEM.php">
-                                                    <input type="hidden" name="ORDNO" value="<?echo $ORDNO;?>" />
+                                                    <input type="hidden" name="ORDNO" value="<?php echo $ORDNO;?>" />
                                                     <input type="hidden" name="RETURN" value="view" />
-                                                    <input type="submit" name="button" value="<?echo $ORDNO;?>" />
+                                                    <input type="submit" name="button" value="<?php echo $ORDNO;?>" />
                                                     </form>
                                                 </td>
                                                 <!-- 訂單種類 -->
-                                                <td><?show_ORDTYPE($row['ORDTYPE']);?></td>
+                                                <td><?php show_ORDTYPE($row['ORDTYPE']);?></td>
                                                 <!-- 顧客編號 -->
-                                                <td><?echo $row['EMAIL'];?></td>
+                                                <td><?php echo $row['EMAIL'];?></td>
                                                 <!-- 發票編號 -->
-                                                <td><?echo $row['INVOICENO'];?></td>
+                                                <td><?php echo $row['INVOICENO'];?></td>
                                                 <!-- 缺貨狀態 -->
-                                                <td><?show_BACKSTAT($row['BACKSTAT']);?></td>
+                                                <td><?php show_BACKSTAT($row['BACKSTAT']);?></td>
                                                 <!-- 訂單狀態 -->
-                                                <td><?show_ORDSTAT($row['ORDSTAT']);?></td>
+                                                <td><?php show_ORDSTAT($row['ORDSTAT']);?></td>
                                                 <!-- 付款狀態 -->
-                                                <td><?
+                                                <td><?php 
                                                     if($row['PAYSTAT'] == '1') echo '已付款';
                                                     elseif($row['PAYSTAT'] == '0'){
                                                         $_SESSION['ORDNO'] = $ORDNO;
-                                                        ?><a href="Order_Confirm.php">前往付款</a><?
+                                                        ?><a href="Order_Confirm.php">前往付款</a><?php 
                                                     }
                                                 ?></td>
                                                 <!-- 付款方式 -->
-                                                <td><?show_PAYTYPE($row['PAYTYPE']);?></td>
+                                                <td><?php show_PAYTYPE($row['PAYTYPE']);?></td>
                                                 <!-- 訂單總額 -->
-                                                <td><?echo $row['TOTALPRICE'];?></td>
+                                                <td><?php echo $row['TOTALPRICE'];?></td>
                                                 <!-- 訂單總值 -->
-                                                <td><?echo $row['TOTALAMT'];?></td>
+                                                <td><?php echo $row['TOTALAMT'];?></td>
                                                 <!-- 實收金額 -->
-                                                <td><?
+                                                <td><?php 
                                                 if($row['PAYSTAT'] == '1') echo $row['REALPRICE'];
                                                 else echo '0';
                                                 ?></td>
                                                 <!-- 建立日期 -->
-                                                <td><?echo $row['CREATEDATE'];?></td>
+                                                <td><?php echo $row['CREATEDATE'];?></td>
                                             </tr>
-                                            <?
+                                            <?php 
                                         }
                                     }
                                 }
@@ -185,13 +185,13 @@ function show_PAYTYPE($id){
                                     redirect("../Homepage/index.php");
                                     alert("您無權限觀看此頁面!");
                                     </script>
-                                    <?
+                                    <?php 
                                 }
                                 ?>
                             </tbody>
                         </table>
                         <br>
-                        <?
+                        <?php 
                             echo '共 '.$data_nums.' 筆 - 第 '.$page.' 頁 - 共 '.$pages.' 頁';
                             echo "<br><a href=?page=1>首頁</a>  ";
                             echo "第 ";

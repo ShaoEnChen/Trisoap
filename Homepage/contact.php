@@ -74,7 +74,7 @@
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>
-              <?
+              <?php
             }
             elseif($CUSIDT == 'B'){
               ?>
@@ -87,7 +87,7 @@
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>
-              <?
+              <?php
             }
             else{
               ?>
@@ -159,9 +159,9 @@
               <button type="submit" class="btn btn-dark btn-lg">確認送出</button>
             </form>
             <hr>
-            <p><i class="fa fa-phone fa-fw fa-lg"></i> <?echo $COMTEL;?> <br>
-            <i class="fa fa-envelope fa-fw fa-lg"></i> <?echo $COMEMAIL;?> <br>
-            <i class="fa fa-map-marker fa-fw fa-lg"></i> <?echo $COMADD;?>
+            <p><i class="fa fa-phone fa-fw fa-lg"></i> <?php echo $COMTEL;?> <br>
+            <i class="fa fa-envelope fa-fw fa-lg"></i> <?php echo $COMEMAIL;?> <br>
+            <i class="fa fa-map-marker fa-fw fa-lg"></i> <?php echo $COMADD;?>
             </p>
           </div>
         </div>

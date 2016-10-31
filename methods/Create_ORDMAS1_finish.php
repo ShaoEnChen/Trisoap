@@ -117,7 +117,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
             redirect("../Homepage/index.php");
             alert("訂單建立成功。");
             </script>
-            <?
+            <?php 
         }
         else{
             ?>
@@ -125,16 +125,16 @@ if($EMAIL != null && $CUSIDT == 'A'){
             redirect("Create_ORDMAS1.php");
             alert("訂單建立失敗");
             </script>
-            <?
+            <?php 
         }
     }
     else{
         ?>
         <script>
         redirect("Create_ORDMAS1.php");
-        alert("<?echo $message;?>");
+        alert("<?php echo $message;?>");
         </script>
-        <?
+        <?php 
     }
 }
 else{
@@ -143,5 +143,6 @@ else{
     redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <?
+    <?php 
 }
+?>

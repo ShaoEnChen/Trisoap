@@ -15,7 +15,7 @@
 </head>
 
 <!-- PHP Area -->
-<?
+<?php 
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
@@ -120,9 +120,9 @@ else{
     ?>
     <script>
     redirect("Create_CUSMAS.php");
-    alert("<?echo $message;?>");
+    alert("<?php echo $message;?>");
     </script>
-    <?
+    <?php 
 }
 ?>
 

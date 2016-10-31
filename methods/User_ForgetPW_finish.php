@@ -58,7 +58,7 @@ else{
         ?>
         <script>
         redirect("User_ForgetPW.php");
-        alert("<?echo $message;?>");
+        alert("<?php echo $message;?>");
         </script>
         <?php
 }

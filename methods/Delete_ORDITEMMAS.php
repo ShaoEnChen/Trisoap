@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-<?
+<?php
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/handle_string.php");
@@ -17,7 +17,7 @@ if($EMAIL != null && $ITEMNO != null){
 		redirect("View_Purchase.php");
 		alert("移除成功");
 		</script>
-		<?
+		<?php
 	}
 	else{
 		?>
@@ -25,7 +25,7 @@ if($EMAIL != null && $ITEMNO != null){
 		redirect("View_Purchase.php");
 		alert("移除失敗");
 		</script>
-		<?
+		<?php
 	}
 }
 else{
@@ -34,5 +34,5 @@ else{
 	redirect("../Homepage/index.php");
 	alert("您無權限觀看此頁面");
 	</script>
-	<?
+	<?php
 }

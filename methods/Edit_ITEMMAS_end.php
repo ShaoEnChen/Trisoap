@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-<?php
+<?php 
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/handle_string.php");
@@ -48,25 +48,22 @@ if($EMAIL != null && $CUSIDT == 'A'){
                         redirect("Update_ITEMMAS.php");
                         alert("更新成功");
                         </script>
-                        <?
-                }
+                        <?php               }
                 else{
                         ?>
                         <script>
                         redirect("Edit_ITEMMAS.php");
                         alert("更新失敗");
                         </script>
-                        <?
-                }
+                        <?php               }
         }
         else{
                 ?>
                 <script>
                 redirect("Edit_ITEMMAS.php");
-                alert("<?echo $message1;?>");
+                alert("<?php o $message1;?>");
                 </script>
-                <?
-                unset($_SESSION['newITEMNO']);
+                <?php               unset($_SESSION['newITEMNO']);
         }
 }
 else{
@@ -75,5 +72,4 @@ else{
         redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <?
-}
+        <?php

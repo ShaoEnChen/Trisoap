@@ -1,4 +1,4 @@
-<?
+<?php
 function input($id){
 	return addslashes(htmlspecialchars($_POST[$id]));
 }

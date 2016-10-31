@@ -14,7 +14,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body id="page-top">
-<?php
+<?php 
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
@@ -84,7 +84,7 @@ function show_PAYTYPE($id){
                         <!-- 要改成dropdown -->
                         <!-- 更新使用者資料、密碼 -->
                         <a href="#">
-                            <?php
+                            <?php 
                                 echo $queryCUSNM."，您好<br>";
                             ?>
                         </a>
@@ -98,14 +98,14 @@ function show_PAYTYPE($id){
             </div>
         </div>
     </nav>
-    <?
+    <?php 
         if($EMAIL == null){
                 ?>
                 <script>
                 redirect("../Homepage/index.php");
                 alert("請先註冊或登入!");
                 </script>
-                <?
+                <?php 
         }
         else{
                 $queryORDNO = "SELECT * FROM ORDMAS where EMAIL='$EMAIL' AND ORDSTAT='E' AND PAYSTAT='0' AND ACTCODE='1'";
@@ -117,10 +117,10 @@ function show_PAYTYPE($id){
                         redirect("View_ORDMAS.php");
                         alert("您沒有可取消的訂單!");
                         </script>
-                        <?
+                        <?php 
                 }
                 else{
-                        ?><?
+                        ?><?php 
                         echo "<section><div class=\"orders\">";
                         echo "<form name=\"form\" method=\"post\" action=\"Delete_ORDMAS_finish.php\">";
                         echo "訂單編號：<select name=\"ORDNO\" />";

@@ -63,7 +63,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <? echo $queryCUSNM."，您好<br>"; ?>
+                                <?php echo $queryCUSNM."，您好<br>"; ?>
                             </a>
                         </li>
                         <li>
@@ -120,8 +120,8 @@
                                                     <!-- 訂單編號 -->
                                                     <td>
                                                         <form method="post" action="View_ORDITEM_E.php">
-                                                        <input type="hidden" name="ORDNO" value="<?echo $ORDNO;?>" />
-                                                        <input type="submit" name="button" value="<?echo $ORDNO;?>" />
+                                                        <input type="hidden" name="ORDNO" value="<?php echo $ORDNO;?>" />
+                                                        <input type="submit" name="button" value="<?php echo $ORDNO;?>" />
                                                         </form>
                                                     </td>
                                                     <!-- 訂單種類 -->
@@ -143,14 +143,14 @@
                                                     <!-- 建立日期 -->
                                                     <td><?php echo $row['CREATEDATE'];?></td>
                                                 </tr>
-                                                <?
+                                                <?php 
                                             }
                                         }
                                     ?>
                                     </tbody>
                                 </table>
                                 <br>
-                                <?
+                                <?php 
                                     echo '共 '.$data_nums.' 筆 - 第 '.$page.' 頁 - 共 '.$pages.' 頁';
                                     echo "<br><a href=?page=1>首頁</a>  ";
                                     echo "第 ";
@@ -175,7 +175,7 @@
                 redirect("../Homepage/index.php");
                 alert("您無權限觀看此頁面!");
                 </script>
-                <?
+                <?php 
             }
         ?>
     </body>

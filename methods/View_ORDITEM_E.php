@@ -57,7 +57,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
     <button type="submit" class="promise">儲存</button>
     </form>
     <a href="Update_ORDMAS_E.php"><button type="button" class="cancel">取消</button></a>
-    <?
+    <?php 
 }
 else{
     ?>
@@ -65,7 +65,7 @@ else{
     redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <?
+    <?php 
 }
 ?>
 </div>

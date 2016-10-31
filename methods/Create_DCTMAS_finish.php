@@ -54,9 +54,9 @@ if($EMAIL != null && $CUSIDT == 'A'){
                         ?>
                         <script>
                         redirect("Update_DCTMAS.php");
-                        alert("新增成功，兌換碼為 <?echo $code;?>");
+                        alert("新增成功，兌換碼為 <?php echo $code;?>");
                         </script>
-                        <?
+                        <?php 
                 }
                 else{
                         ?>
@@ -64,16 +64,16 @@ if($EMAIL != null && $CUSIDT == 'A'){
                         redirect("Create_DCTMAS.php");
                         alert("新增失敗");
                         </script>
-                        <?
+                        <?php 
                 }
         }
         else{
                 ?>
                 <script>
                 redirect("Create_DCTMAS.php");
-                alert("<?echo $message;?>");
+                alert("<?php echo $message;?>");
                 </script>
-                <?
+                <?php 
         }
 }
 else{
@@ -82,5 +82,6 @@ else{
         redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <?
+        <?php 
 }
+?>

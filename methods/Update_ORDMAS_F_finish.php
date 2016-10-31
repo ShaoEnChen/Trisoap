@@ -39,7 +39,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                         $_SESSION['ORIGIN'] = 'F';
                         $queryEMAIL = search('EMAIL', 'ORDMAS', 'ORDNO', $ORDNO);
                         mail_pass_order($queryEMAIL, $ORDNO);
-                        ?><script>redirect("Update_ORDMAS_finish.php");</script><?
+                        ?><script>redirect("Update_ORDMAS_finish.php");</script><?php 
                 }
         }
         else
@@ -51,7 +51,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 redirect("Update_ORDMAS_F.php");
                 alert("儲存成功");
                 </script>
-                <?
+                <?php 
         }
         else{
                 ?>
@@ -59,7 +59,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 redirect("Update_ORDMAS_F.php");
                 alert("<?echo $message;?>");
                 </script>
-                <?
+                <?php 
         }
 }
 else{
@@ -68,6 +68,6 @@ else{
         redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <?
+        <?php 
 }
 ?>

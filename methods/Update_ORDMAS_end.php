@@ -18,7 +18,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
 	    redirect("Update_ORDMAS_finish.php");
 	    alert("請輸入發票編號!");
 	    </script>
-	    <?
+	    <?php 
     }
     else{
     	date_default_timezone_set('Asia/Taipei');
@@ -37,14 +37,14 @@ if($EMAIL != null && $CUSIDT == 'A'){
             <script>
             alert("儲存成功");
             </script>
-            <?
+            <?php 
 	    }
 	    else{
             ?>
             <script>
             alert("儲存失敗");
             </script>
-            <?
+            <?php 
 	    }
 	    unset($_SESSION['ORDNO']);
 	    unset($_SESSION['ORIGIN']);
@@ -65,6 +65,6 @@ else{
     redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <?
+    <?php 
 }
 ?>

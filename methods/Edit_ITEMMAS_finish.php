@@ -36,23 +36,23 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 $_SESSION['newITEMNO'] = $newITEMNO;
                 ?>
                 <form method="post" action="Edit_ITEMMAS_end.php">
-                商品編號：<?echo $newITEMNO;?><br><br>
-                商品名稱：<input type="text" name="ITEMNM" value="<?echo $row['ITEMNM'];?>" />
-                商品價格：<input type="text" name="PRICE" value="<?echo $row['PRICE'];?>" />
-                商品敘述：<input type="text" name="DESCRIPTION" value="<?echo $row['DESCRIPTION'];?>" />
+                商品編號：<?php echo $newITEMNO;?><br><br>
+                商品名稱：<input type="text" name="ITEMNM" value="<?php echo $row['ITEMNM'];?>" />
+                商品價格：<input type="text" name="PRICE" value="<?php echo $row['PRICE'];?>" />
+                商品敘述：<input type="text" name="DESCRIPTION" value="<?php echo $row['DESCRIPTION'];?>" />
                 請再次輸入您的密碼：<input type="password" name="PW" />
                 <button type="submit" class="promise">確定</button>
                 </form>
                 <a href="Update_ITEMMAS.php"><button type="button" class="cancel">取消</button></a>
-                <?
+                <?php 
         }
         else{
                 ?>
                 <script>
                 redirect("Edit_ITEMMAS.php");
-                alert("<?echo $message;?>");
+                alert("<?php echo $message;?>");
                 </script>
-                <?
+                <?php 
         }
 }
 else{
@@ -61,7 +61,7 @@ else{
         redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <?
+        <?php 
 }
 ?>
 </div>

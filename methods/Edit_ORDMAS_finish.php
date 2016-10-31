@@ -14,7 +14,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body id="page-top">
-<?php
+<?php 
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/handle_string.php");
@@ -86,7 +86,7 @@ function show_PAYTYPE($id){
                         <!-- 要改成dropdown -->
                         <!-- 更新使用者資料、密碼 -->
                         <a href="#">
-                            <?php
+                            <?php 
                                 echo $queryCUSNM."，您好<br>";
                             ?>
                         </a>
@@ -106,7 +106,7 @@ function show_PAYTYPE($id){
             <div class="manage">
                 <div class="row table-responsive">
                     <div class="tab-content">
-                        <h3>訂單編號：<?echo $ORDNO;?></h3>
+                        <h3>訂單編號：<?php echo $ORDNO;?></h3>
                         <div id="all" class="tab-pane fade in active">                        
                         <table class="table table-hover">
                             <thead>
@@ -118,7 +118,7 @@ function show_PAYTYPE($id){
                                 </tr>
                             </thead>
                             <tbody>
-                                <?
+                                <?php 
                                 if($EMAIL != null){
                                     function ViewORDITEM($number){
                                         $ORDNO = input('ORDNO');
@@ -129,21 +129,21 @@ function show_PAYTYPE($id){
                                         $row = mysql_fetch_array($result);
                                         $name = search('ITEMNM', 'ITEMMAS', 'ITEMNO', $number);
                                         $price = search('PRICE', 'ITEMMAS', 'ITEMNO', $number);
-                                        ?><tr><td><?echo $number;?></td><?
+                                        ?><tr><td><?php echo $number;?></td><?php 
                                         echo "<input type=\"hidden\" name=\"$ITEMNOnumber\" value=\"$number\" />";
-                                        ?><td><?echo $name;?></td><?
-                                        ?><td><?echo $price;?></td><?
+                                        ?><td><?php echo $name;?></td><?php 
+                                        ?><td><?php echo $price;?></td><?php 
                                         if($row == false){
-                                            ?><td><input type="text" name="<?echo $ITEMAMTnumber;?>" value="0" /></td><?
+                                            ?><td><input type="text" name="<?php echo $ITEMAMTnumber;?>" value="0" /></td><?php 
                                         }
                                         else{
                                             $ORDAMT = $row['ORDAMT'];
-                                            ?><td><input type="text" name="<?echo $ITEMAMTnumber;?>" value="<?echo $ORDAMT;?>" /></td></tr><?
+                                            ?><td><input type="text" name="<?php echo $ITEMAMTnumber;?>" value="<?php echo $ORDAMT;?>" /></td></tr><?php 
                                         }
                                     }
                                     ?>
                                     <form name="form" method="post" action="Edit_ORDMAS_end.php">
-                                    <?
+                                    <?php 
                                     ViewORDITEM('1');
                                     ViewORDITEM('2');
                                     ViewORDITEM('3');
@@ -151,7 +151,7 @@ function show_PAYTYPE($id){
                                     ?>
                                     <input type="submit" name="button" value="確定" />
                                     </form>
-                                    <?
+                                    <?php 
                                     $_SESSION['ORDNO'] = $ORDNO;
                                     $_SESSION['number'] = 4;
                                 }
@@ -161,7 +161,7 @@ function show_PAYTYPE($id){
                                     redirect("../Homepage/index.php");
                                     alert("您無權限觀看此頁面!");
                                     </script>
-                                    <?
+                                    <?php 
                                 }
                                 ?>
                             </tbody>

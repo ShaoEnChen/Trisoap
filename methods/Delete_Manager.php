@@ -38,7 +38,7 @@
 		redirect("../Homepage/index.php");
 		alert("您無權限觀看此頁面!");
 		</script>
-		<?
+		<?php
 	}
 	?>
 </body>

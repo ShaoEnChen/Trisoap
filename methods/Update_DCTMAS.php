@@ -64,7 +64,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <? echo $queryCUSNM."，您好<br>"; ?>
+                                <?php echo $queryCUSNM."，您好<br>"; ?>
                             </a>
                         </li>
                         <li>
@@ -113,7 +113,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?
+                                    <?php
                                         $keytype = input('keytype');
                                         $keyvalue = input('keyvalue');
                                         if($keytype == null){
@@ -153,14 +153,14 @@
                                                     <!-- 使用日期 -->
                                                     <td><?php echo $row['USEDATE'];?></td>
                                                 </tr>
-                                                <?
+                                                <?php
                                             }
                                         }
                                     ?>
                                     </tbody>
                                 </table>
                                 <br>
-                                <?
+                                <?php 
                                     echo '共 '.$data_nums.' 筆 - 第 '.$page.' 頁 - 共 '.$pages.' 頁';
                                     echo "<br><a href=?page=1>首頁</a>  ";
                                     echo "第 ";
@@ -185,7 +185,7 @@
                 redirect("../Homepage/index.php");
                 alert("您無權限觀看此頁面!");
                 </script>
-                <?
+                <?php 
             }
         ?>
     </body>

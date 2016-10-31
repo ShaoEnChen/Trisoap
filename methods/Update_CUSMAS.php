@@ -13,7 +13,7 @@
 
 <body>
 <br>
-	<?php
+	<?php 
 	session_start();
 	include_once("Helper/mysql_connect.php");
 	include_once("Helper/sql_operation.php");
@@ -36,26 +36,26 @@
 	<div class="sign-block">
     	<h1>修改資料</h1>
 		<form method="post" action="Update_CUSMAS_finish.php">
-			電子信箱：<?echo $EMAIL;?></label><br>
-			您的姓名：<input type="text" name="CUSNM" value="<?echo $CUSNM;?>" /><br>
-			通訊地址：<input type="text" name="CUSADD" value="<?echo $CUSADD;?>" /><br>
-			聯絡電話：<input type="text" name="TEL" value="<?echo $TEL;?>" /><br>
-			統一編號：<input type="text" name="TAXID" value="<?echo $TAXID;?>" /><br>
+			電子信箱：<?php echo $EMAIL;?></label><br>
+			您的姓名：<input type="text" name="CUSNM" value="<?php echo $CUSNM;?>" /><br>
+			通訊地址：<input type="text" name="CUSADD" value="<?php echo $CUSADD;?>" /><br>
+			聯絡電話：<input type="text" name="TEL" value="<?php echo $TEL;?>" /><br>
+			統一編號：<input type="text" name="TAXID" value="<?php echo $TAXID;?>" /><br>
 			<div class="styled-select">您的膚質：
 				<select name="CUSTYPE">
-				  	<option value="A" <?checkCUSTYPE($CUSTYPE, 'A');?>>乾性</option>
-				  	<option value="B" <?checkCUSTYPE($CUSTYPE, 'B');?>>中性</option>
-				  	<option value="C" <?checkCUSTYPE($CUSTYPE, 'C');?>>油性</option>
-				  	<option value="D" <?checkCUSTYPE($CUSTYPE, 'D');?>>混和性</option>
+				  	<option value="A" <?php checkCUSTYPE($CUSTYPE, 'A');?>>乾性</option>
+				  	<option value="B" <?php checkCUSTYPE($CUSTYPE, 'B');?>>中性</option>
+				  	<option value="C" <?php checkCUSTYPE($CUSTYPE, 'C');?>>油性</option>
+				  	<option value="D" <?php checkCUSTYPE($CUSTYPE, 'D');?>>混和性</option>
 				</select>
 			</div>
 			<br>
-			特殊要求：<textarea name="SPEINS" cols="45" rows="5"><?echo $SPEINS;?></textarea><br>
+			特殊要求：<textarea name="SPEINS" cols="45" rows="5"><?php echo $SPEINS;?></textarea><br>
 			<button type="submit" class="promise">確定</button>
 		</form>
 		<a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
 	</div>
-	<?php
+	<?php 
 	}
 	else{
 		?>
@@ -63,7 +63,7 @@
 		redirect("../Homepage/index.php");
 		alert("您無權限觀看此頁面!");
 		</script>
-		<?
+		<?php 
 	}
 	?>
 </body>

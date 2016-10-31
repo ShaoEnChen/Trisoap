@@ -77,7 +77,7 @@
 					<div class="choices">
 						<h4>精采選集</h4>
 						<div class="slickshow">
-							<?
+							<?php 
 							session_start();
 							include_once("../methods/Helper/mysql_connect.php");
 
@@ -91,9 +91,9 @@
 									if($result['MSGPHOTO'] == 0 && $result['MSGVIDEO'] == 0) {
 							?>
 										<div class="choice">
-											<p class="msg-text"><?echo $result['MSGTXT']; ?></p>
+											<p class="msg-text"><?php echo $result['MSGTXT']; ?></p>
 											<p class="author"> -
-												<?
+												<?php 
 													$cus_email = $result['EMAIL'];
 													$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
 													$cusnm_result = mysql_query($query_cusnm);
@@ -106,21 +106,21 @@
 												?>
 											</p>
 										</div>
-									<?
+									<?php 
 									}
 									else {
 										$msgno = $result['MSGNO'];
 										if($result['MSGPHOTO'] == 1) {
 									?>
 											<div class="choice choice-photo">
-												<img src="picture/<? echo $msgno; ?>.png">
+												<img src="picture/<?php  echo $msgno; ?>.png">
 												<div class="desc">
 													<p>
-														<?echo $result['MSGTXT']; ?>
+														<?php echo $result['MSGTXT']; ?>
 													</p>
 												</div>
 												<p class="author"> -
-													<?
+													<?php 
 														$cus_email = $result['EMAIL'];
 														$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
 														$cusnm_result = mysql_query($query_cusnm);
@@ -133,18 +133,18 @@
 													?>
 												</p>
 											</div>
-									<?
+									<?php 
 										}
 										if($result['MSGVIDEO'] == 1) {
 									?>
 											<div class="choice choice-video">
 												<!-- video here -->
 												<video controls>
-													<source type="video/mp4" src="video/<? echo $msgno; ?>.mp4"></iframe>
+													<source type="video/mp4" src="video/<?php  echo $msgno; ?>.mp4"></iframe>
 												</video>
-												<div class="desc"><?echo $result['MSGTXT']; ?></div>
+												<div class="desc"><?php echo $result['MSGTXT']; ?></div>
 												<p class="author"> -
-													<?
+													<?php 
 														$cus_email = $result['EMAIL'];
 														$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
 														$cusnm_result = mysql_query($query_cusnm);
@@ -157,7 +157,7 @@
 													?>
 												</p>
 											</div>
-							<?
+							<?php 
 										}
 									}
 								}
@@ -165,7 +165,7 @@
 							else {
 							?>
 								<p class="alarm-no-content">暫無內容！</p>
-							<?
+							<?php 
 							}
 							?>
 						</div>
@@ -191,7 +191,7 @@
 				          	<p>
 				          		<a href="../Homepage/contact.php">聯絡我們</a>
 				          	</p>
-				          	<?
+				          	<?php 
 				          	include("../methods/Helper/mysql_connect.php");
 				            include("../methods/Helper/sql_operation.php");
 							$COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
@@ -199,13 +199,13 @@
 							$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
 							?>
 			            	<p>
-			            		<i class="fa fa-phone fa-fw fa-lg"></i> <?echo $COMTEL;?> <br>
+			            		<i class="fa fa-phone fa-fw fa-lg"></i> <?php echo $COMTEL;?> <br>
 							</p>
 							<p>
-								<i class="fa fa-envelope fa-fw fa-lg"></i> <?echo $COMEMAIL;?> <br>
+								<i class="fa fa-envelope fa-fw fa-lg"></i> <?php echo $COMEMAIL;?> <br>
 							</p>
 							<p>
-								<i class="fa fa-map-marker fa-fw fa-lg"></i> <?echo $COMADD;?>
+								<i class="fa fa-map-marker fa-fw fa-lg"></i> <?php echo $COMADD;?>
 			            	</p>
 			          	</div>
 					</div>

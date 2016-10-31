@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-<?php
+<?php 
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
@@ -33,26 +33,23 @@ if($EMAIL != null){
                 ?>
                 <script>
                 redirect("Delete_ORDMAS.php");
-                alert("<?echo $message;?>");
+                alert("<?php o $message;?>");
                 </script>
-                <?
-        }
+                <?php       }
         if($message == null){
                 ?>
                 <script>
                 redirect("View_ORDMAS.php");
                 alert("取消成功");
                 </script>
-                <?
-        }
+                <?php       }
         else{
                 ?>
                 <script>
                 redirect("Delete_ORDMAS.php");
                 alert("取消失敗");
                 </script>
-                <?
-        }
+                <?php       }
 }
 else{
         ?>
@@ -60,6 +57,3 @@ else{
         redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <?
-}
-?>

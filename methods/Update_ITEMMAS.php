@@ -68,7 +68,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <? echo $queryCUSNM."，您好<br>"; ?>
+                                <?php echo $queryCUSNM."，您好<br>"; ?>
                             </a>
                         </li>
                         <li>
@@ -119,7 +119,7 @@
                                                     <!-- 商品狀態 -->
                                                     <td><?php echo $row['ACTCODE'];?></td>
                                                 </tr>
-                                                <?
+                                                <?php 
                                             }
                                         }
                                     ?>
@@ -139,7 +139,7 @@
                 redirect("../Homepage/index.php");
                 alert("您無權限觀看此頁面!");
                 </script>
-                <?
+                <?php 
             }
         ?>
     </body>

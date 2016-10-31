@@ -49,7 +49,7 @@ if($EMAIL != null){
             redirect("../message/message.php");
             alert("留心語成功，已寄發通知信至您的信箱。");
             </script>
-            <?
+            <?php 
         }
         else{
             ?>
@@ -57,16 +57,16 @@ if($EMAIL != null){
             redirect("Create_MSGMAS.php");
             alert("留心語失敗");
             </script>
-            <?
+            <?php 
         }
     }
     else{
         ?>
         <script>
         redirect("Create_MSGMAS.php");
-        alert("<?echo $message;?>");
+        alert("<?php echo $message;?>");
         </script>
-        <?
+        <?php 
     }
 }
 else{
@@ -75,5 +75,6 @@ else{
     redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <?
+    <?php 
 }
+?>

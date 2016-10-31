@@ -62,9 +62,9 @@ if($EMAIL != null){
         ?>
         <script>
         redirect("Edit_ORDMAS.php");
-        alert("<?echo $message;?>");
+        alert("<?php echo $message;?>");
         </script>
-        <?
+        <?php 
     }
     if($message == null){
         ?>
@@ -72,7 +72,7 @@ if($EMAIL != null){
         redirect("View_ORDMAS.php");
         alert("更新成功");
         </script>
-        <?
+        <?php 
     }
     else{
         ?>
@@ -80,7 +80,7 @@ if($EMAIL != null){
         redirect("Edit_ORDMAS.php");
         alert("更新失敗");
         </script>
-        <?
+        <?php 
     }
 }
 else{
@@ -89,6 +89,6 @@ else{
     redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <?
+    <?php 
 }
 ?>

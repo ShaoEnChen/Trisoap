@@ -44,7 +44,7 @@
             <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <?
+            <?php 
             session_start();
             include("../methods/Helper/mysql_connect.php");
             include("../methods/Helper/sql_operation.php");
@@ -74,7 +74,7 @@
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>
-              <?
+              <?php 
             }
             elseif($CUSIDT == 'B'){
               ?>
@@ -87,7 +87,7 @@
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>
-              <?
+              <?php 
             }
             else{
               ?>
@@ -97,7 +97,7 @@
                   <li><a href="../methods/User_login.php">登入</a></li>
                 </ul>
               </li>
-              <?
+              <?php 
             }
             ?>
           </ul>
@@ -177,9 +177,9 @@
           </div>
           <div class="col-md-4">
             <h3><a href="contact.html">聯絡我們</a></h3>
-            <p><i class="fa fa-phone fa-fw fa-lg"></i> <?echo $COMTEL;?> <br>
-            <i class="fa fa-envelope fa-fw fa-lg"></i> <?echo $COMEMAIL;?> <br>
-            <i class="fa fa-map-marker fa-fw fa-lg"></i> <?echo $COMADD;?>
+            <p><i class="fa fa-phone fa-fw fa-lg"></i> <?php echo $COMTEL;?> <br>
+            <i class="fa fa-envelope fa-fw fa-lg"></i> <?php echo $COMEMAIL;?> <br>
+            <i class="fa fa-map-marker fa-fw fa-lg"></i> <?php echo $COMADD;?>
             </p>
           </div>
         </div>

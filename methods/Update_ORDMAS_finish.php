@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<?
+<?php 
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/redirect.js");
@@ -30,7 +30,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
             <button type="submit" class="promise">確定</button>
         </form>
     </div>
-    <?
+    <?php 
 }
 else{
     ?>
@@ -38,7 +38,7 @@ else{
     redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <?
+    <?php 
 }
 ?>
 </body>

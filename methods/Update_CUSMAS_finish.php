@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-<?php
+<?php 
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/handle_string.php");
@@ -52,15 +52,15 @@ if($EMAIL != null){
                 redirect("../Homepage/index.php");
                 alert("資料修改成功");
                 </script>
-                <?
+                <?php 
         }
         else{
                 ?>
                 <script>
                 redirect("Update_CUSMAS.php");
-                alert("<?echo $message;?>");
+                alert("<?php echo $message;?>");
                 </script>
-                <?
+                <?php 
         }
 }
 else
@@ -70,6 +70,6 @@ else
         redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <?
+        <?php 
 }
 ?>

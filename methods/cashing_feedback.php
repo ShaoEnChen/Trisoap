@@ -1,4 +1,4 @@
-<?
+<?php
 include_once("AllPay.Payment.Integration.php");
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");

@@ -45,9 +45,9 @@ if($EMAIL != null){
         ?>
         <script>
         redirect("Create_ORDMAS2.php");
-        alert("<?echo $message;?>");
+        alert("<?php echo $message;?>");
         </script>
-        <?
+        <?php 
     }
     else{
         $row = select('OWNMAS', 'COMNM', 'Trisoap');
@@ -72,7 +72,7 @@ if($EMAIL != null){
                     <script>
                     alert("此兌換卷已被使用");
                     </script>
-                    <?
+                    <?php 
                 }
                 else{
                     $sql = "UPDATE ORDMAS SET DCTID = '$DISCOUNT' WHERE ORDNO = '$ORDNOG'";
@@ -93,7 +93,7 @@ if($EMAIL != null){
             redirect("cashing_test.php");
             alert("訂單建立成功，將為您導向歐付寶頁面。");
             </script>
-            <?
+            <?php 
         }
         else{
             ?>
@@ -101,7 +101,7 @@ if($EMAIL != null){
             redirect("Create_ORDMAS2.php");
             alert("訂單建立失敗");
             </script>
-            <?
+            <?php 
         }
     }
 }
@@ -111,5 +111,6 @@ else{
     redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <?
+    <?php 
 }
+?>

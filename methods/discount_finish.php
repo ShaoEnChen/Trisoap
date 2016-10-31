@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-<?php
+<?php 
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
@@ -40,7 +40,7 @@ if($message == null){
                 <script>
                 redirect("Order_Confirm.php");
                 </script>
-                <?
+                <?php 
         }
         elseif($from == 'vp'){
                 $_SESSION['DISCOUNT'] = $DISCOUNT;
@@ -48,7 +48,7 @@ if($message == null){
                 <script>
                 redirect("View_Purchase.php");
                 </script>
-                <?
+                <?php 
         }
 }
 else
@@ -57,17 +57,17 @@ else
                 ?>
                 <script>
                 redirect("discount_change.php");
-                alert("<?echo $message;?>");
+                alert("<?php echo $message;?>");
                 </script>
-                <?
+                <?php 
         }
         elseif($type == 'd'){
                 ?>
                 <script>
                 redirect("discount.php");
-                alert("<?echo $message;?>");
+                alert("<?php echo $message;?>");
                 </script>
-                <?
+                <?php 
         }
 }
 ?>

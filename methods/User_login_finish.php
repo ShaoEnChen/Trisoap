@@ -31,15 +31,15 @@ if($message == null){
         redirect("../Homepage/index.php");
         alert("成功登入");
         </script>
-        <?
+        <?php 
 }
 else
 {
         ?>
         <script>
         redirect("User_login.php");
-        alert("<?echo $message;?>");
+        alert("<?php echo $message;?>");
         </script>
-        <?
+        <?php 
 }
 ?>

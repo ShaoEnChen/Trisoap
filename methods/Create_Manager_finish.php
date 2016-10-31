@@ -30,7 +30,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
             redirect("Update_Manager.php");
             alert("新增成功");
             </script>
-            <?
+            <?php 
         }
         else{
             ?>
@@ -38,16 +38,16 @@ if($EMAIL != null && $CUSIDT == 'A'){
             redirect("Create_Manager.php");
             alert("新增失敗");
             </script>
-            <?
+            <?php 
         }
     }
     else{
         ?>
         <script>
         redirect("Create_Manager.php");
-        alert("<?echo $message;?>");
+        alert("<?php echo $message;?>");
         </script>
-        <?
+        <?php 
     }
 }
 else{
@@ -56,5 +56,6 @@ else{
     redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <?
+    <?php 
 }
+?>

@@ -1,4 +1,4 @@
-<?
+<?php
 include_once(dirname(__FILE__)."/mysql_connect.php");
 date_default_timezone_set('Asia/Taipei');
 $nowDATE = date("Y-m-d");
@@ -65,7 +65,7 @@ while($email = mysql_fetch_array($CUSMASresult)){
 		<script>
 		alert("Error!");
 		</script>
-		<?
+		<?php
 		break;
 	}
 }

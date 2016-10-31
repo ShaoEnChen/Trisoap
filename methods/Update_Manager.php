@@ -48,7 +48,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <? echo $queryCUSNM."，您好<br>"; ?>
+                                <?php  echo $queryCUSNM."，您好<br>"; ?>
                             </a>
                         </li>
                         <li>
@@ -78,7 +78,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?
+                                    <?php 
                                         $queryManager = "SELECT * FROM CUSMAS WHERE CUSIDT = 'A' AND ACTCODE = '1' ORDER BY CREATEDATE DESC";
                                         $result = mysql_query($queryManager);
                                         $data_nums = mysql_num_rows($result);
@@ -97,24 +97,24 @@
                                                 ?>
                                                 <tr>
                                                     <!-- 電子信箱 -->
-                                                    <td><? echo $row['EMAIL'];?></td>
+                                                    <td><?php  echo $row['EMAIL'];?></td>
                                                     <!-- 姓名 -->
-                                                    <td><? echo $row['CUSNM'];?></td>
+                                                    <td><?php  echo $row['CUSNM'];?></td>
                                                     <!-- 電話 -->
-                                                    <td><? echo $row['TEL'];?></td>
+                                                    <td><?php  echo $row['TEL'];?></td>
                                                     <!-- 地址 -->
-                                                    <td><? echo $row['CUSADD'];?></td>
+                                                    <td><?php  echo $row['CUSADD'];?></td>
                                                     <!-- 帳號建立日期 -->
-                                                    <td><? echo $row['CREATEDATE'];?></td>
+                                                    <td><?php  echo $row['CREATEDATE'];?></td>
                                                 </tr>
-                                                <?
+                                                <?php 
                                             }
                                         }
                                     ?>
                                     </tbody>
                                 </table>
                                 <br>
-                                <?
+                                <?php 
                                     echo '共 '.$data_nums.' 筆 - 第 '.$page.' 頁 - 共 '.$pages.' 頁';
                                     echo "<br><a href=?page=1>首頁</a>  ";
                                     echo "第 ";
@@ -131,7 +131,7 @@
                 </div>
             </div>
         </section>
-        <?php
+        <?php 
             }
             else{
                 ?>
@@ -139,7 +139,7 @@
                 redirect("../Homepage/index.php");
                 alert("您無權限觀看此頁面!");
                 </script>
-                <?
+                <?php 
             }
         ?>
     </body>

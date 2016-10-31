@@ -14,7 +14,7 @@
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body id="page-top">
-		<?php
+		<?php 
 		session_start();
 		include_once("Helper/mysql_connect.php");
 		include_once("Helper/sql_operation.php");
@@ -28,7 +28,7 @@
 			redirect("../Homepage/index.php>");
 			alert("您無權限觀看此頁面!");
 			</script>
-			<?
+			<?php 
 		}
 		else{
 			$queryCUSNM = search('CUSNM', 'CUSMAS', 'EMAIL', $EMAIL);
@@ -47,7 +47,7 @@
 							</li>
 							<li>
 								<a href="#">
-									<? echo $queryCUSNM."，您好<br>"; ?>
+									<?php  echo $queryCUSNM."，您好<br>"; ?>
 								</a>
 							</li>
 							<li>
@@ -92,7 +92,7 @@
 						</div>
 						<div class="row table-responsive">
 							<div class="tab-content">
-							<?
+							<?php 
 							$keytype = input('keytype');
 	                        $keyvalue = input('keyvalue');
 	                        for($i = 0; $i < 6; $i++){
@@ -105,7 +105,7 @@
 			                                $queryMSGMAS = "SELECT * FROM MSGMAS WHERE ACTCODE=1 AND $keytype = '$keyvalue'";
 										?>
 										<div id="ALL" class="tab-pane fade in active">
-										<? break;
+										<?php  break;
 									// 已送出
 									case 1:
 										if($keytype == null)
@@ -114,7 +114,7 @@
 			                                $queryMSGMAS = "SELECT * FROM MSGMAS WHERE ACTCODE=1 AND $keytype = '$keyvalue' AND MSGSTAT = 'A'";
 										?>
 										<div id="A" class="tab-pane fade">
-										<? break;
+										<?php  break;
 									// 已通過
 									case 2:
 										if($keytype == null)
@@ -123,7 +123,7 @@
 			                                $queryMSGMAS = "SELECT * FROM MSGMAS WHERE ACTCODE=1 AND $keytype = '$keyvalue' AND MSGSTAT = 'B'";
 										?>
 										<div id="B" class="tab-pane fade">
-										<? break;
+										<?php  break;
 									// 未通過
 									case 3:
 										if($keytype == null)
@@ -132,7 +132,7 @@
 			                                $queryMSGMAS = "SELECT * FROM MSGMAS WHERE ACTCODE=1 AND $keytype = '$keyvalue' AND MSGSTAT = 'C'";
 										?>
 										<div id="C" class="tab-pane fade">
-										<? break;
+										<?php  break;
 									// 公開中
 									case 4:
 										if($keytype == null)
@@ -141,7 +141,7 @@
 			                                $queryMSGMAS = "SELECT * FROM MSGMAS WHERE ACTCODE=1 AND $keytype = '$keyvalue' AND MSGSTAT = 'D'";
 										?>
 										<div id="D" class="tab-pane fade">
-										<? break;
+										<?php  break;
 									// 典藏
 									case 5:
 										if($keytype == null)
@@ -150,7 +150,7 @@
 			                                $queryMSGMAS = "SELECT * FROM MSGMAS WHERE ACTCODE=1 AND $keytype = '$keyvalue' AND MSGSTAT = 'E'";
 										?>
 										<div id="E" class="tab-pane fade">
-										<? break;
+										<?php  break;
 								}
 								?>
 								<!-- pill content -->
@@ -168,7 +168,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										<?
+										<?php 
 										$result = mysql_query($queryMSGMAS);
                                         if($result != false){
 											while($row = mysql_fetch_array($result)){
@@ -183,7 +183,7 @@
 	                                                <td><?php echo $row['MSGTXT'];?></td>
 	                                                <!-- 留言照片 -->
 	                                                <td>
-	                                                    <?
+	                                                    <?php 
 	                                                    if($row['MSGPHOTO'] == '1'){
 	                                                        echo "<a target=\"_blank\" href=\"../message/picture/$MSGNO.png\">";
 	                                                        echo "<img src=\"../message/picture/$MSGNO.png\" width=\"360\" height=\"270\" />";
@@ -193,7 +193,7 @@
 	                                                </td>
 	                                                <!-- 留言影片 -->
 	                                                <td>
-	                                                    <?
+	                                                    <?php 
 	                                                    if($row['MSGVIDEO'] == '1'){
 	                                                        echo "<a target=\"_blank\" href=\"../message/video/$MSGNO.mp4\">";
 	                                                        echo "<video width=\"360\" height=\"270\" controls>";
@@ -210,14 +210,14 @@
 	                                                <!-- 發佈日期 -->
 	                                                <td><?php echo $row['PUBLICDATE'];?></td>
 	                                            </tr>
-	                                            <?
+	                                            <?php 
 	                                        }
 	                                    }
 	                                    ?>
 									</tbody>
 								</table>
 								</div>
-								<?
+								<?php 
 							}
 							?>
 							</div>
@@ -225,7 +225,7 @@
 					</div>
 				</div>
 			</section>
-			<?
+			<?php 
 		}
 		?>
 	</body>

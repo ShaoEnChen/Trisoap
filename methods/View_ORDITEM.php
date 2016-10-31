@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
 <title>查看訂單</title>
-<?php
+<?php 
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
@@ -50,14 +50,14 @@ if($EMAIL != null){
         $alert .= "付款狀態：".show_PAYSTAT($row['PAYSTAT']).'\n';
         ?>
         <script>
-        alert("<?echo $alert;?>");
+        alert("<?php echo $alert;?>");
         </script>
-        <?
+        <?php 
         if($RETURN == 'update'){
-                ?><script>redirect("Update_ORDMAS.php");</script><?
+                ?><script>redirect("Update_ORDMAS.php");</script><?php 
         }
         elseif($RETURN == 'view'){
-                ?><script>redirect("View_ORDMAS.php");</script><?
+                ?><script>redirect("View_ORDMAS.php");</script><?php 
         }
 }
 else{
@@ -66,5 +66,5 @@ else{
         redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <?
+        <?php 
 }

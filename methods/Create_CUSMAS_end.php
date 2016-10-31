@@ -42,7 +42,7 @@ if($VERIFY == $_SESSION['COMMIT']){
                 redirect("../Homepage/index.php");
                 alert("註冊成功");
                 </script>
-                <?
+                <?php
         }
         else{
                 ?>
@@ -50,7 +50,7 @@ if($VERIFY == $_SESSION['COMMIT']){
                 redirect("Create_CUSMAS.php");
                 alert("系統錯誤，註冊失敗");
                 </script>
-                <?
+                <?php
         }
 }
 else{
@@ -60,5 +60,6 @@ else{
         redirect("Create_CUSMAS.php");
         alert("驗證碼錯誤，註冊失敗");
         </script>
-        <?
+        <?php
 }
+?>

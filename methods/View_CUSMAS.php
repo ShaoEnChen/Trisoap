@@ -40,7 +40,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <? echo $queryCUSNM."，您好<br>"; ?>
+                                <?php echo $queryCUSNM."，您好<br>"; ?>
                             </a>
                         </li>
                         <li>
@@ -90,7 +90,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?
+                                    <?php 
                                         $keytype = input('keytype');
                                         $keyvalue = input('keyvalue');
                                         if($keytype == null){
@@ -117,7 +117,7 @@
                                                 <tr>
                                                     <!-- 電子信箱 -->
                                                     <td>
-                                                        <?
+                                                        <?php 
                                                         $alert = '';
                                                         $alert .= "電子信箱：".$row['EMAIL'].'\n';
                                                         $alert .= "客戶姓名：".$row['CUSNM'].'\n';
@@ -138,33 +138,33 @@
                                                         $alert .= "最後修改時間：".$row['UPDATEDATE'].'\n';
                                                         $alert .= "如何認識三三：".$row['KNOWTYPE'].'\n';
                                                         ?>
-                                                        <button onclick="alert('<?echo $alert;?>');"><?echo $row['EMAIL'];?></button>
+                                                        <button onclick="alert('<?php echo $alert;?>');"><?php echo $row['EMAIL'];?></button>
                                                     </td>
                                                     <!-- 客戶姓名 -->
-                                                    <td><?echo $row['CUSNM'];?></td>
+                                                    <td><?php echo $row['CUSNM'];?></td>
                                                     <!-- 客戶地址 -->
-                                                    <td><?echo $row['CUSADD'];?></td>
+                                                    <td><?php echo $row['CUSADD'];?></td>
                                                     <!-- 客戶膚質 -->
-                                                    <td><?echo $row['CUSTYPE'];?></td>
+                                                    <td><?php echo $row['CUSTYPE'];?></td>
                                                     <!-- 客戶生日 -->
-                                                    <td><?echo $row['CUSBIRTHY'].'/'.$row['CUSBIRTHM'].'/'.$row['CUSBIRTHD'];?></td>
+                                                    <td><?php echo $row['CUSBIRTHY'].'/'.$row['CUSBIRTHM'].'/'.$row['CUSBIRTHD'];?></td>
                                                     <!-- 聯絡電話 -->
-                                                    <td><?echo $row['TEL'];?></td>
+                                                    <td><?php echo $row['TEL'];?></td>
                                                     <!-- 如何認識三三 -->
-                                                    <td><?echo $row['KNOWTYPE'];?></td>
+                                                    <td><?php echo $row['KNOWTYPE'];?></td>
                                                     <!-- 建立日期 -->
-                                                    <td><?echo $row['CREATEDATE'];?></td>
+                                                    <td><?php echo $row['CREATEDATE'];?></td>
                                                     <!-- 最後修改日期 -->
-                                                    <td><?echo $row['UPDATEDATE'];?></td>
+                                                    <td><?php echo $row['UPDATEDATE'];?></td>
                                                 </tr>
-                                                <?
+                                                <?php 
                                             }
                                         }
                                     ?>
                                     </tbody>
                                 </table>
                                 <br>
-                                <?
+                                <?php 
                                     echo '共 '.$data_nums.' 筆 - 第 '.$page.' 頁 - 共 '.$pages.' 頁';
                                     echo "<br><a href=?page=1>首頁</a>  ";
                                     echo "第 ";
@@ -189,7 +189,7 @@
                 redirect("../Homepage/index.php");
                 alert("您無權限觀看此頁面!");
                 </script>
-                <?
+                <?php 
             }
         ?>
     </body>

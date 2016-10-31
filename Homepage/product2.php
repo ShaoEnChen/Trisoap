@@ -44,7 +44,7 @@
             <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <?
+            <?php
             session_start();
             $CUSIDT = $_SESSION['CUSIDT'];
             if($CUSIDT == 'A'){
@@ -69,7 +69,7 @@
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>
-              <?
+              <?php
             }
             elseif($CUSIDT == 'B'){
               ?>
@@ -82,7 +82,7 @@
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>
-              <?
+              <?php
             }
             else{
               ?>
@@ -92,7 +92,7 @@
                   <li><a href="../methods/User_login.php">登入</a></li>
                 </ul>
               </li>
-              <?
+              <?php
             }
             ?>
           </ul>

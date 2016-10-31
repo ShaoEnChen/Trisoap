@@ -56,7 +56,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 redirect("Update_MSGMAS.php");
                 alert("儲存成功");
                 </script>
-                <?
+                <?php 
         }
         else{
                 ?>
@@ -64,7 +64,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 redirect("Update_MSGMAS.php");
                 alert("儲存失敗");
                 </script>
-                <?
+                <?php 
         }
 }
 else{
@@ -73,6 +73,6 @@ else{
         redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <?
+        <?php 
 }
 ?>

@@ -64,7 +64,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <? echo $queryCUSNM."，您好<br>"; ?>
+                                <?php echo $queryCUSNM."，您好<br>"; ?>
                             </a>
                         </li>
                         <li>
@@ -112,7 +112,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?
+                                    <?php 
                                         $keytype = input('keytype');
                                         $keyvalue = input('keyvalue');
                                         if($keytype == null){
@@ -144,12 +144,12 @@
                                                     <td><?php echo $row['EMAIL'];?></td>
                                                     <!-- 留言文字 -->
                                                     <td>
-                                                        <? $text = $row['MSGTXT']; ?>
+                                                        <?php  $text = $row['MSGTXT']; ?>
                                                         <a href="#" onclick="alert('<?echo $text;?>');">顯示</a>
                                                     </td>
                                                     <!-- 留言照片 -->
                                                     <td>
-                                                        <?
+                                                        <?php 
                                                         if($row['MSGPHOTO'] == '1'){
                                                             echo "<a target=\"_blank\" href=\"../message/picture/$MSGNO.png\">";
                                                             echo "<img src=\"../message/picture/$MSGNO.png\" width=\"120\" height=\"90\" />";
@@ -159,7 +159,7 @@
                                                     </td>
                                                     <!-- 留言影片 -->
                                                     <td>
-                                                        <?
+                                                        <?php 
                                                         if($row['MSGVIDEO'] == '1'){
                                                             echo "<a target=\"_blank\" href=\"../message/video/$MSGNO.mp4\">";
                                                             echo "<video width=\"120\" height=\"90\" controls>";
@@ -176,14 +176,14 @@
                                                     <!-- 發佈日期 -->
                                                     <td><?php echo $row['PUBLICDATE'];?></td>
                                                 </tr>
-                                                <?
+                                                <?php 
                                             }
                                         }
                                     ?>
                                     </tbody>
                                 </table>
                                 <br>
-                                <?
+                                <?php 
                                     echo '共 '.$data_nums.' 筆 - 第 '.$page.' 頁 - 共 '.$pages.' 頁';
                                     echo "<br><a href=?page=1>首頁</a>  ";
                                     echo "第 ";
@@ -208,7 +208,7 @@
                 redirect("../Homepage/index.php");
                 alert("您無權限觀看此頁面!");
                 </script>
-                <?
+                <?php 
             }
         ?>
     </body>

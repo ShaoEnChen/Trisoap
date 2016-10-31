@@ -14,7 +14,7 @@
 <body>
   <br>
   <div class="sign-block" style="width: 350px;">
-    <?php
+    <?php 
       session_start();
       include_once("Helper/mysql_connect.php");
       include_once("Helper/handle_string.php");
@@ -47,16 +47,14 @@
       <a href="View_Purchase.php"><button type="button" class="promise">前往結帳</button></a>
       <a href="../Homepage/product.php"><button type="button" class="promise">繼續購物</button></a>
     
-      <?
-          }
+      <?php         }
           else{
             ?>
             <script>
             redirect("../Homepage/product.php");
             alert("系統錯誤，加入購物車失敗");
             </script>
-            <?
-          }
+            <?php         }
         }
         else{
           ?>
@@ -64,8 +62,7 @@
           redirect("../Homepage/product.php");
           alert("請先選擇商品");
           </script>
-          <?
-        }
+          <?php       }
       }
       else{
         ?>
@@ -73,8 +70,7 @@
         redirect("../Homepage/index.php");
         alert("請先登入或註冊!");
         </script>
-        <?
-      }
+        <?php     }
       ?>
     </div>
 </body>

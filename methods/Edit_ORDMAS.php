@@ -98,14 +98,14 @@ function show_PAYTYPE($id){
             </div>
         </div>
     </nav>
-    <?
+    <?php
         if($EMAIL == null){
                 ?>
                 <script>
                 redirect("../Homepage/index.php");
                 alert("請先註冊或登入!");
                 </script>
-                <?
+                <?php
         }
         else{
                 $queryORDNO = "SELECT * FROM ORDMAS where EMAIL='$EMAIL' AND ORDSTAT='E' AND PAYSTAT='0' AND ACTCODE='1'";
@@ -117,10 +117,10 @@ function show_PAYTYPE($id){
                         redirect("View_ORDMAS.php");
                         alert("您沒有可更新的訂單!");
                         </script>
-                        <?
+                        <?php
                 }
                 else{
-                        ?><?
+                        ?><?php 
                         echo "<section><div class=\"orders\">";
                         echo "<form name=\"form\" method=\"post\" action=\"Edit_ORDMAS_finish.php\">";
                         echo "訂單編號：<select name=\"ORDNO\" />";

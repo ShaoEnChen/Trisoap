@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-<?php
+<?php 
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
@@ -39,7 +39,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                         $_SESSION['ORIGIN'] = '1';
                         $queryEMAIL = search('EMAIL', 'ORDMAS', 'ORDNO', $ORDNO);
                         mail_pass_order($queryEMAIL, $ORDNO);
-                        ?><script>redirect("Update_ORDMAS_finish.php");</script><?
+                        ?><script>redirect("Update_ORDMAS_finish.php");</script><?php 
                 }
         }
         mysql_query($sql);
@@ -49,15 +49,15 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 redirect("Update_ORDMAS_1.php");
                 alert("儲存成功");
                 </script>
-                <?
+                <?php 
         }
         else{
                 ?>
                 <script>
                 redirect("Update_ORDMAS_1.php");
-                alert("<?echo $message;?>");
+                alert("<?php echo $message;?>");
                 </script>
-                <?
+                <?php 
         }
 }
 else{
@@ -66,6 +66,6 @@ else{
         redirect("../Homepage/index.php");
         alert("您無權限觀看此頁面!");
         </script>
-        <?
+        <?php 
 }
 ?>

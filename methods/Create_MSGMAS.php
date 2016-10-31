@@ -17,7 +17,7 @@
 <br>
 <div class="sign-block">
     <h1>留心語</h1>
-    <?
+    <?php 
     session_start();
     include_once("Helper/mysql_connect.php");
     include_once("Helper/redirect.js");
@@ -33,7 +33,7 @@
             <button type="submit" class="promise">上傳</button>
         </form>
         <a href="../message/message.php"><button type="button" class="cancel">取消</button></a>
-        <?
+        <?php 
     }
     else{
         ?>
@@ -41,7 +41,7 @@
         redirect("../Homepage/index.php");
         alert("請先登入或註冊!");
         </script>
-        <?
+        <?php 
     }
     ?>
 </div>

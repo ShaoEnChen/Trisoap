@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<?
+<?php 
 session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
@@ -53,12 +53,12 @@ elseif($from == 'vp'){
         請輸入兌換碼：<input type="text" name="DISCOUNT" />
         <button type="submit" class="promise">確定</button>
     </form>
-    <?
+    <?php 
     if($from == 'oc'){
-    	?><a href="Order_Confirm.php"><button type="button" class="cancel">取消</button></a><?
+    	?><a href="Order_Confirm.php"><button type="button" class="cancel">取消</button></a><?php 
     }
     elseif($from == 'vp'){
-    	?><a href="View_Purchase.php"><button type="button" class="cancel">取消</button></a><?
+    	?><a href="View_Purchase.php"><button type="button" class="cancel">取消</button></a><?php 
     }
     ?>
 </div>

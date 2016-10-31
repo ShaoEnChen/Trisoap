@@ -64,7 +64,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <? echo $queryCUSNM."，您好<br>"; ?>
+                                <?php  echo $queryCUSNM."，您好<br>"; ?>
                             </a>
                         </li>
                         <li>
@@ -98,7 +98,7 @@
                                     </thead>
                                     <tbody>
                                     <form method="post" action="Update_MSGMAS_finish.php">
-                                    <?
+                                    <?php 
                                         $queryMSGMAS = "SELECT * FROM MSGMAS WHERE ACTCODE=1 AND MSGSTAT = 'A'";
                                         $result = mysql_query($queryMSGMAS);
                                         $data_nums = mysql_num_rows($result);
@@ -118,17 +118,17 @@
                                                 ?>
                                                 <tr>
                                                     <!-- 留言編號 -->
-                                                    <td><?echo $MSGNO;?></td>
+                                                    <td><?php echo $MSGNO;?></td>
                                                     <!-- 顧客信箱 -->
-                                                    <td><?echo $row['EMAIL'];?></td>
+                                                    <td><?php echo $row['EMAIL'];?></td>
                                                     <!-- 留言文字 -->
                                                     <td>
-                                                        <? $text = $row['MSGTXT']; ?>
-                                                        <a href="#" onclick="alert('<?echo $text;?>');">顯示</a>
+                                                        <?php  $text = $row['MSGTXT']; ?>
+                                                        <a href="#" onclick="alert('<?php echo $text;?>');">顯示</a>
                                                     </td>
                                                     <!-- 留言照片 -->
                                                     <td>
-                                                        <?
+                                                        <?php 
                                                         if($row['MSGPHOTO'] == '1'){
                                                             echo "<a target=\"_blank\" href=\"../message/picture/$MSGNO.png\">";
                                                             echo "<img src=\"../message/picture/$MSGNO.png\" width=\"120\" height=\"90\" />";
@@ -138,7 +138,7 @@
                                                     </td>
                                                     <!-- 留言影片 -->
                                                     <td>
-                                                        <?
+                                                        <?php 
                                                         if($row['MSGVIDEO'] == '1'){
                                                             echo "<a target=\"_blank\" href=\"../message/video/$MSGNO.mp4\">";
                                                             echo "<video width=\"120\" height=\"90\" controls>";
@@ -149,10 +149,10 @@
                                                         ?>
                                                     </td>
                                                     <!-- 建立日期 -->
-                                                    <td><?echo $row['CREATEDATE'];?></td>
+                                                    <td><?php echo $row['CREATEDATE'];?></td>
                                                     <!-- 審核 -->
                                                     <td>
-                                                    <?
+                                                    <?php 
                                                     $MSGNO = $row['MSGNO'];
                                                     $MSGNOnumber = 'MSGNO' . "$number";
                                                     $MSGSTATnumber = 'MSGSTAT' . "$number";
@@ -166,7 +166,7 @@
                                                     </select>
                                                     </td>
                                                 </tr>
-                                                <?
+                                                <?php 
                                             }
                                         }
                                         $_SESSION['number'] = $number - 1;
@@ -175,7 +175,7 @@
                                 </table>
                                 <input type="submit" name="button" class="btn btn-dark" value="儲存" />
                                 <br>
-                                <?
+                                <?php 
                                     echo '共 '.$data_nums.' 筆 - 第 '.$page.' 頁 - 共 '.$pages.' 頁';
                                     echo "<br><a href=?page=1>首頁</a>  ";
                                     echo "第 ";
@@ -201,7 +201,7 @@
                 redirect("../Homepage/index.php");
                 alert("您無權限觀看此頁面!");
                 </script>
-                <?
+                <?php 
             }
         ?>
     </body>

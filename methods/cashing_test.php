@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include_once("AllPay.Payment.Integration.php");
 include_once("Helper/mysql_connect.php");
@@ -18,7 +18,7 @@ if(!$queryORDITEM){
     redirect("../Homepage/index.php");
     alert("這筆訂單沒有任何商品!");
     </script>
-    <?
+    <?php
 }
 elseif($total <= 0 || $total == null){
     ?>
@@ -26,7 +26,7 @@ elseif($total <= 0 || $total == null){
     redirect("../Homepage/index.php");
     alert("這筆訂單付款金額為負!");
     </script>
-    <?
+    <?php
 }
 elseif($EMAIL == null || $ORDNO == null || $ORDNO == '100000000'){
     ?>
@@ -34,7 +34,7 @@ elseif($EMAIL == null || $ORDNO == null || $ORDNO == '100000000'){
     redirect("../Homepage/index.php");
     alert("您無權限觀看此頁面!");
     </script>
-    <?
+    <?php
 }
 else{
     if($from == 'oc'){
@@ -44,7 +44,7 @@ else{
             redirect("Order_Confirm.php");
             alert("請選擇付款方式");
             </script>
-            <?
+            <?php
         }
         else{
             $_SESSION['PAYTYPE'] = $paytype;
@@ -52,7 +52,7 @@ else{
             <script>
             redirect("cashing.php");
             </script>
-            <?
+            <?php
         }
     }
     else{
@@ -60,7 +60,7 @@ else{
         <script>
         redirect("cashing.php");
         </script>
-        <?
+        <?php
     }
 }
 ?>
