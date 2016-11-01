@@ -1,0 +1,29 @@
+.choice {
+	background-color: #fff;
+	/* 高度上限 */
+	max-height: 340px;
+	padding: 50px;
+	/* 自動生成滾軸 */
+	overflow: auto;
+	text-align: initial;
+}
+.intro,
+.choice {
+	box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 20%, 0.5);
+}
+.choice p {
+	margin: 0;
+	white-space: pre-line;
+}
+.choice-photo {
+	position: relative;
+}
+.choice-photo img {
+	width: 100%;
+	height: auto;
+}
+
+.choice-video video {
+	width: 100%;
+	height: auto;
+}

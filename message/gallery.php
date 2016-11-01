@@ -120,7 +120,7 @@
 						<h4>
 							照片&nbsp;
 							<a href="../methods/Create_MSGMAS.php">
-								<i class="fa fa-camera" aria-hidden="true"></i>
+								<i class="fa fa-camera-retro" aria-hidden="true"></i>
 							</a>
 						</h4>
 						<?php 
@@ -179,7 +179,7 @@
 					<div>
 						<h4>影片&nbsp;
 							<a href="../methods/Create_MSGMAS.php">
-								<i class="fa fa-video-camera" aria-hidden="true"></i>
+								<i class="fa fa-play" aria-hidden="true"></i>
 							</a>
 						</h4>
 						<?php 

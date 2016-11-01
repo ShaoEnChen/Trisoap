@@ -1,81 +1,7 @@
 @import url(font-awesome.min.css);
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-	background-color: #ddd;
-}
-
-h1, h2, h3, h4, h5, h6, a, p {
-	font-family: "Open Sans", sans-serif;
-	font-weight: 100;
-}
-
-h2, h3, h4, h5, h6, p, a {
-	color: #777;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	color: #00A0C6;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-hr {
-	border: 0;
-	height: 1px;
-	color: #999;
-	background-color: #999;
-	width: 90%;
-}
-
-/* Navbar */
-.nav-custom {
-	background-color: #fff;
-	z-index: 1000;
-}
-
-.nav-custom a {
-	letter-spacing: 5px;
-	margin-top: 15px;
-}
-
-.nav-custom .nav li a {
-	margin-right: 5px;
-	/*
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
-	*/
-}
-	.nav-custom .nav li a:hover {
-		color: #333;
-		background-color: transparent;
-		/* outline: 0; */
-	}
-	.nav-custom .nav li a:focus {
-		background-color: transparent;
-		/* outline: 0; */
-	}
-
-.navbar-brand {
-	padding: 0 0 0 15px;
-}
-
-.logo {
-	height: 50px;
-	width: auto;
-}
-
-/* collapse btn icon in small screen */
-.icon-bar {
-	background: #777;
-}
+@import url(basic.css);
+@import url(navbar.css);
+@import url(choice.css);
 
 /* Contents */
 .content {
@@ -100,44 +26,8 @@ hr {
 		margin: 20px 1%;
 	}
 }
-.choice {
-	background-color: #fff;
-	/* 高度上限 */
-	max-height: 340px;
-	padding: 50px;
-	/* 自動生成滾軸 */
-	overflow: auto;
-	text-align: initial;
-}
 
-.intro,
-.choice {
-	box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 20%, 0.5);
-}
-
-.choice p {
-	margin: 0;
-	white-space: pre-line;
-}
-
-.choice-photo {
-	position: relative;
-}
-.choice-photo img {
-	width: 100%;
-	height: auto;
-}
-
+/* Choices */
 .choice-video {
 	padding: 50px 10px;
-}
-.choice-video video {
-	width: 100%;
-	height: auto;
-}
-
-/* footer */
-.footer {
-	position: relative;
-	width: 100%;
 }
