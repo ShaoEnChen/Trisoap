@@ -152,13 +152,13 @@
             
             <a href="Create_ORDMAS2.php"><button type="submit" class="promise">確定結帳</button></a>
             <br>
-            <a href="../Homepage/index.php"><button type="button" class="cancel">返回首頁</button></a>
+            <a href="/"><button type="button" class="cancel">返回首頁</button></a>
             <?php 
         }
         else{
             echo "<h2>目前沒有選擇任何商品</h2>";
             ?>
-            <a href="../Homepage/index.php"><button type="button" class="promise">返回首頁</button></a>
+            <a href="/"><button type="button" class="promise">返回首頁</button></a>
             <a href="../Homepage/product.php"><button type="button" class="promise">返回商品頁</button></a>
             <?php 
         }

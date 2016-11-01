@@ -67,7 +67,7 @@
       else{
         ?>
         <script>
-        redirect("../Homepage/index.php");
+        redirect("/");
         alert("請先登入或註冊!");
         </script>
         <?php     }

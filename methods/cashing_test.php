@@ -15,7 +15,7 @@ $queryORDITEM = select('ORDITEMMAS', 'ORDNO', $ORDNO);
 if(!$queryORDITEM){
     ?>
     <script>
-    redirect("../Homepage/index.php");
+    redirect("/");
     alert("這筆訂單沒有任何商品!");
     </script>
     <?php
@@ -23,7 +23,7 @@ if(!$queryORDITEM){
 elseif($total <= 0 || $total == null){
     ?>
     <script>
-    redirect("../Homepage/index.php");
+    redirect("/");
     alert("這筆訂單付款金額為負!");
     </script>
     <?php
@@ -31,7 +31,7 @@ elseif($total <= 0 || $total == null){
 elseif($EMAIL == null || $ORDNO == null || $ORDNO == '100000000'){
     ?>
     <script>
-    redirect("../Homepage/index.php");
+    redirect("/");
     alert("您無權限觀看此頁面!");
     </script>
     <?php

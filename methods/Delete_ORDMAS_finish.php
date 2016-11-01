@@ -54,6 +54,6 @@ if($EMAIL != null){
 else{
         ?>
         <script>
-        redirect("../Homepage/index.php");
+        redirect("/");
         alert("您無權限觀看此頁面!");
         </script>

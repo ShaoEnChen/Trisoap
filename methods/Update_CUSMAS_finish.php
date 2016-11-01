@@ -49,7 +49,7 @@ if($EMAIL != null){
         if($message == null){    
                 ?>
                 <script>
-                redirect("../Homepage/index.php");
+                redirect("/");
                 alert("資料修改成功");
                 </script>
                 <?php 
@@ -67,7 +67,7 @@ else
 {
         ?>
         <script>
-        redirect("../Homepage/index.php");
+        redirect("/");
         alert("您無權限觀看此頁面!");
         </script>
         <?php 

@@ -31,14 +31,14 @@
 				再一次輸入新密碼<br><input type="password" name="newCUSPW2" /><br>
 				<button type="submit" class="promise">確定</button>
 			</form>
-		<a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
+		<a href="/"><button type="button" class="cancel">取消</button></a>
 	</div>
 	<?php
 	}
 	else{
 		?>
 		<script>
-		redirect("../Homepage/index.php");
+		redirect("/");
 		alert("您無權限觀看此頁面!");
 		</script>
 		<?php 

@@ -5,4 +5,4 @@
 session_start();
 session_unset();
 ?>請稍等...
-<meta http-equiv=REFRESH CONTENT=0.5;url=../Homepage/index.php>
+<meta http-equiv=REFRESH CONTENT=0.5;url="/">

@@ -53,7 +53,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
 else{
         ?>
         <script>
-        redirect("../Homepage/index.php");
+        redirect("/");
         alert("您無權限觀看此頁面!");
         </script>
         <?php 

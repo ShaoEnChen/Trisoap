@@ -64,7 +64,7 @@
         <textarea name="SPEINS" value="<?php echo $SPEINS;?>" placeholder="特殊要求(可不填)"></textarea>
         <button type="submit" class="promise">註冊</button>
     </form>
-    <a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
+    <a href="/"><button type="button" class="cancel">取消</button></a>
 </div>
 </body>
 </html>

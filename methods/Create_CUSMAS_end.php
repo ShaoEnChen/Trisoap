@@ -39,7 +39,7 @@ if($VERIFY == $_SESSION['COMMIT']){
                 unset($_SESSION['SPEINS']);
                 ?>
                 <script>
-                redirect("../Homepage/index.php");
+                redirect("/");
                 alert("註冊成功");
                 </script>
                 <?php

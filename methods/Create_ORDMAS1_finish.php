@@ -114,7 +114,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
             }
             ?>
             <script>
-            redirect("../Homepage/index.php");
+            redirect("/");
             alert("訂單建立成功。");
             </script>
             <?php 
@@ -140,7 +140,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
 else{
     ?>
     <script>
-    redirect("../Homepage/index.php");
+    redirect("/");
     alert("您無權限觀看此頁面!");
     </script>
     <?php 

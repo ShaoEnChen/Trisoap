@@ -110,7 +110,7 @@ if($message == ''){
             <p>驗證碼：</p><input type="text" name="VERIFY" /><br>
             <button type="submit" class="promise">確定</button>
         </form>
-        <a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
+        <a href="/"><button type="button" class="cancel">取消</button></a>
     </div>
 </body>
 

@@ -42,7 +42,7 @@
                 <textarea name="ORDINST" rows="3" placeholder="訂單特殊要求"></textarea>
                 請再次輸入您的密碼：<input name="PW" type="password" /><br>
                 <button type="submit" class="promise">確定</button><br>
-                <a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
+                <a href="/"><button type="button" class="cancel">取消</button></a>
             </form>
         </div>
         <?php
@@ -50,7 +50,7 @@
     else{
         ?>
         <script>
-        redirect("../Homepage/index.php");
+        redirect("/");
         alert("您無權限觀看此頁面!");
         </script>
         <?php 

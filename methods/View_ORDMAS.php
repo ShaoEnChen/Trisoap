@@ -57,7 +57,7 @@ function show_PAYTYPE($id){
             <div class="collapse navbar-collapse navbar-main-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="../Homepage/index.php">
+                        <a href="/">
                             回三三首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
                         </a>
                     </li>
@@ -182,7 +182,7 @@ function show_PAYTYPE($id){
                                 else{
                                     ?>
                                     <script>
-                                    redirect("../Homepage/index.php");
+                                    redirect("/");
                                     alert("您無權限觀看此頁面!");
                                     </script>
                                     <?php 

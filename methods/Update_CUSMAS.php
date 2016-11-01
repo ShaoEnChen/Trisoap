@@ -53,14 +53,14 @@
 			特殊要求：<textarea name="SPEINS" cols="45" rows="5"><?php echo $SPEINS;?></textarea><br>
 			<button type="submit" class="promise">確定</button>
 		</form>
-		<a href="../Homepage/index.php"><button type="button" class="cancel">取消</button></a>
+		<a href="/"><button type="button" class="cancel">取消</button></a>
 	</div>
 	<?php 
 	}
 	else{
 		?>
 		<script>
-		redirect("../Homepage/index.php");
+		redirect("/");
 		alert("您無權限觀看此頁面!");
 		</script>
 		<?php 

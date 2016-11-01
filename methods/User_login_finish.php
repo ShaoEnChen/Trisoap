@@ -28,7 +28,7 @@ if($message == null){
         $_SESSION['CUSIDT'] = $queryCUSIDT;
         ?>
         <script>
-        redirect("../Homepage/index.php");
+        redirect("/");
         alert("成功登入");
         </script>
         <?php 

@@ -43,7 +43,7 @@ if($EMAIL != null){
                 if(mysql_query($sql)){               
                         ?>
                         <script>
-                        redirect("../Homepage/index.php");
+                        redirect("/");
                         alert("密碼修改成功");
                         </script>
                         <?php                        
@@ -69,7 +69,7 @@ if($EMAIL != null){
 else{
         ?>
         <script>
-        redirect("../HomePage/index.php");
+        redirect("/");
         alert("您無權限觀看此頁面!");
         </script>
         <?php 

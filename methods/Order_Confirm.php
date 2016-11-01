@@ -168,13 +168,13 @@
             </form>
             <br>
 
-            <a href="../Homepage/index.php"><button type="button" class="cancel">返回首頁</button></a>
+            <a href="/"><button type="button" class="cancel">返回首頁</button></a>
             <?php 
         }
         else{
             echo "<h2>這筆訂單沒有任何商品</h2>";
             ?>
-            <a href="../Homepage/index.php"><button type="button" class="promise">返回首頁</button></a>
+            <a href="/"><button type="button" class="promise">返回首頁</button></a>
             <a href="../Homepage/product.php"><button type="button" class="promise">返回商品頁</button></a>
             <?php 
         }
