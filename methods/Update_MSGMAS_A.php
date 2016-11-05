@@ -131,7 +131,7 @@
                                                         <?php 
                                                         if($row['MSGPHOTO'] == '1'){
                                                             echo "<a target=\"_blank\" href=\"../message/picture/$MSGNO.png\">";
-                                                            echo "<img src=\"../message/picture/$MSGNO.png\" width=\"120\" height=\"90\" />";
+                                                            echo "<img src=\"/message/picture/$MSGNO.png\" width=\"120\" height=\"90\" />";
                                                             echo "</a>";
                                                         }
                                                         ?>

@@ -55,7 +55,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if($SETPRICE == null){
             $message .= '請填寫自訂價格 \n';
         }
-        elseif(is_numeric($SETPRICE) == FALSE || $SETPRICE < 0 || is_float($SETPRICE)){
+        else if(is_numeric($SETPRICE) == FALSE || $SETPRICE < 0 || is_float($SETPRICE)){
             $message .= '自訂價格必須為正整數 \n';
         }
     }

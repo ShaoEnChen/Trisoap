@@ -145,7 +145,7 @@
                                                     <!-- 留言文字 -->
                                                     <td>
                                                         <?php  $text = $row['MSGTXT']; ?>
-                                                        <a href="#" onclick="alert('<?echo $text;?>');">顯示</a>
+                                                        <a href="#" onclick="alert('<?php echo $text;?>');">顯示</a>
                                                     </td>
                                                     <!-- 留言照片 -->
                                                     <td>

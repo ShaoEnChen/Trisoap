@@ -61,7 +61,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 ?>
                 <script>
                 redirect("Edit_ITEMMAS.php");
-                alert("<?php o $message1;?>");
+                alert("<?php echo $message1;?>");
                 </script>
                 <?php               unset($_SESSION['newITEMNO']);
         }
@@ -73,3 +73,5 @@ else{
         alert("您無權限觀看此頁面!");
         </script>
         <?php
+	} 
+	?>
