@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="Homepage/img/misc/favicon.png">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>三三社企</title>
+    <title>三三吾鄉手工皂Trisoap</title>
     <!-- Bootstrap Core CSS-->
     <link href="Homepage/css/bootstrap.min.css" rel="stylesheet">
     <!-- FlexSlider CSS -->
