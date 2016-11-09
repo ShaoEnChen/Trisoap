@@ -48,14 +48,16 @@ if($EMAIL != null && $CUSIDT == 'A'){
                         redirect("Update_ITEMMAS.php");
                         alert("更新成功");
                         </script>
-                        <?php               }
+                        <?php
+                }
                 else{
                         ?>
                         <script>
                         redirect("Edit_ITEMMAS.php");
                         alert("更新失敗");
                         </script>
-                        <?php               }
+                        <?php
+                }
         }
         else{
                 ?>
@@ -74,5 +76,5 @@ else{
         alert("您無權限觀看此頁面!");
         </script>
         <?php
-	} 
-	?>
+} 
+?>

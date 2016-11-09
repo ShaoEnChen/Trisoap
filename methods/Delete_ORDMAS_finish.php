@@ -33,7 +33,7 @@ if($EMAIL != null){
                 ?>
                 <script>
                 redirect("Delete_ORDMAS.php");
-                alert("<?php o $message;?>");
+                alert("<?php echo $message;?>");
                 </script>
                 <?php
         }
