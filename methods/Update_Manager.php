@@ -37,12 +37,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="Create_manager.php">
+                            <a href="Create_Manager.php">
                                 新增管理員<i class="fa fa-angle-down" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="Delete_manager.php">
+                            <a href="Delete_Manager.php">
                                 刪除管理員<i class="fa fa-angle-down" aria-hidden="true"></i>
                             </a>
                         </li>
