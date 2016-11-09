@@ -57,7 +57,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 ?>
                 <script>
                 redirect("Update_ORDMAS_F.php");
-                alert("<?echo $message;?>");
+                alert("<?php echo $message;?>");
                 </script>
                 <?php 
         }

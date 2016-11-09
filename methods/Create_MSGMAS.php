@@ -26,9 +26,9 @@
         ?>
         <form method="post" action="Create_MSGMAS_finish.php" enctype="multipart/form-data">
             <textarea name="MSGTXT" placeholder="文字(必填)"></textarea>
-            照片（上傳格式限制：jpeg/jpg/png）<br>
+            <p>照片（上傳格式限制：jpeg/jpg/png</p>
             <input type="file" name="MSGPHOTO" /><br>
-            影片（上傳格式限制：mp4）<br>
+            <p>影片（上傳格式限制：mp4</p>
             <input type="file" name="MSGVIDEO" /><br>
             <button type="submit" class="promise">上傳</button>
         </form>

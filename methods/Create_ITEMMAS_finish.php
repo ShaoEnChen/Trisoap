@@ -27,13 +27,13 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if($newITEMNM == null){
                 $message = $message . '商品名稱欄位不可空白 \n';
         }
-        if(is_int($newITEMAMT) == FALSE || $newITEMAMT < 0){
+        if($newITEMAMT != (int)$newITEMAMT || (int)$newITEMAMT < 0){
                 $message = $message . '商品數量必須為正整數 \n';
         }
         if($newPRICE == null){
                 $message = $message . '商品價格欄位不可空白 \n';
         }
-        if(is_int($newPRICE) == FALSE || $newPRICE < 0){
+        if($newPRICE != (int)$newPRICE || (int)$newPRICE < 0){
                 $message = $message . '商品價格必須為正整數 \n';
         }
         $queryITEMNO = search('ITEMNO', 'ITEMMAS', 'ITEMNO', $newITEMNO);

@@ -26,7 +26,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if($AMT == null){
                 $message = $message . '進貨數量欄位不可空白 \n';
         }
-        if(is_int($AMT) == FALSE || $AMT < 0){
+        if($AMT != (int)$AMT || $AMT < 0){
                 $message .= '進貨數量必須為正整數 \n';
         }
 
