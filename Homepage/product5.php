@@ -165,14 +165,36 @@
     <section class="footer bg-gray">
       <div class="container">
         <div class="row">
-          
+          <div class="col-md-4">
+            <h3><a href="Homepage/about.php">關於我們</a></h3>
+            <p>「三三吾鄉」的名稱由來，是因每個產品背後，都蘊含三個故事：社福團體喜憨兒協力生產的故事，在地小農用心耕耘的故事，以及身為社會企業的我們，串聯推動夢想的故事。</p>
+          </div>
+          <div class="col-md-4">
+            <h3><a href="Homepage/faq.php">常見問題</a></h3>
+            <p>三三的肥皂都是如何製作的？「冷製手工皂」是使用純天然的基底植物油，搭配上鹼水調配再經過攪拌、保溫、晾皂等各種精細的過程，而後皂化成一個具有不同皂性的產品。</p>
+          </div>
+          <div class="col-md-4">
+            <h3><a href="Homepage/contact.php">聯絡我們</a></h3>
+            <p>
+              <i class="fa fa-phone fa-fw fa-lg"></i>
+              <?php echo $COMTEL;?>
+            </p>
+            <p>
+              <i class="fa fa-envelope fa-fw fa-lg"></i>
+              <?php echo $COMEMAIL;?>
+            </p>
+            <p>
+              <i class="fa fa-map-marker fa-fw fa-lg"></i>
+              <?php echo $COMADD;?>
+            </p>
+          </div>
         </div>
-  
+        <hr>
         <div class="row">
           <div class="col-md-4">
             <ul class="list-inline">
               <li><a href="https://www.facebook.com/trisoap"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
-              <li><a href="contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
+              <li><a href="Homepage/contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
               <li><a href="https://www.pinkoi.com/store/trisoap">Pinkoi</a></li>
             </ul>
           </div>
@@ -182,6 +204,7 @@
         </div>
       </div>
     </section>
+    
     <!-- jQuery-->
     <script src="js/jquery-1.12.3.min.js"></script>
     <!-- Bootstrap Core JavaScript-->

@@ -302,6 +302,7 @@
         </div>
       </div>
     </section>
+    
     <!-- jQuery-->
     <script src="Homepage/js/jquery-1.12.3.min.js"></script>
     <!-- Bootstrap Core JavaScript-->

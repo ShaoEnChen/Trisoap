@@ -1915,6 +1915,11 @@ li .shop-cart {
 }
 
 /* ------ About ------ */
+#about img {
+  width: 100%;
+  height: auto;
+}
+
 #team h3 {
   margin: 0;
 }

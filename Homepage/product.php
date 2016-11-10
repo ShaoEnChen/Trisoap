@@ -158,23 +158,26 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h3><a href="about.html">關於我們</a></h3>
-            <p>一切都是從一個座落在寧靜城市裡的、專門開辦二手販售
-以及手工皂製作的小型作業所---「李勝賢文教基金會」開始的參訪李勝賢文教基金會的經驗讓我們留下了深刻的印象那天，我們第一次學做皂，也是第一次深深地被憨兒們打皂時嶄露出來的自信與笑容深深吸引
+            <h3><a href="Homepage/about.php">關於我們</a></h3>
+            <p>「三三吾鄉」的名稱由來，是因每個產品背後，都蘊含三個故事：社福團體喜憨兒協力生產的故事，在地小農用心耕耘的故事，以及身為社會企業的我們，串聯推動夢想的故事。</p>
+          </div>
+          <div class="col-md-4">
+            <h3><a href="Homepage/faq.php">常見問題</a></h3>
+            <p>三三的肥皂都是如何製作的？「冷製手工皂」是使用純天然的基底植物油，搭配上鹼水調配再經過攪拌、保溫、晾皂等各種精細的過程，而後皂化成一個具有不同皂性的產品。</p>
+          </div>
+          <div class="col-md-4">
+            <h3><a href="Homepage/contact.php">聯絡我們</a></h3>
+            <p>
+              <i class="fa fa-phone fa-fw fa-lg"></i>
+              <?php echo $COMTEL;?>
             </p>
-          </div>
-          <div class="col-md-4">
-            <h3><a href="faq.html">常見問題</a></h3>
-            <p>「冷製手工皂」是使用純天然的基底植物油，搭配上鹼水調配
-  再經過攪拌、保溫、晾皂等各種精細的過程，而後皂化成一個
-  具有不同皂性的產品。有別於一般大型賣場，或是各式衛妝開
-  架式商店所販售的工廠壓製肥皂或沐浴精</p>
-          </div>
-          <div class="col-md-4">
-            <h3><a href="contact.html">聯絡我們</a></h3>
-            <p><i class="fa fa-phone fa-fw fa-lg"></i> <?php echo $COMTEL;?> <br>
-            <i class="fa fa-envelope fa-fw fa-lg"></i> <?php echo $COMEMAIL;?> <br>
-            <i class="fa fa-map-marker fa-fw fa-lg"></i> <?php echo $COMADD;?>
+            <p>
+              <i class="fa fa-envelope fa-fw fa-lg"></i>
+              <?php echo $COMEMAIL;?>
+            </p>
+            <p>
+              <i class="fa fa-map-marker fa-fw fa-lg"></i>
+              <?php echo $COMADD;?>
             </p>
           </div>
         </div>
@@ -183,7 +186,7 @@
           <div class="col-md-4">
             <ul class="list-inline">
               <li><a href="https://www.facebook.com/trisoap"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
-              <li><a href="contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
+              <li><a href="Homepage/contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
               <li><a href="https://www.pinkoi.com/store/trisoap">Pinkoi</a></li>
             </ul>
           </div>
@@ -193,6 +196,7 @@
         </div>
       </div>
     </section>
+    
     <!-- jQuery-->
     <script src="js/jquery-1.12.3.min.js"></script>
     <!-- Bootstrap Core JavaScript-->
