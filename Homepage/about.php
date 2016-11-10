@@ -7,16 +7,11 @@
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>三三社企-關於三三</title>
+    <title>三三吾鄉手工皂Trisoap</title>
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->
     <link href="css/trisoap.css" rel="stylesheet">
-    <script>
-    function closed(){
-    	alert("此功能將在近期開放，敬請期待");
-    }
-    </script>
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
     <!-- Preloader-->
@@ -27,8 +22,16 @@
     <nav class="navbar navbar-custom navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#page-top" class="navbar-brand page-scroll">
-            <!-- Img or text logo--><img src="img/logo2.png" alt="" class="logo"></a>
+          <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#page-top" class="navbar-brand page-scroll">
+            <!-- Img or text logo-->
+            <img src="img/logo2.png" alt="" class="logo">
+          </a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
           <ul class="nav navbar-nav navbar-left">
@@ -100,11 +103,10 @@
       </div>
     </nav>
     <!-- Header-->
-    <header data-background="img/jumbotrons/about.png" class="intro introhalf">
+    <header data-background="img/jumbotrons/about.png" class="intro introhalf" id="intro-about">
       <!-- Intro Header-->
       <div class="intro-body">
         <h1>關於我們</h1>
-
       </div>
     </header>
     <!-- About Section-->
@@ -126,8 +128,6 @@
           </div>
           <div class="col-lg-5 col-lg-offset-1 text-center">
             <h3>&nbsp;</h3>
-            <img src="img/about.jpg" />
-            <!--
             <div data-value="0.999" class="circle"><span></span>
               <div class="agenda">公益</div>
             </div>
@@ -137,7 +137,6 @@
             <div data-value="0.999" class="circle"><span></span>
               <div class="agenda">目標</div>
             </div>
-            -->
           </div>
         </div>
       </div>
@@ -148,49 +147,35 @@
       <div class="container">
         <h3>團隊</h3>
         <div class="row">
-          <p>幾個平凡的大學生，在因緣際會下，因為憨兒們的笑容而相聚，為了再次看到那溫暖的笑容因此以社會企業的形式來串連社福團體與當地小農兩方，靠著三方協力一起朝同一目標與夢想前進。</p>
+          <div class="col-xs-12">
+            <p>
+              幾個平凡的大學生，因緣際會下，因憨兒們的笑容而相聚。為了再次看到那溫暖的笑容，<br>於是以社會企業的形式，串連社福團體與在地小農，靠著三方協力，一起朝同一目標與夢想前進。
+            </p>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-6">
+        <div class="row team-profile">
+          <div class="col-md-4 col-md-offset-1 col-sm-6 col-xs-12">
+            <img src="img/photo1.png" alt="">
+          </div>
+          <div class="col-md-4 col-md-offset-2 col-sm-6 col-xs-12 member-intro">
             <h4>尹又令 Pusher</h4>
             <p>國立臺灣大學社會工作學系</p>
-            <p><img src="img/photo1.png" alt="" class="img-responsive center-block"></p>
             <p>討厭歧視，討厭壓迫，或許我們未來都可以做一個夢，為了做一個沒有歧視的夢而努力。
             社工系相關領域，2015年因為認知到社福團體需要解決的問題而成為三三的創辦人之一，
             在三三中扮演研發與社福小農之間的串聯者，在跟小農洽談的時候愛上了臺東。
             在三三草創的時期也經歷過許多挫折，但因為接受到一次嚴重地對憨兒的歧視，燃起了想要推動三三的信念，
             「三三不僅是一個品牌，更是改變社會的一個生活態度。」
             </p>
-            <ul class="list-inline">
-              <li><a href="https://www.facebook.com/profile.php?id=100000281748300&fref=ts" target="_blank"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus fa-2x fa-fw"></i></a></li>
-            </ul>
             <h5>C.E.O</h5>
           </div>
-          <div class="col-md-4 col-sm-6">
-            <h4>王郁仁</h4>
-            <p>國立臺灣大學工商管理學系</p>
-            <p><img src="img/photo2.png" alt="" class="img-responsive center-block"></p>
-            <p>來自台中的大孩子，<br>
-            對世界有永無止境的好奇心，<br>
-            把生活當作田野，<br>
-            把日常視為創新的根源。<br>
-            我們會一天一天長大，外表逐漸成熟，<br>
-            但內心卻得時時提醒自己<br>
-            要保有小時候的那種想像力與創造力。<br>
-            </p>
-            <ul class="list-inline">
-              <li><a href="https://www.facebook.com/jason.wang.315213?fref=ts" target="_blank"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
-              <li><a href="#"><i class="fa fa-youtube fa-2x fa-fw"></i></a></li>
-            </ul>
-            <h5>C.O.O</h5>
+        </div>
+        <div class="row team-profile">
+          <div class="col-md-4 col-md-offset-1 col-sm-6 col-xs-12">
+            <img src="img/photo3.png" alt="">
           </div>
-          <div class="col-md-4 col-sm-6">
+          <div class="col-md-4 col-md-offset-2 col-sm-6 col-xs-12 member-intro">
             <h4>陳雨彤 Maggy Chen</h4>
             <p>國立臺灣大學國際企業學系</p>
-            <p><img src="img/photo3.png" alt="" class="img-responsive center-block"></p>
             <p>期許自己結合愛心與能力，<br>
             一步一腳印，踏實地朝社會企業的夢想邁進。<br>
             Motto: Be the change that you wish to see in the world.<br>
@@ -198,33 +183,25 @@
             希望，與世界分享幸福與微笑；<br>
             夢想，在三三彩繪吾鄉的美好！<br>
             </p>
-            <ul class="list-inline">
-              <li><a href="https://www.facebook.com/maggy.chen?fref=ts" target="_blank"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram fa-2x fa-fw"></i></a></li>
-            </ul>
             <h5>C.M.O</h5>
           </div>
-          
         </div>
       </div>
     </section>
+
     <!-- Footer Section-->
     <section class="footer bg-gray">
       <div class="container">
-     
         <div class="row">
           <div class="col-md-4">
             <ul class="list-inline">
-              <li><a href="https://www.facebook.com/trisoap/?fref=ts"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter fa-fw fa-lg"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus fa-fw fa-lg"></i></a></li>
+              <li><a href="https://www.facebook.com/trisoap"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
               <li><a href="contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
+              <li><a href="https://www.pinkoi.com/store/trisoap">Pinkoi</a></li>
             </ul>
           </div>
-          
-          <div class="col-md-3">
-            <p class="small">&copy;2016 TriSoap All Rights Reserved</p>
+          <div class="col-md-5">
+            <p class="small">Copyright &copy; 2016 TriSoap All Rights Reserved</p>
           </div>
         </div>
       </div>

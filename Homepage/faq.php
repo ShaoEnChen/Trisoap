@@ -7,16 +7,11 @@
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>三三社企-顧客問答</title>
+    <title>三三吾鄉手工皂Trisoap</title>
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->
     <link href="css/trisoap.css" rel="stylesheet">
-    <script>
-    function closed(){
-    	alert("此功能將在近期開放，敬請期待");
-    }
-    </script>
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
     <!-- Preloader-->
@@ -27,8 +22,16 @@
     <nav class="navbar navbar-custom navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#page-top" class="navbar-brand page-scroll">
-            <!-- Img or text logo--><img src="img/logo2.png" alt="" class="logo"></a>
+          <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#page-top" class="navbar-brand page-scroll">
+            <!-- Img or text logo-->
+            <img src="img/logo2.png" alt="" class="logo">
+          </a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
           <ul class="nav navbar-nav navbar-left">
@@ -100,11 +103,10 @@
       </div>
     </nav>
     <!-- Header-->
-    <header data-background="img/jumbotrons/attitude.jpg" class="intro introhalf">
+    <header data-background="img/jumbotrons/attitude.jpg" class="intro introhalf" id="intro-faq">
       <!-- Intro Header-->
       <div class="intro-body">
         <h1>FAQ</h1>
-        <br>
         <h4>Frequently Asked Questions</h4>
       </div>
     </header>
@@ -191,15 +193,13 @@
         <div class="row">
           <div class="col-md-4">
             <ul class="list-inline">
-              <li><a href="https://www.facebook.com/trisoap/?fref=ts"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter fa-fw fa-lg"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus fa-fw fa-lg"></i></a></li>
+              <li><a href="https://www.facebook.com/trisoap"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
               <li><a href="contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
+              <li><a href="https://www.pinkoi.com/store/trisoap">Pinkoi</a></li>
             </ul>
           </div>
-          
-          <div class="col-md-3">
-            <p class="small">&copy;2016 TriSoap All Rights Reserved</p>
+          <div class="col-md-5">
+            <p class="small">Copyright &copy; 2016 TriSoap All Rights Reserved</p>
           </div>
         </div>
       </div>

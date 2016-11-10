@@ -133,9 +133,9 @@ a, img, :focus, input {
 a:hover, a:focus {
   color: #666;
   text-decoration: none; }
-a img:hover {
+/*a img:hover {
   opacity: .7; }
-
+*/
 .no-pad {
   padding: 0 !important;
   margin: 0 !important; }
@@ -340,10 +340,10 @@ a .fa {
     font-size: 22px;
     letter-spacing: -0.02em;
     text-transform: none;
-    padding: 12px 5px 12px 15px; }
+    /* padding: 12px 5px 12px 15px; */
+    height: 100%; }
   .navbar-custom.top-nav-collapse .navbar-brand {
-    font-size: 18px;
-    padding-top: 18px; }
+    font-size: 18px; }
 
 .logo {
   max-width: 100%; }
@@ -1007,8 +1007,6 @@ input[type=checkbox], input[type=radio] {
 /* Team */
 #team {
   background: #fff; }
-  #team h2 {
-    margin-bottom: 55px; }
   #team p {
     margin-bottom: 10px; }
   #team h2 {
@@ -1735,7 +1733,27 @@ li .shop-cart {
   font-size: 47px; }
 /*# sourceMappingURL=pheromone.css.map */
 
-/* Sean's */
+
+/* Sean's addition */
+
+/* ------各頁Intro橫幅圖片垂直位置------ */
+#intro-about {
+  background-position: center top;
+}
+
+#intro-contact {
+  background-position: center 38%;
+}
+
+#intro-faq {
+  background-position: center 8%;
+}
+
+#intro-product {
+  background-position: center 78%;
+}
+
+/* ------Index------ */
 .flexslider {
   border: none;
 }
@@ -1867,12 +1885,13 @@ li .shop-cart {
   font-size: 5vw;
 }
 
-#slide-textarea3 {
+#slide-textarea3,
+#slide-textarea4 {
   position: absolute;
   bottom: 15vw;
   right: 0;
   padding: 24px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 16px 0 0 16px;
   -webkit-border-radius: 16px 0 0 16px;
   -moz-border-radius: 16px 0 0 16px;
@@ -1884,22 +1903,27 @@ li .shop-cart {
   color: rgba(0, 0, 40, 1);
 }
 
-#slide-textarea4 {
-  writing-mode: vertical-lr;
-  -webkit-writing-mode: vertical-lr;
-  position: absolute;
-  top: 30%;
-  right: 13vw;
-}
-
 #slide-text4 {
   font-size: 4vw;
-  letter-spacing: 4px;
-  color: rgba(0, 0, 40, 0.8);
+  color: rgba(0, 0, 40, 1);
 }
 
 /* 社會企業 slogan */
 .slogan-text {
   text-align: left;
   white-space: pre-line;
+}
+
+/* ------ About ------ */
+#team h3 {
+  margin: 0;
+}
+
+.team-profile img {
+  width: 100%;
+  height: auto;
+}
+
+.member-intro {
+  padding-top: 2%;
 }
