@@ -32,7 +32,7 @@
           </button>
           <a href="#page-top" class="navbar-brand page-scroll">
             <!-- Img or text logo-->
-            <img src="img/logo2.png" alt="" class="logo">
+            <img src="Homepage/img/logo2.png" alt="" class="logo">
           </a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
@@ -120,7 +120,7 @@
         <ul class="slides">
           <li>
             <a href="about.php">
-              <img class="flexslides" src="img/index1.png">
+              <img class="flexslides" src="Homepage/img/index1.png">
               <div id="slide-textarea1">
                 <p class="slide-text" id="slide-text1">三三手皂<br>x<br>來自吾鄉</p>
               </div>
@@ -128,7 +128,7 @@
           </li>
           <li>
             <a href="about.php">
-              <img class="flexslides" src="img/index2.png">
+              <img class="flexslides" src="Homepage/img/index2.png">
               <div id="slide-textarea2-1">
                 <span class="slide-text" id="slide-text2-1-1">小農</span>
                 <span class="slide-text" id="slide-text2-1-2">素材</span>
@@ -144,7 +144,7 @@
           </li>
           <li>
             <a href="about.php">
-              <img class="flexslides" src="img/index3.png">
+              <img class="flexslides" src="Homepage/img/index3.png">
               <div id="slide-textarea3">
                 <p class="slide-text" id="slide-text3">每一顆手工皂，<br>都是注入憨兒們歡笑的純淨手作。</p>
               </div>
@@ -152,7 +152,7 @@
           </li>
           <li>
             <a href="about.php">
-              <img class="flexslides" src="img/index4.png">
+              <img class="flexslides" src="Homepage/img/index4.png">
               <div id="slide-textarea4">
                 <p class="slide-text" id="slide-text4">手作的溫度</p>
               </div>
@@ -292,7 +292,7 @@
           <div class="col-md-4">
             <ul class="list-inline">
               <li><a href="https://www.facebook.com/trisoap"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
-              <li><a href="contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
+              <li><a href="Homepage/contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
               <li><a href="https://www.pinkoi.com/store/trisoap">Pinkoi</a></li>
             </ul>
           </div>
