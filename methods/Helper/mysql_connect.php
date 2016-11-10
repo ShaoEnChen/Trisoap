@@ -2,7 +2,8 @@
 $db_server = "localhost";
 $db_name = "Trisoap";
 $db_user = "root";
-$db_passwd = "n0n02016";
+// $db_passwd = "n0n02016";
+$db_passwd = "";
 // $connect = mysqli_connect($db_server, $db_user, $db_passwd, $db_name);
 
 if(!@mysql_connect($db_server, $db_user, $db_passwd))

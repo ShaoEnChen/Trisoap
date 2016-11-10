@@ -11,7 +11,7 @@ function init() {
         zoom: 16,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(40.722330, -73.992905), // You Address Here
+        center: new google.maps.LatLng(25.013084, 121.528624), // You Address Here
 
         // Disables the default Google Maps UI components
         disableDefaultUI: true,
