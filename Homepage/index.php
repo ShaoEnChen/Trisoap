@@ -186,12 +186,7 @@
     <section id="about-slider">
       <div class="container">
         <div class="row">
-          <div class="col-lg-5">
-            <h3>愛的釀皂</h3>
-            <p>我們故事的第一主角，就是一個個穿上工作服、蓄勢待發地在一旁準備的憨兒們。我們在學習打皂時，他們活像個監督我們生產流程的督導一般。我們非常迅速地在「攪拌」關卡中，不到十分鐘便棄械投降，一旁的憨兒主動地替補了我們的工作，在測量每一種油品時的專注力高的嚇人，連一滴油都不會逃過他們的法眼，當時的我們，深深被這一幅畫面所震懾。</p>
-            <!-- <a href="#" target="_blank" class="btn btn-dark">更多</a> -->
-          </div>
-          <div class="col-lg-6 col-lg-offset-1">
+          <div class="col-lg-6">
             <div id="carousel-light" class="carousel slide carousel-fade">
               <ol class="carousel-indicators">
                 <li data-target="#carousel-light" data-slide-to="0" class="active"></li>
@@ -203,6 +198,11 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-5 col-lg-offset-1">
+            <h3>愛的釀皂</h3>
+            <p>我們故事的第一主角，就是一個個穿上工作服、蓄勢待發地在一旁準備的憨兒們。我們在學習打皂時，他們活像個監督我們生產流程的督導一般。我們非常迅速地在「攪拌」關卡中，不到十分鐘便棄械投降，一旁的憨兒主動地替補了我們的工作，在測量每一種油品時的專注力高的嚇人，連一滴油都不會逃過他們的法眼，當時的我們，深深被這一幅畫面所震懾。</p>
+            <!-- <a href="#" target="_blank" class="btn btn-dark">更多</a> -->
+          </div>
         </div>
       </div>
     </section>
@@ -212,12 +212,7 @@
     <section id="about-slider">
       <div class="container">
         <div class="row">
-          <div class="col-lg-5">
-            <h3>吾鄉小農</h3>
-            <p>第二個故事主角，就是位於台東的在地小農與三樣特色農作物－米、金針花跟釋迦。會成為我們主角的原因很簡單，因為他們堅持好品質、有機，照顧農作物像照顧自己的孩子一樣，用山泉水灌溉並使用自然農法，他們的堅持正完全符合我們的經營理念！</p>
-      			<!-- <a href="#" target="_blank" class="btn btn-dark">更多</a> -->
-          </div>
-          <div class="col-lg-6 col-lg-offset-1">
+          <div class="col-lg-6">
             <div id="carousel-light2" class="carousel slide carousel-fade">
               <ol class="carousel-indicators">
                 <li data-target="#carousel-light2" data-slide-to="0" class="active"></li>
@@ -230,6 +225,11 @@
                 <div class="item"><img src="Homepage/img/farmer3.png" alt="" class="img-responsive center-block"></div>
               </div>
             </div>
+          </div>
+          <div class="col-lg-5 col-lg-offset-1">
+            <h3>吾鄉小農</h3>
+            <p>第二個故事主角，就是位於台東的在地小農與三樣特色農作物－米、金針花跟釋迦。會成為我們主角的原因很簡單，因為他們堅持好品質、有機，照顧農作物像照顧自己的孩子一樣，用山泉水灌溉並使用自然農法，他們的堅持正完全符合我們的經營理念！</p>
+      			<!-- <a href="#" target="_blank" class="btn btn-dark">更多</a> -->
           </div>
         </div>
       </div>
