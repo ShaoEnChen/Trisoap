@@ -27,7 +27,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if($newPRICE == null){
                 $message1 = $message1 . '商品價格欄位不可空白 \n';
         }
-        if(is_int($newPRICE) == FALSE || $newPRICE < 0){
+        if($newPRICE != (int)$newPRICE || (int)$newPRICE < 0){
                 $message1 = $message1 . '商品價格必須為正整數 \n';
         }
 
@@ -48,22 +48,25 @@ if($EMAIL != null && $CUSIDT == 'A'){
                         redirect("Update_ITEMMAS.php");
                         alert("更新成功");
                         </script>
-                        <?php               }
+                        <?php
+                }
                 else{
                         ?>
                         <script>
                         redirect("Edit_ITEMMAS.php");
                         alert("更新失敗");
                         </script>
-                        <?php               }
+                        <?php
+                }
         }
         else{
                 ?>
                 <script>
                 redirect("Edit_ITEMMAS.php");
-                alert("<?php o $message1;?>");
+                alert("<?php echo $message1;?>");
                 </script>
-                <?php               unset($_SESSION['newITEMNO']);
+                <?php
+                unset($_SESSION['newITEMNO']);
         }
 }
 else{
@@ -73,3 +76,5 @@ else{
         alert("您無權限觀看此頁面!");
         </script>
         <?php
+} 
+?>

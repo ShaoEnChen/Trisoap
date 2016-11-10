@@ -120,7 +120,6 @@ function show_PAYTYPE($id){
                         <?php
                 }
                 else{
-                        ?><?php 
                         echo "<section><div class=\"orders\">";
                         echo "<form name=\"form\" method=\"post\" action=\"Edit_ORDMAS_finish.php\">";
                         echo "訂單編號：<select name=\"ORDNO\" />";

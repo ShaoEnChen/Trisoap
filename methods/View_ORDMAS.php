@@ -169,8 +169,8 @@ function show_PAYTYPE($id){
                                                 <td><?php echo $row['TOTALAMT'];?></td>
                                                 <!-- 實收金額 -->
                                                 <td><?php 
-                                                if($row['PAYSTAT'] == '1') echo $row['REALPRICE'];
-                                                else echo '0';
+                                                    if($row['PAYSTAT'] == '1') echo $row['REALPRICE'];
+                                                    else echo '0';
                                                 ?></td>
                                                 <!-- 建立日期 -->
                                                 <td><?php echo $row['CREATEDATE'];?></td>

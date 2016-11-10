@@ -33,23 +33,26 @@ if($EMAIL != null){
                 ?>
                 <script>
                 redirect("Delete_ORDMAS.php");
-                alert("<?php o $message;?>");
+                alert("<?php echo $message;?>");
                 </script>
-                <?php       }
+                <?php
+        }
         if($message == null){
                 ?>
                 <script>
                 redirect("View_ORDMAS.php");
                 alert("取消成功");
                 </script>
-                <?php       }
+                <?php
+        }
         else{
                 ?>
                 <script>
                 redirect("Delete_ORDMAS.php");
                 alert("取消失敗");
                 </script>
-                <?php       }
+                <?php
+        }
 }
 else{
         ?>
@@ -57,3 +60,4 @@ else{
         redirect("/");
         alert("您無權限觀看此頁面!");
         </script>
+}

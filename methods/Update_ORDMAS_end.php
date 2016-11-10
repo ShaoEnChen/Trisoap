@@ -49,13 +49,13 @@ if($EMAIL != null && $CUSIDT == 'A'){
 	    unset($_SESSION['ORDNO']);
 	    unset($_SESSION['ORIGIN']);
 	    if($ORIGIN == '1'){
-	            ?><script>redirect("Update_ORDMAS_1.php");</script><?
+	            ?><script>redirect("Update_ORDMAS_1.php");</script><?php
 	    }
 	    elseif($ORIGIN == 'F'){
-	            ?><script>redirect("Update_ORDMAS_F.php");</script><?
+	            ?><script>redirect("Update_ORDMAS_F.php");</script><?php
 	    }
 	    else{
-	            ?><script>redirect("Update_ORDMAS_R.php");</script><?
+	            ?><script>redirect("Update_ORDMAS_R.php");</script><?php
 	    }
     }
 }

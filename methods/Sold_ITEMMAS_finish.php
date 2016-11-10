@@ -29,31 +29,29 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if($invoice == null){
                 $message .= '發票號碼不可空白 \n';
         }
-        else{
-                if(is_numeric($real) == FALSE || $real < 0 || is_float($real)){
-                        $message .= '銷售總額必須為正整數 \n';
-                }
+        elseif($real != (int)$real || $real < 0){
+                $message .= '銷售總額必須為正整數 \n';
         }
         if($AMT1 == null && $AMT2 == null && $AMT3 == null && $AMT4 == null){
                 $message .= '請至少輸入一項商品的進貨數量 \n';
         }
         elseif($AMT1 != null){
-                if(is_numeric($AMT1) == FALSE || $AMT1 < 0 || is_float($AMT1)){
+                if($AMT1 != (int)$AMT1 || $AMT1 < 0){
                         $message .= '售出數量必須為正整數 \n';
                 }
         }
         elseif($AMT2 != null){
-                if(is_numeric($AMT2) == FALSE || $AMT2 < 0 || is_float($AMT2)){
+                if($AMT2 != (int)$AMT2 || $AMT2 < 0){
                         $message .= '售出數量必須為正整數 \n';
                 }
         }
         elseif($AMT3 != null){
-                if(is_numeric($AMT3) == FALSE || $AMT3 < 0 || is_float($AMT3)){
+                if($AMT3 != (int)$AMT3 || $AMT3 < 0){
                         $message .= '售出數量必須為正整數 \n';
                 }
         }
         elseif($AMT4 != null){
-                if(is_numeric($AMT4) == FALSE || $AMT4 < 0 || is_float($AMT4)){
+                if($AMT4 != (int)$AMT4 || $AMT4 < 0){
                         $message .= '售出數量必須為正整數 \n';
                 }
         }

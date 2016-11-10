@@ -126,6 +126,8 @@
           </div>
           <div class="col-lg-5 col-lg-offset-1 text-center">
             <h3>&nbsp;</h3>
+            <img src="img/about.jpg" />
+            <!--
             <div data-value="0.999" class="circle"><span></span>
               <div class="agenda">公益</div>
             </div>
@@ -135,6 +137,7 @@
             <div data-value="0.999" class="circle"><span></span>
               <div class="agenda">目標</div>
             </div>
+            -->
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ $PW = input('PW');
 $message = '';
 if($EMAIL != null && $CUSIDT == 'A'){
 	if($ORDAMT_1 != null){
-		if(is_numeric($ORDAMT_1) == FALSE || $ORDAMT_1 < 0 || is_float($ORDAMT_1)){
+		if($ORDAMT_1 != (int)$ORDAMT_1 || (int)$ORDAMT_1 < 0){
 	        $message .= '訂購數量必須為正整數 \n';
 	    }
 	}
@@ -28,7 +28,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
 		$ORDAMT_1 = 0;
 	}
 	if($ORDAMT_2 != null){
-		if(is_numeric($ORDAMT_2) == FALSE || $ORDAMT_2 < 0 || is_float($ORDAMT_2)){
+		if($ORDAMT_2 != (int)$ORDAMT_2 || (int)$ORDAMT_2 < 0){
 	        $message .= '訂購數量必須為正整數 \n';
 	    }
 	}
@@ -36,7 +36,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
 		$ORDAMT_2 = 0;
 	}
 	if($ORDAMT_3 != null){
-		if(is_numeric($ORDAMT_3) == FALSE || $ORDAMT_3 < 0 || is_float($ORDAMT_3)){
+		if($ORDAMT_3 != (int)$ORDAMT_3 || (int)$ORDAMT_3 < 0){
 	        $message .= '訂購數量必須為正整數 \n';
 	    }
 	}
@@ -44,7 +44,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
 		$ORDAMT_3 = 0;
 	}
 	if($ORDAMT_4 != null){
-		if(is_numeric($ORDAMT_4) == FALSE || $ORDAMT_4 < 0 || is_float($ORDAMT_4)){
+		if($ORDAMT_4 != (int)$ORDAMT_4 || (int)$ORDAMT_4 < 0){
 	        $message .= '訂購數量必須為正整數 \n';
 	    }
 	}
@@ -55,7 +55,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
         if($SETPRICE == null){
             $message .= '請填寫自訂價格 \n';
         }
-        elseif(is_numeric($SETPRICE) == FALSE || $SETPRICE < 0 || is_float($SETPRICE)){
+        else if($SETPRICE != (int)$SETPRICE || (int)$SETPRICE < 0){
             $message .= '自訂價格必須為正整數 \n';
         }
     }
