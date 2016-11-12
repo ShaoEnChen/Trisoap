@@ -1,4 +1,4 @@
-<?
+<?php
 include_once(dirname(__FILE__)."/PHPMailerAutoload.php"); //匯入PHPMailer類別
 include_once(dirname(__FILE__)."/../mysql_connect.php");
 include_once(dirname(__FILE__)."/../sql_operation.php");
@@ -277,3 +277,4 @@ function mail_reset_password($id, $code){
             echo "Mail not sent!";        
       }
 }
+?>
