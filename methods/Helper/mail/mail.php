@@ -277,3 +277,4 @@ function mail_reset_password($id, $code){
             echo "Mail not sent!";        
       }
 }
+?>

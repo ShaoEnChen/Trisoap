@@ -119,16 +119,20 @@
       <div class="container-fluid flexslider">
         <ul class="slides">
           <li>
-            <a href="about.php">
-              <img class="flexslides" src="Homepage/img/index1.png">
+            <div>
+              <a href="Homepage/about.php">
+                <img class="flexslides" src="Homepage/img/index1.png">
+              </a>
               <div id="slide-textarea1">
                 <p class="slide-text" id="slide-text1">三三手皂<br>x<br>來自吾鄉</p>
               </div>
-            </a>
+            </div>
           </li>
           <li>
-            <a href="about.php">
-              <img class="flexslides" src="Homepage/img/index2.png">
+            <div>
+              <a href="Homepage/about.php">
+                <img class="flexslides" src="Homepage/img/index2.png">
+              </a>
               <div id="slide-textarea2-1">
                 <span class="slide-text" id="slide-text2-1-1">小農</span>
                 <span class="slide-text" id="slide-text2-1-2">素材</span>
@@ -140,23 +144,27 @@
               <div id="slide-textarea2-3">
                 <span class="slide-text" id="slide-text2-3">。</span>
               </div>
-            </a>
+            </div>
           </li>
           <li>
-            <a href="about.php">
-              <img class="flexslides" src="Homepage/img/index3.png">
+            <div>
+              <a href="Homepage/about.php">
+                <img class="flexslides" src="Homepage/img/index3.png">
+              </a>
               <div id="slide-textarea3">
-                <p class="slide-text" id="slide-text3">每一顆手工皂，<br>都是注入憨兒們歡笑的純淨手作。</p>
+                <p class="slide-text" id="slide-text3">每一顆手工皂<br>都是注入憨兒們歡笑的<br>純淨手作</p>
               </div>
-            </a>
+            </div>
           </li>
           <li>
-            <a href="about.php">
-              <img class="flexslides" src="Homepage/img/index4.png">
+            <div>
+              <a href="Homepage/about.php">
+                <img class="flexslides" src="Homepage/img/index4.png">
+              </a>
               <div id="slide-textarea4">
-                <p class="slide-text" id="slide-text4">手作的溫度</p>
+                <p class="slide-text" id="slide-text4">冷製的堅持<br>手作的溫度</p>
               </div>
-            </a>
+            </div>
           </li>
         </ul>
         <div class="flexslider-controls">
