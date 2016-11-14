@@ -29,7 +29,6 @@ if($message == null){
         ?>
         <script>
         redirect("/");
-        alert("成功登入");
         </script>
         <?php 
 }
