@@ -81,7 +81,7 @@
 							session_start();
 							include_once("../methods/Helper/mysql_connect.php");
 
-							$query = "SELECT * FROM MSGMAS WHERE ACTCODE = 1 AND MSGSTAT = 'A'";
+							$query = "SELECT * FROM MSGMAS WHERE ACTCODE = 1 AND MSGSTAT = 'E'";
 							$results = mysql_query($query);
 							$msg_num = mysql_num_rows($results);
 							if($msg_num) {
