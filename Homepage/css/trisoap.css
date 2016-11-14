@@ -1782,6 +1782,7 @@ li .shop-cart {
   list-style-type: none;
   z-index: 1002;
 }
+
 /* slide文字div */
 
 /*
@@ -1806,8 +1807,8 @@ li .shop-cart {
   border: solid #fff 0.3vw;
 }
 
-/* 垂直置中 */
-#slide-textarea1:before {
+#slide-textarea1::before {
+  /* 垂直置中 */
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -1885,27 +1886,65 @@ li .shop-cart {
   font-size: 5vw;
 }
 
-#slide-textarea3,
-#slide-textarea4 {
+#slide-textarea3 {
   position: absolute;
-  bottom: 15vw;
+  bottom: 8vw;
+  right: 6vw;
+}
+
+#slide-textarea3::before {
+  content: '';
+  position: absolute;
+  width: 40%;
+  border-top: 1px solid #fff;
+}
+
+#slide-textarea3::after {
+  content: '';
+  position: absolute;
   right: 0;
-  padding: 24px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 16px 0 0 16px;
-  -webkit-border-radius: 16px 0 0 16px;
-  -moz-border-radius: 16px 0 0 16px;
-  -o-border-radius: 16px 0 0 16px;
+  width: 60%;
+  border-bottom: 1px solid #fff;
 }
 
 #slide-text3 {
   font-size: 3vw;
-  color: rgba(0, 0, 40, 1);
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 6px;
+  padding: 18px;
+}
+
+#slide-textarea4 {
+  position: absolute;
+  top: 33%;
+  left: 30%;
+  width: 40%;
+  text-align: center;
+}
+
+#slide-textarea4::before,
+#slide-textarea4::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+#slide-textarea4::before {
+  border-top: 1px solid #fff;
+}
+
+#slide-textarea4::after {
+  border-bottom: 1px solid #fff;
 }
 
 #slide-text4 {
   font-size: 4vw;
-  color: rgba(0, 0, 40, 1);
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 8px;
+  padding: 18px;
 }
 
 /* 社會企業 slogan */

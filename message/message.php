@@ -113,7 +113,7 @@
 										if($result['MSGPHOTO'] == 1) {
 									?>
 											<div class="choice choice-photo">
-												<img src="picture/<?php  echo $msgno; ?>.png">
+												<img src="picture/<?php echo $msgno; ?>.png">
 												<div class="desc">
 													<p>
 														<?php echo $result['MSGTXT']; ?>
