@@ -81,7 +81,7 @@
 							session_start();
 							include_once("../methods/Helper/mysql_connect.php");
 
-							$query = "SELECT * FROM MSGMAS WHERE ACTCODE = 1";
+							$query = "SELECT * FROM MSGMAS WHERE ACTCODE = 1 AND MSGSTAT = 'A'";
 							$results = mysql_query($query);
 							$msg_num = mysql_num_rows($results);
 							if($msg_num) {
@@ -116,7 +116,7 @@
 												<img src="picture/<?php echo $msgno; ?>.png">
 												<div class="desc">
 													<p>
-														<?php echo $result['MSGTXT']; ?>
+														<?php echo $result['MSGTXT']; echo $msgno; ?>
 													</p>
 												</div>
 												<p class="author"> -
