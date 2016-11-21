@@ -2,9 +2,7 @@
 $db_server = "localhost";
 $db_name = "Trisoap";
 $db_user = "root";
-// $db_passwd = "n0n02016";
-$db_passwd = "allloststars";
-// $connect = mysqli_connect($db_server, $db_user, $db_passwd, $db_name);
+$db_passwd = "n0n02016";
 
 if(!@mysql_connect($db_server, $db_user, $db_passwd))
         die("無法對資料庫連線");
