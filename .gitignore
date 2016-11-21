@@ -1,3 +1,4 @@
 .DS_store
 message/picture/
 message/video/
+methods/Helper/mysql_connect.php
