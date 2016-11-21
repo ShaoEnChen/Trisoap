@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,7 +41,6 @@
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <?php
-            session_start();
             $CUSIDT = $_SESSION['CUSIDT'];
             if($CUSIDT == 'A'){
               ?>
@@ -114,10 +114,10 @@
             <a href="#">露天拍賣</a>
           </div>
         </div>
-        
+
       </div>
     </section>
-   
+
     <!-- Action Section-->
     <div class="section action section-small bg-gray2">
       <div class="container wow fadeIn">

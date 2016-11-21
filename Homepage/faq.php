@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,7 +49,6 @@
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <?php
-            session_start();
             $CUSIDT = $_SESSION['CUSIDT'];
             if($CUSIDT == 'A'){
               ?>
@@ -202,7 +202,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- jQuery-->
     <script src="js/jquery-1.12.3.min.js"></script>
     <!-- Bootstrap Core JavaScript-->

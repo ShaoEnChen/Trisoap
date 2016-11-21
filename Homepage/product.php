@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,8 +40,7 @@
             <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-            <?php 
-            session_start();
+            <?php
             include("../methods/Helper/mysql_connect.php");
             include("../methods/Helper/sql_operation.php");
             $COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
@@ -69,7 +69,7 @@
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>
-              <?php 
+              <?php
             }
             elseif($CUSIDT == 'B'){
               ?>
@@ -82,7 +82,7 @@
                   <li><a href="../methods/User_logout.php">登出</a></li>
                 </ul>
               </li>
-              <?php 
+              <?php
             }
             else{
               ?>
@@ -92,7 +92,7 @@
                   <li><a href="../methods/User_login.php">登入</a></li>
                 </ul>
               </li>
-              <?php 
+              <?php
             }
             ?>
           </ul>
@@ -111,7 +111,7 @@
     <section id="news" class="section-small">
       <div class="container">
         <h3 class="pull-left">商品一覽</h3>
-        
+
         <div class="clearfix"></div>
         <div class="row grid-pad">
           <div class="col-sm-6"><a href="product1.php"><img src="img/product/rice.jpg" alt="" class="img-responsive center-block">
@@ -130,7 +130,7 @@
               <h5>三三臺東意象禮盒組</h5></a>
             <p>三三臺東意象禮盒，乃由TriSoap三三社會企業研發後，將技術免費移轉給李勝賢文教基金會，並由其協力生產。李勝賢文教基金會位於台東市，是以服務憨兒為主的小型作業所，開辦愛心二手商店及手工皂製作已有數年之久。裡頭的憨兒各個是作皂好手，只要提及作皂他們便展現優於一般人的專注力與專業程度。作皂不只為了成品，更在於每個憨兒在作好皂後的自信笑容</p><a href="product4.php" class="btn btn-gray btn-xs">更多</a>
           </div>
-          
+
         </div>
       </div>
     </section>

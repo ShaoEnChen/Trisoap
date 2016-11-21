@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,7 +49,6 @@
             <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
             <?php
-            session_start();
             include "../methods/Helper/mysql_connect.php";
             include "../methods/Helper/sql_operation.php";
             $COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
@@ -122,7 +122,7 @@
             <h2>有話想說</h2>
             <p>對於三三有任何疑惑與意見回饋，或演講合作邀約，都歡迎聯絡我們！</p>
           </div>
-         
+
         </div>
         <div class="row">
           <div class="col-md-8">
@@ -169,7 +169,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Footer Section-->
     <section class="footer bg-gray">
       <div class="container">
@@ -187,7 +187,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- jQuery-->
     <script src="js/jquery-1.12.3.min.js"></script>
     <!-- Bootstrap Core JavaScript-->
