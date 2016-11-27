@@ -3,9 +3,9 @@ include_once(dirname(__FILE__)."/PHPMailerAutoload.php"); //匯入PHPMailer類�
 include_once(dirname(__FILE__)."/../mysql_connect.php");
 include_once(dirname(__FILE__)."/../sql_operation.php");
 function mail_receive_message($id){
-	  $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-	  $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-	  $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
@@ -42,9 +42,9 @@ function mail_receive_message($id){
       }
 }
 function mail_receive_order($id, $ORDNO, $PAYTYPE, $NAME){
-	  $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-	  $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-	  $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
@@ -110,9 +110,9 @@ function mail_receive_order($id, $ORDNO, $PAYTYPE, $NAME){
       }
 }
 function mail_pass_message($id){
-	  $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-	  $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-	  $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
@@ -154,9 +154,9 @@ function mail_pass_message($id){
       }
 }
 function mail_pass_order($id, $ORDNO){
-	  $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-	  $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-	  $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
@@ -193,9 +193,9 @@ function mail_pass_order($id, $ORDNO){
       }
 }
 function mail_verify($id, $code){
-	  $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-	  $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-	  $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
@@ -232,9 +232,9 @@ function mail_verify($id, $code){
       }
 }
 function mail_reset_password($id, $code){
-	  $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-	  $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-	  $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+	$COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
