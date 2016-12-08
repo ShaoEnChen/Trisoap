@@ -1,17 +1,18 @@
+
 <?php
 include_once(dirname(__FILE__)."/PHPMailerAutoload.php"); //匯入PHPMailer類別
 include_once(dirname(__FILE__)."/../mysql_connect.php");
 include_once(dirname(__FILE__)."/../sql_operation.php");
 function mail_receive_message($id){
-	$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-	$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-	$COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
       $mail->SMTPSecure = 'ssl'; // Gmail的SMTP主機需要使用SSL連線
-      $mail->Host = "smtp.gmail.com"; //Gmail的SMTP主機
-      $mail->Port = 465;  //Gmail的SMTP主機的SMTP埠位為465埠。
+      $mail->Host = "188.166.229.87"; //Gmail的SMTP主機
+      $mail->Port = 587;  //Gmail的SMTP主機的SMTP埠位為465埠。
       $mail->IsHTML(true); //設定郵件內容為HTML
       $mail->CharSet = "utf-8"; //設定郵件編碼
       $mail->Username = "trisoap2015@gmail.com"; //設定驗證帳號
@@ -37,20 +38,20 @@ function mail_receive_message($id){
       email : ".$COMEMAIL."<br>
       網址 : ".$COMWEB."<br>"; //設定郵件內容
       $mail->AddAddress($id); //設定收件者郵件及名稱
-      if(!$mail->Send()) {        
-          echo "Mail not sent!";        
+      if(!$mail->Send()) {
+          echo "Mail not sent!";
       }
 }
 function mail_receive_order($id, $ORDNO, $PAYTYPE, $NAME){
-	$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-	$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-	$COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
       $mail->SMTPSecure = 'ssl'; // Gmail的SMTP主機需要使用SSL連線
-      $mail->Host = "smtp.gmail.com"; //Gmail的SMTP主機
-      $mail->Port = 465;  //Gmail的SMTP主機的SMTP埠位為465埠。
+      $mail->Host = "188.166.229.87"; //Gmail的SMTP主機
+      $mail->Port = 587;  //Gmail的SMTP主機的SMTP埠位為465埠。
       $mail->IsHTML(true); //設定郵件內容為HTML
       $mail->CharSet = "utf-8"; //設定郵件編碼
       $mail->Username = "trisoap2015@gmail.com"; //設定驗證帳號
@@ -59,7 +60,7 @@ function mail_receive_order($id, $ORDNO, $PAYTYPE, $NAME){
       $mail->FromName = "三三吾鄉社會企業"; //設定寄件者姓名
       date_default_timezone_set('Asia/Taipei');
       $MAILDATE = date("Y-m-d");
-      $mail->Subject = "三三吾鄉訂單處理通知信"; //設定郵件標題        
+      $mail->Subject = "三三吾鄉訂單處理通知信"; //設定郵件標題
       $mail->Body = "＊此信件為系統發出信件，請勿直接回覆，謝謝！＊<br>
       <br>
       親愛的會員您好：<br>
@@ -105,20 +106,20 @@ function mail_receive_order($id, $ORDNO, $PAYTYPE, $NAME){
       email : ".$COMEMAIL."<br>
       網址 : ".$COMWEB."<br>"; //設定郵件內容
       $mail->AddAddress($id); //設定收件者郵件及名稱
-      if(!$mail->Send()) {        
-          echo "Mail not sent!";        
+      if(!$mail->Send()) {
+          echo "Mail not sent!";
       }
 }
 function mail_pass_message($id){
-	$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-	$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-	$COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
       $mail->SMTPSecure = 'ssl'; // Gmail的SMTP主機需要使用SSL連線
-      $mail->Host = "smtp.gmail.com"; //Gmail的SMTP主機
-      $mail->Port = 465;  //Gmail的SMTP主機的SMTP埠位為465埠。
+      $mail->Host = "188.166.229.87"; //Gmail的SMTP主機
+      $mail->Port = 587;  //Gmail的SMTP主機的SMTP埠位為465埠。
       $mail->IsHTML(true); //設定郵件內容為HTML
       $mail->CharSet = "utf-8"; //設定郵件編碼
       $mail->Username = "trisoap2015@gmail.com"; //設定驗證帳號
@@ -149,20 +150,20 @@ function mail_pass_message($id){
       email : ".$COMEMAIL."<br>
       網址 : ".$COMWEB."<br>"; //設定郵件內容
       $mail->AddAddress($id); //設定收件者郵件及名稱
-      if(!$mail->Send()) {        
-        echo "Mail not sent!";        
+      if(!$mail->Send()) {
+        echo "Mail not sent!";
       }
 }
 function mail_pass_order($id, $ORDNO){
-	$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-	$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-	$COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
       $mail->SMTPSecure = 'ssl'; // Gmail的SMTP主機需要使用SSL連線
-      $mail->Host = "smtp.gmail.com"; //Gmail的SMTP主機
-      $mail->Port = 465;  //Gmail的SMTP主機的SMTP埠位為465埠。
+      $mail->Host = "188.166.229.87"; //Gmail的SMTP主機
+      $mail->Port = 587;  //Gmail的SMTP主機的SMTP埠位為465埠。
       $mail->IsHTML(true); //設定郵件內容為HTML
       $mail->CharSet = "utf-8"; //設定郵件編碼
       $mail->Username = "trisoap2015@gmail.com"; //設定驗證帳號
@@ -171,7 +172,7 @@ function mail_pass_order($id, $ORDNO){
       $mail->FromName = "三三吾鄉社會企業"; //設定寄件者姓名
       date_default_timezone_set('Asia/Taipei');
       $MAILDATE = date("Y-m-d");
-      $mail->Subject = "三三吾鄉出貨通知信"; //設定郵件標題        
+      $mail->Subject = "三三吾鄉出貨通知信"; //設定郵件標題
       $mail->Body = "親愛的三三客戶您好：<br>
       <br>
       您的訂單（編號 ".$ORDNO."）已於今日出貨，故來信通知您，產品將於1-3日或依您指定時間到達。<br>
@@ -188,20 +189,20 @@ function mail_pass_order($id, $ORDNO){
       email : ".$COMEMAIL."<br>
       網址 : ".$COMWEB."<br>"; //設定郵件內容
       $mail->AddAddress($id); //設定收件者郵件及名稱
-      if(!$mail->Send()) {        
-            echo "Mail not sent!";        
+      if(!$mail->Send()) {
+            echo "Mail not sent!";
       }
 }
 function mail_verify($id, $code){
-	$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-	$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-	$COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
       $mail->SMTPSecure = 'ssl'; // Gmail的SMTP主機需要使用SSL連線
-      $mail->Host = "smtp.gmail.com"; //Gmail的SMTP主機
-      $mail->Port = 465;  //Gmail的SMTP主機的SMTP埠位為465埠。
+      $mail->Host = "188.166.229.87"; //Gmail的SMTP主機
+      $mail->Port = 587;  //Gmail的SMTP主機的SMTP埠位為465埠。
       $mail->IsHTML(true); //設定郵件內容為HTML
       $mail->CharSet = "utf-8"; //設定郵件編碼
       $mail->Username = "trisoap2015@gmail.com"; //設定驗證帳號
@@ -210,7 +211,7 @@ function mail_verify($id, $code){
       $mail->FromName = "三三吾鄉社會企業"; //設定寄件者姓名
       date_default_timezone_set('Asia/Taipei');
       $MAILDATE = date("Y-m-d");
-      $mail->Subject = "三三吾鄉會員註冊驗證碼"; //設定郵件標題        
+      $mail->Subject = "三三吾鄉會員註冊驗證碼"; //設定郵件標題
       $mail->Body = "親愛的三三客戶您好：<br>
       <br>
       我們在此誠摯的感謝您註冊三三吾鄉成為會員，期望未來能有榮幸為您服務。<br>
@@ -227,20 +228,20 @@ function mail_verify($id, $code){
       email : ".$COMEMAIL."<br>
       網址 : ".$COMWEB."<br>"; //設定郵件內容
       $mail->AddAddress($id); //設定收件者郵件及名稱
-      if(!$mail->Send()) {        
-            echo "Mail not sent!";        
+      if(!$mail->Send()) {
+            echo "Mail not sent!";
       }
 }
 function mail_reset_password($id, $code){
-	$COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-	$COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-	$COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+      $COMWEB = search('COMWEB', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
       $mail->SMTPAuth = true; //設定SMTP需要驗證
       $mail->SMTPSecure = 'ssl'; // Gmail的SMTP主機需要使用SSL連線
-      $mail->Host = "smtp.gmail.com"; //Gmail的SMTP主機
-      $mail->Port = 465;  //Gmail的SMTP主機的SMTP埠位為465埠。
+      $mail->Host = "188.166.229.87"; //Gmail的SMTP主機
+      $mail->Port = 587;  //Gmail的SMTP主機的SMTP埠位為465埠。
       $mail->IsHTML(true); //設定郵件內容為HTML
       $mail->CharSet = "utf-8"; //設定郵件編碼
       $mail->Username = "trisoap2015@gmail.com"; //設定驗證帳號
@@ -249,7 +250,7 @@ function mail_reset_password($id, $code){
       $mail->FromName = "三三吾鄉社會企業"; //設定寄件者姓名
       date_default_timezone_set('Asia/Taipei');
       $MAILDATE = date("Y-m-d");
-      $mail->Subject = "三三吾鄉會員密碼重設通知"; //設定郵件標題        
+      $mail->Subject = "三三吾鄉會員密碼重設通知"; //設定郵件標題
       $mail->Body = "親愛的三三客戶您好：<br>
       <br>
       我們收到您忘記密碼的申請，已經將您的密碼重新設定，請使用新密碼登入。<br>
@@ -268,8 +269,8 @@ function mail_reset_password($id, $code){
       email : ".$COMEMAIL."<br>
       網址 : ".$COMWEB."<br>"; //設定郵件內容
       $mail->AddAddress($id); //設定收件者郵件及名稱
-      if(!$mail->Send()) {        
-            echo "Mail not sent!";        
+      if(!$mail->Send()) {
+            echo "Mail not sent!";
       }
 }
 ?>
