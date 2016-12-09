@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <nav class="navbar navbar-custom navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -28,8 +27,6 @@
         <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
         <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
         <?php
-    	    include "../methods/Helper/mysql_connect.php";
-    	    include "../methods/Helper/sql_operation.php";
     	    $CUSIDT = $_SESSION['CUSIDT'];
     	    if($CUSIDT == 'A'){
         ?>

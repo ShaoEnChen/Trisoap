@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  include "../methods/Helper/mysql_connect.php";
+  include "../methods/Helper/sql_operation.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -192,8 +197,6 @@
           <div class="col-md-4">
             <h3><a href="contact.php">聯絡我們</a></h3>
             <?php
-              include "../methods/Helper/mysql_connect.php";
-              include "../methods/Helper/sql_operation.php";
               $COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
               $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
               $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
