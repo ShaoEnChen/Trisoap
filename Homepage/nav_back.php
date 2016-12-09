@@ -27,13 +27,10 @@
         <li><a href="Homepage/service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
         <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
         <?php
-    	    include "../methods/Helper/mysql_connect.php";
-    	    include "../methods/Helper/sql_operation.php";
-    	    $COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
-          $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-          $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-    	    $CUSIDT = $_SESSION['CUSIDT'];
-    	    if($CUSIDT == 'A'){
+          include "../methods/Helper/mysql_connect.php";
+          include "../methods/Helper/sql_operation.php";
+          $CUSIDT = $_SESSION['CUSIDT'];
+          if($CUSIDT == 'A'){
         ?>
           <li><a href="#">管理平台<i class="fa fa-angle-down"></i><span class="caret"></span></a>
             <ul class="dropdown-menu">
