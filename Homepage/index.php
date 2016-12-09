@@ -27,7 +27,7 @@
     </div>
 
     <!-- Navigation-->
-    <?php include 'Homepage/nav_Homepage.php'; ?>
+    <?php include 'nav_Homepage.php'; ?>
 
     <!-- Header-->
     <header>
