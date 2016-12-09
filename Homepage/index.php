@@ -24,6 +24,7 @@
 
     <!-- Navigation-->
     <?php include 'Homepage/nav_Homepage.php'; ?>
+    <?php echo getcwd(); ?>
 
     <!-- Header-->
     <header>
