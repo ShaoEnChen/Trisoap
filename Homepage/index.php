@@ -23,8 +23,7 @@
     </div>
 
     <!-- Navigation-->
-    <?php include 'Homepage/nav.php'; ?>
-
+    <?php include 'Homepage/nav_Homepage.php'; ?>
 
     <!-- Header-->
     <header>
