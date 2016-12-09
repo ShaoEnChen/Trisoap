@@ -22,8 +22,6 @@
       <div id="status"></div>
     </div>
 
-    <!-- Navigation-->
-    <?php include 'Homepage/nav_Homepage.php'; ?>
 
     <!-- Header-->
     <header>
