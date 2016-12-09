@@ -9,7 +9,7 @@
       </button>
       <a href="#page-top" class="navbar-brand page-scroll">
         <!-- Img or text logo-->
-        <img src="img/logo2.png" alt="" class="logo">
+        <img src="Homepage/img/logo2.png" alt="" class="logo">
       </a>
     </div>
     <div class="collapse navbar-collapse navbar-main-collapse">
@@ -18,13 +18,13 @@
         <li><a href="/">首頁<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
         <li><a href=#>關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="about.php">三三團隊</a></li>
-            <li><a href="faq.php">顧客問答</a></li>
-            <li><a href="contact.php">聯絡我們</a></li>
+            <li><a href="Homepage/about.php">三三團隊</a></li>
+            <li><a href="Homepage/faq.php">顧客問答</a></li>
+            <li><a href="Homepage/contact.php">聯絡我們</a></li>
           </ul>
         </li>
-        <li><a href="product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
-        <li><a href="service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+        <li><a href="Homepage/product.php">產品故事<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
+        <li><a href="Homepage/service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
         <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
         <?php
     	    include "../methods/Helper/mysql_connect.php";

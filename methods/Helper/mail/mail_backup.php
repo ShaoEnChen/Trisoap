@@ -1,4 +1,3 @@
-
 <?php
 include_once(dirname(__FILE__)."/PHPMailerAutoload.php"); //匯入PHPMailer類別
 include_once(dirname(__FILE__)."/../mysql_connect.php");

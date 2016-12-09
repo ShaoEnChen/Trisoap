@@ -21,7 +21,7 @@
     </div>
 
     <!-- Navigation-->
-    <?php include 'nav.php' ?>
+    <?php include 'nav.php'; ?>
 
     <!-- Header-->
     <header data-background="img/product/detail/series.jpg" class="intro introhalf">

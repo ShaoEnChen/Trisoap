@@ -18,45 +18,9 @@
 	</head>
 	<body>
 		<div>
-			<nav class="navbar navbar-fixed-top nav-custom">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a href="message.php" class="navbar-brand">
-							<img src="image/icon/logo.png" alt="" class="logo">
-						</a>
-					</div>
-					<div class="collapse navbar-collapse navbar-main-collapse">
-						<ul class="nav navbar-nav navbar-right">
-							<li>
-								<a href="message.php">
-									心語首頁
-								</a>
-							</li>
-							<li>
-								<a href="gallery.php">
-									精彩畫廊
-								</a>
-							</li>
-							<li>
-								<a href="../methods/Create_MSGMAS.php">
-									上傳心語
-								</a>
-							</li>
-							<li>
-								<a href="/">
-									回到三三
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
+			<!-- Navigation -->
+			<?php include 'nav_msg.php'; ?>
+
 			<section class="content">
 				<div class="container">
 					<div class="row">
@@ -77,7 +41,7 @@
 					<div class="choices">
 						<h4>精采選集</h4>
 						<div class="slickshow">
-							<?php 
+							<?php
 							session_start();
 							include_once("../methods/Helper/mysql_connect.php");
 
@@ -93,7 +57,7 @@
 										<div class="choice">
 											<p class="msg-text"><?php echo $result['MSGTXT']; ?></p>
 											<p class="author"> -
-												<?php 
+												<?php
 													$cus_email = $result['EMAIL'];
 													$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
 													$cusnm_result = mysql_query($query_cusnm);
@@ -106,7 +70,7 @@
 												?>
 											</p>
 										</div>
-									<?php 
+									<?php
 									}
 									else {
 										$msgno = $result['MSGNO'];
@@ -120,7 +84,7 @@
 													</p>
 												</div>
 												<p class="author"> -
-													<?php 
+													<?php
 														$cus_email = $result['EMAIL'];
 														$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
 														$cusnm_result = mysql_query($query_cusnm);
@@ -133,7 +97,7 @@
 													?>
 												</p>
 											</div>
-									<?php 
+									<?php
 										}
 										if($result['MSGVIDEO'] == 1) {
 									?>
@@ -144,7 +108,7 @@
 												</video>
 												<div class="desc"><?php echo $result['MSGTXT']; ?></div>
 												<p class="author"> -
-													<?php 
+													<?php
 														$cus_email = $result['EMAIL'];
 														$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
 														$cusnm_result = mysql_query($query_cusnm);
@@ -157,7 +121,7 @@
 													?>
 												</p>
 											</div>
-							<?php 
+							<?php
 										}
 									}
 								}
@@ -165,7 +129,7 @@
 							else {
 							?>
 								<p class="alarm-no-content">暫無內容！</p>
-							<?php 
+							<?php
 							}
 							?>
 						</div>
@@ -191,7 +155,7 @@
 				          	<p>
 				          		<a href="../Homepage/contact.php">聯絡我們</a>
 				          	</p>
-				          	<?php 
+				          	<?php
 				          	include("../methods/Helper/mysql_connect.php");
 				            include("../methods/Helper/sql_operation.php");
 							$COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
