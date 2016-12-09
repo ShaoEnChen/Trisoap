@@ -9,16 +9,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="Homepage/img/misc/favicon.png">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>三三吾鄉手工皂Trisoap</title>
     <!-- Bootstrap Core CSS-->
-    <link href="Homepage/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- FlexSlider CSS -->
     <link href="../FlexSlider/flexslider.css" rel="stylesheet">
     <!-- Custom CSS-->
-    <link href="Homepage/css/trisoap.css" rel="stylesheet">
+    <link href="css/trisoap.css" rel="stylesheet">
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
     <!-- Preloader-->
@@ -27,7 +25,7 @@
     </div>
 
     <!-- Navigation-->
-    <?php include 'nav_Homepage.php'; ?>
+    <?php include 'nav.php'; ?>
 
     <!-- Header-->
     <header>
@@ -36,8 +34,8 @@
         <ul class="slides">
           <li>
             <div>
-              <a href="Homepage/about.php">
-                <img class="flexslides" src="Homepage/img/index1.png">
+              <a href="about.php">
+                <img class="flexslides" src="img/index1.png">
               </a>
               <div id="slide-textarea1">
                 <p class="slide-text" id="slide-text1">三三手皂<br>x<br>來自吾鄉</p>
@@ -46,8 +44,8 @@
           </li>
           <li>
             <div>
-              <a href="Homepage/about.php">
-                <img class="flexslides" src="Homepage/img/index2.png">
+              <a href="about.php">
+                <img class="flexslides" src="img/index2.png">
               </a>
               <div id="slide-textarea2-1">
                 <span class="slide-text" id="slide-text2-1-1">小農</span>
@@ -64,8 +62,8 @@
           </li>
           <li>
             <div>
-              <a href="Homepage/about.php">
-                <img class="flexslides" src="Homepage/img/index3.png">
+              <a href="about.php">
+                <img class="flexslides" src="img/index3.png">
               </a>
               <div id="slide-textarea3">
                 <p class="slide-text" id="slide-text3">每一顆手工皂<br>都是注入憨兒們歡笑的<br>純淨手作</p>
@@ -74,8 +72,8 @@
           </li>
           <li>
             <div>
-              <a href="Homepage/about.php">
-                <img class="flexslides" src="Homepage/img/index4.png">
+              <a href="about.php">
+                <img class="flexslides" src="img/index4.png">
               </a>
               <div id="slide-textarea4">
                 <p class="slide-text" id="slide-text4">冷製的堅持<br>手作的溫度</p>
@@ -117,8 +115,8 @@
                 <li data-target="#carousel-light" data-slide-to="1"></li>
               </ol>
               <div role="listbox" class="carousel-inner">
-                <div class="item active"><img src="Homepage/img/production1.jpg" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="Homepage/img/production2.png" alt="" class="img-responsive center-block"></div>
+                <div class="item active"><img src="img/production1.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/production2.png" alt="" class="img-responsive center-block"></div>
               </div>
             </div>
           </div>
@@ -130,6 +128,7 @@
         </div>
       </div>
     </section>
+
 
     <!-- Slider Section-->
     <section id="about-slider">
@@ -143,16 +142,16 @@
                 <li data-target="#carousel-light2" data-slide-to="2"></li>
               </ol>
               <div role="listbox" class="carousel-inner">
-                <div class="item active"><img src="Homepage/img/farmer1.jpg" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="Homepage/img/farmer2.png" alt="" class="img-responsive center-block"></div>
-                <div class="item"><img src="Homepage/img/farmer3.png" alt="" class="img-responsive center-block"></div>
+                <div class="item active"><img src="img/farmer1.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/farmer2.png" alt="" class="img-responsive center-block"></div>
+                <div class="item"><img src="img/farmer3.png" alt="" class="img-responsive center-block"></div>
               </div>
             </div>
           </div>
           <div class="col-lg-5 col-lg-offset-1">
             <h3>吾鄉小農</h3>
             <p>第二個故事主角，就是位於台東的在地小農與三樣特色農作物－米、金針花跟釋迦。會成為我們主角的原因很簡單，因為他們堅持好品質、有機，照顧農作物像照顧自己的孩子一樣，用山泉水灌溉並使用自然農法，他們的堅持正完全符合我們的經營理念！</p>
-            <!-- <a href="#" target="_blank" class="btn btn-dark">更多</a> -->
+      			<!-- <a href="#" target="_blank" class="btn btn-dark">更多</a> -->
           </div>
         </div>
       </div>
@@ -186,18 +185,16 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h3><a href="Homepage/about.php">關於我們</a></h3>
+            <h3><a href="about.php">關於我們</a></h3>
             <p>「三三吾鄉」的名稱由來，是因每個產品背後，都蘊含三個故事：社福團體喜憨兒協力生產的故事，在地小農用心耕耘的故事，以及身為社會企業的我們，串聯推動夢想的故事。</p>
           </div>
           <div class="col-md-4">
-            <h3><a href="Homepage/faq.php">常見問題</a></h3>
+            <h3><a href="faq.php">常見問題</a></h3>
             <p>三三的肥皂都是如何製作的？「冷製手工皂」是使用純天然的基底植物油，搭配上鹼水調配再經過攪拌、保溫、晾皂等各種精細的過程，而後皂化成一個具有不同皂性的產品。</p>
           </div>
           <div class="col-md-4">
-            <h3><a href="Homepage/contact.php">聯絡我們</a></h3>
+            <h3><a href="contact.php">聯絡我們</a></h3>
             <?php
-              # include "../methods/Helper/mysql_connect.php";
-              # include "../methods/Helper/sql_operation.php";
               $COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
               $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
               $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
@@ -221,7 +218,7 @@
           <div class="col-md-4">
             <ul class="list-inline">
               <li><a href="https://www.facebook.com/trisoap"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
-              <li><a href="Homepage/contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
+              <li><a href="contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
               <li><a href="https://www.pinkoi.com/store/trisoap">Pinkoi</a></li>
             </ul>
           </div>
@@ -233,31 +230,31 @@
     </section>
 
     <!-- jQuery-->
-    <script src="Homepage/js/jquery-1.12.3.min.js"></script>
+    <script src="js/jquery-1.12.3.min.js"></script>
     <!-- Bootstrap Core JavaScript-->
-    <script src="Homepage/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- Plugin JavaScript-->
-    <script src="Homepage/js/jquery.easing.min.js"></script>
-    <script src="Homepage/js/jquery.countdown.min.js"></script>
-    <script src="Homepage/js/device.min.js"></script>
-    <script src="Homepage/js/form.min.js"></script>
-    <script src="Homepage/js/jquery.placeholder.min.js"></script>
-    <script src="Homepage/js/jquery.shuffle.min.js"></script>
-    <script src="Homepage/js/jquery.parallax.min.js"></script>
-    <script src="Homepage/js/jquery.circle-progress.min.js"></script>
-    <script src="Homepage/js/jquery.swipebox.min.js"></script>
-    <script src="Homepage/js/smoothscroll.min.js"></script>
-    <script src="Homepage/js/tweecool.min.js"></script>
-    <script src="Homepage/js/wow.min.js"></script>
-    <script src="Homepage/js/jquery.smartmenus.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/form.min.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/jquery.parallax.min.js"></script>
+    <script src="js/jquery.circle-progress.min.js"></script>
+    <script src="js/jquery.swipebox.min.js"></script>
+    <script src="js/smoothscroll.min.js"></script>
+    <script src="js/tweecool.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.smartmenus.js"></script>
     <!-- FlexSlider JS -->
     <script src="../FlexSlider/jquery.flexslider-min.js"></script>
         <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/-->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3E86i8mx1BZDlAaLcknh_mWl4F70i4os"></script>
-        <script src="Homepage/js/map.js"></script>
+        <script src="js/map.js"></script>
     <!-- Custom Theme JavaScript-->
-    <script src="Homepage/js/pheromone.js"></script>
-    <script src="Homepage/js/custom.js"></script>
+    <script src="js/pheromone.js"></script>
+    <script src="js/custom.js"></script>
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

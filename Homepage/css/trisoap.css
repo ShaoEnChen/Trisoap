@@ -1971,3 +1971,8 @@ li .shop-cart {
 .member-intro {
   padding-top: 2%;
 }
+
+/* ------ Product-Intro ------ */
+.product-intro-text {
+  text-align: left;
+}
