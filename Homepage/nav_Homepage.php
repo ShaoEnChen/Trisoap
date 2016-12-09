@@ -28,8 +28,8 @@
         <li><a href="Homepage/service.php">如何購皂<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
         <li><a href="../message/message.php">希望留心語<i class="fa fa-angle-down"></i><span class="caret"></span></a></li>
         <?php
-          include '../methods/Helper/mysql_connect.php';
-          include '../methods/Helper/sql_operation.php';
+          include "../methods/Helper/mysql_connect.php";
+          include "../methods/Helper/sql_operation.php";
           $CUSIDT = $_SESSION['CUSIDT'];
           if($CUSIDT == 'A'){
         ?>
