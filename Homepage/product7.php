@@ -93,7 +93,7 @@
                 <div class="form-group">
                   <label for="number"></label>
                   <input id="number" type="number" name="ORDAMT" value="1" max="50" min="1" class="form-control">
-                  <input type="hidden" name="ITEMNO" value="6">
+                  <input type="hidden" name="ITEMNO" value="7">
                 </div>
                 <button type="submit" class="btn btn-dark">加入購物車</button>
               </form>
