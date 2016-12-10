@@ -20,7 +20,7 @@ session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
 include_once("Helper/handle_string.php");
-include_once("Helper/mail/mail.php");
+include_once("Helper/message.php");
 include_once("Helper/redirect.js");
 $message = '';
 
@@ -75,6 +75,12 @@ if($CUSBIRTHY == null || $CUSBIRTHM == null || $CUSBIRTHD == null){
 if(!checkdate($CUSBIRTHM, $CUSBIRTHD, $CUSBIRTHY)){
     $message = $message . '請輸入正確的生日格式 \n';
 }
+if($TEL == null){
+    $message = $message . '聯絡電話欄位不可空白 \n';
+}
+if (!preg_match('/^[0][9][0-9]{8}$/', $TEL)){ 
+    $message = $message . '請輸入正確的聯絡電話 \n';
+}
 if($KNOWTYPE == null){
     $message = $message . '如何認識三三欄位不可空白 \n';
 }
@@ -96,7 +102,7 @@ if($message == ''){
         $code .= $str[mt_rand(0, strlen($str)-1)];
     }
     $_SESSION['COMMIT'] = $code;
-    mail_verify($EMAIL, $code);
+    message_verify($TEL, $code);
 ?>
 <!-- End PHP Area -->    
 
@@ -105,7 +111,7 @@ if($message == ''){
     <div class="sign-block">
         <h1>註冊結果通知</h1>
         <hr>
-        <p>您的會員註冊驗證碼已寄至您的信箱，煩請您前往確認，並輸入驗證碼。</p>
+        <p>您的會員註冊驗證碼已以簡訊方式寄出，煩請您前往確認，並輸入驗證碼。</p>
         <form method="post" action="Create_CUSMAS_end.php">
             <p>驗證碼：</p><input type="text" name="VERIFY" /><br>
             <button type="submit" class="promise">確定</button>
