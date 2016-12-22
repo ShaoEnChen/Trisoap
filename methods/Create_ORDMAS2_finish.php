@@ -9,23 +9,12 @@ include_once("Helper/update_price.php");
 include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $DISCOUNT = $_SESSION['DISCOUNT'];
-$TEL = input('TEL');
-$TELid = input('TELid');
 $CUSADD = input('CUSADD');
 $CUSADDid = input('CUSADDid');
 $ORDINST = input('ORDINST');
 $PAYTYPE = input('PAYTYPE');
 $message = '';
 if($EMAIL != null){
-    if($TELid == 'Y'){
-        if($TEL != null){
-            $sql = "UPDATE CUSMAS SET TEL='$TEL' WHERE EMAIL='$EMAIL'";
-            mysql_query($sql);
-        }
-        else{
-            $message .= '請填寫您的聯絡電話 \n';
-        }
-    }
     if($CUSADDid == 'Y'){
         if($CUSADD != null){
             $sql = "UPDATE CUSMAS SET CUSADD='$CUSADD' WHERE EMAIL='$EMAIL'";
