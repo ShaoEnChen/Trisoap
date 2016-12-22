@@ -158,8 +158,8 @@ CREATE TABLE `ORDMAS` (
   `ORDINST` varchar(50) COLLATE utf8_bin DEFAULT NULL,
   `DCTID` varchar(50) COLLATE utf8_bin DEFAULT NULL,
   `TOTALPRICE` int(8) DEFAULT '0',
-  `REALPRICE` int(8) NOT NULL,
-  `SHIPFEE` int(8) DEFAULT '0',
+  `REALPRICE` int(8) DEFAULT '0',
+  `SHIPFEE` int(8) NOT NULL,
   `TOTALAMT` int(8) DEFAULT '0',
   `DATEREQ` date DEFAULT NULL,
   `CREATEDATE` datetime NOT NULL,
@@ -192,7 +192,7 @@ CREATE TABLE `OWNMAS` (
 --
 
 INSERT INTO `OWNMAS` (`COMNM`, `COMADD`, `COMTEL`, `COMEMAIL`, `COMWEB`, `COMTAXID`, `NORDNOG`, `NORDNOS`, `NMSGNO`, `SALEAMTDATE`) VALUES
-('Trisoap', '台灣台北市大安區和平東路二段265巷3號', '0952527077', 'trisoap2015@gmail.com', 'needs replenishment', '43864595', 100000001, 999000001, 100001, '');
+('Trisoap', '台灣台東縣台東市鐵花路86巷2號', '0952527077', 'service@trisoap.com', 'trisoap.com', '43864595', 100000001, 999000001, 100001, '');
 
 --
 -- 已匯出資料表的索引

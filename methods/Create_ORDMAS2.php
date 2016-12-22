@@ -26,16 +26,10 @@
     <div class="sign-block" style="width: 400px;">
         <form method="post" action="Create_ORDMAS2_finish.php">
             <?php 
-            $queryTEL = search('TEL', 'CUSMAS', 'EMAIL', $EMAIL);
             $queryCUSADD = search('CUSADD', 'CUSMAS', 'EMAIL', $EMAIL);
-            if($queryTEL == null || $queryCUSADD == null){
-                ?><h1>請先補充會員資料</h1><?php 
-                if($queryTEL == null){
-                    ?><input type="hidden" name="TELid" value="Y" />
-                    <input type="text" name="TEL" placeholder="您的聯絡電話" /><?php 
-                }
-                if($queryCUSADD == null){
-                    ?><input type="hidden" name="CUSADDid" value="Y" />
+            if($queryCUSADD == null){
+                ?><h1>請先補充會員資料</h1>
+                    <input type="hidden" name="CUSADDid" value="Y" />
                     <input type="text" name="CUSADD" placeholder="您的通訊地址" /><?php 
                 }
             }

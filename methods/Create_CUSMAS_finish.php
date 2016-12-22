@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="../Homepage/img/misc/favicon.png">
-    <title>驗證</title>
-    <meta name="author" content="2016 NTUIM SA GROUP7">
-    <meta name="description" content="">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <!-- custom css -->
-    <link href="css/sign.css" rel="stylesheet">
-</head>
-
-<!-- PHP Area -->
 <?php 
 session_start();
 include_once("Helper/mysql_connect.php");
@@ -103,24 +86,7 @@ if($message == ''){
     }
     $_SESSION['COMMIT'] = $code;
     message_verify($TEL, $code);
-?>
-<!-- End PHP Area -->    
-
-<body>
-    <br>
-    <div class="sign-block">
-        <h1>註冊結果通知</h1>
-        <hr>
-        <p>您的會員註冊驗證碼已以簡訊方式寄出，煩請您前往確認，並輸入驗證碼。</p>
-        <form method="post" action="Create_CUSMAS_end.php">
-            <p>驗證碼：</p><input type="text" name="VERIFY" /><br>
-            <button type="submit" class="promise">確定</button>
-        </form>
-        <a href="/"><button type="button" class="cancel">取消</button></a>
-    </div>
-</body>
-
-<?php
+    include("Helper/verify.html");
 }
 else{
     ?>
@@ -131,5 +97,3 @@ else{
     <?php 
 }
 ?>
-
-</html>
