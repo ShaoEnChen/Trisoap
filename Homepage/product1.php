@@ -41,9 +41,15 @@
               <!-- Wrapper for slides-->
               <div class="carousel-inner">
                 <div class="item active"><img src="img/product/detail/rice_soap.jpg" alt=""></div>
-                <div class="item"><img src="img/product/detail/rice.png" alt=""></div>
+                <div class="item"><img src="img/product/detail/rice.jpg" alt=""></div>
               </div>
-              <!-- Controls--><a href="#carousel-shop" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a><a href="#carousel-shop" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
+              <!-- Controls-->
+              <a href="#carousel-shop" data-slide="prev" class="left carousel-control">
+                <span class="icon-prev"></span>
+              </a>
+              <a href="#carousel-shop" data-slide="next" class="right carousel-control">
+                <span class="icon-next"></span>
+              </a>
             </div>
             <div class="col-lg-6 slide">
               <h4>田靜山巒禾風皂 (米皂) </h4>
@@ -53,7 +59,7 @@
               <!-- Indicators-->
               <ol class="carousel-indicators mCustomScrollbar">
                 <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/detail/rice_soap.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/rice.png" alt=""></li>
+                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/rice.jpg" alt=""></li>
               </ol>
               <hr>
               <p>主要成分 / 乳油木果脂、甜杏仁油、橄欖油、椰子油、棕梠油、池上米、研磨艾草粉、研磨金盞花粉</p>

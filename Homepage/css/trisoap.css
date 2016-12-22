@@ -1754,6 +1754,15 @@ li .shop-cart {
 }
 
 /* ------Index------ */
+header {
+  margin-top: 69px;
+}
+
+section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
 .flexslider {
   border: none;
 }
@@ -1783,7 +1792,7 @@ li .shop-cart {
   z-index: 1002;
 }
 
-/* slide文字div */
+/* Slide文字div */
 
 /*
 @font-face {
@@ -1797,99 +1806,10 @@ li .shop-cart {
   margin: 0;
 }
 
-#slide-textarea1 {
-  position: absolute;
-  left: 9vw;
-  bottom: 8vw;
-  width: 22vw;
-  height: 22vw;
-  text-align: center;
-  border: solid #fff 0.3vw;
-}
-
-#slide-textarea1::before {
-  /* 垂直置中 */
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  width: 0;
-  height: 100%;
-}
-
-#slide-text1 {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 4vw;
-  color: #fff;
-}
-
-#slide-textarea2-1,
-#slide-textarea2-2,
-#slide-textarea2-3 {
-  position: absolute;
-}
-
-#slide-textarea2-1 {
-  top: 11vw;
-  right: 29vw;
-  writing-mode: vertical-lr;
-  -webkit-writing-mode: vertical-lr;
-}
-
-#slide-textarea2-2 {
-  top: 32vw;
-  right: 35vw;
-}
-
-#slide-textarea2-3 {
-  top: 34vw;
-  right: 31.5vw;
-}
-
-#slide-text2-1-1,
-#slide-text2-1-2,
-#slide-text2-2-1,
-#slide-text2-2-2 {
-  font-size: 5vw;
-}
-
-#slide-text2-1-2,
-#slide-text2-2-1 {
-  color: #973208;
-}
-
-#slide-text2-1-1,
-#slide-text2-2-2,
-#slide-text2-3 {
-  color: #201000;
-}
-
-#slide-textarea2-1 span:last-of-type::after {
-  content: '';
-  position: absolute;
-  top: 11vw;
-  right: 0;
-  height: 70%;
-  border-right: 1px solid #666;
-}
-
-#slide-textarea2-3 span:last-of-type::after {
-  content: '';
-  position: absolute;
-  top: -1vw;
-  left: -17vw;
-  width: 600%;
-  border-top: 1px solid #666;
-}
-
-#slide-text2-3 {
-  font-size: 5vw;
-}
-
 #slide-textarea3 {
   position: absolute;
-  bottom: 8vw;
-  right: 6vw;
+  bottom: 3vw;
+  right: 4vw;
 }
 
 #slide-textarea3::before {
@@ -1908,43 +1828,73 @@ li .shop-cart {
 }
 
 #slide-text3 {
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: 300;
   color: #fff;
   letter-spacing: 6px;
-  padding: 18px;
+  padding: 10px;
 }
 
-#slide-textarea4 {
+/* Buy Now - Product Elements */
+#buy-product div[class*="col-"] {
+  margin-bottom: 40px;
+}
+
+.product-element img {
+  width: 100%;
+  height: auto;
+}
+
+.img-cover {
   position: absolute;
-  top: 33%;
-  left: 30%;
-  width: 40%;
+  /* width without padding from bootstrap grid system */
+  width: calc(100% - 30px);
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  background-color: transparent;
+  z-index: 10;
   text-align: center;
 }
 
-#slide-textarea4::before,
-#slide-textarea4::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  left: 0;
+.img-cover:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-#slide-textarea4::before {
-  border-top: 1px solid #fff;
+.img-cover:hover .buy-now {
+  opacity: 1;
 }
 
-#slide-textarea4::after {
-  border-bottom: 1px solid #fff;
-}
-
-#slide-text4 {
-  font-size: 4vw;
-  font-weight: 300;
+.buy-now {
+  position: relative;
+  top: 50%;
+  left: 28%;
+  width: 44%;
+  display: block;
+  padding: 7px 12px;
+  transform: translateY(-50%);
   color: #fff;
-  letter-spacing: 8px;
-  padding: 18px;
+  font-size: 22px;
+  opacity: 0;
+
+  border: solid 1px #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.buy-now:hover {
+  background-color: #fff;
+}
+
+/* 標語 - 三個故事 */
+#services {
+  background-color: #F9B80E;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* 社會企業 slogan */

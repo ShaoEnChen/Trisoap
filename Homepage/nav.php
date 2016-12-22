@@ -29,8 +29,10 @@
             <li><a href="product.php">臺東系列產品</a></li>
           </ul>
         </li>
-        <li><a href="service.php">如何購皂</a></li>
+        <li><a href="https://trisoap.typeform.com/to/voNGpg" target="_blank">試用品申請</a></li>
         <li><a href="../message/message.php">希望留心語</a></li>
+        <li><a href="partner.php">合作夥伴</a></li>
+        <li><a href="media.php">媒體報導</a></li>
         <?php
     	    $CUSIDT = $_SESSION['CUSIDT'];
     	    if($CUSIDT == 'A'){

@@ -42,9 +42,15 @@
               <div class="carousel-inner">
                 <div class="item active"><img src="img/product/detail/taitung_small.jpg" alt=""></div>
                 <div class="item"><img src="img/product/detail/taitung_green.jpg" alt=""></div>
+                <div class="item"><img src="img/product/detail/taitung.jpg" alt=""></div>
               </div>
               <!-- Controls-->
-              <a href="#carousel-shop" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a><a href="#carousel-shop" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
+              <a href="#carousel-shop" data-slide="prev" class="left carousel-control">
+                <span class="icon-prev"></span>
+              </a>
+              <a href="#carousel-shop" data-slide="next" class="right carousel-control">
+                <span class="icon-next"></span>
+              </a>
             </div>
             <div class="col-lg-6 slide">
               <h4>三三臺東意象禮盒組</h4>
@@ -55,6 +61,7 @@
               <ol class="carousel-indicators mCustomScrollbar">
                 <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/detail/taitung_small.jpg" alt=""></li>
                 <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/taitung_green.jpg" alt=""></li>
+                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/taitung.jpg" alt=""></li>
               </ol>
               <hr>
               <p>禮盒內含 / 金絲森林渲染皂一顆 釋迦手感果力皂一顆 田靜山巒禾風皂一顆</p>

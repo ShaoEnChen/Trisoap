@@ -31,6 +31,7 @@
         <h4>Frequently Asked Questions</h4>
       </div>
     </header>
+
     <!-- Buttons-->
     <section>
       <div class="container">
@@ -106,6 +107,7 @@
         </div>
       </div>
     </section>
+
     <!-- Footer Section-->
     <section class="footer bg-gray">
       <div class="container">

@@ -95,7 +95,7 @@
         </div>
         <div class="row team-profile">
           <div class="col-md-4 col-md-offset-1 col-sm-6 col-xs-12">
-            <img src="img/photo3.png" alt="">
+            <img src="img/photo2.png" alt="">
           </div>
           <div class="col-md-4 col-md-offset-2 col-sm-6 col-xs-12 member-intro">
             <h4>陳雨彤 Maggy Chen</h4>
