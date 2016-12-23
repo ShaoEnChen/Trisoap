@@ -77,6 +77,13 @@
               <button type="submit" class="btn btn-dark btn-lg">確認送出</button>
             </form>
             <hr>
+            <?php
+              # include "../methods/Helper/mysql_connect.php";
+              # include "../methods/Helper/sql_operation.php";
+              $COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
+              $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+              $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
+            ?>
             <p><i class="fa fa-phone fa-fw fa-lg"></i> <?php echo $COMTEL;?> <br>
             <i class="fa fa-envelope fa-fw fa-lg"></i> <?php echo $COMEMAIL;?> <br>
             <i class="fa fa-map-marker fa-fw fa-lg"></i> <?php echo $COMADD;?>
