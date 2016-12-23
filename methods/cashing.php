@@ -15,9 +15,9 @@ try {
 
     //AllPay Service Parameter
     $obj->ServiceURL = "https://payment-stage.allpay.com.tw/Cashier/AioCheckOut/V2";
-    $obj->HashKey    = '5294y06JbISpM5x9';                                           //Hashkey
-    $obj->HashIV     = 'v77hoKGq4kWxNNIS';                                           //HashIV
-    $obj->MerchantID = '2000132';                                                    //MerchantID
+    $obj->HashKey    = 'bwqFcafJNX4GzAWO';                                           //Hashkey
+    $obj->HashIV     = 'mJf0B3ONPbCfwkmF';                                           //HashIV
+    $obj->MerchantID = '1385617';                                                    //MerchantID
 
     //Basic Order Parameter
     $obj->Send['ReturnURL'] = "http://trisoap.com/methods/cashing_feedback.php"; //付款完成通知回傳的網址
