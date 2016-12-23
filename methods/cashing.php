@@ -20,7 +20,7 @@ try {
     $obj->MerchantID = '2000132';                                                    //MerchantID
 
     //Basic Order Parameter
-    $obj->Send['ReturnURL'] = "http://192.168.5.63/methods/cashing_feedback.php"; //付款完成通知回傳的網址
+    $obj->Send['ReturnURL'] = "http://trisoap.com/methods/cashing_feedback.php"; //付款完成通知回傳的網址
     $TradeNo = "Test".time();  //use time to produce TradeNo
     $obj->Send['MerchantTradeNo']   = $TradeNo;                                 //Order_id
     $obj->Send['MerchantTradeDate'] = date("Y/m/d H:i:s");                      //Order_time
