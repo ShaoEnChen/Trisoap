@@ -35,7 +35,7 @@ try {
     else{
         $obj->Send['ChoosePayment'] = PaymentMethod::Credit;                    //Payment Method
     }
-    $obj->Send['ClientBackURL']     = "http://192.168.5.63/Homepage/index.php";
+    $obj->Send['ClientBackURL']     = "http://trisoap.com";
 
     $sql = "UPDATE ORDMAS SET MerchantTradeNo = '$TradeNo' WHERE ORDNO = '$ORDNO'";
     mysql_query($sql);
