@@ -78,8 +78,8 @@
             </form>
             <hr>
             <?php
-              # include "../methods/Helper/mysql_connect.php";
-              # include "../methods/Helper/sql_operation.php";
+              include "../methods/Helper/mysql_connect.php";
+              include "../methods/Helper/sql_operation.php";
               $COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
               $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
               $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
