@@ -10,8 +10,8 @@ try
 	$obj = new AllInOne();
  	//AllPay Service Parameter
  	$obj->HashKey     = 'bwqFcafJNX4GzAWO'; 
-    $obj->HashIV      = 'mJf0B3ONPbCfwkmF';
-    $obj->MerchantID  = '1385617'; 
+    	$obj->HashIV      = 'mJf0B3ONPbCfwkmF';
+    	$obj->MerchantID  = '1385617'; 
 	//FeedBack Parameter
  	$arFeedback = $obj->CheckOutFeedback();
  	/* 檢核與變更訂單狀態 */
