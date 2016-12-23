@@ -14,7 +14,7 @@ try {
     $obj = new AllInOne();
 
     //AllPay Service Parameter
-    $obj->ServiceURL = "https://payment-stage.allpay.com.tw/Cashier/AioCheckOut/V2";
+    $obj->ServiceURL = "https://payment.allpay.com.tw/Cashier/AioCheckOut/V2";
     $obj->HashKey    = 'bwqFcafJNX4GzAWO';                                           //Hashkey
     $obj->HashIV     = 'mJf0B3ONPbCfwkmF';                                           //HashIV
     $obj->MerchantID = '1385617';                                                    //MerchantID
