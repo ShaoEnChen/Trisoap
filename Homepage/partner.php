@@ -32,63 +32,134 @@
 
 		<!-- Buttons-->
 	    <section>
-	      <div class="container">
-	        <div class="row wow fadeIn">
-	          <div class="col-md-8 col-md-offset-2">
-	            <div id="accordion" role="tablist" aria-multiselectable="true" class="panel-group">
-	              <div class="panel panel-default">
-	                <div id="layer1Heading_1" role="tab" class="panel-heading">
-	                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#layer1Collapse_1" aria-expanded="true" aria-controls="layer1Collapse_1">
-	                  	<h4 class="panel-title">臺東</h4>
-	                  </a>
-	                </div>
-	                <div id="layer1Collapse_1" role="tabpanel" aria-labelledby="layer1Heading_1" class="panel-collapse collapse in">
-	                  <div class="panel-body">
-
-	                  </div>
-                  	</div>
-	              </div>
-	              <div class="panel panel-default">
-	                <div id="layer1Heading_2" role="tab" class="panel-heading">
-	                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#layer1Collapse_2" aria-expanded="true" aria-controls="layer1Collapse_2">
-	                  	<h4 class="panel-title">花蓮</h4>
-	                  </a>
-	                </div>
-	                <div id="layer1Collapse_2" role="tabpanel" aria-labelledby="layer1Heading_2" class="panel-collapse collapse">
-	                  <div class="panel-body">
-						啊啊啊啊啊
-	                  </div>
-                  	</div>
-	              </div>
-	              <div class="panel panel-default">
-	                <div id="layer1Heading_2" role="tab" class="panel-heading">
-	                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#layer1Collapse_2" aria-expanded="true" aria-controls="layer1Collapse_2">
-	                  	<h4 class="panel-title">宜蘭</h4>
-	                  </a>
-	                </div>
-	                <div id="layer1Collapse_2" role="tabpanel" aria-labelledby="layer1Heading_2" class="panel-collapse collapse">
-	                  <div class="panel-body">
-						啊啊啊啊啊
-	                  </div>
-                  	</div>
-	              </div>
-	              <div class="panel panel-default">
-	                <div id="layer1Heading_2" role="tab" class="panel-heading">
-	                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#layer1Collapse_2" aria-expanded="true" aria-controls="layer1Collapse_2">
-	                  	<h4 class="panel-title">台北</h4>
-	                  </a>
-	                </div>
-	                <div id="layer1Collapse_2" role="tabpanel" aria-labelledby="layer1Heading_2" class="panel-collapse collapse">
-	                  <div class="panel-body">
-						啊啊啊啊啊
-	                  </div>
-                  	</div>
-	              </div>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-	    </section>
+	      	<div class="container">
+		        <div class="row wow fadeIn">
+		        	<div class="col-md-8 col-md-offset-2">
+		            	<div id="accordion" role="tablist" aria-multiselectable="true" class="panel-group">
+							<div class="panel panel-default">
+		                		<div id="layer1Heading_1" role="tab" class="panel-heading">
+		                			<a role="button" data-toggle="collapse" data-parent="#accordion" href="#layer1Collapse_1" aria-expanded="true" aria-controls="layer1Collapse_1">
+		                 				<h4 class="panel-title">臺東</h4>
+		                  			</a>
+		                		</div>
+		                		<div id="layer1Collapse_1" role="tabpanel" aria-labelledby="layer1Heading_1" class="panel-collapse collapse in">
+		                			<div class="panel-body">
+										<div class="panel panel-default">
+											<div id="layer2Heading_1" role="tab" class="panel-heading">
+												<a role="button" data-toggle="collapse" data-parent="layer1Heading_1" href="#layer2Collapse_1" aria-expanded="true" aria-controls="layer2Collapse_1">
+								  					<h4 class="panel-title">李勝賢文教基金會</h4>
+												</a>
+											</div>
+											<div id="layer2Collapse_1" role="tabpanel" aria-labelledby="layer2Heading_1" class="panel-collapse collapse">
+												<div class="panel-body">
+													<a href="#">連結</a>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div id="layer2Heading_2" role="tab" class="panel-heading">
+												<a role="button" data-toggle="collapse" data-parent="layer1Heading_1" href="#layer2Collapse_2" aria-expanded="true" aria-controls="layer2Collapse_2">
+								  					<h4 class="panel-title">小農食尚</h4>
+												</a>
+											</div>
+											<div id="layer2Collapse_2" role="tabpanel" aria-labelledby="layer2Heading_2" class="panel-collapse collapse">
+												<div class="panel-body">
+													<a href="#">連結</a>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div id="layer2Heading_3" role="tab" class="panel-heading">
+												<a role="button" data-toggle="collapse" data-parent="layer1Heading_1" href="#layer2Collapse_3" aria-expanded="true" aria-controls="layer2Collapse_3">
+								  					<h4 class="panel-title">高家米倉</h4>
+												</a>
+											</div>
+											<div id="layer2Collapse_3" role="tabpanel" aria-labelledby="layer2Heading_3" class="panel-collapse collapse">
+												<div class="panel-body">
+													<a href="#">連結</a>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div id="layer2Heading_4" role="tab" class="panel-heading">
+												<a role="button" data-toggle="collapse" data-parent="layer1Heading_1" href="#layer2Collapse_4" aria-expanded="true" aria-controls="layer2Collapse_4">
+								  					<h4 class="panel-title">李勝賢文教基金會</h4>
+												</a>
+											</div>
+											<div id="layer2Collapse_4" role="tabpanel" aria-labelledby="layer2Heading_4" class="panel-collapse collapse">
+												<div class="panel-body">
+													<a href="#">連結</a>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div id="layer2Heading_5" role="tab" class="panel-heading">
+												<a role="button" data-toggle="collapse" data-parent="layer1Heading_1" href="#layer2Collapse_5" aria-expanded="true" aria-controls="layer2Collapse_5">
+								  					<h4 class="panel-title">薑黃伯</h4>
+												</a>
+											</div>
+											<div id="layer2Collapse_5" role="tabpanel" aria-labelledby="layer2Heading_5" class="panel-collapse collapse">
+												<div class="panel-body">
+													<a href="#">連結</a>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div id="layer2Heading_6" role="tab" class="panel-heading">
+												<a role="button" data-toggle="collapse" data-parent="layer1Heading_1" href="#layer2Collapse_6" aria-expanded="true" aria-controls="layer2Collapse_6">
+								  					<h4 class="panel-title">釋迦小羊牧場</h4>
+												</a>
+											</div>
+											<div id="layer2Collapse_6" role="tabpanel" aria-labelledby="layer2Heading_6" class="panel-collapse collapse">
+												<div class="panel-body">
+													<a href="#">連結</a>
+												</div>
+											</div>
+										</div>
+		                  			</div>
+	                  			</div>
+							</div>
+							<div class="panel panel-default">
+								<div id="layer1Heading_2" role="tab" class="panel-heading">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#layer1Collapse_2" aria-expanded="true" aria-controls="layer1Collapse_2">
+										<h4 class="panel-title">花蓮</h4>
+									</a>
+								</div>
+								<div id="layer1Collapse_2" role="tabpanel" aria-labelledby="layer1Heading_2" class="panel-collapse collapse">
+									<div class="panel-body">
+									啊啊啊啊啊
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div id="layer1Heading_3" role="tab" class="panel-heading">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#layer1Collapse_3" aria-expanded="true" aria-controls="layer1Collapse_3">
+										<h4 class="panel-title">宜蘭</h4>
+									</a>
+								</div>
+								<div id="layer1Collapse_3" role="tabpanel" aria-labelledby="layer1Heading_3" class="panel-collapse collapse">
+									<div class="panel-body">
+									啊啊啊啊啊
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div id="layer1Heading_4" role="tab" class="panel-heading">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#layer1Collapse_4" aria-expanded="true" aria-controls="layer1Collapse_4">
+										<h4 class="panel-title">台北</h4>
+									</a>
+								</div>
+								<div id="layer1Collapse_4" role="tabpanel" aria-labelledby="layer1Heading_4" class="panel-collapse collapse">
+									<div class="panel-body">
+									啊啊啊啊啊
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<!-- Footer Section-->
 		<section class="footer bg-gray">
