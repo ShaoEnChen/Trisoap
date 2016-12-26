@@ -4,6 +4,22 @@ include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
 include_once("Helper/handle_string.php");
 
+function transfer_PaymentType($paytype) {
+	$split = explode('_', $paytype);
+	if ($split[0] == 'Credit') {
+		return 'A';
+	}
+	else if ($split[0] == 'ATM') {
+		return 'B';
+	}
+	else if ($split[0] == 'WebATM') {
+		return 'C';
+	}
+	else {
+		return 'F';
+	}
+}
+
 // get feedback from AllPay
 try
 {
@@ -38,7 +54,8 @@ try
  		}
 
  		if($szRtnCode == 1){
- 			$sql = "UPDATE ORDMAS SET PAYTYPE = '$szPaymentType' WHERE MerchantTradeNo = '$szMerchantTradeNo'";
+ 			$paytype = transfer_PaymentType($szPaymentType);
+ 			$sql = "UPDATE ORDMAS SET PAYTYPE = '$paytype' WHERE MerchantTradeNo = '$szMerchantTradeNo'";
 		    mysql_query($sql);
 		    $sql = "UPDATE ORDMAS SET PAYSTAT = 1 WHERE MerchantTradeNo = '$szMerchantTradeNo'";
 		    mysql_query($sql);
