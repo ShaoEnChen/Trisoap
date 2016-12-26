@@ -38,23 +38,96 @@
 
         <div class="clearfix"></div>
         <div class="row grid-pad">
-          <div class="col-sm-6"><a href="product1.php"><img src="img/product/rice.png" alt="" class="img-responsive center-block">
-              <h5>田靜山巒禾風皂 (米皂）</h5></a>
-            <p>甜杏仁油－蘊含天然維他命的豐富油，甜杏仁油是手工皂界的優良油品，富含天然維他命對於改善過乾的肌膚有良好的作用，亦適用於敏感性肌膚調理。禾風皂由台東池上在地小農「高家米倉」提供的純淨米糠乾燥研磨後添加至皂中，可藉由純淨米糠的顆粒清除肌膚中的細微髒汙</p><a href="product1.php" class="btn btn-gray btn-xs">更多</a>
+          <div class="col-sm-6">
+            <a href="product1.php">
+              <img src="img/product/rice.png" alt="" class="img-responsive center-block">
+              <h5>田靜山巒禾風皂 (米皂）</h5>
+            </a>
+            <p>
+              甜杏仁油－蘊含天然維他命的豐富油，甜杏仁油是手工皂界的優良油品，富含天然維他命對於改善過乾的肌膚有良好的作用，亦適用於敏感性肌膚調理。禾風皂由台東池上在地小農「高家米倉」提供的純淨米糠乾燥研磨後添加至皂中，可藉由純淨米糠的顆粒清除肌膚中的細微髒汙
+            </p>
+            <a href="product1.php" class="btn btn-gray btn-xs">更多</a>
           </div>
-          <div class="col-sm-6"><a href="product2.php"><img src="img/product/lily.png" alt="" class="img-responsive center-block">
-              <h5>金絲森林渲染皂 (金針花皂）</h5></a>
-            <p>乳油木果脂－神奇奶油樹的聖品，由非洲乳油木樹中的果油提煉而出，在洗感上帶給肌膚滋潤卻又不黏膩的舒適體驗；搭配台東池上的乾燥金針，點點花絲由手作渲染而出的花紋更在視覺上帶來豐富感受。四種油品的經典配方是TriSoap三三的經典皂款，帶給你不論視覺或洗感上都獨一無二的經典旅程</p><a href="product2.php" class="btn btn-gray btn-xs">更多</a>
+          <div class="col-sm-6">
+            <a href="product2.php">
+              <img src="img/product/lily.png" alt="" class="img-responsive center-block">
+              <h5>金絲森林渲染皂 (金針花皂）</h5>
+            </a>
+            <p>
+              乳油木果脂－神奇奶油樹的聖品，由非洲乳油木樹中的果油提煉而出，在洗感上帶給肌膚滋潤卻又不黏膩的舒適體驗；搭配台東池上的乾燥金針，點點花絲由手作渲染而出的花紋更在視覺上帶來豐富感受。四種油品的經典配方是TriSoap三三的經典皂款，帶給你不論視覺或洗感上都獨一無二的經典旅程
+            </p>
+            <a href="product2.php" class="btn btn-gray btn-xs">更多</a>
           </div>
-          <div class="col-sm-6"><a href="product3.php"><img src="img/product/shakya.png" alt="" class="img-responsive center-block">
-              <h5>釋迦手感果力皂 (釋迦皂）</h5></a>
-            <p>葡萄籽油－洗淨後的清爽感受，葡萄籽油是軟油中的特色油品，洗淨後帶給肌膚非常清爽而不黏膩的感受，與橄欖油的成分交疊，會有大小泡沫交雜的豐富洗感。取自台東小農「釋迦小羊牧場」所提供的釋迦果實，藉由將微弱的果酸添加減低肥皂中過於刺激的鹼性達成天然的去除膚質表面髒汙的獨家體驗</p><a href="product3.php" class="btn btn-gray btn-xs">更多</a>
+          <div class="col-sm-6">
+            <a href="product3.php">
+              <img src="img/product/shakya.png" alt="" class="img-responsive center-block">
+              <h5>釋迦手感果力皂 (釋迦皂）</h5>
+            </a>
+            <p>
+              葡萄籽油－洗淨後的清爽感受，葡萄籽油是軟油中的特色油品，洗淨後帶給肌膚非常清爽而不黏膩的感受，與橄欖油的成分交疊，會有大小泡沫交雜的豐富洗感。取自台東小農「釋迦小羊牧場」所提供的釋迦果實，藉由將微弱的果酸添加減低肥皂中過於刺激的鹼性達成天然的去除膚質表面髒汙的獨家體驗
+            </p>
+            <a href="product3.php" class="btn btn-gray btn-xs">更多</a>
           </div>
-          <div class="col-sm-6"><a href="product4.php"><img src="img/product/gift.png" alt="" class="img-responsive center-block">
-              <h5>三三臺東意象禮盒組</h5></a>
-            <p>三三臺東意象禮盒，乃由TriSoap三三社會企業研發後，將技術免費移轉給李勝賢文教基金會，並由其協力生產。李勝賢文教基金會位於台東市，是以服務憨兒為主的小型作業所，開辦愛心二手商店及手工皂製作已有數年之久。裡頭的憨兒各個是作皂好手，只要提及作皂他們便展現優於一般人的專注力與專業程度。作皂不只為了成品，更在於每個憨兒在作好皂後的自信笑容</p><a href="product4.php" class="btn btn-gray btn-xs">更多</a>
+          <div class="col-sm-6">
+            <a href="product4.php">
+              <img src="img/product/gift.png" alt="" class="img-responsive center-block">
+              <h5>三三臺東意象禮盒組</h5>
+            </a>
+            <p>
+              三三臺東意象禮盒，乃由TriSoap三三社會企業研發後，將技術免費移轉給李勝賢文教基金會，並由其協力生產。李勝賢文教基金會位於台東市，是以服務憨兒為主的小型作業所，開辦愛心二手商店及手工皂製作已有數年之久。裡頭的憨兒各個是作皂好手，只要提及作皂他們便展現優於一般人的專注力與專業程度。作皂不只為了成品，更在於每個憨兒在作好皂後的自信笑容
+            </p>
+            <a href="product4.php" class="btn btn-gray btn-xs">更多</a>
           </div>
-
+          <div class="col-sm-6">
+            <a href="product5.php">
+              <img src="img/product/gift.png" alt="" class="img-responsive center-block">
+              <h5>三三臺東意象皂絲旅行組</h5>
+            </a>
+            <p>
+              臺東皂絲旅行組
+              內涵臺東洛神紅麴、萱草米黃、暖暖薑黃皂絲旅用組。
+              天然手打皂絲，綿密的起泡讓你在旅途當中享受不同的驚奇。
+              添加台東在地素材的旅行組，
+              讓你在洗澡的時候也像在旅行。
+            </p>
+            <a href="product5.php" class="btn btn-gray btn-xs">更多</a>
+          </div>
+          <div class="col-sm-6">
+            <a href="product6.php">
+              <img src="img/product/gift.png" alt="" class="img-responsive center-block">
+              <h5>洛神紅麴皂絲旅行組</h5>
+            </a>
+            <p>
+              台東的艷麗珍寶，捧在農友的手上閃閃發光。
+              自然主義之下的友善農法
+              將洛神與紅麴乾燥後添入的獨門絕配。
+            </p>
+            <a href="product6.php" class="btn btn-gray btn-xs">更多</a>
+          </div>
+          <div class="col-sm-6">
+            <a href="product7.php">
+              <img src="img/product/gift.png" alt="" class="img-responsive center-block">
+              <h5>暖暖薑黃旅用皂絲</h5>
+            </a>
+            <p>
+              豔黃中帶點純樸的橘棕
+              經過薑黃伯特殊而又綿密的加工研磨
+              入皂而成的溫暖色澤讓你有個暖暖的冬天。
+            </p>
+            <a href="product7.php" class="btn btn-gray btn-xs">更多</a>
+          </div>
+          <div class="col-sm-6">
+            <a href="product8.php">
+              <img src="img/product/gift.png" alt="" class="img-responsive center-block">
+              <h5>萱草米黃旅用皂絲</h5>
+            </a>
+            <p>
+              盛開在池上的橘黃萱草
+              象徵著溫暖又偉大的母親。
+              搭配來自非洲的紅棕櫚油，一起享受如母親溫暖般的呵護。
+            </p>
+            <a href="product8.php" class="btn btn-gray btn-xs">更多</a>
+          </div>
         </div>
       </div>
     </section>
