@@ -29,9 +29,8 @@
             $queryCUSADD = search('CUSADD', 'CUSMAS', 'EMAIL', $EMAIL);
             if($queryCUSADD == null){
                 ?><h1>請先補充會員資料</h1>
-                    <input type="hidden" name="CUSADDid" value="Y" />
-                    <input type="text" name="CUSADD" placeholder="您的通訊地址" /><?php 
-                }
+                <input type="hidden" name="CUSADDid" value="Y" />
+                <input type="text" name="CUSADD" placeholder="您的通訊地址" /><?php 
             }
             ?>
         	<h1>請先建立訂單</h1>

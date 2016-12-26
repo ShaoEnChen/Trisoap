@@ -14,13 +14,13 @@ try {
     $obj = new AllInOne();
 
     //AllPay Service Parameter
-    $obj->ServiceURL = "https://payment-stage.allpay.com.tw/Cashier/AioCheckOut/V2";
-    $obj->HashKey    = '5294y06JbISpM5x9';                                           //Hashkey
-    $obj->HashIV     = 'v77hoKGq4kWxNNIS';                                           //HashIV
-    $obj->MerchantID = '2000132';                                                    //MerchantID
+    $obj->ServiceURL = "https://payment.allpay.com.tw/Cashier/AioCheckOut/V2";
+    $obj->HashKey    = 'bwqFcafJNX4GzAWO';                                           //Hashkey
+    $obj->HashIV     = 'mJf0B3ONPbCfwkmF';                                           //HashIV
+    $obj->MerchantID = '1385617';                                                    //MerchantID
 
     //Basic Order Parameter
-    $obj->Send['ReturnURL'] = "http://192.168.5.63/methods/cashing_feedback.php"; //付款完成通知回傳的網址
+    $obj->Send['ReturnURL'] = "http://trisoap.com/methods/cashing_feedback.php"; //付款完成通知回傳的網址
     $TradeNo = "Test".time();  //use time to produce TradeNo
     $obj->Send['MerchantTradeNo']   = $TradeNo;                                 //Order_id
     $obj->Send['MerchantTradeDate'] = date("Y/m/d H:i:s");                      //Order_time
@@ -35,7 +35,7 @@ try {
     else{
         $obj->Send['ChoosePayment'] = PaymentMethod::Credit;                    //Payment Method
     }
-    $obj->Send['ClientBackURL']     = "http://192.168.5.63/Homepage/index.php";
+    $obj->Send['ClientBackURL']     = "http://trisoap.com";
 
     $sql = "UPDATE ORDMAS SET MerchantTradeNo = '$TradeNo' WHERE ORDNO = '$ORDNO'";
     mysql_query($sql);
