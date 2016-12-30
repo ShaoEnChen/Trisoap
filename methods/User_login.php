@@ -20,9 +20,9 @@
         <input type="text" placeholder="電子信箱" name="EMAIL" />
         <input type="password" placeholder="密碼" name="CUSPW" />
         <button type="submit" class="promise">登入</button>
-        <a href="Create_CUSMAS.php"><button type="button" class="cancel">立即註冊</button></a>
     </form>
-    <a href="/"><button type="button" class="cancel" style="width: 49.35%;">取消</button></a>
+    <a href="Create_CUSMAS.php"><button type="button" class="cancel">立即註冊</button></a>
+    <a href="/"><button type="button" class="cancel" style="width: 49.35%; margin-bottom: 5px;">取消</button></a>
     <a href="User_ForgetPW.php"><button type="button" class="cancel" style="width: 49.35%;">忘記密碼</button></a>
 </div>
 </body>
