@@ -30,9 +30,9 @@
             if($queryCUSADD == null){
                 ?><h1>請先補充通訊地址</h1>
                 <input type="hidden" name="CUSADDid" value="Y" />
-                <input type="text" name="CUSADD_1" placeholder="台北市" />
-                <input type="text" name="CUSADD_2" placeholder="大安區" />
-                <input type="text" name="CUSADD_3" placeholder="和平東路二段265巷3號" /><?php 
+                <input type="text" name="CUSADD_1" placeholder="台北市" style="width: 49.35%"/>
+                <input type="text" name="CUSADD_2" placeholder="大安區" style="width: 49.35%"/>
+                <input type="text" name="CUSADD_3" placeholder="和平東路二段265巷3號" style="width: 100%"/><?php 
             }
             ?>
         	<h1>請先建立訂單</h1>
