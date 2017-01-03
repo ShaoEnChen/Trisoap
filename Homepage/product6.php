@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,8 +28,7 @@
       <!-- Intro Header-->
       <div class="intro-body">
         <h1>商品一覽</h1>
-        <h4>單品</h4>
-        </h4>
+        <h4>旅用皂絲</h4>
       </div>
     </header>
     <!-- shop-->
@@ -41,59 +40,97 @@
             <div class="col-lg-6 carousel-outer">
               <!-- Wrapper for slides-->
               <div class="carousel-inner">
-                <div class="item active"><img src="img/product/detail/shakya_soap.jpg" alt=""></div>
-                <div class="item"><img src="img/product/detail/shakya.png" alt=""></div>
+                <div class="item active"><img src="img/product/rice.png" alt=""></div>
+                <!-- <div class="item"><img src="" alt=""></div> -->
               </div>
-              <!-- Controls--><a href="#carousel-shop" data-slide="prev" class="left carousel-control"><span class="icon-prev"></span></a><a href="#carousel-shop" data-slide="next" class="right carousel-control"><span class="icon-next"></span></a>
+              <!-- Controls-->
+              <a href="#carousel-shop" data-slide="prev" class="left carousel-control">
+                <span class="icon-prev"></span>
+              </a>
+              <a href="#carousel-shop" data-slide="next" class="right carousel-control">
+                <span class="icon-next"></span>
+              </a>
             </div>
             <div class="col-lg-6 slide">
-              <h4>釋迦手感果力皂 (釋迦皂)</h4>
+              <h4>洛神紅麴皂絲旅行組</h4>
               <p class="small">REF. 9583301-234</p>
-              <p>翠綠的果實結在樹上，粼粼片片的果殼像極了小羊身上蜷曲的羊毛。
-              純天然入皂的棕色，極為天然的提煉手法將一顆一顆的釋迦果力完美融入，帶給你洗感上的全新體驗。</p>
+              <p>
+                台東的艷麗珍寶，捧在農友的手上閃閃發光。
+                自然主義之下的友善農法，
+                將洛神與紅麴乾燥後添入的獨門絕配。
+              </p>
               <!-- Indicators-->
               <ol class="carousel-indicators mCustomScrollbar">
-                <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/detail/shakya_soap.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/shakya.png" alt=""></li>
+                <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/rice.png" alt=""></li>
+                <!-- <li data-target="#carousel-shop" data-slide-to="1"><img src="" alt=""></li> -->
               </ol>
               <hr>
-              <p>主要成分 / 葡萄籽油 橄欖油 棕梠油 乳油木果脂 葡萄籽油 釋迦果砂</p>
-              <p>適用膚質 / 中性與乾性之膚質適用</p>
+              <p>主要成分 / 椰子油、棕櫚油、苦茶油、米糠油、蓖麻油、乾燥研磨臺東自然主義洛神花、天然紅麴粉</p>
+              <p>適用膚質 / 油性中性膚質適用，亦適合作洗髮皂使用</p>
               <div class="panel panel-default">
                 <div id="heading1" role="tab" class="panel-heading">
-                  <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1" class="collapsed">產品特色</a></h4>
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1" class="collapsed">
+                    <h4 class="panel-title">產品特色</h4>
+                  </a>
                 </div>
                 <div id="collapse1" role="tabpanel" aria-labelledby="heading1" class="panel-collapse collapse">
-                  <div class="panel-body">葡萄籽油－－洗淨後的清爽感受，葡萄籽油是軟油中的特色油品，洗淨後帶給肌膚非常清爽而不黏膩的感受，與橄欖油的成分交疊，會有大小泡沫交雜的豐富洗感。取自台東小農「釋迦小羊牧場」所提供的釋迦果實，藉由果泥入皂的方式，將微弱的果酸添加減低肥皂中過於刺激的鹼性，再藉由獨門的乾燥手法提煉出釋迦中的果砂，可藉由磨砂效果達成天然的去除膚質表面髒汙的獨家體驗。</div>
+                  <div class="panel-body">
+                    苦茶油 – 苦茶油被人稱為「台灣在地的好油」，苦茶油具有高抗氧化物質，讓皮膚頭髮處於良好狀態，能讓肌膚調整並保溼，滲透性快，能使用於全身肌膚它又能在表皮上形成一層很薄的保護膜，保住皮膚內的水份，是一款非常適合拿來洗髮的洗髮皂。
+                  </div>
                 </div>
               </div>
               <div class="panel panel-default">
                 <div id="heading2" role="tab" class="panel-heading">
-                  <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2" class="collapsed">在地小農</a></h4>
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2" class="collapsed">
+                    <h4 class="panel-title">在地小農</h4>
+                  </a>
                 </div>
                 <div id="collapse2" role="tabpanel" aria-labelledby="heading2" class="panel-collapse collapse">
-                  <div class="panel-body">釋迦小羊牧場 －－ 青綠糖蘋果的純真天堂<br>
-                  座落太麻里的「釋迦小羊牧場」。牧場在向陽面陽光充足的情況下，搭配上山泉水的灌溉，產出的台東二號釋迦碩大又飽滿。堅持產地自銷，從施肥、剪枝、開花、授粉、疏果、除草、套袋，親手處理每一個從小羊牧場產出的釋迦；對於各種細節的注重，以及對於果實品質安全的堅持，都可看出負責人陳志韋的認真和堅毅。<br>
-                  高溫後的降雨容易使釋迦產生裂果，裂果賣相不佳，常是小農的困擾。三三向釋迦小羊牧場合作購買部分裂果，純手工取出果泥、果皮與果沙整顆果實充分利用，製作成三三臺東意象的原料之一。「裂果的釋迦，像是在開懷大笑的小羊。」<br>
-                  釋迦小羊牧場  <a target="_blank" href="https://www.facebook.com/taimalicustardapple/">https://www.facebook.com/taimalicustardapple/</a></div>
+                  <div class="panel-body">
+                    台東自然主義 – 台東自然農法的幕後推手。
+                    三三洛神紅麴皂絲，乃是採用台東自然主義友善耕種乾燥過後的洛神花。臺東自然主義經營人呂宏文，從耕種開始並秉持著自然友善以及追求一種對大地自然循環的尊重，不施藥與化肥的堅持，並且擔任推廣台東友善耕種「共好」的概念，希望更多農友加入自然主義的概念同行。
+                    <a href="https://www.facebook.com/maturalism/">
+                      臺東自然主義：https://www.facebook.com/maturalism/
+                    </a>
+
+                    台東薑黃伯 – 台東樂山的薑黃淨土。
+                    臺東薑黃樂山野菜香草園，園區座落於台灣最後一塊淨土，其中含有多項礦物質又受太平洋水氣影響，成為種植的良好場所。台東薑黃伯園區經過20年的耕耘，堅持無施灑農藥，以最優質的束骨秋鬱金為主，強調「純淨、優質、安心」，經過多項有機認證測驗通過，堅持帶給你最好的薑黃農產。
+                    <a href="http://www.tailosan.com/">
+                      臺東薑黃伯：http://www.tailosan.com/
+                    </a>
+
+                    臺東小農食在
+                    金絲森林渲染皂當中的金針，乃是由「小農食在」所提供。小農食在的金針花田，有別於一般種植於高山上，而是在台東縣池上鄉的平地栽培，因此在非高山金針產季時，也能夠提供最新鮮的金針花。市面上的金針花的加工品，為保有其鮮豔色澤與延長保存期間，經常添加二氧化硫，使含硫量超標，這些含硫金針，亦稱為「紅針、有毒金針」。而小農食在在製作過程中，完全不添加亞硫酸及其他添加物，是用於製作肥皂最好、安心的無硫金針。
+                    <a href="https://www.facebook.com/pinganmipu/">
+                      小農食在：https://www.facebook.com/pinganmipu/
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="panel panel-default">
                 <div id="heading3" role="tab" class="panel-heading">
-                  <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3" class="collapsed">愛心協力</a></h4>
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3" class="collapsed">
+                    <h4 class="panel-title">愛心協力</h4>
+                  </a>
                 </div>
                 <div id="collapse3" role="tabpanel" aria-labelledby="heading3" class="panel-collapse collapse">
-                  <div class="panel-body">釋迦手感果力皂，乃由TriSoap三三社會企業研發後，將技術免費移轉給李勝賢文教基金會，並由其協力生產。李勝賢文教基金會位於台東市區，是以服務憨兒為主的小型作業所，開辦愛心二手商店以及手工皂製作已有數年之久。裡頭的憨兒各個是作皂好手，只要提及作皂他們便展現優於一般人的專注力與專業程度。作皂不只為了成品，更在於每個憨兒在做好皂後的自信笑容。三三台東意象的每樣產品，在經過數個月的技術移轉與培訓後成功開發，每一顆手工皂，都是來自憨兒們歡笑天堂的純淨手作。</div>
+                  <div class="panel-body">
+                    李勝賢文教基金會
+                    李勝賢文教基金會位於台東市區，是以服務憨兒為主的小型作業所，開辦愛心二手商店以及手工皂製作已有數年之久。裡頭的憨兒各個是作皂好手，只要提及作皂他們便展現優於一般人的專注力與專業程度。作皂不只為了成品，更在於每個憨兒在做好皂後的自信笑容。三三台東意象的每樣產品，在經過數個月的技術移轉與培訓後成功開發，每一顆手工皂，都是來自憨兒們歡笑天堂的純淨手作。
+
+                    台北自閉症基金會北投工坊
+                    自閉症基金會北投工坊位於台北市北投區，是一個專門協助自閉症做職業培訓的小型作業所。裡頭的自閉症小孩有一個共同的特質便是「固著」，對於許多細節的一絲不苟。自閉症基金會北投工坊強調「將自閉症的特質化為優勢」，北投工坊不把自閉症的特質當作一種劣勢，而是運用一絲不苟的特質，來達成產品細節的完美。
+                  </div>
                 </div>
               </div>
               <form class="form-inline" method="post" action="../methods/Purchase_finish.php">
                 <div class="form-group">
-                  <h2 class="no-pad">$300</h2>
+                  <h2 class="no-pad">$40</h2>
                 </div>
                 <div class="form-group">
                   <label for="number"></label>
                   <input id="number" type="number" name="ORDAMT" value="1" max="50" min="1" class="form-control">
-                  <input type="hidden" name="ITEMNO" value="6">
+                  <input type="hidden" name="ITEMNO" value="5">
                 </div>
                 <button type="submit" class="btn btn-dark">加入購物車</button>
               </form>

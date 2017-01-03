@@ -1058,8 +1058,8 @@ blockquote {
       text-decoration: none;
       color: #000; }
   .footer hr {
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-top: 1px solid #ccc; }
   .footer .classic {
     color: #999; }
@@ -1077,7 +1077,7 @@ blockquote {
     margin-top: 25px;
     margin-bottom: 25px; } }
 /* Twitter */
-.twitter-widget .icon {
+/* .twitter-widget .icon {
   margin-top: -5px;
   opacity: .6; }
 .twitter-widget ul {
@@ -1095,6 +1095,7 @@ blockquote {
 
 #tweecool span {
   font-size: 18px; }
+ */
 
 /* Map */
 #map {
@@ -1735,7 +1736,16 @@ li .shop-cart {
 
 
 /* Sean's addition */
+header {
+  margin-top: 69px;
+}
 
+section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+/* ------Index------ */
 /* ------各頁Intro橫幅圖片垂直位置------ */
 #intro-about {
   background-position: center top;
@@ -1751,16 +1761,6 @@ li .shop-cart {
 
 #intro-product {
   background-position: center 78%;
-}
-
-/* ------Index------ */
-header {
-  margin-top: 69px;
-}
-
-section {
-  padding-top: 90px;
-  padding-bottom: 90px;
 }
 
 .flexslider {
@@ -1887,20 +1887,38 @@ section {
 }
 
 .buy-now:hover {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 /* 標語 - 三個故事 */
 #services {
-  background-color: #F9B80E;
+  background-color: #EA8B3B;
   padding-top: 60px;
   padding-bottom: 60px;
+  color: #fff;
 }
 
 /* 社會企業 slogan */
 .slogan-text {
   text-align: left;
   white-space: pre-line;
+}
+
+/* ------ Footer ------ */
+.footer {
+  /* background-color: #EA8B3B; */
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+/* .footer,
+.footer a {
+  color:  #fff;
+} */
+
+.footer p {
+  font-size: 14px;
+  margin: 0 0 10px;
 }
 
 /* ------ About ------ */
@@ -1925,4 +1943,19 @@ section {
 /* ------ Product-Intro ------ */
 .product-intro-text {
   text-align: left;
+}
+
+/* soapstring */
+#soapstring p {
+  white-space: pre-line;
+}
+
+#soapstring > .container > p {
+  text-align: center;
+}
+
+/* All products */
+#shop p,
+#shop .panel-body {
+  white-space: pre-line;
 }

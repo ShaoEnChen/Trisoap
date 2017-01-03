@@ -16,23 +16,29 @@
       <ul class="nav navbar-nav navbar-left">
         <li class="hidden"><a href="#page-top"></a></li>
         <li><a href="/">首頁</a></li>
-        <li><a href=#>關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+        <li><a href="#">關於三三<i class="fa fa-angle-down"></i><span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="about.php">三三團隊</a></li>
+            <li><a href="product_intro.php">三三堅持</a></li>
             <li><a href="faq.php">顧客問答</a></li>
             <li><a href="contact.php">聯絡我們</a></li>
           </ul>
         </li>
         <li><a href="#">三三產品<i class="fa fa-angle-down"></i><span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="product_intro.php">三三堅持</a></li>
-            <li><a href="product.php">臺東系列產品</a></li>
+            <li class="dropdown-header">臺東系列產品</li>
+            <li><a href="product.php">單品</a></li>
+            <li><a href="soapstring.php">旅用皂絲</a></li>
           </ul>
         </li>
         <li><a href="https://trisoap.typeform.com/to/voNGpg" target="_blank">試用品申請</a></li>
         <li><a href="../message/message.php">希望留心語</a></li>
-        <li><a href="partner.php">合作夥伴</a></li>
-        <li><a href="media.php">媒體報導</a></li>
+        <li><a href="#">xxxx<i class="fa fa-angle-down"></i><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="partner.php">合作夥伴</a></li>
+            <li><a href="media.php">媒體報導</a></li>
+          </ul>
+        </li>
         <?php
     	    $CUSIDT = $_SESSION['CUSIDT'];
     	    if($CUSIDT == 'A'){

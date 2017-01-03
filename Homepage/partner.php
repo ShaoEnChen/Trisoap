@@ -119,7 +119,7 @@
 		                  			</div>
 	                  			</div>
 							</div>
-							<div class="panel panel-default">
+							<!-- <div class="panel panel-default">
 								<div id="layer1Heading_2" role="tab" class="panel-heading">
 									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#layer1Collapse_2" aria-expanded="true" aria-controls="layer1Collapse_2">
 										<h4 class="panel-title">花蓮</h4>
@@ -130,7 +130,7 @@
 									啊啊啊啊啊
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<div class="panel panel-default">
 								<div id="layer1Heading_3" role="tab" class="panel-heading">
 									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#layer1Collapse_3" aria-expanded="true" aria-controls="layer1Collapse_3">
@@ -143,7 +143,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="panel panel-default">
+							<!-- <div class="panel panel-default">
 								<div id="layer1Heading_4" role="tab" class="panel-heading">
 									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#layer1Collapse_4" aria-expanded="true" aria-controls="layer1Collapse_4">
 										<h4 class="panel-title">台北</h4>
@@ -154,7 +154,7 @@
 									啊啊啊啊啊
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>

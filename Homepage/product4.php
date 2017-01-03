@@ -40,9 +40,8 @@
             <div class="col-lg-6 carousel-outer">
               <!-- Wrapper for slides-->
               <div class="carousel-inner">
-                <div class="item active"><img src="img/product/detail/taitung_small.jpg" alt=""></div>
-                <div class="item"><img src="img/product/detail/taitung_green.jpg" alt=""></div>
-                <div class="item"><img src="img/product/detail/taitung.jpg" alt=""></div>
+                <div class="item active"><img src="img/product/gift.png" alt=""></div>
+                <!-- <div class="item"><img src="" alt=""></div> -->
               </div>
               <!-- Controls-->
               <a href="#carousel-shop" data-slide="prev" class="left carousel-control">
@@ -55,17 +54,20 @@
             <div class="col-lg-6 slide">
               <h4>三三臺東意象禮盒組</h4>
               <p class="small">REF. 9583301-234</p>
-              <p>三三吾鄉，我們的共同原鄉，來自台東最純淨的唯一。
-              清風徐過的稻田、翠綠飽滿的釋迦、嬌豔暖橘的金針，融合當地的憨兒手作，三種特色，造就臺東意象禮盒組的經典</p>
+              <p>
+                三三吾鄉，我們的共同原鄉，來自台東最純淨的唯一。
+                清風徐過的稻田、翠綠飽滿的釋迦、嬌豔暖橘的金針，融合當地的憨兒手作，三種特色，造就臺東意象禮盒組的經典。
+              </p>
               <!-- Indicators-->
               <ol class="carousel-indicators mCustomScrollbar">
-                <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/detail/taitung_small.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/taitung_green.jpg" alt=""></li>
-                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/taitung.jpg" alt=""></li>
+                <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/gift.png" alt=""></li>
+                <!-- <li data-target="#carousel-shop" data-slide-to="1"><img src="" alt=""></li> -->
               </ol>
               <hr>
-              <p>禮盒內含 / 金絲森林渲染皂一顆 釋迦手感果力皂一顆 田靜山巒禾風皂一顆</p>
-              <p>（照片形象擺設僅供參考；實品將以三三獨家設計禮盒包裝）</p>
+              <p>
+                禮盒內含 / 金絲森林渲染皂一顆 釋迦手感果力皂一顆 田靜山巒禾風皂一顆
+                （照片形象擺設僅供參考；實品將以三三獨家設計禮盒包裝）
+              </p>
               <form class="form-inline" method="post" action="../methods/Purchase_finish.php">
                 <div class="form-group">
                   <h2 class="no-pad">$900</h2>
