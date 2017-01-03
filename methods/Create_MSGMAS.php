@@ -38,7 +38,7 @@
     else{
         ?>
         <script>
-        redirect("/");
+        redirect("../methods/User_login.php");
         alert("請先登入或註冊!");
         </script>
         <?php 

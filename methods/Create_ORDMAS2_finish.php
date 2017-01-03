@@ -9,19 +9,22 @@ include_once("Helper/update_price.php");
 include_once("Helper/redirect.js");
 $EMAIL = $_SESSION['EMAIL'];
 $DISCOUNT = $_SESSION['DISCOUNT'];
-$CUSADD = input('CUSADD');
+$CUSADD_1 = input('CUSADD_1');
+$CUSADD_2 = input('CUSADD_2');
+$CUSADD_3 = input('CUSADD_3');
 $CUSADDid = input('CUSADDid');
 $ORDINST = input('ORDINST');
 $PAYTYPE = input('PAYTYPE');
 $message = '';
 if($EMAIL != null){
     if($CUSADDid == 'Y'){
-        if($CUSADD != null){
+        if($CUSADD_1 != null && $CUSADD_2 != null && $CUSADD_3 != null){
+            $CUSADD = $CUSADD_1.$CUSADD_2.$CUSADD_3;
             $sql = "UPDATE CUSMAS SET CUSADD='$CUSADD' WHERE EMAIL='$EMAIL'";
             mysql_query($sql);
         }
         else{
-            $message .= '請填寫您的通訊地址 \n';
+            $message .= '請完整填寫您的通訊地址 \n';
         }
     }
     if($PAYTYPE != null){

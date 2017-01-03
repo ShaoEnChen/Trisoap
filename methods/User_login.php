@@ -21,6 +21,7 @@
         <input type="password" placeholder="密碼" name="CUSPW" />
         <button type="submit" class="promise">登入</button>
     </form>
+    <a href="Create_CUSMAS.php"><button type="button" class="cancel" style=" margin-bottom: 5px;">立即註冊</button></a>
     <a href="/"><button type="button" class="cancel" style="width: 49.35%;">取消</button></a>
     <a href="User_ForgetPW.php"><button type="button" class="cancel" style="width: 49.35%;">忘記密碼</button></a>
 </div>

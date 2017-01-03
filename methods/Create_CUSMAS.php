@@ -40,19 +40,16 @@
         <input type="password" name="CUSPW2" placeholder="再次輸入密碼" /></label>
         <input type="date" name="CUSBIRTH" value="<?php echo $CUSBIRTH;?>" placeholder="生日  ex.1999-8-8" /></label>
         <input type="text" name="TEL" value="<?php echo $TEL;?>" placeholder="聯絡電話" /></label>
-        <input type="text" name="CUSADD" value="<?php echo $CUSADD;?>" placeholder="通訊地址(可不填)" /></label> 
         <input type="text" name="TAXID" value="<?php echo $TAXID;?>" placeholder="統一編號(可不填)" /></label>
         <div class="q-select">
-            <select name="CUSTYPE">
+            <select name="CUSTYPE" style="width: 49.35%;">
                 <option value="">您的膚質</option>
                 <option value="A" <?php checkTYPE($CUSTYPE, 'A');?>>乾性</option>
                 <option value="B" <?php checkTYPE($CUSTYPE, 'B');?>>中性</option>
                 <option value="C" <?php checkTYPE($CUSTYPE, 'C');?>>油性</option>
                 <option value="D" <?php checkTYPE($CUSTYPE, 'D');?>>混和性</option>
             </select>
-        </div>
-        <div class="q-select">
-            <select name="KNOWTYPE">
+            <select name="KNOWTYPE" style="width: 49.35%;">
                 <option value="">如何認識三三</option>
                 <option value="A" <?php checkTYPE($KNOWTYPE, 'A');?>>粉絲專頁</option>
                 <option value="B" <?php checkTYPE($KNOWTYPE, 'B');?>>親友介紹</option>
