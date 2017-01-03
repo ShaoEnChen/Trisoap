@@ -9,7 +9,7 @@
       </button>
       <a href="#page-top" class="navbar-brand page-scroll">
         <!-- Img or text logo-->
-        <img src="Homepage/img/logo.png" alt="" class="logo">
+        <img src="Homepage/img/logo1k.png" alt="" class="logo">
       </a>
     </div>
     <div class="collapse navbar-collapse navbar-main-collapse">
