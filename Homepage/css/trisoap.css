@@ -346,7 +346,8 @@ a .fa {
     font-size: 18px; }
 
 .logo {
-  max-width: 100%; }
+  /* Sean addition */
+  max-width: 60%; }
 
 .navbar-custom.top-nav-collapse .navbar-brand .logo {
   max-width: 80%; }
@@ -1745,7 +1746,6 @@ section {
   padding-bottom: 90px;
 }
 
-/* ------Index------ */
 /* ------各頁Intro橫幅圖片垂直位置------ */
 #intro-about {
   background-position: center top;
@@ -1763,6 +1763,7 @@ section {
   background-position: center 78%;
 }
 
+/* ------Index------ */
 .flexslider {
   border: none;
 }
@@ -1793,14 +1794,6 @@ section {
 }
 
 /* Slide文字div */
-
-/*
-@font-face {
-  font-family: 'FOUNTAIN';
-  src: url(../fonts/fountainpen.ttf) format('truetype');
-}
-*/
-
 .slide-text {
   font-family: 'Noto Sans TC', 'Raleway';
   margin: 0;
@@ -1899,10 +1892,11 @@ section {
 }
 
 /* 社會企業 slogan */
-.slogan-text {
+/* .slogan-text {
   text-align: left;
   white-space: pre-line;
 }
+*/
 
 /* ------ Footer ------ */
 .footer {
@@ -1919,6 +1913,23 @@ section {
 .footer p {
   font-size: 14px;
   margin: 0 0 10px;
+}
+
+/* ------ Navbar ------ */
+@media (max-width: 479px) {
+  /* When logo becomes too wide on mobile screen */
+  /* original: 100% */
+  .navbar-brand {
+    width: 80%;
+  }
+}
+
+@media (min-width: 991px) {
+  /* Before button collapse */
+  /* original: 33% */
+  .navbar-header {
+    width: 30%;
+  }
 }
 
 /* ------ About ------ */
