@@ -14,6 +14,9 @@
 		<link href="css/gallery.css" rel="stylesheet">
 	</head>
 	<body>
+		<!-- GA -->
+    	<?php include_once("analyticstracking.php") ?>
+
 		<div>
 			<!-- Navigation -->
 			<?php include 'nav_msg.php'; ?>

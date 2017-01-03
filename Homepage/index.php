@@ -19,6 +19,9 @@
     <link href="Homepage/css/trisoap.css" rel="stylesheet">
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
+    <!-- GA -->
+    <?php include_once("analyticstracking.php") ?>
+
     <!-- Preloader-->
     <div id="preloader">
       <div id="status"></div>
