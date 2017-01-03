@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<!-- GA -->
-    	<?php include_once("analyticstracking.php") ?>
+    	<?php include_once("../methods/Helper/analyticstracking.php") ?>
 
 		<div>
 			<!-- Navigation -->

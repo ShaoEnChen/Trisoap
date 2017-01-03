@@ -14,7 +14,7 @@
 	</head>
 	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
     	<!-- GA -->
-	    <?php include_once("analyticstracking.php") ?>
+    	<?php include_once("../methods/Helper/analyticstracking.php") ?>
 
 		<!-- Preloader-->
 		<div id="preloader">
