@@ -20,6 +20,7 @@
             include_once("Helper/sql_operation.php");
             include_once("Helper/handle_string.php");
             include_once("Helper/redirect.js");
+            include_once("Helper/analyticstracking.php");
             $EMAIL = $_SESSION['EMAIL'];
             $CUSIDT = $_SESSION['CUSIDT'];
             if($EMAIL != null && $CUSIDT == 'A'){

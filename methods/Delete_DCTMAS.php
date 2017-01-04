@@ -20,6 +20,7 @@
     <h1>刪除折扣</h1>
         <?php
         session_start();
+        include_once("Helper/analyticstracking.php");
         $EMAIL = $_SESSION['EMAIL'];
         $CUSIDT = $_SESSION['CUSIDT'];
         if($EMAIL != null && $CUSIDT == 'A'){

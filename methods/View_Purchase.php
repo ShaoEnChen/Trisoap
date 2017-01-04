@@ -19,6 +19,7 @@
         session_start();
         include_once("Helper/mysql_connect.php");
         include_once("Helper/sql_operation.php");
+        include_once("Helper/analyticstracking.php");
         unset($_SESSION['from']);
         unset($_SESSION['type']);
 

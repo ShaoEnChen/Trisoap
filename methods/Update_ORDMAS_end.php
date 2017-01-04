@@ -5,6 +5,7 @@ session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/handle_string.php");
 include_once("Helper/redirect.js");
+include_once("Helper/analyticstracking.php");
 $EMAIL = $_SESSION['EMAIL'];
 $CUSIDT = $_SESSION['CUSIDT'];
 $ORIGIN = $_SESSION['ORIGIN'];

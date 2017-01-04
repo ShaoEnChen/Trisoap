@@ -21,6 +21,7 @@
     <form method="post" action="Create_CUSMAS_finish.php">
         <?php 
         session_start();
+        include_once("Helper/analyticstracking.php");
         $EMAIL = $_SESSION['EMAIL'];
         $CUSNM = $_SESSION['CUSNM'];
         $CUSBIRTH = $_SESSION['CUSBIRTH'];

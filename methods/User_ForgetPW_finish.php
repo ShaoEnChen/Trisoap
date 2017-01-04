@@ -6,6 +6,7 @@ include_once("Helper/sql_operation.php");
 include_once("Helper/handle_string.php");
 include_once("Helper/mail/mail.php");
 include_once("Helper/redirect.js");
+include_once("Helper/analyticstracking.php");
 $message = '';
 $EMAIL = input('EMAIL');
 $standard = "/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/";

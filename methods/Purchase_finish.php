@@ -20,6 +20,7 @@
       include_once("Helper/handle_string.php");
       include_once("Helper/update_price.php");
       include_once("Helper/redirect.js");
+      include_once("Helper/analyticstracking.php");
       $EMAIL = $_SESSION['EMAIL'];
       $ORDNO = '100000000';
       $ITEMNO = input('ITEMNO');

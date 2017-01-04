@@ -3,6 +3,7 @@ include_once("AllPay.Payment.Integration.php");
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
 include_once("Helper/handle_string.php");
+include_once("Helper/analyticstracking.php");
 
 function transfer_PaymentType($paytype) {
 	$split = explode('_', $paytype);

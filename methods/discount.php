@@ -16,6 +16,7 @@
 <?php 
 session_start();
 include_once("Helper/handle_string.php");
+include_once("Helper/analyticstracking.php");
 if($_SESSION['from'] != null){
     $from = $_SESSION['from'];
 }

@@ -18,6 +18,7 @@ session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
 include_once("Helper/handle_string.php");
+include_once("Helper/analyticstracking.php");
 $ORDNO = $_SESSION['ORDNO'];
 if($_SESSION['from'] != null){
     $from = $_SESSION['from'];
