@@ -29,6 +29,7 @@
             <li class="dropdown-header">臺東系列產品</li>
             <li><a href="product.php">單品</a></li>
             <li><a href="soapstring.php">旅用皂絲</a></li>
+            <li><a href="shopping_guide.php">購物須知</a></li>
           </ul>
         </li>
         <li><a href="https://trisoap.typeform.com/to/voNGpg" target="_blank">試用品申請</a></li>

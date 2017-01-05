@@ -1979,3 +1979,26 @@ section {
 .partner-logo {
   width: 150px;
 }
+
+/* ------ Shopping-Guide ------ */
+#shopping-guide p {
+  white-space: pre-line;
+}
+
+#shopping-guide h4 {
+  color: #000;
+}
+
+#shopping-guide a {
+  color: #EA8B3B;
+}
+
+.guide {
+  width: 25px;
+  height: auto;
+}
+
+.slogan {
+  width: 100%;
+  text-align: center;
+}
