@@ -1970,3 +1970,12 @@ section {
 #shop .panel-body {
   white-space: pre-line;
 }
+
+/* ------ Partner ------ */
+#partner p {
+  white-space: pre-line;
+}
+
+.partner-logo {
+  width: 150px;
+}
