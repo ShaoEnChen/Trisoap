@@ -114,7 +114,7 @@
     </section>
 
     <!-- Slider Section-->
-    <section id="about-slider">
+    <section class="about-slider">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
@@ -131,7 +131,7 @@
     </section>
 
     <!-- Slider Section-->
-    <section id="about-slider2">
+    <section class="about-slider">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
@@ -148,7 +148,7 @@
     </section>
 
     <!-- Slider Section-->
-    <section id="about-slider3">
+    <section class="about-slider">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
