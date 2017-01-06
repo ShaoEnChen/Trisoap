@@ -207,7 +207,7 @@ nav .label {
 
 /* Buttons */
 .btn {
-  font-size: 12px !important;
+  font-size: 12px;
   letter-spacing: 2px;
   outline: 0;
   text-transform: uppercase;
@@ -1714,9 +1714,9 @@ li .shop-cart {
     -moz-transition: all .0s ease-in-out !important;
     transition: all .0s ease-in-out !important; } }
 @media (max-width: 1200px) {
-  #about, #about-slider, #about-slider2 {
+  #about, #about-slider, #about-slider2, #about-slider3 {
     text-align: center; }
-  #about p, #about-slider p, #about-slider2 p {
+  #about p, #about-slider p, #about-slider2 p, #about-slider3 p {
     text-align: left; }
   #carousel-light, #carousel-light2, #carousel-light3, #carousel-dark, #carousel-transparent {
     margin: 45px 0; } }
@@ -1746,7 +1746,34 @@ section {
   padding-bottom: 90px;
 }
 
-/* ------各頁Intro橫幅圖片垂直位置------ */
+a .fa {
+  transition: none;
+}
+
+.vertical-middle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bg-orange {
+  background-color: #F18C41;
+}
+
+.bg-orange,
+.bg-orange a {
+  color: #fff;
+}
+
+/* hr */
+.seperate {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #ccc;
+  width: 80%;
+}
+
+/* 各頁Intro橫幅圖片垂直位置 */
 #intro-about {
   background-position: center top;
 }
@@ -1761,6 +1788,18 @@ section {
 
 #intro-product {
   background-position: center 78%;
+}
+
+/* Button in intro-body */
+.intro-body a.btn {
+  border: solid 1px #fff;
+  font-size: 18px;
+}
+
+.intro-body a.btn:hover,
+.intro-body a.btn:focus {
+  background-color: #fff;
+  color: #555;
 }
 
 /* ------Index------ */
@@ -1861,17 +1900,13 @@ section {
 }
 
 .buy-now {
-  position: relative;
-  top: 50%;
   left: 28%;
   width: 44%;
   display: block;
   padding: 7px 12px;
-  transform: translateY(-50%);
   color: #fff;
   font-size: 22px;
   opacity: 0;
-
   border: solid 1px #fff;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -1885,34 +1920,38 @@ section {
 
 /* 標語 - 三個故事 */
 #services {
-  background-color: #EA8B3B;
   padding-top: 60px;
   padding-bottom: 60px;
   color: #fff;
 }
 
-/* 社會企業 slogan */
-/* .slogan-text {
-  text-align: left;
-  white-space: pre-line;
+#about-slider,
+#about-slider2,
+#about-slider3 {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-*/
+
+#about-slider img,
+#about-slider2 img,
+#about-slider3 img {
+  margin: 0 auto 25px;
+}
 
 /* ------ Footer ------ */
 .footer {
-  /* background-color: #EA8B3B; */
   padding-top: 40px;
   padding-bottom: 20px;
 }
 
-/* .footer,
-.footer a {
-  color:  #fff;
-} */
+.footer h5 {
+  font-size: 12px;
+  margin-top: 20px;
+}
 
 .footer p {
-  font-size: 14px;
-  margin: 0 0 10px;
+  font-size: 16px;
+  margin: 0 0 6px;
 }
 
 /* ------ Navbar ------ */
@@ -1976,6 +2015,18 @@ section {
   white-space: pre-line;
 }
 
+#partner a.btn {
+  border: solid 1px #000;
+  font-size: 18px;
+  color: #000;
+}
+
+#partner a.btn:hover,
+#partner a.btn:focus {
+  border: solid 1px #666;
+  color: #666;
+}
+
 .partner-logo {
   width: 150px;
 }
@@ -1993,12 +2044,66 @@ section {
   color: #EA8B3B;
 }
 
-.guide {
+#shopping-guide .guide {
   width: 25px;
   height: auto;
 }
 
-.slogan {
+#shopping-guide .slogan {
   width: 100%;
   text-align: center;
+}
+
+/* ------ Trial ------ */
+#trial {
+  padding-bottom: 0;
+}
+
+#trial div {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 25px;
+}
+
+#trial a.btn {
+  border: solid 1px #555;
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#trial a.btn:hover,
+#trial a.btn:focus {
+  border: solid 1px #666;
+  color: #666;
+}
+
+#trial .parallax {
+  /* -webkit-perspective: 1px;
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto; */
+  color: #fff;
+  padding: 0;
+}
+
+#trial .parallax-layer {
+  height: 70vh;
+  /* position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+}
+
+#trial #feature1 {
+  background-image: url(../img/trial/feature1.png);
+}
+
+#trial #feature2 {
+  background-image: url(../img/trial/feature2.png);
+}
+
+#trial #feature3 {
+  background-image: url(../img/trial/feature3.png);
 }

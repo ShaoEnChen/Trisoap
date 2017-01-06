@@ -32,36 +32,40 @@
 		<header data-background="img/jumbotrons/product_idea.jpg" class="intro introhalf" id="intro-product">
 			<!-- Intro Header-->
 			<div class="intro-body">
-				<h1>媒體報導</h1>
-				<h4>一路走來，感謝各家媒體對於三三的支持，每篇報導，都是宣揚三三理念的好夥伴。</h4>
+				<h1>試用品申請</h1>
+				<a href="https://trisoap.typeform.com/to/voNGpg" target="_blank" role="button" class="btn">申請試用三三吾鄉皂</a>
 			</div>
 		</header>
 
-		<section>
-			<div class="container">
-				<h3>國內外媒體報導</h3>
-		        <div class="row">
-		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="https://castnet.nctu.edu.tw/castnet/article/9986?issueID=630"><img src="img/media/castnet.png" alt="喀報"></a>
-		        	</div>
-		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="http://www.storm.mg/lifestyle/200500"><img src="img/media/storm.png" alt="風傳媒"></a>
-		        	</div>
-		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="#"><img src="img/media/hakkatv.png" alt="客家電視台"></a>
-		        	</div>
-		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="https://www.peopo.org/news/316929"><img src="img/media/peopo.png" alt="Peopo 公民新聞"></a>
-		        	</div>
-		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="http://www.vita.tw/2016/09/blog-post_5.html"><img src="img/media/vita.png" alt="生命力新聞"></a>
-		        	</div>
-	        	</div>
-	        </div>
+		<section id="trial" class="bg-white text-center">
+			<div class="slogan">
+				<h3>三三的好品質，讓試用過的人都一致好評！</h3>
+				<p>一些留言1</p>
+			</div>
+			<hr class="seperate">
+			<div class="slogan">
+				<h3>三三捨去大筆金錢買廣告的行銷手法，選擇最貼近客人的試用計畫</h3>
+				<p>好皂不怕人試，真正的好品質一洗就知道</p>
+			</div>
+			<div class="parallax">
+				<div class="parallax-layer" id="feature1">
+					<h3 class="vertical-middle">台東小農素材添加：池上米米糠、池上無硫金針，帶給你豐富體驗</h3>
+				</div>
+				<div class="parallax-layer" id="feature2">
+					<h3 class="vertical-middle">天然植物油調和，無毒無化學添加</h3>
+				</div>
+				<div class="parallax-layer" id="feature3">
+					<h3 class="vertical-middle">冷製手作堅持超過一個月以上量皂期</h3>
+				</div>
+			</div>
+			<div class="slogan">
+				<h3>上百消費者試用好評發售中</h3>
+				<a href="https://trisoap.typeform.com/to/voNGpg" target="_blank" role="button" class="btn">立即申請試用</a>
+			</div>
 		</section>
 
 		<!-- Footer Section-->
-    	<?php include 'footer.php'; ?>
+		<?php include 'footer.php'; ?>
 
 		<!-- jQuery-->
 		<script src="js/jquery-1.12.3.min.js"></script>

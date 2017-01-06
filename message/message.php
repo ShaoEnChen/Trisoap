@@ -83,7 +83,7 @@
 												<img src="picture/<?php echo $msgno; ?>.png">
 												<div class="desc">
 													<p>
-														<?php echo $result['MSGTXT']; echo $msgno; ?>
+														<?php echo $result['MSGTXT']; ?>
 													</p>
 												</div>
 												<p class="author"> -
@@ -107,7 +107,7 @@
 											<div class="choice choice-video">
 												<!-- video here -->
 												<video controls>
-													<source type="video/mp4" src="video/<?php  echo $msgno; ?>.mp4"></iframe>
+													<source type="video/mp4" src="video/<?php echo $msgno; ?>.mp4"></iframe>
 												</video>
 												<div class="desc"><?php echo $result['MSGTXT']; ?></div>
 												<p class="author"> -

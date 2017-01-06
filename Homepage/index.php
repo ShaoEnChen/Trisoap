@@ -84,7 +84,7 @@
           <div class="col-sm-6">
             <div class="product-element" id="product-element1">
               <div class="img-cover">
-                <a href="product4.php" class="buy-now">立即購買</a>
+                <a href="product4.php" class="buy-now vertical-middle">立即購買</a>
               </div>
               <img src="img/product/gift.png" alt="">
             </div>
@@ -92,7 +92,7 @@
           <div class="col-sm-6">
             <div class="product-element" id="product-element2">
               <div class="img-cover">
-                <a href="product1.php" class="buy-now">立即購買</a>
+                <a href="product1.php" class="buy-now vertical-middle">立即購買</a>
               </div>
               <img src="img/product/rice.png" alt="">
             </div>
@@ -102,12 +102,12 @@
     </section>
 
     <!-- Services Section-->
-    <section id="services">
+    <section id="services" class="bg-orange">
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <h3>三個故事 Tri Story</h3>
-            <p>一切都是從一個座落在寧靜城市裡的、專門開辦二手販售以及手工皂製作的小型作業所---「李勝賢文教基金會」開始的</p>
+            <p>一切都是從一個座落在寧靜城市裡的、專門開辦二手販售以及手工皂製作的小型作業所 -「李勝賢文教基金會」開始的</p>
           </div>
         </div>
       </div>
@@ -117,10 +117,10 @@
     <section id="about-slider">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-md-12">
             <img src="img/society.png" class="img-responsive">
           </div>
-          <div class="col-lg-5 col-lg-offset-1">
+          <div class="col-lg-5 col-lg-offset-1 col-md-12">
             <h3>愛的釀皂</h3>
             <p>
               我們故事的第一主角，就是一個個穿上工作服、蓄勢待發地在一旁準備的憨兒們。我們在學習打皂時，他們活像個監督我們生產流程的督導一般。我們非常迅速地在「攪拌」關卡中，不到十分鐘便棄械投降，一旁的憨兒主動地替補了我們的工作，在測量每一種油品時的專注力高的嚇人，連一滴油都不會逃過他們的法眼，當時的我們，深深被這一幅畫面所震懾。
@@ -134,10 +134,10 @@
     <section id="about-slider2">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-md-12">
             <img src="img/farm.png" class="img-responsive">
           </div>
-          <div class="col-lg-5 col-lg-offset-1">
+          <div class="col-lg-5 col-lg-offset-1 col-md-12">
             <h3>吾鄉小農</h3>
             <p>
               第二個故事主角，就是位於台東的在地小農與三樣特色農作物－米、金針花跟釋迦。會成為我們主角的原因很簡單，因為他們堅持好品質、有機，照顧農作物像照顧自己的孩子一樣，用山泉水灌溉並使用自然農法，他們的堅持正完全符合我們的經營理念！
@@ -151,10 +151,10 @@
     <section id="about-slider3">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-md-12">
             <img src="img/intern.png" class="img-responsive">
           </div>
-          <div class="col-lg-5 col-lg-offset-1">
+          <div class="col-lg-5 col-lg-offset-1 col-md-12">
             <h3>社會企業</h3>
             <p>
               第三個故事就是因著在地小農和社福團體而生的社會企業的故事，三三吾鄉秉持著社會企業的精神，協助解決在地的社會問題，期待透過新的創新，帶動在地的新生。
@@ -165,62 +165,7 @@
     </section>
 
     <!-- Footer Section-->
-    <section class="footer bg-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h5>關於三三</h5>
-            <p><a href="about.php">三三團隊</a></p>
-            <p><a href="product_intro.php">三三堅持</a></p>
-            <p><a href="partner.php">合作夥伴</a></p>
-            <p><a href="media.php">媒體報導</a></p>
-          </div>
-          <div class="col-md-4">
-            <h5>客戶服務</h5>
-            <p><a href="faq.php">顧客問答</a></p>
-            <p><a href="contact.php">聯絡我們</a></p>
-            <p><a href="../message/message.php">希望留心語</a></p>
-            <h5>三三產品</h5>
-            <p><a href="product.php">臺東系列單品</a></p>
-            <p><a href="soapstring.php">旅用皂絲</a></p>
-            <p><a href="#">試用品申請</a></p>
-          </div>
-          <div class="col-md-4">
-            <h5><a href="contact.php">聯絡我們</a></h5>
-            <?php
-              $COMTEL = search('COMTEL', 'OWNMAS', 'COMNM', 'Trisoap');
-              $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
-              $COMADD = search('COMADD', 'OWNMAS', 'COMNM', 'Trisoap');
-            ?>
-            <p>
-              <i class="fa fa-phone fa-fw fa-lg"></i>
-              <?php echo $COMTEL;?>
-            </p>
-            <p>
-              <i class="fa fa-envelope fa-fw fa-lg"></i>
-              <?php echo $COMEMAIL;?>
-            </p>
-            <p>
-              <i class="fa fa-map-marker fa-fw fa-lg"></i>
-              <?php echo $COMADD;?>
-            </p>
-          </div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-md-4">
-            <ul class="list-inline">
-              <li><a href="https://www.facebook.com/trisoap"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
-              <li><a href="contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
-              <li><a href="https://www.pinkoi.com/store/trisoap">Pinkoi</a></li>
-            </ul>
-          </div>
-          <div class="col-md-5">
-            <p class="small">Copyright &copy; 2016 TriSoap All Rights Reserved</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <?php include 'footer.php'; ?>
 
     <!-- jQuery-->
     <script src="js/jquery-1.12.3.min.js"></script>

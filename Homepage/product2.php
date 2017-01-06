@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php
+  session_start();
+  include "../methods/Helper/mysql_connect.php";
+  include "../methods/Helper/sql_operation.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -129,22 +133,7 @@
     </section>
 
     <!-- Footer Section-->
-    <section class="footer bg-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <ul class="list-inline">
-              <li><a href="https://www.facebook.com/trisoap"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
-              <li><a href="Homepage/contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
-              <li><a href="https://www.pinkoi.com/store/trisoap">Pinkoi</a></li>
-            </ul>
-          </div>
-          <div class="col-md-5">
-            <p class="small">Copyright &copy; 2016 TriSoap All Rights Reserved</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <?php include 'footer.php'; ?>
 
     <!-- jQuery-->
     <script src="js/jquery-1.12.3.min.js"></script>

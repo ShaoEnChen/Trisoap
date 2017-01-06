@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php
+  session_start();
+  include "../methods/Helper/mysql_connect.php";
+  include "../methods/Helper/sql_operation.php";
+?>
 <!DOCTYPE html>
 <html>
 	<head>
