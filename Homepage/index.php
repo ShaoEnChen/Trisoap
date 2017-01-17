@@ -9,14 +9,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/misc/favicon.png">
+    <link rel="shortcut icon" href="Homepage/img/misc/favicon.png">
     <title>三三吾鄉手工皂Trisoap</title>
     <!-- Bootstrap Core CSS-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="Homepage/css/bootstrap.min.css" rel="stylesheet">
     <!-- FlexSlider CSS -->
     <link href="../FlexSlider/flexslider.css" rel="stylesheet">
     <!-- Custom CSS-->
-    <link href="css/trisoap.css" rel="stylesheet">
+    <link href="Homepage/css/trisoap.css" rel="stylesheet">
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
     <!-- GA -->
@@ -28,7 +28,7 @@
     </div>
 
     <!-- Navigation-->
-    <?php include 'nav.php'; ?>
+    <?php include 'nav_Homepage.php'; ?>
 
     <!-- Header-->
     <header>
@@ -37,22 +37,22 @@
         <ul class="slides">
           <li>
             <div>
-              <a href="product.php">
-                <img class="flexslides" src="img/index1.png">
+              <a href="Homepage/product.php">
+                <img class="flexslides" src="Homepage/img/index1.png">
               </a>
             </div>
           </li>
           <li>
             <div>
-              <a href="about.php">
-                <img class="flexslides" src="img/index2.png">
+              <a href="Homepage/about.php">
+                <img class="flexslides" src="Homepage/img/index2.png">
               </a>
             </div>
           </li>
           <li>
             <div>
-              <a href="partner.php">
-                <img class="flexslides" src="img/index3.png">
+              <a href="Homepage/partner.php">
+                <img class="flexslides" src="Homepage/img/index3.png">
               </a>
               <div id="slide-textarea3">
                 <p class="slide-text" id="slide-text3">每一顆手工皂<br>都是注入憨兒們歡笑的<br>純淨手作</p>
@@ -61,8 +61,8 @@
           </li>
           <li>
             <div>
-              <a href="product_intro.php">
-                <img class="flexslides" src="img/index4.png">
+              <a href="Homepage/product_intro.php">
+                <img class="flexslides" src="Homepage/img/index4.png">
               </a>
             </div>
           </li>
@@ -84,17 +84,17 @@
           <div class="col-sm-6">
             <div class="product-element" id="product-element1">
               <div class="img-cover">
-                <a href="product4.php" class="buy-now vertical-middle">立即購買</a>
+                <a href="Homepage/product4.php" class="buy-now vertical-middle">立即購買</a>
               </div>
-              <img src="img/product/gift.png" alt="">
+              <img src="Homepage/img/product/gift.png" alt="">
             </div>
           </div>
           <div class="col-sm-6">
             <div class="product-element" id="product-element2">
               <div class="img-cover">
-                <a href="product1.php" class="buy-now vertical-middle">立即購買</a>
+                <a href="Homepage/product1.php" class="buy-now vertical-middle">立即購買</a>
               </div>
-              <img src="img/product/rice.png" alt="">
+              <img src="Homepage/img/product/rice.png" alt="">
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
-            <img src="img/society.png" class="img-responsive">
+            <img src="Homepage/img/society.png" class="img-responsive">
           </div>
           <div class="col-lg-5 col-lg-offset-1 col-md-12">
             <h3>愛的釀皂</h3>
@@ -136,7 +136,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
-            <img src="img/farm.png" class="img-responsive">
+            <img src="Homepage/img/farm.png" class="img-responsive">
           </div>
           <div class="col-lg-5 col-lg-offset-1 col-md-12">
             <h3>吾鄉小農</h3>
@@ -153,7 +153,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
-            <img src="img/intern.png" class="img-responsive">
+            <img src="Homepage/img/intern.png" class="img-responsive">
           </div>
           <div class="col-lg-5 col-lg-offset-1 col-md-12">
             <h3>社會企業</h3>
@@ -166,34 +166,34 @@
     </section>
 
     <!-- Footer Section-->
-    <?php include 'footer.php'; ?>
+    <?php include 'footer_Homepage.php'; ?>
 
     <!-- jQuery-->
-    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="Homepage/js/jquery-1.12.3.min.js"></script>
     <!-- Bootstrap Core JavaScript-->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="Homepage/js/bootstrap.min.js"></script>
     <!-- Plugin JavaScript-->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/device.min.js"></script>
-    <script src="js/form.min.js"></script>
-    <script src="js/jquery.placeholder.min.js"></script>
-    <script src="js/jquery.shuffle.min.js"></script>
-    <script src="js/jquery.parallax.min.js"></script>
-    <script src="js/jquery.circle-progress.min.js"></script>
-    <script src="js/jquery.swipebox.min.js"></script>
-    <script src="js/smoothscroll.min.js"></script>
-    <script src="js/tweecool.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.smartmenus.js"></script>
+    <script src="Homepage/js/jquery.easing.min.js"></script>
+    <script src="Homepage/js/jquery.countdown.min.js"></script>
+    <script src="Homepage/js/device.min.js"></script>
+    <script src="Homepage/js/form.min.js"></script>
+    <script src="Homepage/js/jquery.placeholder.min.js"></script>
+    <script src="Homepage/js/jquery.shuffle.min.js"></script>
+    <script src="Homepage/js/jquery.parallax.min.js"></script>
+    <script src="Homepage/js/jquery.circle-progress.min.js"></script>
+    <script src="Homepage/js/jquery.swipebox.min.js"></script>
+    <script src="Homepage/js/smoothscroll.min.js"></script>
+    <script src="Homepage/js/tweecool.min.js"></script>
+    <script src="Homepage/js/wow.min.js"></script>
+    <script src="Homepage/js/jquery.smartmenus.js"></script>
     <!-- FlexSlider JS -->
     <script src="../FlexSlider/jquery.flexslider-min.js"></script>
         <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/-->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3E86i8mx1BZDlAaLcknh_mWl4F70i4os"></script>
-        <script src="js/map.js"></script>
+        <script src="Homepage/js/map.js"></script>
     <!-- Custom Theme JavaScript-->
-    <script src="js/pheromone.js"></script>
-    <script src="js/flexslider_index.js"></script>
+    <script src="Homepage/js/pheromone.js"></script>
+    <script src="Homepage/js/flexslider_index.js"></script>
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
