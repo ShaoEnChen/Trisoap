@@ -13,6 +13,8 @@
 		<title>三三吾鄉手工皂Trisoap</title>
 		<!-- Bootstrap Core CSS-->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- FlexSlider CSS -->
+    	<link href="../FlexSlider/flexslider.css" rel="stylesheet">
 		<!-- Custom CSS-->
 		<link href="css/trisoap.css" rel="stylesheet">
 	</head>
@@ -29,7 +31,7 @@
 		<?php include 'nav.php'; ?>
 
 		<!-- Header-->
-		<header data-background="img/jumbotrons/product_idea.jpg" class="intro introhalf" id="intro-product">
+		<header data-background="img/jumbotrons/trial.png" class="intro introhalf" id="intro-product">
 			<!-- Intro Header-->
 			<div class="intro-body">
 				<h1>試用品申請</h1>
@@ -40,22 +42,49 @@
 		<section id="trial" class="bg-white text-center">
 			<div class="slogan">
 				<h3>三三的好品質，讓試用過的人都一致好評！</h3>
-				<p>一些留言1</p>
+				<div class="flexslider">
+					<ul class="slides">
+						<li>
+							<div>
+								<p>一些留言1</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<p>一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言!2</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<p>一些留言3</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<p>一些留言4</p>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<hr class="seperate">
 			<div class="slogan">
 				<h3>三三捨去大筆金錢買廣告的行銷手法，選擇最貼近客人的試用計畫</h3>
 				<p>好皂不怕人試，真正的好品質一洗就知道</p>
 			</div>
-			<div class="parallax">
-				<div class="parallax-layer" id="feature1">
-					<h3 class="vertical-middle">台東小農素材添加：池上米米糠、池上無硫金針，帶給你豐富體驗</h3>
+			<div class="features" id="feature1">
+				<div class="container vertical-middle">
+					<h3>台東小農素材添加：池上米米糠、池上無硫金針，帶給你豐富體驗</h3>
 				</div>
-				<div class="parallax-layer" id="feature2">
-					<h3 class="vertical-middle">天然植物油調和，無毒無化學添加</h3>
+			</div>
+			<div class="features" id="feature2">
+				<div class="container vertical-middle">
+					<h3>天然植物油調和，無毒無化學添加</h3>
 				</div>
-				<div class="parallax-layer" id="feature3">
-					<h3 class="vertical-middle">冷製手作堅持超過一個月以上量皂期</h3>
+			</div>
+			<div class="features" id="feature3">
+				<div class="container vertical-middle">
+					<h3>冷製手作堅持超過一個月以上量皂期</h3>
 				</div>
 			</div>
 			<div class="slogan">
@@ -87,6 +116,9 @@
 		<script src="js/jquery.smartmenus.js"></script>
 		<!-- Custom Theme JavaScript-->
 		<script src="js/pheromone.js"></script>
+		<!-- FlexSlider JS -->
+	    <script src="../FlexSlider/jquery.flexslider-min.js"></script>
+	    <script src="js/flexslider_message.js"></script>
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

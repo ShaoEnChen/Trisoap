@@ -29,11 +29,10 @@
 		<?php include 'nav.php'; ?>
 
 		<!-- Header-->
-		<header data-background="img/jumbotrons/product_idea.jpg" class="intro introhalf" id="intro-product">
+		<header data-background="img/jumbotrons/cooperate.png" class="intro introhalf" id="intro-product">
 			<!-- Intro Header-->
 			<div class="intro-body">
 				<h1>合作夥伴</h1>
-				<h4>學長這裡要放啥</h4>
 			</div>
 		</header>
 

@@ -29,7 +29,7 @@
 		<?php include 'nav.php'; ?>
 
 		<!-- Header-->
-		<header data-background="img/jumbotrons/product_idea.jpg" class="intro introhalf" id="intro-product">
+		<header data-background="img/jumbotrons/cooperate.png" class="intro introhalf" id="intro-product">
 			<!-- Intro Header-->
 			<div class="intro-body">
 				<h1>媒體報導</h1>
@@ -42,19 +42,19 @@
 				<h3>國內外媒體報導</h3>
 		        <div class="row">
 		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="https://castnet.nctu.edu.tw/castnet/article/9986?issueID=630"><img src="img/media/castnet.png" alt="喀報"></a>
+		        		<a href="https://castnet.nctu.edu.tw/castnet/article/9986?issueID=630" target="_blank"><img src="img/media/castnet.png" alt="喀報"></a>
 		        	</div>
 		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="http://www.storm.mg/lifestyle/200500"><img src="img/media/storm.png" alt="風傳媒"></a>
+		        		<a href="http://www.storm.mg/lifestyle/200500" target="_blank"><img src="img/media/storm.png" alt="風傳媒"></a>
 		        	</div>
 		        	<div class="col-xs-12 col-sm-6 col-md-4">
 		        		<a href="#"><img src="img/media/hakkatv.png" alt="客家電視台"></a>
 		        	</div>
 		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="https://www.peopo.org/news/316929"><img src="img/media/peopo.png" alt="Peopo 公民新聞"></a>
+		        		<a href="https://www.peopo.org/news/316929" target="_blank"><img src="img/media/peopo.png" alt="Peopo 公民新聞"></a>
 		        	</div>
 		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="http://www.vita.tw/2016/09/blog-post_5.html"><img src="img/media/vita.png" alt="生命力新聞"></a>
+		        		<a href="http://www.vita.tw/2016/09/blog-post_5.html" target="_blank"><img src="img/media/vita.png" alt="生命力新聞"></a>
 		        	</div>
 	        	</div>
 	        </div>

@@ -29,7 +29,7 @@
 		<?php include 'nav.php'; ?>
 
 		<!-- Header-->
-		<header data-background="img/jumbotrons/product_idea.jpg" class="intro introhalf" id="intro-product">
+		<header data-background="img/jumbotrons/guide.png" class="intro introhalf" id="intro-product">
 			<!-- Intro Header-->
 			<div class="intro-body">
 				<h1>購物須知</h1>

@@ -90,7 +90,6 @@
         <?php
         }
         ?>
-        <li><a href="#" onClick="closed()"><span class="lang">Eng</span></a></li>
       </ul>
     </div>
   </div>

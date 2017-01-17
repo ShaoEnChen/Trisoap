@@ -2057,6 +2057,9 @@ a .fa {
 
 #trial div {
   width: 100%;
+}
+
+#trial .slogan {
   padding-top: 60px;
   padding-bottom: 25px;
 }
@@ -2074,32 +2077,54 @@ a .fa {
   color: #666;
 }
 
-#trial .parallax {
-  /* -webkit-perspective: 1px;
-  perspective: 1px;
-  overflow-x: hidden;
-  overflow-y: auto; */
-  color: #fff;
-  padding: 0;
+#trial .flexslider {
+  width: 60%;
+  margin: 70px auto 25px;
 }
 
-#trial .parallax-layer {
+#trial .flex-direction-nav a {
+  margin: 0;
+  transform: translateY(-50%);
+}
+
+#trial .flex-direction-nav a::before {
+  font-size: 24px;
+}
+
+#trial .slides div {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#trial .slides p {
+  margin: 0;
+}
+/*
+.parallax {
+  min-height: 400px;
+  background: transparent;
+}
+ */
+#trial .features {
   height: 70vh;
-  /* position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-#trial #feature1 {
-  background-image: url(../img/trial/feature1.png);
+#feature1 {
+  background: url(../img/trial/feature1.png) no-repeat center center fixed;
 }
 
-#trial #feature2 {
-  background-image: url(../img/trial/feature2.png);
+#feature2 {
+  background: url(../img/trial/feature2.png) no-repeat center center fixed;
 }
 
-#trial #feature3 {
-  background-image: url(../img/trial/feature3.png);
+#feature3 {
+  background: url(../img/trial/feature3.png) no-repeat center center fixed;
+}
+
+#trial .features .container {
+  color: #fff;
 }

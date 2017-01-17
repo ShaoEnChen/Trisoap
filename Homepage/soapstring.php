@@ -35,8 +35,8 @@
     <header data-background="img/jumbotrons/product_idea.jpg" class="intro introhalf" id="intro-product">
       <!-- Intro Header-->
       <div class="intro-body">
-        <h1>臺東系列商品</h1>
-        <h4>旅用皂絲</h4>
+        <h1>旅用皂絲</h1>
+        <h4>臺東系列商品</h4>
       </div>
     </header>
     <!-- News Block-->
@@ -54,6 +54,7 @@
           起泡加倍，沖洗搓揉快速來一場泡沫饗宴。
           天然環保，原料天然無毒打擊化學壓製皂。
         </p>
+        <h3 class="pull-left">商品一覽</h3>
         <div class="clearfix"></div>
         <div class="row grid-pad">
           <div class="col-sm-12 col-md-6">

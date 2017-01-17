@@ -35,8 +35,8 @@
     <header data-background="img/jumbotrons/product_idea.jpg" class="intro introhalf" id="intro-product">
       <!-- Intro Header-->
       <div class="intro-body">
-        <h1>臺東系列商品</h1>
-        <h4>單品 / 禮盒</h4>
+        <h1>單品 / 禮盒</h1>
+        <h4>臺東系列商品</h4>
       </div>
     </header>
     <!-- News Block-->

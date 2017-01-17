@@ -124,11 +124,6 @@ body {
     outline: none;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-}
-
 textarea[placeholder] {
     font-family: 微軟正黑體;
 }
@@ -151,7 +146,7 @@ option {
     font-size: 14px;
     font-family: 微軟正黑體;
     outline: none;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .cancel:hover {
@@ -161,4 +156,12 @@ option {
 p {
     font-family: 微軟正黑體;
     padding: 0 5px 0 5px;
+}
+
+.sign-block input[type=checkbox] {
+    width: initial;
+}
+
+.privacy-text {
+    white-space: pre-line;
 }

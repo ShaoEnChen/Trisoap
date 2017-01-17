@@ -10,7 +10,3 @@ $(window).load(function() {
 	animationSpeed: 1000
   });
 });
-
-function closed() {
-	alert("此功能將在近期開放，敬請期待");
-}

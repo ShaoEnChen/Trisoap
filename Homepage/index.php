@@ -37,14 +37,14 @@
         <ul class="slides">
           <li>
             <div>
-              <a href="product.php">
+              <a href="Homepage/product.php">
                 <img class="flexslides" src="Homepage/img/index1.png">
               </a>
             </div>
           </li>
           <li>
             <div>
-              <a href="about.php">
+              <a href="Homepage/about.php">
                 <img class="flexslides" src="Homepage/img/index2.png">
               </a>
             </div>
@@ -61,7 +61,7 @@
           </li>
           <li>
             <div>
-              <a href="about.php">
+              <a href="Homepage/about.php">
                 <img class="flexslides" src="Homepage/img/index4.png">
               </a>
             </div>
@@ -192,7 +192,7 @@
         <script src="Homepage/js/map.js"></script>
     <!-- Custom Theme JavaScript-->
     <script src="Homepage/js/pheromone.js"></script>
-    <script src="Homepage/js/custom.js"></script>
+    <script src="Homepage/js/flexslider_index.js"></script>
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
