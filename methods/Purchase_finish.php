@@ -44,7 +44,7 @@
           if(mysql_query($sql)){
             echo "<br><h1>商品已成功加入購物車</h1>";
       ?>
-
+      <p style="font-family: 微軟正黑體; font-size: 14px;">目前全館滿777即可享臺灣本島免運費！</p>
       <a href="View_Purchase.php"><button type="button" class="promise">前往結帳</button></a>
       <a href="../Homepage/product.php"><button type="button" class="promise">繼續購物</button></a>
     

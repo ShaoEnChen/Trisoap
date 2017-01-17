@@ -40,7 +40,7 @@ if($EMAIL != null){
         $message .= '留言文字欄位不可空白';
     }
     if($message == ''){
-        $sql = "insert into MSGMAS (MSGNO, EMAIL, MSGTXT, MSGPHOTO, MSGVIDEO, CREATEDATE) values ('$MSGNO', '$EMAIL', '$MSGTXT', '$MSGPHOTO', '$MSGVIDEO', '$CREATEDATE')";
+        $sql = "INSERT INTO MSGMAS (MSGNO, EMAIL, MSGTXT, MSGPHOTO, MSGVIDEO, CREATEDATE) VALUES ('$MSGNO', '$EMAIL', '$MSGTXT', '$MSGPHOTO', '$MSGVIDEO', '$CREATEDATE')";
         if(mysql_query($sql)){
             $sql = "UPDATE OWNMAS SET NMSGNO=NMSGNO+1 where COMNM='Trisoap'";
             mysql_query($sql);
