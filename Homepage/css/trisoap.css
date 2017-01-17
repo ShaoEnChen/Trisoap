@@ -1925,6 +1925,10 @@ a .fa {
   color: #fff;
 }
 
+#services p {
+  white-space: pre-wrap;
+}
+
 .about-slider {
   padding-top: 60px;
   padding-bottom: 60px;
