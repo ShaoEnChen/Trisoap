@@ -29,7 +29,7 @@
             <li class="dropdown-header">臺東系列產品</li>
             <li><a href="Homepage/product.php">單品</a></li>
             <li><a href="Homepage/soapstring.php">旅用皂絲</a></li>
-            <li><a href="shopping_guide.php">購物須知</a></li>
+            <li><a href="Homepage/shopping_guide.php">購物須知</a></li>
           </ul>
         </li>
         <li><a href="Homepage/trial.php">試用品申請</a></li>
