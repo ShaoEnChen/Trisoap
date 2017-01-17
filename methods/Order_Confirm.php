@@ -165,6 +165,7 @@
                     </select>
                 </div>
             <br>
+            <p>目前全館滿777即可享臺灣本島免運費！</p>
             <button type="submit" class="promise">確定結帳</button>
             </form>
             <br>

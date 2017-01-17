@@ -145,7 +145,7 @@
                                                     <td><?php echo $row['EMAIL'];?></td>
                                                     <!-- 留言文字 -->
                                                     <td>
-                                                        <?php  $text = $row['MSGTXT']; ?>
+                                                        <?php $text = $row['MSGTXT']; ?>
                                                         <a href="#" onclick="alert('<?php echo $text;?>');">顯示</a>
                                                     </td>
                                                     <!-- 留言照片 -->
