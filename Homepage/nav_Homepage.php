@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#page-top" class="navbar-brand page-scroll">
+      <a href="/" class="navbar-brand page-scroll">
         <!-- Img or text logo-->
         <img src="Homepage/img/logo.png" alt="" class="logo">
       </a>
