@@ -32,7 +32,7 @@
         else{
             $checkDISCOUNT = 'B';
         }
-        
+
         echo "<h2>已選擇的商品</h2>";
 
         $ItemNo = array("ItemNo");
@@ -47,7 +47,7 @@
             $name = search('ITEMNM', 'ITEMMAS', 'ITEMNO', $node);
             array_push($ItemName, $name);
             $price = search('PRICE', 'ITEMMAS', 'ITEMNO', $node);
-            array_push($Price, $price);        
+            array_push($Price, $price);
         }
 
         $sql = "SELECT ORDAMT FROM ORDITEMMAS where ORDNO = '$ORDNO' AND EMAIL = '$EMAIL'";  //get item amount
@@ -84,7 +84,7 @@
                         <td><?php echo $ItemName[$i];?></td>
                         <td><?php echo $Price[$i];?></td>
                         <td><?php echo $ItemAmount[$i];?></td>
-                        <?php 
+                        <?php
                         $price = $Price[$i] * $ItemAmount[$i];
                         $total += $price;
                         ?>
@@ -96,7 +96,7 @@
                             </form>
                         </td>
                     </tr>
-                    <?php 
+                    <?php
                 }
                 ?>
                 <tr>
@@ -107,7 +107,7 @@
                     <td>留心語折扣 : </td>
                     <td colspan="3"><?php echo $discount;?></td>
                 </tr>
-                <?php 
+                <?php
                 if($checkDISCOUNT == 'A'){
                     $DISCOUNTNM = search('DCTNM', 'DCTMAS', 'DCTID', $DISCOUNT);
                     $DISCOUNTPRICE = search('DCTPRICE', 'DCTMAS', 'DCTID', $DISCOUNT);
@@ -125,14 +125,14 @@
                         </form>
                     </td>
                     </tr>
-                    <?php 
+                    <?php
                 }
                 ?>
                 <tr>
                     <td>總計 : </td>
                     <td colspan="3"><?php echo $total;?></td>
                 </tr>
-                <?php 
+                <?php
                 if($checkDISCOUNT == 'B'){
                     ?>
                     <tr>
@@ -144,26 +144,27 @@
                         </form>
                     </td>
                     </tr>
-                    <?php 
+                    <?php
                 }
                 $_SESSION['total'] = $total;
                 ?>
                 </tbody>
             </table><br>
-            
+            <p>目前全館滿777即可享臺灣本島免運費！</p>
             <a href="Create_ORDMAS2.php"><button type="submit" class="promise">確定結帳</button></a>
             <br>
             <a href="/"><button type="button" class="cancel">返回首頁</button></a>
-            <?php 
+            <?php
         }
         else{
             echo "<h2>目前沒有選擇任何商品</h2>";
             ?>
+            <p>目前全館滿777即可享臺灣本島免運費！</p>
             <a href="/"><button type="button" class="promise">返回首頁</button></a>
             <a href="../Homepage/product.php"><button type="button" class="promise">返回商品頁</button></a>
-            <?php 
+            <?php
         }
-    ?>   
+    ?>
     </div>
 </body>
 </html>
