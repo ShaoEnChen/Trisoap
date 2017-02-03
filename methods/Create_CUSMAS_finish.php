@@ -23,6 +23,7 @@ $EMAIL = input('EMAIL');
 $TAXID = input('TAXID');
 $KNOWTYPE = input('KNOWTYPE');
 $SPEINS = input('SPEINS');
+$privacy = input('privacy');
 
 if($EMAIL == null){
     $message = $message . '電子信箱欄位不可空白 \n';
@@ -67,6 +68,9 @@ if (!preg_match('/^[0][9][0-9]{8}$/', $TEL)){
 }
 if($KNOWTYPE == null){
     $message = $message . '如何認識三三欄位不可空白 \n';
+}
+if($privacy != 'true'){
+    $message = $message . '請確定您已詳閱並同意個人資料保護條款 \n';
 }
 $_SESSION['CUSNM'] = $CUSNM;
 $_SESSION['CUSPW'] = $CUSPW1;
