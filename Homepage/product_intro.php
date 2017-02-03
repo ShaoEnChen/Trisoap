@@ -36,45 +36,36 @@
 			</div>
 		</header>
 
-		<section id="product-intro" class="bg-white text-center">
+		<section id="product-intro" class="bg-white">
 			<div class="container">
-				<h3>三三堅持</h3>
-				<div class="row">
-					<div class="col-xs-8 col-xs-offset-2">
-						<h4>手皂製法，堅持冷製</h4>
-						<p class="product-intro-text">
+				<h3 class="text-center">三三堅持</h3>
+				<div>
+					<div class="content">
+						<img src="img/product/intro/cold.png" alt="手皂製法，堅持冷製">
+					</div>
+					<div class="content content-text clear">
+						<h4 class="text-center">手皂製法，堅持冷製</h4>
+						<p>
 							三三吾鄉手工皂，堅持品質最高的「冷製」作法。「冷製手工皂」是使用純天然的基底植物油進行皂化，再經過攪拌、保溫、晾皂等精細製程，而後打皂出一個個具有不同皂性的產品。有別於一般大型賣場，或各式藥妝開架式商店所販售的工廠壓製肥皂或沐浴精（其中多為石油裂解而成的產物），冷製手工皂製作過程中無任何化學添加，堅持33天以上的晾皂期，才能帶給你最天然的清潔享受。
 						</p>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-xs-8 col-xs-offset-2">
-						<h4>油品來源，天然安心</h4>
-						<p class="product-intro-text">
+				<div>
+					<div class="content content-text">
+						<h4 class="text-center">油品來源，天然安心</h4>
+						<p>
 							油品，是製作手工皂的原料關鍵主角；不同的配方比例，造就了不同手工皂滋潤或清爽的特性。三三吾鄉手工皂，身為創新的公益手工皂品牌，油品的品質與安全，也是我們的重要堅持。我們與的油品進貨管道，來自從研發階段就是好夥伴的 <a href="http://red271.redmedia.com.tw/front/bin/home.phtml">誠香集</a>，無論是乳油木果脂、橄欖油、棕櫚油......，每一滴，都是經過手工皂專業老師核可的安心原料。日後，我們也將爭取各項油品認證，給您更安心的來源資訊，敬請安心使用！
 						</p>
+					</div>
+					<div class="content clear">
+						<img src="img/product/intro/oil.png" alt="油品來源，天然安心">
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- Footer Section-->
-		<section class="footer bg-gray">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-						<ul class="list-inline">
-							<li><a href="https://www.facebook.com/trisoap"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
-							<li><a href="Homepage/contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
-							<li><a href="https://www.pinkoi.com/store/trisoap">Pinkoi</a></li>
-						</ul>
-					</div>
-					<div class="col-md-5">
-						<p class="small">Copyright &copy; 2016 TriSoap All Rights Reserved</p>
-					</div>
-				</div>
-			</div>
-		</section>
+	    <?php include 'footer.php'; ?>
 
 		<!-- jQuery-->
 		<script src="js/jquery-1.12.3.min.js"></script>

@@ -51,10 +51,12 @@
 						<h4>
 							如何購買
 							<img class="guide" src="img/guide/cash.png">
+							<!-- cash by Shmidt Sergey from the Noun Project -->
 						</h4>
 						<h5>
 							電話購買
 							<img class="guide" src="img/guide/phone.png">
+							<!-- Phone by Icons Bazaar from the Noun Project -->
 						</h5>
 						<p>	服務電話：<a href="tel:0952527077">0952527077</a>
 							電子郵件購買：<a href="mailto:service@trisoap.com">service@trisoap.com</a>
@@ -64,6 +66,7 @@
 						<h5>
 							網路購物
 							<img class="guide" src="img/guide/web.png">
+							<!-- Browser by Sergey Demushkin from the Noun Project -->
 						</h5>
 						<p>	三三吾鄉官方形象網站提供顧客詳細的商品介紹、生產合作單位以及相關產品資訊，可登入會員會進行選購。
 							¶ 官網將不定時推出優惠訊息，請密切關注！
@@ -84,6 +87,7 @@
 						<h4>
 							付款說明
 							<img class="guide" src="img/guide/wallet.png">
+							<!-- Wallet by anbileru adaleru from the Noun Project -->
 						</h4>
 						<h5>信用卡付款</h5>
 						<p>	我們將為您轉向至歐付寶第三方支付平台，提供您最安心的資料保密以及嚴謹順暢的購物流程。歐付寶通過經濟部Cash Inbound/Cash Outbound網路代結匯資格，且逐步推出整合系統。金流方面已與聯合信用卡處理中心、臺灣銀行、第一銀行、華南銀行、台北富邦、國泰世華、玉山銀行、台新銀行、中國信託……等多家銀行合作(以銀行代碼排序)，共同推展信頼之第三方支付交易履約保證平台。
@@ -103,6 +107,7 @@
 						<h4>
 							發票說明
 							<img class="guide" src="img/guide/invoice.png">
+							<!-- Dollar Invoice by Stock Image Folio from the Noun Project -->
 						</h4>
 						<p>	發票可於購買時之特殊需求中填寫需要二聯式或三聯式之發票以及是否需要統一編號，若無填寫則由三三吾鄉官方依照法規程序開立發票。
 						</p>
@@ -114,6 +119,7 @@
 						<h4>
 							退換貨說明
 							<img class="guide" src="img/guide/return.png">
+							<!-- Package box return by arloenl evinniev from the Noun Project -->
 						</h4>
 						<p>	三三秉持社企精神，出貨前皆透過層層品質控管以及特殊篩選模式，替消費者把關產品的最高品質。如若發現商品於配送過程或其他因素造成瑕疵，三三亦遵照消費者保護法提供七天內退換貨服務。
 						¶ 若遇瑕疵需退換貨請電洽服務專線<a href="tel:0952527077">0952-527077</a>或來信客服信箱<a href="mailto:service@trisoap.com">service@trisoap.com</a>，我們將最快速度為您服務。
@@ -127,6 +133,7 @@
 						<h4>
 							配送說明
 							<img class="guide" src="img/guide/delivery.png">
+							<!-- package accept by unlimicon from the Noun Project -->
 						</h4>
 						<p>	一律交由中華郵政進行配送，涵蓋地區包含臺灣本島以及離島地區。若遇假日期間，配送時間還請耐心等候。
 						¶ 不適用國外地區配送，若需國外訂購請電話洽詢。

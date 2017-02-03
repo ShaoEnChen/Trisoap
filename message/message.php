@@ -10,9 +10,8 @@
 		<meta name="description" content="">
 		<!-- bootstrap css -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!-- slick css -->
-		<link href="slick/slick.css" rel="stylesheet">
-		<link href="slick/slick-theme.css" rel="stylesheet">
+		<!-- FlexSlider CSS -->
+    	<link href="../FlexSlider/flexslider.css" rel="stylesheet">
 		<!-- custom css -->
 		<link href="css/message.css" rel="stylesheet">
 	</head>
@@ -43,7 +42,8 @@
 					</div>
 					<div class="choices">
 						<h4>精采選集</h4>
-						<div class="slickshow">
+						<div class="flexslider">
+							<ul class="slides">
 							<?php
 							session_start();
 							include_once("../methods/Helper/mysql_connect.php");
@@ -57,6 +57,7 @@
 									// text only
 									if($result['MSGPHOTO'] == 0 && $result['MSGVIDEO'] == 0) {
 							?>
+									<li>
 										<div class="choice">
 											<p class="msg-text"><?php echo $result['MSGTXT']; ?></p>
 											<p class="author"> -
@@ -73,12 +74,14 @@
 												?>
 											</p>
 										</div>
+									</li>
 									<?php
 									}
 									else {
 										$msgno = $result['MSGNO'];
 										if($result['MSGPHOTO'] == 1) {
 									?>
+										<li>
 											<div class="choice choice-photo">
 												<img src="picture/<?php echo $msgno; ?>.png">
 												<div class="desc">
@@ -100,10 +103,12 @@
 													?>
 												</p>
 											</div>
+										</li>
 									<?php
 										}
 										if($result['MSGVIDEO'] == 1) {
 									?>
+										<li>
 											<div class="choice choice-video">
 												<!-- video here -->
 												<video controls>
@@ -124,6 +129,7 @@
 													?>
 												</p>
 											</div>
+										</li>
 							<?php
 										}
 									}
@@ -131,10 +137,19 @@
 							}
 							else {
 							?>
-								<p class="alarm-no-content">暫無內容！</p>
+								<li>
+									<p class="alarm-no-content">暫無內容！1</p>
+								</li>
+								<li>
+									<p class="alarm-no-content">暫無內容！2</p>
+								</li>
+								<li>
+									<p class="alarm-no-content">暫無內容！3</p>
+								</li>
 							<?php
 							}
 							?>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -145,10 +160,19 @@
 					<div class="row">
 						<div class="col-sm-4">
 							<ul class="list-inline">
-								<li><a href="https://www.facebook.com/trisoap/?fref=ts"><i class="fa fa-facebook fa-fw fa-lg"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter fa-fw fa-lg"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus fa-fw fa-lg"></i></a></li>
-								<li><a href="../Homepage/contact.php"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
+								<li>
+									<a href="https://www.facebook.com/trisoap">
+										<i class="fa fa-facebook fa-fw fa-lg"></i>
+									</a>
+								</li>
+								<li>
+									<a href="contact.php">
+										<i class="fa fa-envelope fa-fw fa-lg"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.pinkoi.com/store/trisoap">Pinkoi</a>
+								</li>
 							</ul>
 						</div>
 						<div class="col-sm-4">
@@ -184,8 +208,8 @@
 	<script src="js/jquery-1.12.3.min.js"></script>
 	<!-- bootstrap js -->
 	<script src="js/bootstrap.min.js"></script>
-	<!-- slick -->
-	<script src="slick/slick.min.js"></script>
+	<!-- FlexSlider JS -->
+	<script src="../FlexSlider/jquery.flexslider-min.js"></script>
 	<!-- custom js -->
 	<script src="js/message.js"></script>
 </html>

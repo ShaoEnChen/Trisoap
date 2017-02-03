@@ -67,7 +67,10 @@
 					</ul>
 				</div>
 			</div>
-			<hr class="seperate">
+
+			<!-- 嵌入Typeform -->
+			<?php include 'typeform.php'; ?>
+
 			<div class="slogan">
 				<h3>三三捨去大筆金錢買廣告的行銷手法，選擇最貼近客人的試用計畫</h3>
 				<p>好皂不怕人試，真正的好品質一洗就知道</p>
@@ -119,6 +122,7 @@
 		<!-- FlexSlider JS -->
 	    <script src="../FlexSlider/jquery.flexslider-min.js"></script>
 	    <script src="js/flexslider_message.js"></script>
+	    <script src="js/typeform.js"></script>
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

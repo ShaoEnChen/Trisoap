@@ -15,6 +15,8 @@
     <title>三三吾鄉手工皂Trisoap</title>
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- FlexSlider CSS -->
+    <link href="../FlexSlider/flexslider.css" rel="stylesheet">
     <!-- Custom CSS-->
     <link href="css/trisoap.css" rel="stylesheet">
     <link href="css/product.css" rel="stylesheet">
@@ -41,19 +43,40 @@
     </header>
     <!-- News Block-->
     <section id="soapstring" class="section-small">
-      <div class="container">
+      <div class="container text-center">
         <p>
           溫和而舒適的手作皂，綿密如雪絲，故名皂絲。
           為了解決憨兒手部精細動作不穩定的困難，
           三三吾鄉研發獨門皂絲組，將皂絲裝到不織布袋中，
-
-          「不用拆封，沾水即可沖出獨特而舒適的洗感」
-
-          攜帶方便，解決皂軟爛沾手黏附背包問題。
-          用量設計，洗澡完即扔，輕鬆旅行無負擔。
-          起泡加倍，沖洗搓揉快速來一場泡沫饗宴。
-          天然環保，原料天然無毒打擊化學壓製皂。
         </p>
+        <div class="slogan text-center">
+          <h3>「不用拆封，沾水即可沖出獨特而舒適的洗感」</h3>
+        </div>
+        <div class="flexslider">
+          <ul class="slides text-center">
+            <li>
+              <div>
+                <p>攜帶方便，解決皂軟爛沾手黏附背包問題。</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p>用量設計，洗澡完即扔，輕鬆旅行無負擔。</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p>起泡加倍，沖洗搓揉快速來一場泡沫饗宴。</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p>天然環保，原料天然無毒打擊化學壓製皂。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
         <h3 class="pull-left">商品一覽</h3>
         <div class="clearfix"></div>
         <div class="row grid-pad">
@@ -132,6 +155,9 @@
     <script src="js/jquery.smartmenus.js"></script>
     <!-- Custom Theme JavaScript-->
     <script src="js/pheromone.js"></script>
+    <!-- FlexSlider JS -->
+    <script src="../FlexSlider/jquery.flexslider-min.js"></script>
+    <script src="js/flexslider_message.js"></script>
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
