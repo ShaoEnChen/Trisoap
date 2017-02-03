@@ -138,13 +138,7 @@
 							else {
 							?>
 								<li>
-									<p class="alarm-no-content">暫無內容！1</p>
-								</li>
-								<li>
-									<p class="alarm-no-content">暫無內容！2</p>
-								</li>
-								<li>
-									<p class="alarm-no-content">暫無內容！3</p>
+									<p class="alarm-no-content">暫無內容！</p>
 								</li>
 							<?php
 							}

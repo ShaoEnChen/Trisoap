@@ -2028,11 +2028,6 @@ a .fa {
   }
 }
 
-/* soapstring */
-#soapstring p {
-  white-space: pre-line;
-}
-
 /* All products */
 #shop p,
 #shop .panel-body {
@@ -2081,6 +2076,11 @@ a .fa {
 #shopping-guide .slogan {
   width: 100%;
   text-align: center;
+}
+
+/* ------ Soapstring ------ */
+#soapstring p {
+  white-space: pre-line;
 }
 
 /* ------ Trial ------ */
