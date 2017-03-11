@@ -2083,9 +2083,14 @@ a .fa {
   white-space: pre-line;
 }
 
+#soapstring .features {
+  font-size: 20px;
+}
+
 /* ------ Trial ------ */
 #trial {
   padding-bottom: 0;
+  border: none;
 }
 
 #trial div {
@@ -2160,6 +2165,10 @@ a .fa {
 
 #trial .features .container {
   color: #fff;
+}
+
+#trial .feature-text {
+  white-space: pre-line;
 }
 
 .embed-typeform {
