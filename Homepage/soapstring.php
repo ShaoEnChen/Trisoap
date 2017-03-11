@@ -52,29 +52,11 @@
         <div class="slogan text-center">
           <h3>「不用拆封，沾水即可沖出獨特而舒適的洗感」</h3>
         </div>
-        <div class="flexslider">
-          <ul class="slides text-center">
-            <li>
-              <div>
-                <p>攜帶方便，解決皂軟爛沾手黏附背包問題。</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>用量設計，洗澡完即扔，輕鬆旅行無負擔。</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>起泡加倍，沖洗搓揉快速來一場泡沫饗宴。</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>天然環保，原料天然無毒打擊化學壓製皂。</p>
-              </div>
-            </li>
-          </ul>
+        <div class="text-center">
+          <p>攜帶方便，解決皂軟爛沾手黏附背包問題。</p>
+          <p>用量設計，洗澡完即扔，輕鬆旅行無負擔。</p>
+          <p>起泡加倍，沖洗搓揉快速來一場泡沫饗宴。</p>
+          <p>天然環保，原料天然無毒打擊化學壓製皂。</p>
         </div>
 
         <h3 class="pull-left">商品一覽</h3>
