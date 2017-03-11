@@ -31,7 +31,7 @@
     <?php include 'nav.php'; ?>
 
     <!-- Header-->
-    <header data-background="img/product/detail/series.jpg" class="intro introhalf">
+    <header data-background="img/jumbotrons/soapstring.jpg" class="intro introhalf">
       <!-- Intro Header-->
       <div class="intro-body">
         <h1>商品一覽</h1>
@@ -47,8 +47,9 @@
             <div class="col-lg-6 carousel-outer">
               <!-- Wrapper for slides-->
               <div class="carousel-inner">
-                <div class="item active"><img src="img/product/rice.png" alt=""></div>
-                <!-- <div class="item"><img src="" alt=""></div> -->
+                <div class="item active"><img src="img/product/string_gift.jpg" alt="產品封面照片"></div>
+                <div class="item"><img src="img/product/detail/string_gift01.jpg" alt="產品照片1"></div>
+                <div class="item"><img src="img/product/detail/string_gift02.jpg" alt="產品照片2"></div>
               </div>
               <!-- Controls-->
               <a href="#carousel-shop" data-slide="prev" class="left carousel-control">
@@ -57,7 +58,14 @@
               <a href="#carousel-shop" data-slide="next" class="right carousel-control">
                 <span class="icon-next"></span>
               </a>
+              <!-- Indicators-->
+              <ol class="carousel-indicators mCustomScrollbar">
+                <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/string_gift.jpg" alt="產品封面小圖"></li>
+                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/string_gift01.jpg" alt="產品小圖1"></li>
+                <li data-target="#carousel-shop" data-slide-to="2"><img src="img/product/detail/string_gift02.jpg" alt="產品小圖2"></li>
+              </ol>
             </div>
+
             <div class="col-lg-6 slide">
               <h4>三三臺東意象皂絲旅行組</h4>
               <p class="small">REF. 9583301-234</p>
@@ -68,11 +76,6 @@
                 添加台東在地素材的旅行組，
                 讓你在洗澡的時候也像在旅行。
               </p>
-              <!-- Indicators-->
-              <ol class="carousel-indicators mCustomScrollbar">
-                <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/rice.png" alt=""></li>
-                <!-- <li data-target="#carousel-shop" data-slide-to="1"><img src="" alt=""></li> -->
-              </ol>
               <hr>
               <p>
                 禮盒內含 /

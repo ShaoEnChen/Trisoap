@@ -34,7 +34,7 @@
     <?php include 'nav.php'; ?>
 
     <!-- Header-->
-    <header data-background="img/jumbotrons/product_idea.jpg" class="intro introhalf" id="intro-product">
+    <header data-background="img/jumbotrons/soapstring.jpg" class="intro introhalf" id="intro-product">
       <!-- Intro Header-->
       <div class="intro-body">
         <h1>旅用皂絲</h1>
@@ -82,7 +82,7 @@
         <div class="row grid-pad">
           <div class="col-sm-12 col-md-6">
             <a href="product5.php">
-              <img src="img/product/rice.png" alt="" class="img-responsive center-block">
+              <img src="img/product/string_gift.jpg" alt="" class="img-responsive center-block">
               <h5>三三臺東意象皂絲旅行組</h5>
             </a>
             <p>
@@ -94,7 +94,7 @@
           </div>
           <div class="col-sm-12 col-md-6">
             <a href="product6.php">
-              <img src="img/product/lily.png" alt="" class="img-responsive center-block">
+              <img src="img/product/string_roselle.jpg" alt="" class="img-responsive center-block">
               <h5>洛神紅麴皂絲旅行組</h5>
             </a>
             <p>
@@ -106,7 +106,7 @@
           </div>
           <div class="col-sm-12 col-md-6">
             <a href="product7.php">
-              <img src="img/product/shakya.png" alt="" class="img-responsive center-block">
+              <img src="img/product/string_turmeric.jpg" alt="" class="img-responsive center-block">
               <h5>暖暖薑黃旅用皂絲</h5>
             </a>
             <p>
@@ -118,7 +118,7 @@
           </div>
           <div class="col-sm-12 col-md-6">
             <a href="product8.php">
-              <img src="img/product/gift.png" alt="" class="img-responsive center-block">
+              <img src="img/product/string_lily.jpg" alt="" class="img-responsive center-block">
               <h5>萱草米黃旅用皂絲</h5>
             </a>
             <p>
