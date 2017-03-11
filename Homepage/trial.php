@@ -46,53 +46,61 @@
 					<ul class="slides">
 						<li>
 							<div>
-								<p>一些留言1</p>
+								<p>政大 陳同學</p>
+								<p>在洗的時候小農的米糠顆粒感覺很明顯，有點磨砂去角質的感覺，對皮膚好又健康。</p>
 							</div>
 						</li>
 						<li>
 							<div>
-								<p>一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言一些留言!2</p>
+								<p>文大 嚴同學</p>
+								<p>第一次拿三三的試用皂來洗手的時候真的有嚇到！特殊的內袋設計起泡感覺完全加倍！</p>
 							</div>
 						</li>
 						<li>
 							<div>
-								<p>一些留言3</p>
+								<p>臺北 蘇先生</p>
+								<p>因為朋友的介紹認識三三的，收到試用品的時候很驚喜，洗起來很舒服，包裝也很有質感。</p>
 							</div>
 						</li>
 						<li>
 							<div>
-								<p>一些留言4</p>
+								<p>台東 蘇小姐</p>
+								<p>因為我皮膚有點油，所以不喜歡洗起來油膩的沐浴乳，<br>但三三的產品用起來不會乾澀但是又有滋潤的感覺，真的很棒。</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<p>台北 王先生</p>
+								<p>平常都是用肥皂洗澡，但是三三的手工皂洗起來很天然舒服，感覺對皮膚真的很好。</p>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
-
-			<!-- 嵌入Typeform -->
-			<?php include 'typeform.php'; ?>
-
-			<div class="slogan">
+			<div class="slogan bg-orange">
 				<h3>三三捨去大筆金錢買廣告的行銷手法，選擇最貼近客人的試用計畫</h3>
 				<p>好皂不怕人試，真正的好品質一洗就知道</p>
 			</div>
 			<div class="features" id="feature1">
 				<div class="container vertical-middle">
 					<h3>台東小農素材添加：池上米米糠、池上無硫金針，帶給你豐富體驗</h3>
+					<p class="feature-text">池上米選用與高家米倉小農合作，碾米後的最後一道青殼，作為素材添加不僅天然也可增加去角質洗感。
+					選用在地無硫金針乾燥的小農食在品牌，取代傳統的化學食用色素，用金針花絲點綴不同的視覺感受。</p>
 				</div>
 			</div>
 			<div class="features" id="feature2">
 				<div class="container vertical-middle">
 					<h3>天然植物油調和，無毒無化學添加</h3>
+					<p class="feature-text">皂內綜合食品級天然橄欖油、椰子油、乳油木果脂、葡萄籽油......等高達八項天然植物油品，
+					堅持無化學溶劑、染劑、矽靈、起泡劑、防腐劑……等有害物添加，勢要讓消費者感受到天然洗感的特色。</p>
 				</div>
 			</div>
 			<div class="features" id="feature3">
 				<div class="container vertical-middle">
-					<h3>冷製手作堅持超過一個月以上量皂期</h3>
+					<h3>冷製手作，堅持超過一個月以上量皂期</h3>
+					<p class="feature-text">選用皂中最繁複冷製作法，並添加三三獨門步驟，完整16步驟毫不馬虎，堅持在中途加入超過一個月以上量皂期，
+					並在出貨前使用試紙檢驗酸鹼值，高嚴謹的品管方法和高品質的冷製製成，是我們要帶給消費者的一種態度。</p>
 				</div>
-			</div>
-			<div class="slogan">
-				<h3>上百消費者試用好評發售中</h3>
-				<a href="https://trisoap.typeform.com/to/voNGpg" target="_blank" role="button" class="btn">立即申請試用</a>
 			</div>
 		</section>
 
