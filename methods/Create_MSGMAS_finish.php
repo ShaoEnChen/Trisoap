@@ -21,7 +21,7 @@ if($EMAIL != null){
             $message .= '請上傳格式為 jpeg/jpg/png 的照片 \n';
         }
         else{
-            move_uploaded_file($_FILES["MSGPHOTO"]["tmp_name"], '../message/picture/'.$MSGNO.'.png');
+            move_uploaded_file($_FILES["MSGPHOTO"]["tmp_name"], '../Homepage/picture/'.$MSGNO.'.png');
             $MSGPHOTO = 1;
         }
     }
@@ -30,7 +30,7 @@ if($EMAIL != null){
             $message .= '請上傳格式為 mp4 的影片 \n';
         }
         else{
-            move_uploaded_file($_FILES["MSGVIDEO"]["tmp_name"], '../message/video/'.$MSGNO.'.mp4');
+            move_uploaded_file($_FILES["MSGVIDEO"]["tmp_name"], '../Homepage/video/'.$MSGNO.'.mp4');
             $MSGVIDEO = 1;
         }
     }
@@ -47,10 +47,10 @@ if($EMAIL != null){
             mail_receive_message($EMAIL);
             ?>
             <script>
-            redirect("../message/message.php");
+            redirect("../Homepage/message.php");
             alert("留心語成功，已寄發通知信至您的信箱。");
             </script>
-            <?php 
+            <?php
         }
         else{
             ?>
@@ -58,7 +58,7 @@ if($EMAIL != null){
             redirect("Create_MSGMAS.php");
             alert("留心語失敗");
             </script>
-            <?php 
+            <?php
         }
     }
     else{
@@ -67,7 +67,7 @@ if($EMAIL != null){
         redirect("Create_MSGMAS.php");
         alert("<?php echo $message;?>");
         </script>
-        <?php 
+        <?php
     }
 }
 else{
@@ -76,6 +76,6 @@ else{
     redirect("/");
     alert("您無權限觀看此頁面!");
     </script>
-    <?php 
+    <?php
 }
 ?>

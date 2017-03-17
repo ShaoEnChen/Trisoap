@@ -37,32 +37,29 @@
         <ul class="slides">
           <li>
             <div>
-              <a href="product.php">
-                <img class="flexslides" src="img/index1.png">
-              </a>
-            </div>
-          </li>
-          <li>
-            <div>
               <a href="about.php">
-                <img class="flexslides" src="img/index2.png">
+                <img class="flexslides" src="img/index/index1.png">
               </a>
             </div>
           </li>
           <li>
             <div>
-              <a href="partner.php">
-                <img class="flexslides" src="img/index3.png">
+              <a href="trial.php">
+                <img class="flexslides" src="img/index/index2.png">
               </a>
-              <div id="slide-textarea3">
-                <p class="slide-text" id="slide-text3">每一顆手工皂<br>都是注入憨兒們歡笑的<br>純淨手作</p>
-              </div>
             </div>
           </li>
           <li>
             <div>
-              <a href="product_intro.php">
-                <img class="flexslides" src="img/index4.png">
+              <a href="message.php">
+                <img class="flexslides" src="img/index/index3.png">
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="https://www.facebook.com/trisoap/">
+                <img class="flexslides" src="img/index/index4.png">
               </a>
             </div>
           </li>

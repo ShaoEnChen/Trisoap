@@ -1738,7 +1738,7 @@ li .shop-cart {
 
 /* Sean's addition */
 header {
-  margin-top: 60px;
+  margin-top: 56px;
 }
 
 section {
@@ -1834,41 +1834,6 @@ a .fa {
   -o-border-radius: 4px;
   list-style-type: none;
   z-index: 1002;
-}
-
-/* Slide文字div */
-.slide-text {
-  font-family: 'Noto Sans TC', 'Raleway';
-  margin: 0;
-}
-
-#slide-textarea3 {
-  position: absolute;
-  bottom: 3vw;
-  right: 4vw;
-}
-
-#slide-textarea3::before {
-  content: '';
-  position: absolute;
-  width: 40%;
-  border-top: 1px solid #fff;
-}
-
-#slide-textarea3::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  width: 60%;
-  border-bottom: 1px solid #fff;
-}
-
-#slide-text3 {
-  font-size: 2vw;
-  font-weight: 300;
-  color: #fff;
-  letter-spacing: 6px;
-  padding: 10px;
 }
 
 /* Buy Now - Product Elements */

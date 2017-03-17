@@ -32,10 +32,11 @@
 
     <!-- Header-->
     <header data-background="img/jumbotrons/contact.jpg" class="intro introhalf" id="intro-contact">
-      <!-- Intro Header-->
-      <div class="intro-body">
-        <h1>聯絡我們</h1>
-      </div>
+
+    <!-- Intro Header-->
+    <div class="intro-body">
+      <h1>聯絡我們</h1>
+    </div>
     </header>
     <!-- Contact Section-->
     <section id="contact">
@@ -51,7 +52,6 @@
           <div class="col-md-8">
             <!-- Map Section-->
             <div id="map"></div>
-            <p></p>
           </div>
           <div class="col-md-4">
             <!-- Contact Form - Enter your email address on line 17 of the mail/contact_me.php file to make this form work. For more information on how to do this please visit the Docs!-->
@@ -119,7 +119,7 @@
     <script src="js/tweecool.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.smartmenus.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkgvqaeUhwvRuSvrBjp9OCZOgP2mPGL9M"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkgvqaeUhwvRuSvrBjp9OCZOgP2mPGL9M"></script>
     <script src="js/map.js"></script>
     <!-- Custom Theme JavaScript-->
     <script src="js/pheromone.js"></script>
