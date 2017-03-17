@@ -38,21 +38,21 @@
           <li>
             <div>
               <a href="Homepage/product.php">
-                <img class="flexslides" src="Homepage/img/index1.png">
+                <img class="flexslides" src="Homepage/img/index/index1.png">
               </a>
             </div>
           </li>
           <li>
             <div>
               <a href="Homepage/about.php">
-                <img class="flexslides" src="Homepage/img/index2.png">
+                <img class="flexslides" src="Homepage/img/index/index2.png">
               </a>
             </div>
           </li>
           <li>
             <div>
               <a href="Homepage/partner.php">
-                <img class="flexslides" src="Homepage/img/index3.png">
+                <img class="flexslides" src="Homepage/img/index/index3.png">
               </a>
               <div id="slide-textarea3">
                 <p class="slide-text" id="slide-text3">每一顆手工皂<br>都是注入憨兒們歡笑的<br>純淨手作</p>
@@ -62,7 +62,7 @@
           <li>
             <div>
               <a href="Homepage/product_intro.php">
-                <img class="flexslides" src="Homepage/img/index4.png">
+                <img class="flexslides" src="Homepage/img/index/index4.png">
               </a>
             </div>
           </li>
