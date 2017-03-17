@@ -54,9 +54,6 @@
               <a href="Homepage/partner.php">
                 <img class="flexslides" src="Homepage/img/index/index3.png">
               </a>
-              <div id="slide-textarea3">
-                <p class="slide-text" id="slide-text3">每一顆手工皂<br>都是注入憨兒們歡笑的<br>純淨手作</p>
-              </div>
             </div>
           </li>
           <li>
