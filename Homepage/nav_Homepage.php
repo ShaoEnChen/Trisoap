@@ -33,7 +33,7 @@
           </ul>
         </li>
         <li><a href="Homepage/trial.php">試用品申請</a></li>
-        <li><a href="../message/message.php">希望留心語</a></li>
+        <li><a href="Homepage/message.php">希望留心語</a></li>
         <li><a href="#">異業合作<i class="fa fa-angle-down"></i><span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="Homepage/partner.php">合作夥伴</a></li>
