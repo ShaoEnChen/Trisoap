@@ -38,7 +38,7 @@
 			</div>
 		</header>
 
-		<section>
+		<section id="message">
 			<div class="container">
 				<h3>活動辦法</h3>
 				<h5>
@@ -57,9 +57,7 @@
 
 			<div class="container choices">
 				<h4>精采選集</h4>
-				<div>
-					<ul>
-					<?php
+				<?php
 					$query = "SELECT * FROM MSGMAS WHERE ACTCODE = 1"; # AND MSGSTAT = 'E'";
 					$results = mysql_query($query);
 					$msg_num = mysql_num_rows($results);
@@ -68,96 +66,97 @@
 							$result = mysql_fetch_array($results);
 							// text only
 							if($result['MSGPHOTO'] == 0 && $result['MSGVIDEO'] == 0) {
+				?>
+				<div class="choice">
+					<div class="msg-text">
+						<p>
+							<?php echo $result['MSGTXT']; ?>
+						</p>
+					</div>
+					<p class="msg-author"> -
+					<?php
+						$cus_email = $result['EMAIL'];
+						$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
+						$cusnm_result = mysql_query($query_cusnm);
+						if($cusnm_result) {
+							echo mysql_result($cusnm_result, 0);
+						}
+						else {
+							echo $cus_email;
+						}
 					?>
-						<li>
-							<div class="choice">
-								<p class="msg-text"><?php echo $result['MSGTXT']; ?></p>
-								<p class="author"> -
-									<?php
-										$cus_email = $result['EMAIL'];
-										$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
-										$cusnm_result = mysql_query($query_cusnm);
-										if($cusnm_result) {
-											echo mysql_result($cusnm_result, 0);
-										}
-										else {
-											echo $cus_email;
-										}
-									?>
-								</p>
-							</div>
-						</li>
-						<?php
+					</p>
+				</div>
+				<?php
 							}
 							else {
 								$msgno = $result['MSGNO'];
 								if($result['MSGPHOTO'] == 1) {
-							?>
-						<li>
-							<div class="choice choice-photo">
-								<img src="picture/<?php echo $msgno; ?>.png">
-								<div class="desc">
-									<p>
-										<?php echo $result['MSGTXT']; ?>
-									</p>
-								</div>
-								<p class="author"> -
-									<?php
-										$cus_email = $result['EMAIL'];
-										$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
-										$cusnm_result = mysql_query($query_cusnm);
-										if($cusnm_result) {
-											echo mysql_result($cusnm_result, 0);
-										}
-										else {
-											echo $cus_email;
-										}
-									?>
-								</p>
-							</div>
-						</li>
-							<?php
+				?>
+				<div class="choice">
+					<div class="msg-text">
+						<p>
+							<?php echo $result['MSGTXT']; ?>
+						</p>
+					</div>
+					<p class="msg-author"> -
+					<?php
+						$cus_email = $result['EMAIL'];
+						$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
+						$cusnm_result = mysql_query($query_cusnm);
+						if($cusnm_result) {
+							echo mysql_result($cusnm_result, 0);
+						}
+						else {
+							echo $cus_email;
+						}
+					?>
+					</p>
+					<img class="choice-photo" src="picture/<?php echo $msgno; ?>.png">
+				</div>
+				<?php
 								}
 								if($result['MSGVIDEO'] == 1) {
-							?>
-						<li>
-							<div class="choice choice-video">
-								<!-- video here -->
-								<video controls>
-									<source type="video/mp4" src="video/<?php echo $msgno; ?>.mp4"></iframe>
-								</video>
-								<div class="desc"><?php echo $result['MSGTXT']; ?></div>
-								<p class="author"> -
-									<?php
-										$cus_email = $result['EMAIL'];
-										$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
-										$cusnm_result = mysql_query($query_cusnm);
-										if($cusnm_result) {
-											echo mysql_result($cusnm_result, 0);
-										}
-										else {
-											echo $cus_email;
-										}
-									?>
-								</p>
-							</div>
-						</li>
-							<?php
+				?>
+				<div class="choice">
+					<div class="msg-text">
+						<p>
+							<?php echo $result['MSGTXT']; ?>
+						</p>
+					</div>
+					<p class="msg-author"> -
+					<?php
+						$cus_email = $result['EMAIL'];
+						$query_cusnm = "SELECT CUSNM FROM CUSMAS WHERE EMAIL = '$cus_email'";
+						$cusnm_result = mysql_query($query_cusnm);
+						if($cusnm_result) {
+							echo mysql_result($cusnm_result, 0);
+						}
+						else {
+							echo $cus_email;
+						}
+					?>
+					</p>
+					<video class="choice-video" controls>
+						<source type="video/mp4" src="video/<?php echo $msgno; ?>.mp4">
+						您的瀏覽器不支援影片標籤。
+					</video>
+				</div>
+				<?php
 								}
 							}
 						}
 					}
 					else {
-					?>
-						<li>
-							<p class="alarm-no-content">暫無內容！</p>
-						</li>
-					<?php
-					}
-					?>
-					</ul>
+				?>
+				<div>
+					<p class="alarm-no-content">暫無內容！</p>
 				</div>
+				<?php
+					}
+				?>
 			</div>
+			<div class="clear"></div>
 		</section>
 
 		<!-- Footer Section-->
