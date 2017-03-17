@@ -1,4 +1,4 @@
 .DS_store
-Homepage/picture/
-Homepage/video/
+Homepage/picture/*
+Homepage/video/*
 methods/Helper/mysql_connect.php
