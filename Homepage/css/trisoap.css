@@ -2151,3 +2151,38 @@ a .fa {
 #poweredbytypeform a {
   color: #999;
 }
+
+/* ------ Message ------ */
+#message .choice {
+  float: left;
+}
+
+@media (min-width: 769px) {
+  #message .choice {
+    width: 27%;
+    margin: 0 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  #message .choice {
+    width: 80%;
+    margin: 0 10%;
+  }
+}
+
+#message .msg-text {
+  white-space: pre-line;
+}
+
+#message .choice-photo,
+#message .choice-video {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  margin: 10px 0;
+}
+
+#message .msg-author {
+  text-align: center;
+}
