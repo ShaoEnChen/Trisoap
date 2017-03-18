@@ -37,28 +37,28 @@
         <ul class="slides">
           <li>
             <div>
-              <a href="Homepage/product.php">
+              <a href="Homepage/about.php">
                 <img class="flexslides" src="Homepage/img/index/index1.png">
               </a>
             </div>
           </li>
           <li>
             <div>
-              <a href="Homepage/about.php">
+              <a href="Homepage/trial.php">
                 <img class="flexslides" src="Homepage/img/index/index2.png">
               </a>
             </div>
           </li>
           <li>
             <div>
-              <a href="Homepage/partner.php">
+              <a href="Homepage/message.php">
                 <img class="flexslides" src="Homepage/img/index/index3.png">
               </a>
             </div>
           </li>
           <li>
             <div>
-              <a href="Homepage/product_intro.php">
+              <a href="https://www.facebook.com/trisoap/" target="_blank">
                 <img class="flexslides" src="Homepage/img/index/index4.png">
               </a>
             </div>
