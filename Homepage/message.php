@@ -58,7 +58,7 @@
 			<div class="container choices">
 				<h4>精采選集</h4>
 				<?php
-					$query = "SELECT * FROM MSGMAS WHERE ACTCODE = 1 AND MSGSTAT = 'E'";
+					$query = "SELECT * FROM MSGMAS WHERE ACTCODE = 1";#  AND MSGSTAT = 'E'";
 					$results = mysql_query($query);
 					$msg_num = mysql_num_rows($results);
 					if($msg_num) {
