@@ -60,7 +60,7 @@
 											<div id="layer2Collapse_1" role="tabpanel" aria-labelledby="layer2Heading_1" class="panel-collapse collapse">
 												<div class="panel-body">
 													<h4>
-														<a href="www.shanhsien.org.tw/">
+														<a href="http://www.shanhsien.org.tw/">
 															<img class="partner-logo" src="img/partner/lee.png" alt="">
 														</a>
 														李勝賢文教基金會
@@ -68,7 +68,7 @@
 													<p>
 														李勝賢文教基金會位於台東市區，是以服務憨兒為主的小型作業所，開辦愛心二手商店以及手工皂製作已有數年之久。裡頭的憨兒各個是作皂好手，只要提及作皂他們便展現優於一般人的專注力與專業程度。作皂不只為了成品，更在於每個憨兒在做好皂後的自信笑容。三三台東意象的每樣產品，在經過數個月的技術移轉與培訓後成功開發，每一顆手工皂，都是來自憨兒們歡笑天堂的純淨手作。
 													</p>
-													<a href="www.shanhsien.org.tw/" target="_blank" role="button" class="btn">
+													<a href="http://www.shanhsien.org.tw/" target="_blank" role="button" class="btn">
 														暸解更多
 														<i class="fa fa-angle-right"></i>
 													</a>
