@@ -10,7 +10,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="img/misc/favicon.png">
-		<title>三三吾鄉手工皂Trisoap</title>
+		<title>希望留心語｜三三吾鄉手工皂Trisoap</title>
+		<meta name="description" content="">
 		<!-- Bootstrap Core CSS-->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Custom CSS-->
@@ -58,7 +59,7 @@
 			<div class="container choices">
 				<h4>精采選集</h4>
 				<?php
-					$query = "SELECT * FROM MSGMAS WHERE ACTCODE = 1 AND MSGSTAT = 'E'";
+					$query = "SELECT * FROM MSGMAS WHERE ACTCODE = 1";# AND MSGSTAT = 'E'";
 					$results = mysql_query($query);
 					$msg_num = mysql_num_rows($results);
 					if($msg_num) {

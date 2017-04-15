@@ -4,15 +4,14 @@
   include "../methods/Helper/sql_operation.php";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
+    <title>金絲森林渲染皂｜三三吾鄉手工皂Trisoap</title>
     <meta name="description" content="">
-    <meta name="author" content="">
-    <title>三三吾鄉手工皂Trisoap</title>
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->
