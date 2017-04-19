@@ -3,6 +3,7 @@ include_once("AllPay.Payment.Integration.php");
 include_once("Helper/mysql_connect.php");
 include_once("Helper/sql_operation.php");
 include_once("Helper/handle_string.php");
+include_once("Helper/mail/mail.php");
 include_once("Helper/analyticstracking.php");
 
 function transfer_PaymentType($paytype) {
@@ -27,8 +28,8 @@ try
 	$obj = new AllInOne();
  	//AllPay Service Parameter
  	$obj->HashKey     = 'bwqFcafJNX4GzAWO'; 
-    	$obj->HashIV      = 'mJf0B3ONPbCfwkmF';
-    	$obj->MerchantID  = '1385617'; 
+    $obj->HashIV      = 'mJf0B3ONPbCfwkmF';
+    $obj->MerchantID  = '1385617'; 
 	//FeedBack Parameter
  	$arFeedback = $obj->CheckOutFeedback();
  	/* 檢核與變更訂單狀態 */
@@ -65,6 +66,7 @@ try
 		    $queryEMAIL = search('EMAIL', 'ORDMAS', 'MerchantTradeNo', $szMerchantTradeNo);
 		    $sql = "UPDATE CUSMAS SET DISCOUNT = 0 WHERE EMAIL = '$queryEMAIL'";
 		    mysql_query($sql);
+		    mail_receive_order_notice();
 		    print '1|OK';	//tell AllPay that we get the feedback
  		}
  	} 

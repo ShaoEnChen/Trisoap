@@ -256,7 +256,7 @@ function mail_receive_member_notice($NAME){
           echo "Mail not sent!";
       }
 }
-function mail_receive_order_notice($NAME, $ORDER){
+function mail_receive_order_notice(){
       $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
       $mail= new PHPMailer(); //建立新物件
       $mail->IsSMTP(); //設定使用SMTP方式寄信
@@ -273,7 +273,7 @@ function mail_receive_order_notice($NAME, $ORDER){
       date_default_timezone_set('Asia/Taipei');
       $MAILDATE = date("Y-m-d");
       $mail->Subject = "[系統訊息] 新訂單通知信"; //設定郵件標題
-      $mail->Body = "[系統訊息] 會員 ".$NAME." 剛才透過官方網站下了訂單，訂單編號 ".$ORDER;
+      $mail->Body = "[系統訊息] 有會員透過官方網站下了訂單";
       $mail->AddAddress($COMEMAIL); //設定收件者郵件及名稱
       if(!$mail->Send()) {
           echo "Mail not sent!";
