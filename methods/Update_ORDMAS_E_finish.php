@@ -29,6 +29,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
                 $queryPAYTYPE = show_PAYTYPE(search('PAYTYPE', 'ORDMAS', 'ORDNO', $ORDNO));
                 $queryName = search('CUSNM', 'CUSMAS', 'EMAIL', $queryEMAIL);
                 mail_receive_order($queryEMAIL, $ORDNO, $queryPAYTYPE, $queryName);
+                mail_receive_order_notice($queryName, $ORDNO);
                 ?>
                 <script>
                 redirect("Update_ORDMAS_E.php");

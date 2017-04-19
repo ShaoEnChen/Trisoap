@@ -233,4 +233,50 @@ function mail_reset_password($id, $code){
             echo "Mail not sent!";
       }
 }
+function mail_receive_member_notice($NAME){
+      $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+      $mail= new PHPMailer(); //建立新物件
+      $mail->IsSMTP(); //設定使用SMTP方式寄信
+      $mail->SMTPAuth = true; //設定SMTP需要驗證
+      $mail->SMTPSecure = 'ssl'; // Gmail的SMTP主機需要使用SSL連線
+      $mail->Host = "smtp.gmail.com"; //Gmail的SMTP主機
+      $mail->Port = 465;  //Gmail的SMTP主機的SMTP埠位為465埠。
+      $mail->IsHTML(true); //設定郵件內容為HTML
+      $mail->CharSet = "utf-8"; //設定郵件編碼
+      $mail->Username = "trisoap2015@gmail.com"; //設定驗證帳號
+      $mail->Password = "2015n0n0"; //設定驗證密碼
+      $mail->From = "trisoap2015@gmail.com"; //設定寄件者信箱
+      $mail->FromName = "三三吾鄉社會企業"; //設定寄件者姓名
+      date_default_timezone_set('Asia/Taipei');
+      $MAILDATE = date("Y-m-d");
+      $mail->Subject = "[系統訊息] 新會員通知信"; //設定郵件標題
+      $mail->Body = "[系統訊息] ".$NAME." 已經註冊成為三三吾鄉會員";
+      $mail->AddAddress($COMEMAIL); //設定收件者郵件及名稱
+      if(!$mail->Send()) {
+          echo "Mail not sent!";
+      }
+}
+function mail_receive_order_notice($NAME, $ORDER){
+      $COMEMAIL = search('COMEMAIL', 'OWNMAS', 'COMNM', 'Trisoap');
+      $mail= new PHPMailer(); //建立新物件
+      $mail->IsSMTP(); //設定使用SMTP方式寄信
+      $mail->SMTPAuth = true; //設定SMTP需要驗證
+      $mail->SMTPSecure = 'ssl'; // Gmail的SMTP主機需要使用SSL連線
+      $mail->Host = "smtp.gmail.com"; //Gmail的SMTP主機
+      $mail->Port = 465;  //Gmail的SMTP主機的SMTP埠位為465埠。
+      $mail->IsHTML(true); //設定郵件內容為HTML
+      $mail->CharSet = "utf-8"; //設定郵件編碼
+      $mail->Username = "trisoap2015@gmail.com"; //設定驗證帳號
+      $mail->Password = "2015n0n0"; //設定驗證密碼
+      $mail->From = "trisoap2015@gmail.com"; //設定寄件者信箱
+      $mail->FromName = "三三吾鄉社會企業"; //設定寄件者姓名
+      date_default_timezone_set('Asia/Taipei');
+      $MAILDATE = date("Y-m-d");
+      $mail->Subject = "[系統訊息] 新訂單通知信"; //設定郵件標題
+      $mail->Body = "[系統訊息] 會員 ".$NAME." 剛才透過官方網站下了訂單，訂單編號 ".$ORDER;
+      $mail->AddAddress($COMEMAIL); //設定收件者郵件及名稱
+      if(!$mail->Send()) {
+          echo "Mail not sent!";
+      }
+}
 ?>

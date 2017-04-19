@@ -5,6 +5,7 @@ session_start();
 include_once("Helper/mysql_connect.php");
 include_once("Helper/handle_string.php");
 include_once("Helper/redirect.js");
+include_once("Helper/mail/mail.php");
 include_once("Helper/analyticstracking.php");
 $VERIFY = input('VERIFY');
 if($VERIFY == $_SESSION['COMMIT']){
@@ -28,6 +29,7 @@ if($VERIFY == $_SESSION['COMMIT']){
         $UPDATEDATE = date("Y-m-d H:i:s");
         $sql = "INSERT INTO CUSMAS (CUSNM, CUSPW, CUSADD, CUSTYPE, CUSBIRTHY, CUSBIRTHM, CUSBIRTHD, TEL, EMAIL, TAXID, KNOWTYPE, SPEINS, CREATEDATE, UPDATEDATE) values ('$CUSNM', '$CUSPW', '$CUSADD', '$CUSTYPE', '$CUSBIRTHY', '$CUSBIRTHM', '$CUSBIRTHD', '$TEL', '$EMAIL', '$TAXID', '$KNOWTYPE', '$SPEINS', '$CREATEDATE', '$UPDATEDATE')";
         if(mysql_query($sql)){
+                mail_receive_member_notice($CUSNM);
                 $_SESSION['CUSIDT'] = 'B';
                 unset($_SESSION['CUSNM']);
                 unset($_SESSION['CUSPW']);
