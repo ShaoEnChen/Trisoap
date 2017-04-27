@@ -43,7 +43,10 @@ if($EMAIL != null && $CUSIDT == 'A'){
         }
 
         if($message == null){
-                $sql = "insert into ITEMMAS (ITEMNO, ITEMNM, ITEMAMT, PRICE, DESCRIPTION) values ('$newITEMNO', '$newITEMNM', '$newITEMAMT', '$newPRICE', '$newDESCRIPTION')";
+                date_default_timezone_set('Asia/Taipei');
+                $CREATEDATE = date("Y-m-d H:i:s");
+                $UPDATEDATE = date("Y-m-d H:i:s");
+                $sql = "insert into ITEMMAS (ITEMNO, ITEMNM, ITEMAMT, PRICE, DESCRIPTION, CREATEDATE, UPDATEDATE) values ('$newITEMNO', '$newITEMNM', '$newITEMAMT', '$newPRICE', '$newDESCRIPTION', '$CREATEDATE', '$UPDATEDATE')";
                 if(mysql_query($sql)){
                         ?>
                         <script>
