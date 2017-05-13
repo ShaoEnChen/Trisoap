@@ -45,13 +45,20 @@ if($EMAIL != null){
     else{
         $row = select('OWNMAS', 'COMNM', 'Trisoap');
         $ORDNOG = $row['NORDNOG'];
-        $ORDNOS = $row['NORDNOS'];
         date_default_timezone_set('Asia/Taipei');
         $CREATEDATE = date("Y-m-d H:i:s");
         $UPDATEDATE = date("Y-m-d H:i:s");
         $USEDATE = date("Y-m-d H:i:s");
         $ORDTYPE = 'G';
-        $SHIPFEE = 70;
+        $total = 0;
+        $sql = mysql_query("SELECT * FROM ORDITEMMAS where ORDNO = 100000000 AND EMAIL = '$EMAIL'");  //get item amount
+        while ($fetch = mysql_fetch_array($sql)) {
+            $ITEMNO = $fetch['ITEMNO'];
+            $queryPrice = mysql_query("SELECT * FROM ITEMMAS where ITEMNO = '$ITEMNO'");  //get item amount
+            $fetchPrice = mysql_fetch_array($queryPrice);
+            $total += $fetchPrice['PRICE'] * $fetch['ORDAMT'];
+        }
+        $SHIPFEE = $total >= 777 ? 0 : 70;
         $sql = "INSERT INTO ORDMAS (ORDNO, ORDTYPE, EMAIL, ORDINST, SHIPFEE, CREATEDATE, UPDATEDATE) values ('$ORDNOG', '$ORDTYPE', '$EMAIL', '$ORDINST', '$SHIPFEE', '$CREATEDATE', '$UPDATEDATE')";
         if(mysql_query($sql)){
             $sql = "UPDATE OWNMAS SET NORDNOG=NORDNOG+1 where COMNM='Trisoap'";

@@ -78,7 +78,7 @@
           <div class="col-sm-12 col-md-6">
             <a href="product6.php">
               <img src="img/product/string_roselle.jpg" alt="" class="img-responsive center-block">
-              <h5>洛神紅麴皂絲旅行組</h5>
+              <h5>洛神紅麴旅用皂絲</h5>
             </a>
             <p>
               台東的艷麗珍寶，捧在農友的手上閃閃發光。

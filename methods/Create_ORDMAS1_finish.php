@@ -71,7 +71,7 @@ if($EMAIL != null && $CUSIDT == 'A'){
         $CREATEDATE = date("Y-m-d H:i:s");
         $UPDATEDATE = date("Y-m-d H:i:s");
         $ORDTYPE = 'G';
-        $SHIPFEE = 70;
+        $SHIPFEE = 0;
         $sql = "INSERT INTO ORDMAS (ORDNO, ORDTYPE, EMAIL, ORDINST, SHIPFEE, CREATEDATE, UPDATEDATE) values ('$ORDNOG', '$ORDTYPE', '$EMAIL', '$ORDINST', '$SHIPFEE', '$CREATEDATE', '$UPDATEDATE')";
         if(mysql_query($sql)){
             $sql = "UPDATE OWNMAS SET NORDNOG=NORDNOG+1 where COMNM='Trisoap'";

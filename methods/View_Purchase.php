@@ -59,10 +59,8 @@
         }
 
         if($number != 0){
-            $shipfee = 70;
-            $total = $shipfee;
+            $total = 0;
             $discount = search('DISCOUNT', 'CUSMAS', 'EMAIL', $EMAIL);
-            $total -= $discount;
             ?>
             <table>
                 <thead>
@@ -97,6 +95,7 @@
                         </td>
                     </tr>
                     <?php
+                    $shipfee = $total >= 777 ? 0 : 70;
                 }
                 ?>
                 <tr>
@@ -126,6 +125,7 @@
                     </td>
                     </tr>
                     <?php
+                    $total -= $discount;
                 }
                 ?>
                 <tr>

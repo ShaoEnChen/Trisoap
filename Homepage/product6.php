@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
-    <title>洛神紅麴皂絲旅行組｜三三吾鄉手工皂Trisoap</title>
+    <title>洛神紅麴旅用皂絲｜三三吾鄉手工皂Trisoap</title>
     <meta name="description" content="">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">

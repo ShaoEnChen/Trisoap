@@ -18,7 +18,7 @@
         <h5>三三產品</h5>
         <p><a href="Homepage/product.php">臺東系列單品</a></p>
         <p><a href="Homepage/soapstring.php">旅用皂絲</a></p>
-        <p><a href="Homepage/shopping-guide.php">購物須知</a></p>
+        <p><a href="Homepage/shopping_guide.php">購物須知</a></p>
         <p><a href="Homepage/trial.php">試用品申請</a></p>
       </div>
       <div class="col-sm-3">
