@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="img/misc/favicon.png">
 		<title>合作夥伴｜三三吾鄉手工皂Trisoap</title>
-		<meta name="description" content="">
+		<meta name="description" content="三三吾鄉一路走來擁有許多合作夥伴，不論是協助的在地社福，或是合作的在地小農，我們都利用品牌聯名的方式，共同曝光，想瞭解更多歡迎點入瞭解。">
 		<!-- Bootstrap Core CSS-->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Custom CSS-->

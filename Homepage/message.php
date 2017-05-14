@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="img/misc/favicon.png">
 		<title>希望留心語｜三三吾鄉手工皂Trisoap</title>
-		<meta name="description" content="">
+		<meta name="description" content="三三吾鄉舉辦希望留心語活動，有別於總是希望憨兒寫卡片給消費者感謝他們對我們的支持，這次我們希望翻轉過來，由消費者來告訴我們，你對我們的憨兒做出來的產品有多支持，試著稱讚他們吧！">
 		<!-- Bootstrap Core CSS-->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Custom CSS-->

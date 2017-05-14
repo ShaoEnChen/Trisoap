@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="img/misc/favicon.png">
 		<title>試用品申請｜三三吾鄉手工皂Trisoap</title>
-		<meta name="description" content="">
+		<meta name="description" content="三三的好品質，讓試用過的人都一致好評，好皂不怕人試，輕鬆幾個按鈕，免費獲得三三吾鄉試用品。">
 		<!-- Bootstrap Core CSS-->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- FlexSlider CSS -->

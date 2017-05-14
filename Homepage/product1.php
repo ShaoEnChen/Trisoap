@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>田靜山巒禾風皂｜三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="">
+    <meta name="description" content="徐徐微風拂過，隨風搖曳的稻禾色調，是種清心舒適的享受。艾草底層與金盞花粉夾層的色澤設計，凸顯台東的小農意象。">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->

@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>暖暖薑黃旅用皂絲｜三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="">
+    <meta name="description" content="豔黃中帶點純樸的橘棕，經過薑黃伯特殊而又綿密的加工研磨，入皂而成的溫暖色澤讓你有個暖暖的冬天。">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->

@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="img/misc/favicon.png">
 		<title>三三堅持｜三三吾鄉手工皂Trisoap</title>
-		<meta name="description" content="">
+		<meta name="description" content="三三吾鄉手工皂，堅持品質最高的「冷製」作法。「冷製手工皂」是使用純天然的基底植物油進行皂化，再經過攪拌、保溫、晾皂等精細製程，而後打皂出一個個具有不同皂性的產品。">
 		<!-- Bootstrap Core CSS-->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Custom CSS-->

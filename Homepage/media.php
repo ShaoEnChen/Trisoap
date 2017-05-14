@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="img/misc/favicon.png">
 		<title>媒體報導｜三三吾鄉手工皂Trisoap</title>
-		<meta name="description" content="">
+		<meta name="description" content="一路走來，感謝各家媒體對於三三的支持，每篇報導，都是宣揚三三理念的好夥伴。">
 		<!-- Bootstrap Core CSS-->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Custom CSS-->

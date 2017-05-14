@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>三三臺東意象禮盒組｜三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="">
+    <meta name="description" content="三三吾鄉，我們的共同原鄉，來自台東最純淨的唯一。清風徐過的稻田、翠綠飽滿的釋迦、嬌豔暖橘的金針，融合當地的憨兒手作，三種特色，造就臺東意象禮盒組的經典。">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->

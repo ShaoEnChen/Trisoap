@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="">
+    <meta name="description" content="三三吾鄉手工皂，結合在地小農、社福公益、社會企業等三方元素，利用嶄新的旅行用皂絲組，期待翻轉公益社福的悲情形象。">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- FlexSlider CSS -->

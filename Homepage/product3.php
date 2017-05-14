@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>釋迦手感果力皂｜三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="">
+    <meta name="description" content="翠綠的果實結在樹上，粼粼片片的果殼像極了小羊身上蜷曲的羊毛。純天然入皂的棕色，極為天然的提煉手法將一顆一顆的釋迦果力完美融入，帶給你洗感上的全新體驗。">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->

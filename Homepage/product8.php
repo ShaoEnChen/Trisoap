@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>萱草米黃旅用皂絲｜三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="">
+    <meta name="description" content="盛開在池上的橘黃萱草，象徵著溫暖又偉大的母親。搭配來自非洲的紅棕櫚油，一起享受如母親溫暖般的呵護。">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->

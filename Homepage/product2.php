@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>金絲森林渲染皂｜三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="">
+    <meta name="description" content="點點金黃的花絲在皂上綴躍，好比座落在太麻里原生的花田，點綴著清幽的臺東。手作渲染的花紋，隨著不同的心情有所變化；每種皂款都為你獻上獨一。">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->

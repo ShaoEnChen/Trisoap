@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>常見問題｜三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="">
+    <meta name="description" content="三三吾鄉手工皂都是怎麼製作的？什麼是手工皂？三三吾鄉皂堅持品質最高的「冷製」作法。「冷製手工皂」是使用純天然的基底植物油，搭配上鹼水調配，再經過攪拌、保溫、晾皂等各種精細的過程，而後皂化成一個個具有不同皂性的產品。有別於一般大型賣場，或是各式衛妝開架式商店所販售的工廠壓製肥皂或沐浴精（其中多為石油裂解而成的產物），冷製手工皂製作過程無任何化學添加，堅持33天以上的晾皂期，才能帶給你最天然的清潔享受。">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->

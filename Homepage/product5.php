@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>三三臺東意象皂絲旅行組｜三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="">
+    <meta name="description" content="內涵臺東洛神紅麴、萱草米黃、暖暖薑黃皂絲旅用組。天然手打皂絲，綿密的起泡讓你在旅途當中享受不同的驚奇。添加台東在地素材的旅行組，讓你在洗澡的時候也像在旅行。">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->

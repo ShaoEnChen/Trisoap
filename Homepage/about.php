@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>關於我們｜三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="">
+    <meta name="description" content="我們堅持天然，因為那是大自然最真實的純淨。我們堅持手工皂，因為那是帶給憨兒自信的泉源。我們堅持三三吾鄉， 因為三三吾鄉不只是個故事，更是種生活的態度。">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->

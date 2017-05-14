@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>單品 / 禮盒｜三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="">
+    <meta name="description" content="三三吾鄉商品分為單品與禮盒組，為不同需求之客戶量身設計，單品適合居家日常使用，禮盒組送禮自用兩相宜，精緻包裝與台北大稻埕在地設計師合作，期待給予消費者最在地的旅程。">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->

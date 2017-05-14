@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>旅用皂絲 | 三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="">
+    <meta name="description" content="溫和而舒適的手工皂，綿密如雪絲，故名皂絲。為了解決憨兒手部精細動作不穩定的困難，三三吾鄉研發獨門皂絲組，將皂絲裝到不織布袋中，「不用拆封，沾水即可沖出獨特而舒適的洗感」">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- FlexSlider CSS -->
