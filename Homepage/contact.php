@@ -118,7 +118,7 @@
     <script src="js/tweecool.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.smartmenus.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqLzZouUqN1dWEVR9_75YO6bXL5OuhcRs"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqLzZouUqN1dWEVR9_75YO6bXL5OuhcRs"></script>
     <script src="js/map.js"></script>
     <!-- Custom Theme JavaScript-->
     <script src="js/pheromone.js"></script>

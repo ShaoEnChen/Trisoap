@@ -186,9 +186,6 @@
     <script src="Homepage/js/jquery.smartmenus.js"></script>
     <!-- FlexSlider JS -->
     <script src="../FlexSlider/jquery.flexslider-min.js"></script>
-        <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3E86i8mx1BZDlAaLcknh_mWl4F70i4os"></script>
-        <script src="Homepage/js/map.js"></script>
     <!-- Custom Theme JavaScript-->
     <script src="Homepage/js/pheromone.js"></script>
     <script src="Homepage/js/flexslider_index.js"></script>
