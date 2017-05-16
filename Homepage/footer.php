@@ -12,13 +12,13 @@
         <h5>客戶服務</h5>
         <p><a href="faq.php">顧客問答</a></p>
         <p><a href="contact.php">聯絡我們</a></p>
-        <p><a href="../message/message.php">希望留心語</a></p>
+        <p><a href="message.php">希望留心語</a></p>
       </div>
       <div class="col-sm-2">
         <h5>三三產品</h5>
         <p><a href="product.php">臺東系列單品</a></p>
         <p><a href="soapstring.php">旅用皂絲</a></p>
-        <p><a href="shopping-guide.php">購物須知</a></p>
+        <p><a href="shopping_guide.php">購物須知</a></p>
         <p><a href="trial.php">試用品申請</a></p>
       </div>
       <div class="col-sm-3">

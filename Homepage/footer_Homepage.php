@@ -12,7 +12,7 @@
         <h5>客戶服務</h5>
         <p><a href="Homepage/faq.php">顧客問答</a></p>
         <p><a href="Homepage/contact.php">聯絡我們</a></p>
-        <p><a href="../message/message.php">希望留心語</a></p>
+        <p><a href="Homepage/message.php">希望留心語</a></p>
       </div>
       <div class="col-sm-2">
         <h5>三三產品</h5>
