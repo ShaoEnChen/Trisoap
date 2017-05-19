@@ -39,28 +39,28 @@
           <li>
             <div>
               <a href="Homepage/about.php">
-                <img class="flexslides" src="Homepage/img/index/index1.png">
+                <img class="flexslides" src="Homepage/img/index/index1.png" alt="三三吾鄉 About">
               </a>
             </div>
           </li>
           <li>
             <div>
               <a href="Homepage/trial.php">
-                <img class="flexslides" src="Homepage/img/index/index2.png">
+                <img class="flexslides" src="Homepage/img/index/index2.png" alt="試用皂免費申請中 Trial">
               </a>
             </div>
           </li>
           <li>
             <div>
               <a href="Homepage/message.php">
-                <img class="flexslides" src="Homepage/img/index/index3.png">
+                <img class="flexslides" src="Homepage/img/index/index3.png" alt="希望留心語 Activity">
               </a>
             </div>
           </li>
           <li>
             <div>
               <a href="https://www.facebook.com/trisoap/" target="_blank">
-                <img class="flexslides" src="Homepage/img/index/index4.png">
+                <img class="flexslides" src="Homepage/img/index/index4.png" alt="工作坊開催中 Workshop">
               </a>
             </div>
           </li>
@@ -84,7 +84,7 @@
               <div class="img-cover">
                 <a href="Homepage/product4.php" class="buy-now vertical-middle">立即購買</a>
               </div>
-              <img src="Homepage/img/product/gift.png" alt="">
+              <img src="Homepage/img/product/gift.png" alt="三三臺東意象禮盒組 Gift Boxs">
             </div>
           </div>
           <div class="col-sm-6">
@@ -92,7 +92,7 @@
               <div class="img-cover">
                 <a href="Homepage/product1.php" class="buy-now vertical-middle">立即購買</a>
               </div>
-              <img src="Homepage/img/product/rice.png" alt="">
+              <img src="Homepage/img/product/rice.png" alt="田靜山巒禾風皂 (米皂) Rice Soap">
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
-            <img src="Homepage/img/society.png" class="img-responsive">
+            <img src="Homepage/img/society.png" class="img-responsive" alt="愛的釀皂 Story 1">
           </div>
           <div class="col-lg-5 col-lg-offset-1 col-md-12">
             <h3>愛的釀皂</h3>
@@ -134,7 +134,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
-            <img src="Homepage/img/farm.png" class="img-responsive">
+            <img src="Homepage/img/farm.png" class="img-responsive" alt="吾鄉小農 Story 2">
           </div>
           <div class="col-lg-5 col-lg-offset-1 col-md-12">
             <h3>吾鄉小農</h3>
@@ -151,7 +151,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
-            <img src="Homepage/img/intern.png" class="img-responsive">
+            <img src="Homepage/img/intern.png" class="img-responsive" alt="社會企業 Story 3">
           </div>
           <div class="col-lg-5 col-lg-offset-1 col-md-12">
             <h3>社會企業</h3>
