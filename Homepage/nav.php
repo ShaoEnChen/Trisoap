@@ -49,7 +49,8 @@
               <li><a href="../methods/Update_Manager.php">權限管理</a></li>
               <li><a href="../methods/Update_ITEMMAS.php">商品管理</a></li>
               <li><a href="../methods/Update_ORDMAS.php">訂單管理</a></li>
-              <li><a href="../methods/Update_DCTMAS.php">折扣管理</a></li>
+	      <li><a href="../Trisoap_WL/controller/index.php">倉儲暨物流管理</a></li>
+	      <li><a href="../methods/Update_DCTMAS.php">折扣管理</a></li>
               <li><a href="../methods/Update_MSGMAS.php">留心語管理</a></li>
               <li><a href="../methods/View_CUSMAS.php">查看客戶</a></li>
               <li><a href="../methods/Create_ORDMAS1.php">建立訂單</a></li>
