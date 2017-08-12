@@ -97,6 +97,8 @@
                     <?php
                 }
                 $shipfee = $total >= 777 ? 0 : 70;
+                $total += $shipfee;
+                $total -= $discount;
                 ?>
                 <tr>
                     <td>運費 : </td>
@@ -125,8 +127,6 @@
                     </td>
                     </tr>
                     <?php
-                    $total -= $discount;
-                    $total += $shipfee;
                 }
                 ?>
                 <tr>
