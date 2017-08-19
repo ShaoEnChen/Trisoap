@@ -18,7 +18,6 @@
     <link href="../FlexSlider/flexslider.css" rel="stylesheet">
     <!-- Custom CSS-->
     <link href="css/trisoap.css" rel="stylesheet">
-    <link href="css/product.css" rel="stylesheet">
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
     <!-- GA -->

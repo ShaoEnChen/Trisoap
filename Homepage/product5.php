@@ -47,6 +47,7 @@
               <!-- Wrapper for slides-->
               <div class="carousel-inner">
                 <div class="item active"><img src="img/product/string_gift.jpg" alt="產品封面照片"></div>
+                <div class="item"><img src="img/product/detail/string_gift00.jpg" alt="產品照片0"></div>
                 <div class="item"><img src="img/product/detail/string_gift01.jpg" alt="產品照片1"></div>
                 <div class="item"><img src="img/product/detail/string_gift02.jpg" alt="產品照片2"></div>
               </div>
@@ -60,14 +61,14 @@
               <!-- Indicators-->
               <ol class="carousel-indicators mCustomScrollbar">
                 <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/string_gift.jpg" alt="產品封面小圖"></li>
-                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/string_gift01.jpg" alt="產品小圖1"></li>
-                <li data-target="#carousel-shop" data-slide-to="2"><img src="img/product/detail/string_gift02.jpg" alt="產品小圖2"></li>
+                <li data-target="#carousel-shop" data-slide-to="1"><img src="img/product/detail/string_gift00.jpg" alt="產品小圖0"></li>
+                <li data-target="#carousel-shop" data-slide-to="2"><img src="img/product/detail/string_gift01.jpg" alt="產品小圖1"></li>
+                <li data-target="#carousel-shop" data-slide-to="3"><img src="img/product/detail/string_gift02.jpg" alt="產品小圖2"></li>
               </ol>
             </div>
 
             <div class="col-lg-6 slide">
               <h4>三三臺東意象皂絲旅行組</h4>
-              <p class="small">REF. 9583301-234</p>
               <p>
                 臺東皂絲旅行組
                 內涵臺東洛神紅麴、萱草米黃、暖暖薑黃皂絲旅用組。

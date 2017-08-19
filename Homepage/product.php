@@ -16,7 +16,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS-->
     <link href="css/trisoap.css" rel="stylesheet">
-    <link href="css/product.css" rel="stylesheet">
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
     <!-- GA -->
