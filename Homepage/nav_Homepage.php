@@ -26,6 +26,7 @@
         </li>
         <li><a href="#">三三產品<i class="fa fa-angle-down"></i><span class="caret"></span></a>
           <ul class="dropdown-menu">
+            <li><a href="Homepage/moonfest_products.php">中秋禮皂</a></li>
             <li class="dropdown-header">臺東系列產品</li>
             <li><a href="Homepage/product.php">單品</a></li>
             <li><a href="Homepage/soapstring.php">旅用皂絲</a></li>
