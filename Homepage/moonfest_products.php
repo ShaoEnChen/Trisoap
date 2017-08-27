@@ -90,7 +90,7 @@
             <a href="moonfest_hot_air_balloon.php" class="btn btn-gray btn-xs">更多</a>
           </div>
           <div class="col-sm-12 col-md-6">
-            <a href="">
+            <a href="moonfest_mixed.php">
               <img src="img/product/moonfest/moonfest_gift.jpg" alt="" class="img-responsive center-block">
               <h5>中秋混搭單品皂絲組</h5>
             </a>
@@ -100,7 +100,7 @@
               可根據顧客的需求而選擇內容物的混搭風，
               是經濟又實惠的團員禮。
             </p>
-            <a href="" class="btn btn-gray btn-xs">更多</a>
+            <a href="moonfest_mixed.php" class="btn btn-gray btn-xs">更多</a>
           </div>
         </div>
       </div>
