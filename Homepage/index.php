@@ -38,6 +38,13 @@
         <ul class="slides">
           <li>
             <div>
+              <a href="Homepage/moonfest_products.php">
+                <img class="flexslides" src="Homepage/img/index/index_moonfest.jpg" alt="中秋禮皂">
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
               <a href="Homepage/about.php">
                 <img class="flexslides" src="Homepage/img/index/index1.png" alt="三三吾鄉 About">
               </a>
@@ -67,6 +74,7 @@
         </ul>
         <div class="flexslider-controls">
           <ol class="flex-control-nav">
+            <li></li>
             <li></li>
             <li></li>
             <li></li>
