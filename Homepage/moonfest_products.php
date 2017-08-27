@@ -10,8 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/misc/favicon.png">
-    <title>旅用皂絲 | 三三吾鄉手工皂Trisoap</title>
-    <meta name="description" content="溫和而舒適的手工皂，綿密如雪絲，故名皂絲。為了解決憨兒手部精細動作不穩定的困難，三三吾鄉研發獨門皂絲組，將皂絲裝到不織布袋中，「不用拆封，沾水即可沖出獨特而舒適的洗感」">
+    <title>中秋禮皂系列 | 三三吾鄉手工皂Trisoap</title>
+    <meta name="description" content="">
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- FlexSlider CSS -->
@@ -35,27 +35,26 @@
     <header data-background="img/jumbotrons/soapstring.jpg" class="intro introhalf" id="intro-product">
       <!-- Intro Header-->
       <div class="intro-body">
-        <h1>旅用皂絲</h1>
-        <h4>臺東系列商品</h4>
+        <h1>中秋禮皂</h1>
       </div>
     </header>
     <!-- News Block-->
     <section id="soapstring" class="section-small">
       <div class="container text-center">
         <p>
-          溫和而舒適的手作皂，綿密如雪絲，故名皂絲。
-          為了解決憨兒手部精細動作不穩定的困難，
-          三三吾鄉研發獨門皂絲組，將皂絲裝到不織布袋中，
+          想在中秋送份有意義又體面的禮盒，
+          三三吾鄉中秋禮盒是您的不二選擇。
+          多家企業指定贈禮。
         </p>
         <div class="slogan text-center">
-          <h3>「不用拆封，沾水即可沖出獨特而舒適的洗感」</h3>
+          <h3>中秋，三三吾鄉與您團員</h3>
         </div>
         <div class="text-center">
           <p class="features">
-          攜帶方便，解決皂軟爛沾手黏附背包問題。
-          用量設計，洗澡完即扔，輕鬆旅行無負擔。
-          起泡加倍，沖洗搓揉快速來一場泡沫饗宴。
-          天然環保，原料天然無毒打擊化學壓製皂。
+          大方的剪裁配上三三吾鄉的金典款混搭，
+          活潑的風格和繽紛的色彩，
+          送給顧客一份歡樂和一份溫暖。
+          中秋禮皂系列是大器又體面的最佳選擇。
           </p>
         </div>
 
@@ -63,52 +62,45 @@
         <div class="clearfix"></div>
         <div class="row grid-pad">
           <div class="col-sm-12 col-md-6">
-            <a href="product5.php">
-              <img src="img/product/string_gift.jpg" alt="" class="img-responsive center-block">
-              <h5>三三臺東意象皂絲旅行組</h5>
+            <a href="moonfest_moon_rabbit.php">
+              <img src="img/product/moonfest/moonfest_moon_rabbit.jpg" alt="" class="img-responsive center-block">
+              <h5>月兔捉迷藏</h5>
             </a>
             <p>
-              內含臺東洛神紅麴、萱草米黃、暖暖薑黃皂絲旅用組。
-              天然手打皂絲，綿密的起泡讓你在旅途當中享受不同的驚奇。
-              添加台東在地素材的旅行組，讓你在洗澡的時候也像在旅行。
+              三三吾鄉人氣繽紛贈禮，
+              採用大膽的混搭色，
+              襯托出月兔的活潑感，
+              不同於傳統的月兔形象，
+              硬是給你不一樣的三三感受。
             </p>
-            <a href="product5.php" class="btn btn-gray btn-xs">更多</a>
+            <a href="moonfest_moon_rabbit.php" class="btn btn-gray btn-xs">更多</a>
           </div>
           <div class="col-sm-12 col-md-6">
-            <a href="product6.php">
-              <img src="img/product/string_roselle.jpg" alt="" class="img-responsive center-block">
-              <h5>洛神紅麴旅用皂絲</h5>
+            <a href="moonfest_hot_air_balloon.php">
+              <img src="img/product/moonfest/moonfest_hot_air_balloon.jpg" alt="" class="img-responsive center-block">
+              <h5>熱氣球登月</h5>
             </a>
             <p>
-              台東的艷麗珍寶，捧在農友的手上閃閃發光。
-              自然主義之下的友善農法，
-              將洛神與紅麴乾燥後添入的獨門絕配。
+              什麼！？
+              臺東熱氣球在中秋節時候登陸月球？
+              在三三吾鄉的想像力世界中，
+              台東專屬特色的熱氣球，
+              不只帶你賞月更帶你搭熱氣球征服月亮！
             </p>
-            <a href="product6.php" class="btn btn-gray btn-xs">更多</a>
+            <a href="moonfest_hot_air_balloon.php" class="btn btn-gray btn-xs">更多</a>
           </div>
           <div class="col-sm-12 col-md-6">
-            <a href="product7.php">
-              <img src="img/product/string_turmeric.jpg" alt="" class="img-responsive center-block">
-              <h5>暖暖薑黃旅用皂絲</h5>
+            <a href="">
+              <img src="img/product/moonfest/moonfest_gift.jpg" alt="" class="img-responsive center-block">
+              <h5>中秋混搭單品皂絲組</h5>
             </a>
             <p>
-              豔黃中帶點純樸的橘棕，
-              經過薑黃伯特殊而又綿密的加工研磨，
-              入皂而成的溫暖色澤讓你有個暖暖的冬天。
+              月兔在台灣在地作物當中嬉笑，
+              透過全暖色的設計帶給你三三吾鄉的絕佳精神。
+              可根據顧客的需求而選擇內容物的混搭風，
+              是經濟又實惠的團員禮。
             </p>
-            <a href="product7.php" class="btn btn-gray btn-xs">更多</a>
-          </div>
-          <div class="col-sm-12 col-md-6">
-            <a href="product8.php">
-              <img src="img/product/string_lily.jpg" alt="" class="img-responsive center-block">
-              <h5>萱草米黃旅用皂絲</h5>
-            </a>
-            <p>
-              盛開在池上的橘黃萱草，
-              象徵著溫暖又偉大的母親。
-              搭配來自非洲的紅棕櫚油，一起享受如母親溫暖般的呵護。
-            </p>
-            <a href="product8.php" class="btn btn-gray btn-xs">更多</a>
+            <a href="" class="btn btn-gray btn-xs">更多</a>
           </div>
         </div>
       </div>
