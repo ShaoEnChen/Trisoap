@@ -47,7 +47,7 @@
           多家企業指定贈禮。
         </p>
         <div class="slogan text-center">
-          <h3>中秋，三三吾鄉與您團員</h3>
+          <h3>中秋，三三吾鄉與您團圓</h3>
         </div>
         <div class="text-center">
           <p class="features">
@@ -91,7 +91,7 @@
           </div>
           <div class="col-sm-12 col-md-6">
             <a href="moonfest_mixed.php">
-              <img src="img/product/moonfest/moonfest_gift.jpg" alt="" class="img-responsive center-block">
+              <img src="img/product/moonfest/moonfest_mixed.jpg" alt="" class="img-responsive center-block">
               <h5>中秋混搭單品皂絲組</h5>
             </a>
             <p>

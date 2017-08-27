@@ -46,7 +46,12 @@
             <div class="col-lg-6 carousel-outer">
               <!-- Wrapper for slides-->
               <div class="carousel-inner">
-                <div class="item active"><img src="img/product/moonfest/moonfest_hot_air_balloon.jpg" alt="產品封面照片"></div>
+                <div class="item active">
+                  <img src="img/product/moonfest/moonfest_hot_air_balloon.jpg" alt="產品封面照片">
+                </div>
+                <div class="item">
+                  <img src="img/product/moonfest/moonfest_gift_inside.jpg" alt="產品內容照片">
+                </div>
               </div>
               <!-- Controls-->
               <a href="#carousel-shop" data-slide="prev" class="left carousel-control">
@@ -57,7 +62,12 @@
               </a>
               <!-- Indicators-->
               <ol class="carousel-indicators mCustomScrollbar">
-                <li data-target="#carousel-shop" data-slide-to="0" class="active"><img src="img/product/moonfest/moonfest_hot_air_balloon.jpg" alt="產品封面小圖"></li>
+                <li data-target="#carousel-shop" data-slide-to="0" class="active">
+                  <img src="img/product/moonfest/moonfest_hot_air_balloon.jpg" alt="產品封面小圖">
+                </li>
+                <li data-target="#carousel-shop" data-slide-to="1">
+                  <img src="img/product/moonfest/moonfest_gift_inside.jpg" alt="產品內容小圖">
+                </li>
               </ol>
             </div>
 
