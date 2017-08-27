@@ -133,7 +133,7 @@
               </div>
               <form class="form-inline" method="post" action="../methods/Purchase_finish.php">
                 <div class="form-group">
-                  <h2 class="no-pad">$40</h2>
+                  <h2 class="no-pad">$1200</h2>
                 </div>
                 <div class="form-group">
                   <label for="number"></label>

@@ -32,7 +32,7 @@
     <?php include 'nav.php'; ?>
 
     <!-- Header-->
-    <header data-background="img/jumbotrons/soapstring.jpg" class="intro introhalf" id="intro-product">
+    <header data-background="img/jumbotrons/moonfest.jpg" class="intro introhalf" id="intro-product">
       <!-- Intro Header-->
       <div class="intro-body">
         <h1>中秋禮皂</h1>
