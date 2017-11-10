@@ -9,15 +9,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="Homepage/img/misc/favicon.png">
+    <link rel="shortcut icon" href="img/misc/favicon.png">
     <title>三三吾鄉手工皂Trisoap</title>
     <meta name="description" content="三三吾鄉手工皂，結合在地小農、社福公益、社會企業等三方元素，利用嶄新的旅行用皂絲組，期待翻轉公益社福的悲情形象。">
     <!-- Bootstrap Core CSS-->
-    <link href="Homepage/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- FlexSlider CSS -->
     <link href="../FlexSlider/flexslider.css" rel="stylesheet">
     <!-- Custom CSS-->
-    <link href="Homepage/css/trisoap.css" rel="stylesheet">
+    <link href="css/trisoap.css" rel="stylesheet">
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
     <!-- GA -->
@@ -29,7 +29,7 @@
     </div>
 
     <!-- Navigation-->
-    <?php include 'nav_Homepage.php'; ?>
+    <?php include 'nav.php'; ?>
 
     <!-- Header-->
     <header>
@@ -38,36 +38,36 @@
         <ul class="slides">
           <li>
             <div>
-              <a href="Homepage/moonfest_products.php">
-                <img class="flexslides" src="Homepage/img/index/index_moonfest.jpg" alt="中秋禮皂">
+              <a href="moonfest_products.php">
+                <img class="flexslides" src="img/index/index_moonfest.jpg" alt="中秋禮皂">
               </a>
             </div>
           </li>
           <li>
             <div>
-              <a href="Homepage/about.php">
-                <img class="flexslides" src="Homepage/img/index/index1.png" alt="三三吾鄉 About">
+              <a href="about.php">
+                <img class="flexslides" src="img/index/index1.png" alt="三三吾鄉 About">
               </a>
             </div>
           </li>
           <li>
             <div>
-              <a href="Homepage/trial.php">
-                <img class="flexslides" src="Homepage/img/index/index2.png" alt="試用皂免費申請中 Trial">
+              <a href="trial.php">
+                <img class="flexslides" src="img/index/index2.png" alt="試用皂免費申請中 Trial">
               </a>
             </div>
           </li>
           <li>
             <div>
-              <a href="Homepage/message.php">
-                <img class="flexslides" src="Homepage/img/index/index3.png" alt="希望留心語 Activity">
+              <a href="message.php">
+                <img class="flexslides" src="img/index/index3.png" alt="希望留心語 Activity">
               </a>
             </div>
           </li>
           <li>
             <div>
-              <a href="https://www.facebook.com/trisoap/" target="_blank">
-                <img class="flexslides" src="Homepage/img/index/index4.png" alt="工作坊開催中 Workshop">
+              <a href="https://www.facebook.com/trisoap/">
+                <img class="flexslides" src="img/index/index4.png" alt="工作坊開催中 Workshop">
               </a>
             </div>
           </li>
@@ -90,17 +90,17 @@
           <div class="col-sm-6">
             <div class="product-element" id="product-element1">
               <div class="img-cover">
-                <a href="Homepage/product4.php" class="buy-now vertical-middle">立即購買</a>
+                <a href="product4.php" class="buy-now vertical-middle">立即購買</a>
               </div>
-              <img src="Homepage/img/product/gift.png" alt="三三臺東意象禮盒組 Gift Boxs">
+              <img src="img/product/gift.png" alt="三三臺東意象禮盒組 Gift Boxs">
             </div>
           </div>
           <div class="col-sm-6">
             <div class="product-element" id="product-element2">
               <div class="img-cover">
-                <a href="Homepage/product1.php" class="buy-now vertical-middle">立即購買</a>
+                <a href="product1.php" class="buy-now vertical-middle">立即購買</a>
               </div>
-              <img src="Homepage/img/product/rice.png" alt="田靜山巒禾風皂 (米皂) Rice Soap">
+              <img src="img/product/rice.png" alt="田靜山巒禾風皂 (米皂) Rice Soap">
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
-            <img src="Homepage/img/society.png" class="img-responsive" alt="愛的釀皂 Story 1">
+            <img src="img/society.png" class="img-responsive" alt="愛的釀皂 Story 1">
           </div>
           <div class="col-lg-5 col-lg-offset-1 col-md-12">
             <h3>愛的釀皂</h3>
@@ -142,7 +142,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
-            <img src="Homepage/img/farm.png" class="img-responsive" alt="吾鄉小農 Story 2">
+            <img src="img/farm.png" class="img-responsive" alt="吾鄉小農 Story 2">
           </div>
           <div class="col-lg-5 col-lg-offset-1 col-md-12">
             <h3>吾鄉小農</h3>
@@ -159,7 +159,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
-            <img src="Homepage/img/intern.png" class="img-responsive" alt="社會企業 Story 3">
+            <img src="img/intern.png" class="img-responsive" alt="社會企業 Story 3">
           </div>
           <div class="col-lg-5 col-lg-offset-1 col-md-12">
             <h3>社會企業</h3>
@@ -172,31 +172,31 @@
     </section>
 
     <!-- Footer Section-->
-    <?php include 'footer_Homepage.php'; ?>
+    <?php include 'footer.php'; ?>
 
     <!-- jQuery-->
-    <script src="Homepage/js/jquery-1.12.3.min.js"></script>
+    <script src="js/jquery-1.12.3.min.js"></script>
     <!-- Bootstrap Core JavaScript-->
-    <script src="Homepage/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- Plugin JavaScript-->
-    <script src="Homepage/js/jquery.easing.min.js"></script>
-    <script src="Homepage/js/jquery.countdown.min.js"></script>
-    <script src="Homepage/js/device.min.js"></script>
-    <script src="Homepage/js/form.min.js"></script>
-    <script src="Homepage/js/jquery.placeholder.min.js"></script>
-    <script src="Homepage/js/jquery.shuffle.min.js"></script>
-    <script src="Homepage/js/jquery.parallax.min.js"></script>
-    <script src="Homepage/js/jquery.circle-progress.min.js"></script>
-    <script src="Homepage/js/jquery.swipebox.min.js"></script>
-    <script src="Homepage/js/smoothscroll.min.js"></script>
-    <script src="Homepage/js/tweecool.min.js"></script>
-    <script src="Homepage/js/wow.min.js"></script>
-    <script src="Homepage/js/jquery.smartmenus.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/form.min.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/jquery.parallax.min.js"></script>
+    <script src="js/jquery.circle-progress.min.js"></script>
+    <script src="js/jquery.swipebox.min.js"></script>
+    <script src="js/smoothscroll.min.js"></script>
+    <script src="js/tweecool.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.smartmenus.js"></script>
     <!-- FlexSlider JS -->
     <script src="../FlexSlider/jquery.flexslider-min.js"></script>
     <!-- Custom Theme JavaScript-->
-    <script src="Homepage/js/pheromone.js"></script>
-    <script src="Homepage/js/flexslider_index.js"></script>
+    <script src="js/pheromone.js"></script>
+    <script src="js/flexslider_index.js"></script>
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
