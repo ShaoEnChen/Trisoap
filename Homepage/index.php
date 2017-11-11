@@ -15,7 +15,7 @@
     <!-- Bootstrap Core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- FlexSlider CSS -->
-    <link href="../FlexSlider/flexslider.css" rel="stylesheet">
+    <link href="FlexSlider/flexslider.css" rel="stylesheet">
     <!-- Custom CSS-->
     <link href="css/trisoap.css" rel="stylesheet">
   </head>
@@ -193,7 +193,7 @@
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.smartmenus.js"></script>
     <!-- FlexSlider JS -->
-    <script src="../FlexSlider/jquery.flexslider-min.js"></script>
+    <script src="FlexSlider/jquery.flexslider-min.js"></script>
     <!-- Custom Theme JavaScript-->
     <script src="js/pheromone.js"></script>
     <script src="js/flexslider_index.js"></script>
