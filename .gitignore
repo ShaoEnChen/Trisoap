@@ -1,4 +1,5 @@
 .DS_store
+*.sh
 Homepage/picture/*
 Homepage/video/*
 methods/Helper/mysql_connect.php
