@@ -88,7 +88,7 @@
 	      </p>
               <form class="form-inline" method="post" action="../methods/Purchase_finish.php">
                 <div class="form-group">
-                  <h2 class="no-pad">$1100<small>（企業採購$500）</small></h2>
+                  <h2 class="no-pad">$1100</h2>
                 </div>
                 <div class="form-group">
                   <label for="number"></label>
