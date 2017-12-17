@@ -39,36 +39,29 @@
         <ul class="slides">
           <li>
             <div>
-              <a href="moonfest_products.php">
-                <img class="flexslides" src="img/index/index_moonfest.jpg" alt="中秋禮皂">
+              <a href="newyear_products.php">
+                <img class="flexslides" src="img/index/index01.jpg" alt="春節禮盒">
               </a>
             </div>
           </li>
-          <li>
+	  <li>
+            <div>
+              <a href="#">
+                <img class="flexslides" src="img/index/index02.jpg" alt="客製化婚禮小物開催中">
+              </a>
+            </div>
+          </li>
+	  <li>
             <div>
               <a href="about.php">
-                <img class="flexslides" src="img/index/index1.png" alt="三三吾鄉 About">
+                <img class="flexslides" src="img/index/index03.jpg" alt="三三吾鄉 About">
               </a>
             </div>
           </li>
           <li>
             <div>
               <a href="trial.php">
-                <img class="flexslides" src="img/index/index2.png" alt="試用皂免費申請中 Trial">
-              </a>
-            </div>
-          </li>
-          <li>
-            <div>
-              <a href="message.php">
-                <img class="flexslides" src="img/index/index3.png" alt="希望留心語 Activity">
-              </a>
-            </div>
-          </li>
-          <li>
-            <div>
-              <a href="https://www.facebook.com/trisoap/">
-                <img class="flexslides" src="img/index/index4.png" alt="工作坊開催中 Workshop">
+                <img class="flexslides" src="img/index/index04.jpg" alt="試用皂免費申請中 Trial">
               </a>
             </div>
           </li>
@@ -77,9 +70,8 @@
           <ol class="flex-control-nav">
             <li></li>
             <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+	    <li></li>
+	    <li></li>
           </ol>
         </div>
       </div>
@@ -88,7 +80,7 @@
     <section id="buy-product">
       <div class="container">
         <div class="row">
-          <div class="col-sm-6">
+          <!--<div class="col-sm-6">
             <div class="product-element" id="product-element1">
               <div class="img-cover">
                 <a href="product4.php" class="buy-now vertical-middle">立即購買</a>
@@ -103,7 +95,15 @@
               </div>
               <img src="img/product/rice.png" alt="田靜山巒禾風皂 (米皂) Rice Soap">
             </div>
-          </div>
+          </div>-->
+	  <div class="col-sm-8 col-sm-offset-2">
+            <div class="product-element">
+	      <div class="img-cover">
+                <a href="newyear_products.php" class="buy-now vertical-middle">立即購買</a>
+              </div>
+              <img src="img/product/newyear/jumbotron_gift.jpg" alt="春節禮盒">
+            </div>
+	  </div>
         </div>
       </div>
     </section>

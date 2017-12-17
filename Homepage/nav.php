@@ -26,15 +26,15 @@
         </li>
         <li><a href="#">三三產品<i class="fa fa-angle-down"></i><span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="moonfest_products.php">中秋禮皂</a></li>
-            <li class="dropdown-header">臺東系列產品</li>
+	    <li><a href="newyear_products.php">春節禮盒</a></li>
+	    <li class="dropdown-header">中秋禮皂	已售罄</li>
+            <!--<li><a href="moonfest_products.php">中秋禮皂	已售罄</a></li>-->
             <li><a href="product.php">單品</a></li>
             <li><a href="soapstring.php">旅用皂絲</a></li>
             <li><a href="shopping_guide.php">購物須知</a></li>
           </ul>
         </li>
         <li><a href="trial.php">試用品申請</a></li>
-        <li><a href="message.php">希望留心語</a></li>
         <li><a href="#">異業合作<i class="fa fa-angle-down"></i><span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="partner.php">合作夥伴</a></li>

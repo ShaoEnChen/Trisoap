@@ -26,7 +26,9 @@
         </li>
         <li><a href="#">三三產品<i class="fa fa-angle-down"></i><span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="Homepage/moonfest_products.php">中秋禮皂</a></li>
+	    <li><a href="Homepage/newyear_products.php">春節禮盒</a></li>
+	    <li class="dropdown-header">中秋禮皂	已售罄</li>
+            <!--<li><a href="Homepage/moonfest_products.php">中秋禮皂	已售罄</a></li>-->
             <li class="dropdown-header">臺東系列產品</li>
             <li><a href="Homepage/product.php">單品</a></li>
             <li><a href="Homepage/soapstring.php">旅用皂絲</a></li>
@@ -34,7 +36,6 @@
           </ul>
         </li>
         <li><a href="Homepage/trial.php">試用品申請</a></li>
-        <li><a href="Homepage/message.php">希望留心語</a></li>
         <li><a href="#">異業合作<i class="fa fa-angle-down"></i><span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="Homepage/partner.php">合作夥伴</a></li>
