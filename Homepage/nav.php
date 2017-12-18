@@ -35,6 +35,7 @@
           </ul>
         </li>
         <li><a href="trial.php">試用品申請</a></li>
+        <li><a href="customize.php">客製化專區</a></li>
         <li><a href="#">異業合作<i class="fa fa-angle-down"></i><span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="partner.php">合作夥伴</a></li>

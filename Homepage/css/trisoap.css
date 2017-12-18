@@ -2186,3 +2186,16 @@ a .fa {
 #message .msg-author {
   text-align: center;
 }
+
+#customize {
+  padding: 0;
+}
+
+#customize_wrap {
+  width: 100%;
+}
+
+#customize_wrap > img {
+  width: 100%;
+  height: auto;
+}

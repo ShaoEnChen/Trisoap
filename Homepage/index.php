@@ -46,7 +46,7 @@
           </li>
 	  <li>
             <div>
-              <a href="#">
+              <a href="customize.php">
                 <img class="flexslides" src="img/index/index02.jpg" alt="客製化婚禮小物開催中">
               </a>
             </div>

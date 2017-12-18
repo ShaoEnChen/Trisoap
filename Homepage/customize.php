@@ -10,8 +10,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="img/misc/favicon.png">
-		<title>媒體報導｜三三吾鄉手工皂Trisoap</title>
-		<meta name="description" content="一路走來，感謝各家媒體對於三三的支持，每篇報導，都是宣揚三三理念的好夥伴。">
+		<title>客製化專區｜三三吾鄉手工皂Trisoap</title>
+		<meta name="description" content="各式婚禮小物 / 企業贈禮 / 政府宣傳 / 股東會贈品等">
 		<!-- Bootstrap Core CSS-->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Custom CSS-->
@@ -29,40 +29,14 @@
 		<!-- Navigation-->
 		<?php include 'nav.php'; ?>
 
-		<!-- Header-->
-		<header data-background="img/jumbotrons/cooperate.png" class="intro introhalf" id="intro-product">
-			<!-- Intro Header-->
-			<div class="intro-body">
-				<h1>媒體報導</h1>
-				<h4>一路走來，感謝各家媒體對於三三的支持，每篇報導，都是宣揚三三理念的好夥伴。</h4>
+		<section id="customize">
+			<div id="customize_wrap">
+				<img src="img/customize_content.jpg" alt="客製化專區">
 			</div>
-		</header>
-
-		<section>
-			<div class="container">
-				<h3>國內外媒體報導</h3>
-		        <div class="row">
-		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="https://castnet.nctu.edu.tw/castnet/article/9986?issueID=630" target="_blank"><img src="img/media/castnet.png" alt="喀報"></a>
-		        	</div>
-		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="http://www.storm.mg/lifestyle/200500" target="_blank"><img src="img/media/storm.png" alt="風傳媒"></a>
-		        	</div>
-		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="#"><img src="img/media/hakkatv.png" alt="客家電視台"></a>
-		        	</div>
-		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="https://www.peopo.org/news/316929" target="_blank"><img src="img/media/peopo.png" alt="Peopo 公民新聞"></a>
-		        	</div>
-		        	<div class="col-xs-12 col-sm-6 col-md-4">
-		        		<a href="http://www.vita.tw/2016/09/blog-post_5.html" target="_blank"><img src="img/media/vita.png" alt="生命力新聞"></a>
-		        	</div>
-	        	</div>
-	        </div>
 		</section>
 
 		<!-- Footer Section-->
-    	<?php include 'footer.php'; ?>
+		<?php include 'footer.php'; ?>
 
 		<!-- jQuery-->
 		<script src="js/jquery-1.12.3.min.js"></script>
