@@ -1,7 +1,43 @@
+<!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-	hi
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>TriBake 樂芽 Menu</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			#tribake_menu_cover,
+			#tribake_menu_content {
+				width: 100%;
+				height: auto;
+			}
+
+			@media screen and (min-width: 768px) {
+				main {
+					display: block;
+					display: flex;
+				}
+
+				.tribake_menu {
+					float: left;
+					width: 50%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="tribake_menu">
+				<img id="tribake_menu_cover" src="image/tribake_menu_01.jpg" alt="TriBake menu cover">
+			</div>
+			<div class="tribake_menu">
+				<img id="tribake_menu_content" src="image/tribake_menu_02.jpg" alt="TriBake menu content">
+			</div>
+		</main>
+	</body>
 </html>
